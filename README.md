@@ -1,17 +1,14 @@
 ## SteamAPI
-<div style="text-align:center;padding:10px">
-    <a href="https://www.npmjs.com/package/steamapi">
-        <img src="https://nodei.co/npm/steamapi.png?compact=true" alt="">
-    </a>
-    <br>
-    <a href="https://www.npmjs.com/package/steamapi">
-        <img src="https://img.shields.io/npm/v/steamapi.svg?maxAge=3600" alt="NPM">
-    </a>
-    <a href="https://dc.dim.codes">
-        <img src="https://img.shields.io/discord/204352669731520512.svg?maxAge=3600" alt="Discord">
-    </a>
-    <pre>A nice Steam API wrapper with the ability to resolve users</pre>
+<div align="center">
+	<p>
+		<a href="https://www.npmjs.com/package/steamapi"><img src="https://nodei.co/npm/steamapi.png?compact=true" alt="" /></a>
+	</p>
+	<p>
+		<a href="https://www.npmjs.com/package/steamapi"><img src="https://img.shields.io/npm/v/steamapi.svg?maxAge=3600" alt="NPM" /></a>
+		<a href="https://dc.dim.codes"><img src="https://img.shields.io/discord/204352669731520512.svg?maxAge=3600" alt="Discord" /></a>
+	</p>
 </div>
+
 ## Setup
 ### Installation
 ```
