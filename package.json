@@ -1,12 +1,33 @@
 {
   "name": "steamapi",
-  "version": "0.1.0",
-  "description": "Steam API Wrapper",
+  "description": "A nice Steam API wrapper.",
   "main": "lib/app.js",
-  "repository": "https://github.com/lloti/steampowered-api",
-  "author": "Dim",
-  "license": "MIT",
+  "version": "1.0.0",
+  "keywords": [
+    "steam",
+    "api",
+    "wrapper",
+    "steam-api",
+    "steampowered"
+  ],
+  "maintainers": [
+    {
+      "name": "Dim",
+      "email": "dimggyt@gmail.com",
+      "web": "https://dim.codes"
+    }
+  ],
   "dependencies": {
-    "node-fetch": "^1.7.2"
-  }
+    "node-fetch": "*"
+  },
+  "bugs": {
+    "web": "https://github.com/lloti/node-steamapi/issues"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/lloti/node-steamapi"
+    }
+  ],
+  "homepage": "https://github.com/lloti/node-steamapi#readme"
 }
