@@ -57,6 +57,7 @@ steam.getUserSummary('76561198378422474').then(summary => {
 });
 ```
 ### Methods
+- get
 - resolve
 - getGameAchievements
 - getGameNews

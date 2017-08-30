@@ -2,7 +2,7 @@
   "name": "steamapi",
   "description": "A nice Steam API wrapper.",
   "main": "lib/app.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "steam",
     "api",

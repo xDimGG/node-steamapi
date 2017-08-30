@@ -7,10 +7,10 @@ const inspect = json => console.log(require('util').inspect(json, { depth: null 
 steam.resolve('xDim').then(async id => {
     console.log('resolve');
     console.log(id);
-    console.log('getNews');
-    await steam.getGameNews(730).then(inspect).catch(inspect);
     console.log('getGameAchievements');
     await steam.getGameAchievements(730).then(inspect).catch(inspect);
+    console.log('getGameNews');
+    await steam.getGameNews(730).then(inspect).catch(inspect);
     console.log('getGamePlayers');
     await steam.getGamePlayers(730).then(inspect).catch(inspect);
     console.log('getGameSchema');
