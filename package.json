@@ -1,0 +1,12 @@
+{
+  "name": "steamapi",
+  "version": "0.1.0",
+  "description": "Steam API Wrapper",
+  "main": "lib/app.js",
+  "repository": "https://github.com/lloti/steampowered-api",
+  "author": "Dim",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^1.7.2"
+  }
+}
