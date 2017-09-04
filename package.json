@@ -18,8 +18,7 @@
     }
   ],
   "dependencies": {
-    "node-fetch": "*",
-    "snekfetch": "^3.3.0"
+    "snekfetch": "*"
   },
   "bugs": {
     "web": "https://github.com/lloti/node-steamapi/issues"
