@@ -2,7 +2,7 @@
   "name": "steamapi",
   "description": "A nice Steam API wrapper.",
   "main": "app.js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "keywords": [
     "steam",
     "api",
@@ -18,7 +18,8 @@
     }
   ],
   "dependencies": {
-    "node-fetch": "*"
+    "node-fetch": "*",
+    "snekfetch": "^3.3.0"
   },
   "bugs": {
     "web": "https://github.com/lloti/node-steamapi/issues"
