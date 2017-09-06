@@ -36,7 +36,7 @@ steam.getUserSummary('76561198378422474').then(summary => {
   console.log(summary);
   /*
   {
-  	avatar: {
+    avatar: {
       small: '<url>',
       medium: '<url>',
       large: '<url>'
