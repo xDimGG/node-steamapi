@@ -92,7 +92,7 @@ class SteamAPI {
   /**
    * Get news for app id
    * @param {string} app App ID
-   * @returns {Promise<Array<Object>} App news for ID
+   * @returns {Promise<Array<Object>>} App news for ID
    */
   getGameNews(app) {
     return new Promise(async (resolve, reject) => {
