@@ -17,6 +17,7 @@ class SteamAPI {
       'User-Agent': `SteamAPI/${version} https://www.npmjs.com/package/steamapi`
     };
   }
+
   /**
    * Get custom path that isn't in SteamAPI
    * @param {string} path Path to request e.g '/IPlayerService/GetOwnedGames/v1?steamid=76561198378422474'
@@ -29,6 +30,7 @@ class SteamAPI {
         .catch(reject);
     });
   }
+
   /**
    * Resolve info based on id|profile|url
    * @param {string} info Something to resolve e.g 'https://steamcommunity.com/id/xDim'
@@ -62,6 +64,7 @@ class SteamAPI {
       resolve(steamID);
     });
   }
+
   /**
    * Get every single app on steam
    * @returns {Promise<Array<Object>>} Objects consisting of appid and name
@@ -72,6 +75,7 @@ class SteamAPI {
       resolve(json.applist.apps);
     });
   }
+
   /**
    * Get achievements for app id
    * @param {string} app App ID
@@ -84,6 +88,7 @@ class SteamAPI {
       resolve(json.achievementpercentages.achievements);
     });
   }
+
   /**
    * Get news for app id
    * @param {string} app App ID
@@ -97,6 +102,7 @@ class SteamAPI {
       resolve(json.appnews.newsitems);
     });
   }
+
   /**
    * Get number of current players for app id
    * @param {string} app App ID
@@ -110,6 +116,7 @@ class SteamAPI {
       resolve(json.response.player_count);
     });
   }
+
   /**
    * Get schema for app id
    * @param {string} app App ID
@@ -123,6 +130,7 @@ class SteamAPI {
       resolve(json.game);
     });
   }
+
   /**
    * Get every server associated with ip
    * @param {string} ip IP to request
@@ -146,6 +154,7 @@ class SteamAPI {
       })));
     });
   }
+
   /**
    * Get users achievements for app id
    * @param {string} id User ID
@@ -170,6 +179,7 @@ class SteamAPI {
       });
     });
   }
+
   /**
    * Get users badges
    * @param {string} id User ID
@@ -191,6 +201,7 @@ class SteamAPI {
       })));
     });
   }
+
   /**
    * Get users bans
    * @param {string} id User ID
@@ -212,6 +223,7 @@ class SteamAPI {
       });
     });
   }
+
   /**
    * Get users friends
    * @param {string} id User ID
@@ -233,6 +245,7 @@ class SteamAPI {
       resolve(newFriends);
     });
   }
+
   /**
    * Get users groups
    * @param {string} id User ID
@@ -246,6 +259,7 @@ class SteamAPI {
       resolve(json.response.groups.map(group => group.gid));
     });
   }
+
   /**
    * Get users level
    * @param {string} id User ID
@@ -258,6 +272,7 @@ class SteamAPI {
       resolve(json.response.player_level);
     });
   }
+
   /**
    * Get users owned games
    * @param {string} id User ID
@@ -274,6 +289,7 @@ class SteamAPI {
       })));
     });
   }
+
   /**
    * Get users recent games
    * @param {string} id User ID
@@ -293,6 +309,7 @@ class SteamAPI {
       })));
     });
   }
+
   /**
    * Gets servers on steamcommunity.com/dev/managegameservers using your key or provided key
    * @param {boolean} [hide=false] Hide deleted/expired servers
@@ -320,6 +337,7 @@ class SteamAPI {
       });
     });
   }
+
   /**
    * Get users stats for app id
    * @param {string} id User ID
@@ -335,6 +353,7 @@ class SteamAPI {
       resolve(json.playerstats);
     });
   }
+
   /**
    * Get users summary
    * @param {string} id User ID
