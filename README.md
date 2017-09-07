@@ -26,46 +26,53 @@ Now, you can call methods to the `steam` object
 
 For example, lets get the SteamID64 of a user. SteamAPI provides a `resolve` method which allows urls/id/profile
 ```js
-steam.resolve('https://steamcommunity.com/id/xDim').then(id => {
-  console.log(id); // 76561198378422474
+steam.resolve('https://steamcommunity.com/id/DimGG').then(id => {
+  console.log(id); // 76561198146931523
 });
 ```
 Now let's take that ID and get their profile
 ```js
-steam.getUserSummary('76561198378422474').then(summary => {
+steam.getUserSummary('76561198146931523').then(summary => {
   console.log(summary);
   /*
-  {
-    avatar: {
-      small: '<url>',
-      medium: '<url>',
-      large: '<url>'
-    },
-    commentPermission: 1,
-    created: 1491084178,
-    lastLogOff: 1495166756,
-    nickname: 'xDim',
-    personaState: 0,
-    personaStateFlags: 0,
-    primaryGroupID: '103582791457347196',
-    profileState: 1,
-    profileURL: 'http://steamcommunity.com/id/xDim/',
-    steamID: '76561198378422474',
-    visibilityState: 3
-  }
+	{
+		avatar: {
+	 	  small: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/7f/7fdf55394eb5765ef6f7be3b1d9f834fa9c824e8.jpg',
+      medium: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/7f/7fdf55394eb5765ef6f7be3b1d9f834fa9c824e8_medium.jpg',
+    	large: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/7f/7fdf55394eb5765ef6f7be3b1d9f834fa9c824e8_full.jpg'
+		},
+	  commentPermission: 1,
+	  created: 1406393110,
+	  lastLogOff: 1504721187,
+	  nickname: 'Dim | www.dim.codes',
+	  personaState: 3,
+	  personaStateFlags: 0,
+	  primaryGroupID: '103582791457347196',
+	  profileState: 1,
+	  profileURL: 'http://steamcommunity.com/id/DimGG/',
+	  steamID: '76561198146931523',
+	  visibilityState: 3
+	}
   */
 });
 ```
 ### Methods
-- get
-- resolve
-- getGameAchievements
-- getGameNews
-- getGamePlayers
-- getGameSchema
-- getUserAchievements
-- getUserBans
-- getUserFriends
-- getUserGroups
-- getUserStats
-- getUserSummary
+- resolve(info)
+- get(path)
+- getAppList()
+- getGameAchievements(app)
+- getGameNews(app)
+- getGamePlayers(app)
+- getGameSchema(app)
+- getServers(ip)
+- getUserAchievements(id, app)
+- getUserBadges(id)
+- getUserBans(id)
+- getUserFriends(id)
+- getUserGroups(id)
+- getUserLevel(id)
+- getUserOwnedGames(id)
+- getUserRecentGames(id)
+- getUserServers([hide], [key])
+- getUserStats(id, app)
+- getUserSummary(id)
