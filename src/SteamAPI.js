@@ -90,6 +90,19 @@ class SteamAPI {
   }
 
   /**
+   * Get details for app id
+   * @param {string} app App ID
+   * @returns {Promise<Object>>} App details for ID
+   */
+  getGameDetails(app) {
+    return new Promise(async (resolve, reject) => {
+      if (!appReg.test(app)) return reject('no appid provided');
+      const json = await fetch(`http://store.steampowered.com/api/appdetails?appids=${app}`, this.headers).catch(reject);
+      if (!json[app].success) return reject('no app found');
+      resolve(json[app].data);
+    });
+  }
+  /**
    * Get news for app id
    * @param {string} app App ID
    * @returns {Promise<Array<Object>>} App news for ID

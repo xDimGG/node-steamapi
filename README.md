@@ -61,6 +61,7 @@ steam.getUserSummary('76561198146931523').then(summary => {
 - get(path)
 - getAppList()
 - getGameAchievements(app)
+- getGameDetails(app)
 - getGameNews(app)
 - getGamePlayers(app)
 - getGameSchema(app)
