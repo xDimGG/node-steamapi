@@ -75,6 +75,28 @@ class SteamAPI {
       resolve(json.applist.apps);
     });
   }
+  
+  /**
+   * Get featured categories on the steam store
+   * @returns {Promise<Object>>} Featured categories
+   */
+  getFeaturedCategories() {
+    return new Promise(async (resolve, reject) => {
+      const json = await fetch('https://store.steampowered.com/api/featuredcategories', this.headers).catch(reject);
+      resolve(json);
+    });
+  }
+  
+  /**
+   * Get featured games on the steam store
+   * @returns {Promise<Object>>} Featured games
+   */
+  getFeaturedGames() {
+    return new Promise(async (resolve, reject) => {
+      const json = await fetch('https://store.steampowered.com/api/featured', this.headers).catch(reject);
+      resolve(json);
+    });
+  }
 
   /**
    * Get achievements for app id
@@ -97,11 +119,12 @@ class SteamAPI {
   getGameDetails(app) {
     return new Promise(async (resolve, reject) => {
       if (!appReg.test(app)) return reject('no appid provided');
-      const json = await fetch(`http://store.steampowered.com/api/appdetails?appids=${app}`, this.headers).catch(reject);
+      const json = await fetch(`https://store.steampowered.com/api/appdetails?appids=${app}`, this.headers).catch(reject);
       if (!json[app].success) return reject('no app found');
       resolve(json[app].data);
     });
   }
+
   /**
    * Get news for app id
    * @param {string} app App ID

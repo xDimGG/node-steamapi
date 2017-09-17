@@ -11,6 +11,11 @@ steam.resolve('id/DimGG/').then(async id => {
   console.log('getAppList');
   await steam.getAppList().then(inspect);
   
+  console.log('getFeaturedCategories');
+  await steam.getFeaturedCategories().then(inspect);
+  console.log('getFeaturedGames');
+  await steam.getFeaturedGames().then(inspect);
+
   console.log('getGameAchievements');
   await steam.getGameAchievements(730).then(inspect);
   console.log('getGameDetails');
