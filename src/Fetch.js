@@ -11,15 +11,15 @@ module.exports = (url, headers) => {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.once('end', () => {
-        if (res.statusCode === 500) return reject('internal server error');
-        if (res.statusCode === 403) return reject('invalid key');
-        if (res.statusCode === 400) return reject('invalid parameters');
-        if (res.statusCode !== 200) return reject(res.statusMessage);
+        if (res.statusCode === 500) return reject(new Error('internal server error'));
+        if (res.statusCode === 403) return reject(new Error('invalid key'));
+        if (res.statusCode === 400) return reject(new Error('invalid parameters'));
+        if (res.statusCode !== 200) return reject(new Error(res.statusMessage));
         try {
           const json = JSON.parse(data);
           resolve(json);
         } catch(error) {
-          reject(error);
+          reject(new Error(error));
         }
       });
     });
