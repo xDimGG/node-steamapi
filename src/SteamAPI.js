@@ -20,7 +20,7 @@ class SteamAPI {
 			'User-Agent': `SteamAPI/${version} https://www.npmjs.com/package/steamapi`
 		};
 		this.options = {
-			enabled: cache.enabled || true,
+			enabled: cache.enabled === false ? false : true,
 			expires: cache.expires || 86400000
 		};
 		if (this.options.enabled) this.cache = new Map();
