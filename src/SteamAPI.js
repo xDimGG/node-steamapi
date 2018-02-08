@@ -1,398 +1,360 @@
-const fetch = require('./Fetch');
+const PlayerAchievements = require('./structures/PlayerAchievements');
+const PlayerSummary = require('./structures/PlayerSummary');
+const PlayerServers = require('./structures/PlayerServers');
+const PlayerBadges = require('./structures/PlayerBadges');
+const PlayerStats = require('./structures/PlayerStats');
+const PlayerBans = require('./structures/PlayerBans');
+const RecentGame = require('./structures/RecentGame');
+const Friend = require('./structures/Friend');
+const Server = require('./structures/Server');
+const Game = require('./structures/Game');
+
+const objectify = require('./utils/objectify');
+const fetch = require('./utils/fetch');
 const { version } = require('../package.json');
+const appReg = /^\d{1,6}$/;
 const idReg = /^\d{17}$/;
 
 class SteamAPI {
 	/**
-	 * Sets Steam key for future use
+	 * Sets Steam key for future use.
 	 * @param {string} key Steam key
 	 * @param {Object} [cache={}] Optional options for caching `getGameDetails()`
 	 * @param {boolean} [cache.enabled=true] Whether to cache or not
 	 * @param {number} [cache.expires=86400000] How long cache should last for (ms) [1 day by default]
 	 */
-	constructor(key, cache = {}) {
-		if (!key) console.log('no key provided | some methods may not work | go get one > https://goo.gl/DfNy5s');
-		this.baseURL = 'https://api.steampowered.com';
+	constructor(key, { enabled = true, expires = 86400000 } = {}) {
+		if (!key) console.warn('no key provided | some methods may not work | go get one > https://goo.gl/DfNy5s');
 		this.key = key;
-		this.headers = {
-			'User-Agent': `SteamAPI/${version} https://www.npmjs.com/package/steamapi`
-		};
-		this.options = {
-			enabled: cache.enabled === false ? false : true,
-			expires: cache.expires || 86400000
-		};
-		if (this.options.enabled) this.cache = new Map();
+		this.baseAPI = 'https://api.steampowered.com';
+		this.baseStore = 'https://store.steampowered.com/api';
+		this.headers = { 'User-Agent': `SteamAPI/${version} (https://www.npmjs.com/package/steamapi)` };
+		this.options = { enabled, expires };
+		this.resolveCache = new Map();
+		if (enabled) this.cache = new Map();
 	}
 
 	/**
-	 * Get custom path that isn't in SteamAPI
+	 * Get custom path that isn't in SteamAPI.
 	 * @param {string} path Path to request e.g '/IPlayerService/GetOwnedGames/v1?steamid=76561198378422474'
+	 * @param {string} [base=this.baseAPI] Base URL
+	 * @param {string} [key=this.key] The key to use
 	 * @returns {Promise<Object>} JSON Response
 	 */
-	async get(path) {
-		return await fetch(`${this.baseURL}${path}${path.includes('?') ? '&' : '?'}key=${this.key}`, this.headers);
+	get(path, base = this.baseAPI, key = this.key) {
+		return fetch(`${base}${path}${path.includes('?') ? '&' : '?'}key=${key}`, this.headers);
 	}
 
 	/**
-	 * Resolve info based on id|profile|url
+	 * Resolve info based on id|profile|url.
+	 * Rejects promise if a profile couldn't be resolved.
 	 * @param {string} info Something to resolve e.g 'https://steamcommunity.com/id/xDim'
 	 * @returns {Promise<string>} Profile ID
 	 */
-	async resolve(info) {
-		if (!info) throw new Error('no info provided');
-		let steamID, steamURL;
-		if (/^(?:\/?profiles\/)?\d{17}.*$/.test(info)) {
-			steamID = info.replace(/^(?:\/?profiles\/)?(\d{17}).*$/, '$1');
-		} else if (/^(?:\/?id\/)?\w{2,32}.*$/.test(info)) {
-			steamURL = info.replace(/^(?:\/?id\/)?(\w{2,32}).*$/, '$1');
-		} else {
-			const url = parse(info);
-			if (url.hostname === 'steamcommunity.com') {
-				if (url.path.startsWith('/id/')) {
-					steamURL = url.path.replace(/\/id\//, '');
-				} else if (url.path.startsWith('/profiles/')) {
-					steamID = url.path.replace(/\/profiles\//, '');
-				} else {
-					throw new Error('Invalid profile link/id');
-				}
-			}
+	resolve(info) {
+		if (!info) return Promise.reject(new TypeError('Invalid/no app provided'));
+
+		const profileBaseReg = '(?:(?:(?:(?:https?)?:\\/\\/)?(?:www\\.)?steamcommunity\\.com)?)?\\/?';
+		const profileURLReg = RegExp(`${profileBaseReg}(?:profiles\\/)?(\\d{17})`, 'i');
+		const profileIDReg = RegExp(`${profileBaseReg}(?:id\\/)?(\\w{2,32})`, 'i');
+
+		if (profileURLReg.test(info))
+			return Promise.resolve(info.match(profileURLReg)[1]);
+
+		if (profileIDReg.test(info)) {
+			const id = info.match(profileIDReg)[1];
+			if (this.resolveCache.has(id)) return this.resolveCache.get(id);
+
+			return this
+				.get(`/ISteamUser/ResolveVanityURL/v1?vanityurl=${id}`)
+				.then(json => json.response.success
+					? this.resolveCache.set(id, json.response.steamid).get(id)
+					: Promise.reject(new TypeError('Invalid profile ID'))
+				);
 		}
-		if (steamURL) {
-			const json = await fetch(`${this.baseURL}/ISteamUser/ResolveVanityURL/v1?key=${this.key}&vanityurl=${steamURL}`, this.headers);
-			if (json.response.success) {
-				steamID = json.response.steamid
-			} else {
-				throw new Error('Invalid profile link/id')
-			}
-		}
-		return steamID;
+
+		return Promise.reject(new TypeError('Invalid format'));
 	}
 
 	/**
-	 * Get every single app on steam
-	 * @returns {Promise<Array<Object>>} Objects consisting of appid and name
+	 * @typedef {App}
+	 * @property {number} appid The app's ID
+	 * @property {string} name The app's name
 	 */
-	async getAppList() {
-		const json = await fetch(`${this.baseURL}/ISteamApps/GetAppList/v2`, this.headers);
-		return json.applist.apps;
-	}
-	
+
 	/**
-	 * Get featured categories on the steam store
-	 * @returns {Promise<Object>>} Featured categories
+	 * Get every single app on steam.
+	 * @returns {Promise<App[]>} Array of apps
 	 */
-	async getFeaturedCategories() {
-		const json = await fetch('https://store.steampowered.com/api/featuredcategories', this.headers);
-		return Object.values(json);
+	getAppList() {
+		return this
+			.get('/ISteamApps/GetAppList/v2')
+			.then(json => json.applist.apps);
 	}
-	
+
+	/**
+	 * Get featured categories on the steam store.
+	 * @returns {Promise<Object[]>} Featured categories
+	 */
+	getFeaturedCategories() {
+		return this
+			.get('/featuredcategories', this.baseStore)
+			.then(Object.values);
+	}
+
 	/**
 	 * Get featured games on the steam store
-	 * @returns {Promise<Object>>} Featured games
+	 * @returns {Promise<Object>} Featured games
 	 */
-	async getFeaturedGames() {
-		const json = await fetch('https://store.steampowered.com/api/featured', this.headers);
-		return json;
+	getFeaturedGames() {
+		return this.get('/featured', this.baseStore);
 	}
 
 	/**
-	 * Get achievements for app id
+	 * Get achievements for app id.
 	 * @param {string} app App ID
-	 * @returns {Promise<Array<string>>} App achievements for ID
+	 * @returns {Promise<Object>} App achievements for ID
 	 */
-	async getGameAchievements(app) {
-		if (isNaN(app)) throw new Error('no appid provided');
-		const json = await fetch(`${this.baseURL}/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v2?gameid=${app}`, this.headers);
-		return json.achievementpercentages.achievements;
+	getGameAchievements(app) {
+		if (!appReg.test(app)) return Promise.reject(new TypeError('Invalid/no app provided'));
+
+		return this
+			.get(`/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v2?gameid=${app}`)
+			.then(json => objectify(json.achievementpercentages.achievements, 'percent'));
 	}
 
 	/**
-	 * Get details for app id
+	 * Get details for app id.
 	 * <warn>Requests for this endpoint are limited to 200 every 5 minutes</warn> 
 	 * @param {string} app App ID
-	 * @param {boolean} force Overwrite cache
-	 * @returns {Promise<Object>>} App details for ID
+	 * @param {boolean} [force=false] Overwrite cache
+	 * @returns {Promise<Object>} App details for ID
 	 */
-	async getGameDetails(app, force) {
-		if (isNaN(app)) throw new Error('no appid provided');
-		app = app.toString();
-		if (this.options.enabled) {
-			if (force || (this.cache.has(app) && this.cache.get(app).expires <= Date.now()) || !this.cache.has(app)) {
-				const json = await fetch(`https://store.steampowered.com/api/appdetails?appids=${app}`, this.headers);
-				if (!json[app].success) throw new Error('no app found');
-				this.cache.set(app, {
-					data: json[app].data,
-					expires: Date.now() + this.options.expires
-				});
-			}
-		} else {
-			const json = await fetch(`https://store.steampowered.com/api/appdetails?appids=${app}`, this.headers);
-			if (!json[app].success) throw new Error('no app found');
-			return json[app].data;
-		}
-		return this.cache.get(app).data;
+	getGameDetails(app, force = false) {
+		if (!appReg.test(app)) return Promise.reject(TypeError('Invalid/no app provided'));
+
+		const request = () => this
+			.get(`/appdetails?appids=${app}`, this.baseStore)
+			.then(json => json[app].success ? json[app].data : Promise.reject(new Error('No app found')));
+
+		if (!force && this.options.enabled && this.cache.has(app) && this.cache.get(app)[0] > Date.now())
+			return Promise.resolve(this.cache.get(app)[1]);
+
+		if (this.options.enabled && (!this.cache.has(app) || this.cache.get(app)[0] <= Date.now()))
+			return request().then(json => this.cache.set(app, [Date.now() + this.options.expires, json]) && json);
+
+		return request();
 	}
 
 	/**
-	 * Get news for app id
+	 * Get news for app id.
 	 * @param {string} app App ID
-	 * @returns {Promise<Array<Object>>} App news for ID
+	 * @returns {Promise<Object[]>} App news for ID
 	 */
-	async getGameNews(app) {
-		if (isNaN(app)) throw new Error('no appid provided');
-		const json = await fetch(`${this.baseURL}/ISteamNews/GetNewsForApp/v2?appid=${app}`, this.headers);
-		if (json.appnews.count === 0) throw new Error('no news found');
-		return json.appnews.newsitems;
+	getGameNews(app) {
+		if (!appReg.test(app)) return Promise.reject(new TypeError('Invalid/no app provided'));
+
+		return this
+			.get(`/ISteamNews/GetNewsForApp/v2?appid=${app}`)
+			.then(json => json.appnews.count ? json.appnews.newsitems : Promise.reject(new Error('No news found')));
 	}
 
 	/**
-	 * Get number of current players for app id
+	 * Get number of current players for app id.
 	 * @param {string} app App ID
 	 * @returns {Promise<number>} Number of players
 	 */
-	async getGamePlayers(app) {
-		if (isNaN(app)) throw new Error('no appid provided');
-		const json = await fetch(`${this.baseURL}/ISteamUserStats/GetNumberOfCurrentPlayers/v1?appid=${app}`, this.headers);
-		if (json.response.result !== 1) throw new Error('invalid app id');
-		return json.response.player_count;
+	getGamePlayers(app) {
+		if (!appReg.test(app)) return Promise.reject(new TypeError('Invalid/no app provided'));
+
+		return this
+			.get(`/ISteamUserStats/GetNumberOfCurrentPlayers/v1?appid=${app}`)
+			.then(json => json.response.result === 1 ? json.response.player_count : Promise.reject(new Error('No app found')));
 	}
 
 	/**
-	 * Get schema for app id
+	 * Get schema for app id.
 	 * @param {string} app App ID
-	 * @returns {Promise<number>} Schema
+	 * @returns {Promise<Object>} Schema
 	 */
-	async getGameSchema(app) {
-		if (isNaN(app)) throw new Error('no appid provided');
-		const json = await fetch(`${this.baseURL}/ISteamUserStats/GetSchemaForGame/v2?key=${this.key}&appid=${app}`, this.headers);
-		if (!json.game) throw new Error('game not found');
-		return json.game;
+	getGameSchema(app) {
+		if (!appReg.test(app)) return Promise.reject(new TypeError('Invalid/no app provided'));
+
+		return this
+			.get(`/ISteamUserStats/GetSchemaForGame/v2?appid=${app}`)
+			.then(json => json.game ? json.game : Promise.reject(new Error('No app found')));
+		// TODO: Schema Class
 	}
 
 	/**
-	 * Get every server associated with host
+	 * Get every server associated with host.
 	 * @param {string} host Host to request
-	 * @returns {Promise<Array<Object>>} Objects consisting of server info
-	 */
-	async getServers(host) {
-		if (!host) throw new Error('no host provided');
-		const json = await fetch(`${this.baseURL}/ISteamApps/GetServersAtAddress/v1?addr=${host}`, this.headers);
-		if (!json.response.success) throw new Error('invalid host');
-		return json.response.servers.map(server => ({
-			address: server.addr,
-			appID: server.appid,
-			game: server.gamedir,
-			gmsindex: server.gmsindex,
-			lan: server.lan,
-			port: server.gameport,
-			region: server.region,
-			secure: server.secure,
-			specPort: server.specPort
-		}));
+	 * @returns {Promise<Server[]>} Server info
+	 */ 
+	getServers(host) {
+		if (!host) return Promise.reject(new TypeError('No host provided'));
+
+		return this
+			.get(`/ISteamApps/GetServersAtAddress/v1?addr=${host}`)
+			.then(json => json.response.success ? json.response.servers.map(server => new Server(server)) : Promise.reject(new Error('Invalid host')));
 	}
 
 	/**
-	 * Get users achievements for app id
+	 * Get users achievements for app id.
 	 * @param {string} id User ID
 	 * @param {string} app App ID
-	 * @returns {Promise<Object>} Achievements
+	 * @returns {Promise<PlayerAchievements>} Achievements
 	 */
-	async getUserAchievements(id, app) {
-		if (!idReg.test(id)) throw new Error('no user id provided');
-		if (isNaN(app)) throw new Error('no appid provided');
-		const json = await fetch(`${this.baseURL}/ISteamUserStats/GetPlayerAchievements/v1?key=${this.key}&steamid=${id}&appid=${app}`, this.headers);
-		const stats = json.playerstats;
-		if (!stats.success) throw new Error('error getting achievements');
-		return {
-			gameName: stats.gameName,
-			steamID: stats.steamID,
-			achievements: stats.achievements.map(achievement => ({
-				api: achievement.apiname,
-				achieved: achievement.achieved ? true : false,
-				unlockTime: achievement.unlocktime
-			}))
-		};
+	getUserAchievements(id, app) {
+		if (!idReg.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
+		if (!appReg.test(app)) return Promise.reject(new TypeError('Invalid/no appid provided'));
+
+		return this
+			.get(`/ISteamUserStats/GetPlayerAchievements/v1?steamid=${id}&appid=${app}`)
+			.then(json => json.playerstats.success ? new PlayerAchievements(json.playerstats) : Promise.reject(new Error('No app/player found')));
 	}
 
 	/**
-	 * Get users badges
+	 * Get users badges.
 	 * @param {string} id User ID
-	 * @returns {Promise<Array<Object>>} Badges
+	 * @returns {Promise<PlayerBadges>} Badges
 	 */
-	async getUserBadges(id) {
-		if (!idReg.test(id)) throw new Error('no id provided');
-		const json = await fetch(`${this.baseURL}/IPlayerService/GetBadges/v1?key=${this.key}&steamid=${id}`, this.headers);
-		return json.response.badges.map(badge => ({
-			appID: badge.appid,
-			badgeID: badge.badgeid,
-			borderColor: badge.border_color,
-			communityItemID: badge.communityitemid,
-			completionTime: badge.completion_time,
-			level: badge.level,
-			scarcity: badge.scarcity,
-			xp: badge.xp
-		}));
+	getUserBadges(id) {
+		if (!idReg.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
+
+		return this
+			.get(`/IPlayerService/GetBadges/v1?steamid=${id}`)
+			.then(json => new PlayerBadges(json.response));
 	}
 
 	/**
-	 * Get users bans
+	 * Get users bans.
+	 * @param {string|string[]} id User ID(s)
+	 * @returns {Promise<PlayerBans|PlayerBans[]>} Ban info
+	 */
+	getUserBans(id) {
+		const arr = Array.isArray(id);
+		if ((arr && id.some(i => !idReg.test(i))) || (!arr && !idReg.test(id))) return Promise.reject(new TypeError('Invalid/no id provided'));
+
+		return this
+			.get(`/ISteamUser/GetPlayerBans/v1?steamids=${id}`)
+			.then(json => json.players.length
+				? arr
+					? json.players.map(player => new PlayerBans(player))
+					: new PlayerBans(json.players[0])
+				: Promise.reject(new Error('No players found'))
+			);
+	}
+
+	/**
+	 * Get users friends.
 	 * @param {string} id User ID
-	 * @returns {Promise<Object>} Ban info
+	 * @returns {Promise<Friend[]>} Friends
 	 */
-	async getUserBans(id) {
-		if (!idReg.test(id)) throw new Error('no id provided');
-		const json = await fetch(`${this.baseURL}/ISteamUser/GetPlayerBans/v1?key=${this.key}&steamids=${id}`, this.headers);
-		const ban = json.players[0];
-		return {
-			communityBanned: ban.CommunityBanned,
-			daysSinceLastBan: ban.DaysSinceLastBan,
-			economyBan: ban.EconomyBan,
-			numberOfVACBans: ban.NumberOfVACBans,
-			numberOfGameBans: ban.NumberOfGameBans,
-			steamID: ban.SteamID,
-			VACBanned: ban.VACBanned
-		};
+	getUserFriends(id) {
+		if (!idReg.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
+
+		return this
+			.get(`/ISteamUser/GetFriendList/v1?steamid=${id}`)
+			.then(json => json.friendslist.friends.map(friend => new Friend(friend)));
 	}
 
 	/**
-	 * Get users friends
+	 * Get users groups.
 	 * @param {string} id User ID
-	 * @returns {Promise<Array<Object>>} Friends
+	 * @returns {Promise<string[]>} Groups
 	 */
-	async getUserFriends(id) {
-		if (!idReg.test(id)) throw new Error('no id provided');
-		const json = await fetch(`${this.baseURL}/ISteamUser/GetFriendList/v1?key=${this.key}&steamid=${id}`, this.headers);
-		return json.friendslist.friends.map(friend => ({
-			steamID: friend.steamid,
-			relationship: friend.relationship,
-			friendSince: friend.friend_since
-		}));
+	getUserGroups(id) {
+		if (!idReg.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
+
+		return this
+			.get(`/ISteamUser/GetUserGroupList/v1?steamid=${id}`)
+			.then(json => json.response.success ? json.response.groups.map(group => group.gid) : Promise.reject(new Error('Failed')));
 	}
 
 	/**
-	 * Get users groups
-	 * @param {string} id User ID
-	 * @returns {Promise<Array<string>>} Groups
-	 */
-	async getUserGroups(id) {
-		if (!idReg.test(id)) throw new Error('no id provided');
-		const json = await fetch(`${this.baseURL}/ISteamUser/GetUserGroupList/v1?key=${this.key}&steamid=${id}`, this.headers);
-		if (!json.response.success) throw new Error('failed');
-		return json.response.groups.map(group => group.gid);
-	}
-
-	/**
-	 * Get users level
+	 * Get users level.
 	 * @param {string} id User ID
 	 * @returns {Promise<number>} Level
 	 */
-	async getUserLevel(id) {
-		if (!idReg.test(id)) throw new Error('no id provided');
-		const json = await fetch(`${this.baseURL}/IPlayerService/GetSteamLevel/v1?key=${this.key}&steamid=${id}`, this.headers);
-		return json.response.player_level;
+	getUserLevel(id) {
+		if (!idReg.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
+
+		return this
+			.get(`/IPlayerService/GetSteamLevel/v1?steamid=${id}`)
+			.then(json => json.response.player_level);
 	}
 
 	/**
-	 * Get users owned games
+	 * Get users owned games.
 	 * @param {string} id User ID
-	 * @returns {Promise<Array<Object>>} Owned games
+	 * @returns {Promise<Game[]>} Owned games
 	 */
-	async getUserOwnedGames(id) {
-		if (!idReg.test(id)) throw new Error('no id provided');
-		const json = await fetch(`${this.baseURL}/IPlayerService/GetOwnedGames/v1?key=${this.key}&steamid=${id}`, this.headers);
-		return json.response.games.map(game => ({
-			appID: game.appid,
-			playTime: game.playtime_forever,
-			playTime2: game.playtime_2weeks || null
-		}));
+	getUserOwnedGames(id) {
+		if (!idReg.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
+
+		return this
+			.get(`/IPlayerService/GetOwnedGames/v1?steamid=${id}`)
+			.then(json => json.response.games.map(game => new Game(game)));
 	}
 
 	/**
-	 * Get users recent games
+	 * Get users recent games.
 	 * @param {string} id User ID
-	 * @returns {Promise<Array<Object>>} Recent games
+	 * @returns {Promise<RecentGame[]>} Recent games
 	 */
-	async getUserRecentGames(id) {
-		if (!idReg.test(id)) throw new Error('no id provided');
-		const json = await fetch(`${this.baseURL}/IPlayerService/GetRecentlyPlayedGames/v1?key=${this.key}&steamid=${id}`, this.headers);
-		return json.response.games.map(game => ({
-			appID: game.appid,
-			logoURL: `https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/${game.appid}/${game.img_logo_url}.jpg`,
-			name: game.name,
-			iconURL: `https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/${game.appid}/${game.img_icon_url}.jpg`,
-			playTime: game.playtime_forever,
-			playTime2: game.playtime_2weeks
-		}));
+	getUserRecentGames(id) {
+		if (!idReg.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
+
+		return this
+			.get(`/IPlayerService/GetRecentlyPlayedGames/v1?steamid=${id}`)
+			.then(json => json.response.total_count ? json.response.games.map(game => new RecentGame(game)) : []);
 	}
 
 	/**
-	 * Gets servers on steamcommunity.com/dev/managegameservers using your key or provided key
+	 * Gets servers on steamcommunity.com/dev/managegameservers using your key or provided key.
 	 * @param {boolean} [hide=false] Hide deleted/expired servers
 	 * @param {string} [key=this.key] Key
-	 * @returns {Promise<Object>} Servers
+	 * @returns {Promise<PlayerServers>} Servers
 	 */
-	async getUserServers(hide = false, key = this.key) {
-		const json = await fetch(`${this.baseURL}/IGameServersService/GetAccountList/v1?key=${key}`, this.headers);
-		const response = json.response;
-		return {
-			actor: response.actor,
-			expires: response.expires,
-			banned: response.is_banned,
-			lastActionTime: response.last_action_time,
-			servers: response.servers.filter(server => hide && !(server.is_deleted || server.is_expired)).map(server => ({
-				appID: server.appid,
-				deleted: server.is_deleted,
-				expired: server.is_expired,
-				lastLoginTime: server.rt_last_logon,
-				memo: server.memo,
-				steamID: server.steamid,
-				token: server.login_token
-			}))
-		};
+	getUserServers(hide = false, key) {
+		return this
+			.get('/IGameServersService/GetAccountList/v1', this.baseAPI, key)
+			.then(json => new PlayerServers(json.response, hide));
 	}
 
 	/**
-	 * Get users stats for app id
+	 * Get users stats for app id.
 	 * @param {string} id User ID
 	 * @param {string} app App ID
-	 * @returns {Promise<Object>} Stats for app id
+	 * @returns {Promise<PlayerStats>} Stats for app id
 	 */
-	async getUserStats(id, app) {
-		if (!idReg.test(id)) throw new Error('no user id provided');
-		if (isNaN(app)) throw new Error('no appid provided');
-		const json = await fetch(`${this.baseURL}/ISteamUserStats/GetUserStatsForGame/v2?key=${this.key}&steamid=${id}&appid=${app}`, this.headers);
-		if (!json.playerstats) throw new Error('game not found for user');
-		return json.playerstats;
+	getUserStats(id, app) {
+		if (!idReg.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
+		if (!appReg.test(app)) return Promise.reject(new TypeError('Invalid/no app provided'));
+
+		return this
+			.get(`/ISteamUserStats/GetUserStatsForGame/v2?steamid=${id}&appid=${app}`)
+			.then(json => json.playerstats ? new PlayerStats(json.playerstats) : Promise.reject(new Error('No player found')));
 	}
 
 	/**
-	 * Get users summary
+	 * Get users summary.
 	 * @param {string} id User ID
-	 * @returns {Promise<Object>} Summary
+	 * @returns {Promise<PlayerSummary>} Summary
 	 */
-	async getUserSummary(id) {
-		if (!idReg.test(id)) throw new Error('no id provided');
-		const json = await fetch(`${this.baseURL}/ISteamUser/GetPlayerSummaries/v2?key=${this.key}&steamids=${id}`, this.headers);
-		const player = json.response.players[0];
-		if (!player) throw new Error('invalid id');
-		return {
-			avatar: {
-				small: player.avatar,
-				medium: player.avatarmedium,
-				large: player.avatarfull
-			},
-			commentPermission: player.commentpermission,
-			created: player.timecreated,
-			lastLogOff: player.lastlogoff,
-			nickname: player.personaname,
-			personaState: player.personastate,
-			personaStateFlags: player.personastateflags,
-			primaryGroupID: player.primaryclanid,
-			profileState: player.profilestate,
-			profileURL: player.profileurl,
-			steamID: player.steamid,
-			visibilityState: player.communityvisibilitystate
-		};
+	getUserSummary(id) {
+		const arr = Array.isArray(id);
+		if ((arr && id.some(i => !idReg.test(i))) || (!arr && !idReg.test(id))) return Promise.reject(new TypeError('Invalid/no id provided'));
+
+		return this
+			.get(`/ISteamUser/GetPlayerSummaries/v2?steamids=${id}`)
+			.then(json => json.response.players.length
+				? arr
+					? json.response.players.map(player => new PlayerSummary(player))
+					: new PlayerSummary(json.response.players[0])
+				: Promise.reject(new Error('No players found'))
+			);
 	}
 }
 
