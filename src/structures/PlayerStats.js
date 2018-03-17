@@ -6,7 +6,6 @@ class PlayerStats extends Player {
 		super();
 		this.steamID = player.steamID;
 		this.game = player.gameName;
-		console.log(player);
 		if (player.stats)
 			this.stats = objectify(player.stats);
 		if (player.achievements)
