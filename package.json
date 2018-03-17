@@ -1,30 +1,29 @@
-
 {
-  "author": "lloti <dimggyt@gmail.com> (https://dim.codes)",
-  "name": "steamapi",
-  "description": "A nice Steam API wrapper.",
-  "main": "index.js",
-  "version": "2.0.0",
+	"author": "lloti <dimggyt@gmail.com> (https://dim.codes)",
+	"name": "steamapi",
+	"description": "A nice Steam API wrapper.",
+	"main": "index.js",
+	"version": "2.0.1",
 	"license": "MIT",
 	"eslintConfig": {
 		"extends": "eslint-config-lloti"
 	},
-  "keywords": [
-    "steam",
-    "api",
-    "wrapper",
-    "steam-api",
-    "steampowered"
-  ],
-  "bugs": {
-    "web": "https://github.com/lloti/node-steamapi/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lloti/node-steamapi"
-  },
-  "homepage": "https://github.com/lloti/node-steamapi#readme",
-  "devDependencies": {
-    "eslint-config-lloti": "github:lloti/eslint-config-lloti"
-  }
+	"keywords": [
+		"steam",
+		"api",
+		"wrapper",
+		"steam-api",
+		"steampowered"
+	],
+	"bugs": {
+		"web": "https://github.com/lloti/node-steamapi/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lloti/node-steamapi"
+	},
+	"homepage": "https://github.com/lloti/node-steamapi#readme",
+	"devDependencies": {
+		"eslint-config-lloti": "github:lloti/eslint-config-lloti"
+	}
 }

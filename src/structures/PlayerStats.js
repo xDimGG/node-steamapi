@@ -6,8 +6,11 @@ class PlayerStats extends Player {
 		super();
 		this.steamID = player.steamID;
 		this.game = player.gameName;
-		this.stats = objectify(player.stats);
-		this.achievements = objectify(player.achievements, 'achieved');
+		console.log(player);
+		if (player.stats)
+			this.stats = objectify(player.stats);
+		if (player.achievements)
+			this.achievements = objectify(player.achievements, 'achieved');
 	}
 }
 
