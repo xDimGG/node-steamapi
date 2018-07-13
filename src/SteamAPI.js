@@ -294,7 +294,7 @@ class SteamAPI {
 		if (!idReg.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
 
 		return this
-			.get(`/IPlayerService/GetOwnedGames/v1?steamid=${id}`)
+			.get(`/IPlayerService/GetOwnedGames/v1?steamid=${id}&include_appinfo=1`)
 			.then(json => json.response.games.map(game => new Game(game)));
 	}
 
