@@ -210,7 +210,7 @@ class SteamAPI {
 		if (!appReg.test(app)) return Promise.reject(new TypeError('Invalid/no appid provided'));
 
 		return this
-			.get(`/ISteamUserStats/GetPlayerAchievements/v1?steamid=${id}&appid=${app}`)
+			.get(`/ISteamUserStats/GetPlayerAchievements/v1?steamid=${id}&appid=${app}&l=english`)
 			.then(json => json.playerstats.success ? new PlayerAchievements(json.playerstats) : Promise.reject(new Error('No app/player found')));
 	}
 
