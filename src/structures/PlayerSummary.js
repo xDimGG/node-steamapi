@@ -18,6 +18,9 @@ class PlayerSummary extends Player {
 		this.personaStateFlags = player.personastateflags;
 		this.commentPermission = player.commentpermission;
 		this.visibilityState = player.communityvisibilitystate;
+		this.countryCode = player.loccountrycode;
+		this.stateCode = player.locstatecode;
+		this.cityId = player.loccityid;
 	}
 
 	/**
