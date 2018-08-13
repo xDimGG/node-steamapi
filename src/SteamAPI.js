@@ -210,7 +210,7 @@ class SteamAPI {
 		if (!appReg.test(app)) return Promise.reject(new TypeError('Invalid/no appid provided'));
 
 		return this
-			.get(`/ISteamUserStats/GetPlayerAchievements/v1?steamid=${id}&appid=${app}`)
+			.get(`/ISteamUserStats/GetPlayerAchievements/v1?steamid=${id}&appid=${app}&l=english`)
 			.then(json => json.playerstats.success ? new PlayerAchievements(json.playerstats) : Promise.reject(new Error('No app/player found')));
 	}
 
@@ -294,7 +294,7 @@ class SteamAPI {
 		if (!idReg.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
 
 		return this
-			.get(`/IPlayerService/GetOwnedGames/v1?steamid=${id}`)
+			.get(`/IPlayerService/GetOwnedGames/v1?steamid=${id}&include_appinfo=1`)
 			.then(json => json.response.games.map(game => new Game(game)));
 	}
 
