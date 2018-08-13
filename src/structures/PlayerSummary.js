@@ -20,7 +20,7 @@ class PlayerSummary extends Player {
 		this.visibilityState = player.communityvisibilitystate;
 		this.countryCode = player.loccountrycode;
 		this.stateCode = player.locstatecode;
-		this.cityID = player.loccityid;
+		this.cityId = player.loccityid;
 	}
 
 	/**
