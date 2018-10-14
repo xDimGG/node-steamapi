@@ -63,7 +63,7 @@ class SteamAPI {
 
 		if (profileIDReg.test(info)) {
 			const id = info.match(profileIDReg)[1];
-			if (this.resolveCache.has(id)) return this.resolveCache.get(id);
+			if (this.resolveCache.has(id)) return Promise.resolve(this.resolveCache.get(id));
 
 			return this
 				.get(`/ISteamUser/ResolveVanityURL/v1?vanityurl=${id}`)
