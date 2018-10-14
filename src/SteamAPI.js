@@ -125,7 +125,7 @@ class SteamAPI {
 
 	/**
 	 * Get details for app id.
-	 * <warn>Requests for this endpoint are limited to 200 every 5 minutes</warn> 
+	 * <warn>Requests for this endpoint are limited to 200 every 5 minutes</warn>
 	 * @param {string} app App ID
 	 * @param {boolean} [force=false] Overwrite cache
 	 * @returns {Promise<Object>} App details for ID
@@ -190,7 +190,7 @@ class SteamAPI {
 	 * Get every server associated with host.
 	 * @param {string} host Host to request
 	 * @returns {Promise<Server[]>} Server info
-	 */ 
+	 */
 	getServers(host) {
 		if (!host) return Promise.reject(new TypeError('No host provided'));
 
