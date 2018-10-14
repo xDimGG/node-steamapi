@@ -1,5 +1,5 @@
 {
-	"author": "lloti <dimggyt@gmail.com> (https://dim.codes)",
+	"author": "xDimGG <dimggyt@gmail.com> (https://dim.codes)",
 	"name": "steamapi",
 	"description": "A nice Steam API wrapper.",
 	"main": "index.js",
@@ -16,14 +16,14 @@
 		"steampowered"
 	],
 	"bugs": {
-		"web": "https://github.com/lloti/node-steamapi/issues"
+		"web": "https://github.com/xDimGG/node-steamapi/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/lloti/node-steamapi"
+		"url": "https://github.com/xDimGG/node-steamapi"
 	},
-	"homepage": "https://github.com/lloti/node-steamapi#readme",
+	"homepage": "https://github.com/xDimGG/node-steamapi#readme",
 	"devDependencies": {
-		"eslint-config-lloti": "github:lloti/eslint-config-lloti"
+		"eslint-config-lloti": "github:xDimGG/eslint-config-lloti"
 	}
 }
