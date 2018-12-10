@@ -22,7 +22,7 @@ module.exports = (url, { headers } = {}) => {
 			if (ce === 'gzip') res.pipe(op = createGunzip());
 
 			op.on('data', chunk => data += chunk);
-			op.once('errror', reject);
+			op.once('error', reject);
 			op.once('end', () => {
 				if (res.statusCode === 500) return reject(new Error('Internal server error'));
 				if (res.statusCode === 403) return reject(new Error('Invalid key'));
