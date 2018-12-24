@@ -8,7 +8,6 @@ class PlayerServers extends Player {
 		this.banned = player.is_banned;
 		this.expires = player.expires;
 		this.lastActionTime = player.last_action_time;
-		console.log(player);
 		this.servers = player.servers
 			? player.servers
 				.filter(server => !hide || !(server.is_deleted || server.is_expired))

@@ -79,7 +79,6 @@ class SteamAPI {
 		let idMatch;
 		if ((idMatch = info.match(reProfileID)) !== null) {
 			const id = idMatch[1];
-			console.log(id);
 			if (this.resolveCache.has(id)) return Promise.resolve(this.resolveCache.get(id));
 
 			return this
