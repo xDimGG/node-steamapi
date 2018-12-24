@@ -24,8 +24,6 @@ module.exports = (url, { headers } = {}) => {
 			op.on('data', chunk => data += chunk);
 			op.once('error', reject);
 			op.once('end', () => {
-				if (res.statusCode === 500) return reject(new Error('Internal server error'));
-				if (res.statusCode === 403) return reject(new Error('Invalid key'));
 				if (res.statusCode === 400) return reject(new Error(reg.test(data) ? data.match(reg)[1] : data));
 				if (res.statusCode !== 200) return reject(new Error(res.statusMessage));
 				try {
