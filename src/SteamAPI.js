@@ -235,7 +235,7 @@ class SteamAPI {
 			.get(`/ISteamUserStats/GetPlayerAchievements/v1?steamid=${id}&appid=${app}&l=english`)
 			.then(json => json.playerstats.success
 				? new PlayerAchievements(json.playerstats)
-				: Promise.reject(new Error(json.response.message))
+				: Promise.reject(new Error(json.playerstats.message))
 			);
 	}
 
