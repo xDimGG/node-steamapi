@@ -15,6 +15,10 @@ const { version } = require('../package.json');
 const appReg = /^\d{1,6}$/;
 const idReg = /^\d{17}$/;
 
+const profileBaseReg = String.raw`(?:(?:(?:(?:https?)?:\/\/)?(?:www\.)?steamcommunity\.com)?)?\/?`;
+const profileURLReg = RegExp(String.raw`${profileBaseReg}(?:profiles\/)?(\d{17})`, 'i');
+const profileIDReg = RegExp(String.raw`${profileBaseReg}(?:id\/)?(\w{2,32})`, 'i');
+
 class SteamAPI {
 	/**
 	 * Sets Steam key for future use.
@@ -53,10 +57,6 @@ class SteamAPI {
 	 */
 	resolve(info) {
 		if (!info) return Promise.reject(new TypeError('Invalid/no app provided'));
-
-		const profileBaseReg = '(?:(?:(?:(?:https?)?:\\/\\/)?(?:www\\.)?steamcommunity\\.com)?)?\\/?';
-		const profileURLReg = RegExp(`${profileBaseReg}(?:profiles\\/)?(\\d{17})`, 'i');
-		const profileIDReg = RegExp(`${profileBaseReg}(?:id\\/)?(\\w{2,32})`, 'i');
 
 		if (profileURLReg.test(info))
 			return Promise.resolve(info.match(profileURLReg)[1]);
