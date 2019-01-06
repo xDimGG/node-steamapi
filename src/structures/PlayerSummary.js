@@ -20,6 +20,7 @@ class PlayerSummary extends Player {
 		this.commentPermission = player.commentpermission;
 		this.visibilityState = player.communityvisibilitystate;
 		this.gameID = player.gameid;
+		this.gameExtraInfo = player.gameextrainfo;
 		this.countryCode = player.loccountrycode;
 		this.stateCode = player.locstatecode;
 		this.cityID = player.loccityid;
