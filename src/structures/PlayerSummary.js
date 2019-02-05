@@ -13,7 +13,7 @@ class PlayerSummary extends Player {
 		this.created = player.timecreated;
 		this.lastLogOff = player.lastlogoff;
 		this.nickname = player.personaname;
-		this.realname = player.realname;
+		this.realName = player.realname;
 		this.primaryGroupID = player.primaryclanid;
 		this.personaState = player.personastate;
 		this.personaStateFlags = player.personastateflags;
