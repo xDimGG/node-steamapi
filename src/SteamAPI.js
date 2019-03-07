@@ -31,7 +31,6 @@ class SteamAPI {
 	 * @param {boolean} [options.disableWarnings=false] Whether to suppress warnings
 	 */
 	constructor(key, { enabled = true, expires = 86400000, disableWarnings = false } = {}) {
-		if (!key && !disableWarnings) this._warn('no key provided, some methods won\'t work, go get one from https://goo.gl/DfNy5s');
 		this.key = key;
 		this.baseAPI = 'https://api.steampowered.com';
 		this.baseStore = 'https://store.steampowered.com/api';
@@ -39,6 +38,7 @@ class SteamAPI {
 		this.options = { enabled, expires, disableWarnings };
 		this.resolveCache = new Map();
 		if (enabled) this.cache = new Map();
+		if (!key) this._warn('no key provided, some methods won\'t work, go get one from https://goo.gl/DfNy5s');
 	}
 
 	/**
