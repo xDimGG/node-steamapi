@@ -23,9 +23,9 @@ class PlayerSummary extends Player {
 		this.stateCode = player.locstatecode;
 		this.cityID = player.loccityid;
 		this.gameServerIP = player.gameserverip;
-        	this.gameServerSteamID = player.gameserversteamid;
-        	this.gameExtraInfo = player.gameextrainfo;
-        	this.gameID = player.gameid;
+		this.gameServerSteamID = player.gameserversteamid;
+		this.gameExtraInfo = player.gameextrainfo;
+		this.gameID = player.gameid;
 	}
 
 	/**
