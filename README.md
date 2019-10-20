@@ -5,7 +5,7 @@
 	</p>
 	<p>
 		<a href="https://www.npmjs.com/package/steamapi"><img src="https://img.shields.io/npm/v/steamapi.svg?maxAge=3600" alt="NPM" /></a>
-		<a href="https://dc.dim.codes"><img src="https://img.shields.io/discord/204352669731520512.svg?maxAge=3600" alt="Discord" /></a>
+		<a href="https://discord.dim.codes"><img src="https://img.shields.io/discord/204352669731520512.svg?maxAge=3600" alt="Discord" /></a>
 	</p>
 </div>
 
@@ -15,22 +15,22 @@
 npm i steamapi
 ```
 ### Getting an API Key
-Once signed into Steam, head over to http://steamcommunity.com/dev/apikey to make an API key
+Once signed into Steam, head over to http://steamcommunity.com/dev/apikey to generate an API key.
 ### Usage
-First, start by making a new SteamAPI "user"
+First, we start by making a SteamAPI "user".
 ```js
 const SteamAPI = require('steamapi');
 const steam = new SteamAPI('steam token');
 ```
-Now, you can call methods to the `steam` object
+Now, we can call methods on the `steam` object.
 
-For example, lets get the SteamID64 of a user. SteamAPI provides a `resolve` method which allows urls/id/profile
+For example, let's retrieve the SteamID64 of a user. SteamAPI provides a `resolve` method, which accepts URLs and IDs.
 ```js
 steam.resolve('https://steamcommunity.com/id/DimGG').then(id => {
 	console.log(id); // 76561198146931523
 });
 ```
-Now let's take that ID and get their profile
+Now let's take that ID, and fetch the user's profile.
 ```js
 steam.getUserSummary('76561198146931523').then(summary => {
 	console.log(summary);
