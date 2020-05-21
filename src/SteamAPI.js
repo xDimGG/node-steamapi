@@ -12,7 +12,7 @@ const Game = require('./structures/Game');
 const objectify = require('./utils/objectify');
 const fetch = require('./utils/fetch');
 const { version, name } = require('../package.json');
-const reApp = /^\d{1,6}$/;
+const reApp = /^\d{1,7}$/;
 const reID = /^\d{17}$/;
 
 const reProfileBase = String.raw`(?:(?:(?:(?:https?)?:\/\/)?(?:www\.)?steamcommunity\.com)?)?\/?`;
