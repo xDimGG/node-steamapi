@@ -13,6 +13,7 @@ const objectify = require('./utils/objectify');
 const fetch = require('./utils/fetch');
 const { version, name } = require('../package.json');
 const reApp = /^\d{1,6}$/;
+const reRegion = /us|es|de|fr|ru|nz|au|uk/;
 const reID = /^\d{17}$/;
 
 const reProfileBase = String.raw`(?:(?:(?:(?:https?)?:\/\/)?(?:www\.)?steamcommunity\.com)?)?\/?`;
@@ -144,13 +145,15 @@ class SteamAPI {
 	 * <warn>Requests for this endpoint are limited to 200 every 5 minutes</warn>
 	 * @param {string} app App ID
 	 * @param {boolean} [force=false] Overwrite cache
+   * @param {string} region Store region
 	 * @returns {Promise<Object>} App details for ID
 	 */
-	getGameDetails(app, force = false) {
-		if (!reApp.test(app)) return Promise.reject(TypeError('Invalid/no app provided'));
+	getGameDetails(app, force = false, region = 'es') {
+    if (!reApp.test(app)) return Promise.reject(TypeError('Invalid/no app provided'));
+    if (!reRegion.test(region)) return Promise.reject(TypeError('Invalid region provided'));
 
 		const request = () => this
-			.get(`/appdetails?appids=${app}`, this.baseStore)
+			.get(`/appdetails?appids=${app}&cc=${region}`, this.baseStore)
 			.then(json => json[app].success
 				? json[app].data
 				: Promise.reject(new Error('No app found'))
