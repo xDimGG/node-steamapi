@@ -12,7 +12,7 @@ const Game = require('./structures/Game');
 const objectify = require('./utils/objectify');
 const fetch = require('./utils/fetch');
 const { version, name } = require('../package.json');
-const reApp = /^\d{1,6}$/;
+const reApp = /^\d{1,7}$/;
 const reRegion = /us|es|de|fr|ru|nz|au|uk/;
 const reID = /^\d{17}$/;
 
