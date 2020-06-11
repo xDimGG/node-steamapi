@@ -13,7 +13,7 @@ const objectify = require('./utils/objectify');
 const fetch = require('./utils/fetch');
 const { version, name } = require('../package.json');
 const reApp = /^\d{1,7}$/;
-const reRegion = /us|es|de|fr|ru|nz|au|uk/;
+const reRegion = /^us|es|de|fr|ru|nz|au|uk$/i;
 const reID = /^\d{17}$/;
 
 const reProfileBase = String.raw`(?:(?:(?:(?:https?)?:\/\/)?(?:www\.)?steamcommunity\.com)?)?\/?`;
@@ -158,12 +158,13 @@ class SteamAPI {
 				? json[app].data
 				: Promise.reject(new Error('No app found'))
 			);
+		const key = `${app}-${region.toLowerCase()}`;
 
-		if (!force && this.options.enabled && this.cache.has(app) && this.cache.get(app)[0] > Date.now())
-			return Promise.resolve(this.cache.get(app)[1]);
+		if (!force && this.options.enabled && this.cache.has(key) && this.cache.get(key)[0] > Date.now())
+			return Promise.resolve(this.cache.get(key)[1]);
 
-		if (this.options.enabled && (!this.cache.has(app) || this.cache.get(app)[0] <= Date.now()))
-			return request().then(json => this.cache.set(app, [Date.now() + this.options.expires, json]) && json);
+		if (this.options.enabled && (!this.cache.has(key) || this.cache.get(key)[0] <= Date.now()))
+			return request().then(json => this.cache.set(key, [Date.now() + this.options.expires, json]) && json);
 
 		return request();
 	}
