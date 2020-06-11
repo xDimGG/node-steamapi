@@ -19,7 +19,7 @@ steam.resolve('id/DimGG/').then(async id => {
 	console.log('getGameAchievements');
 	await steam.getGameAchievements(730).then(inspect);
 	console.log('getGameDetails');
-	await steam.getGameDetails(730).then(inspect);
+  await steam.getGameDetails(730).then(inspect);
 	console.log('getGameNews');
 	await steam.getGameNews(730).then(inspect);
 	console.log('getGamePlayers');
