@@ -3,10 +3,10 @@
 	"name": "steamapi",
 	"description": "A nice Steam API wrapper.",
 	"main": "index.js",
-	"version": "2.0.7",
+	"version": "2.1.0",
 	"license": "MIT",
 	"eslintConfig": {
-		"extends": "eslint-config-lloti"
+		"extends": "eslint-config-dim"
 	},
 	"keywords": [
 		"steam",
@@ -24,6 +24,6 @@
 	},
 	"homepage": "https://github.com/xDimGG/node-steamapi#readme",
 	"devDependencies": {
-		"eslint-config-lloti": "github:xDimGG/eslint-config-lloti"
+		"eslint-config-dim": "github:xDimGG/eslint-config-dim"
 	}
 }
