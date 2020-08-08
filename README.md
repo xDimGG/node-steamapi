@@ -163,7 +163,7 @@ Get achievements for app id.
 
 <a name="SteamAPI+getGameDetails"></a>
 
-### steamAPI.getGameDetails(app, [force]) ⇒ <code>Promise.&lt;Object&gt;</code>
+### steamAPI.getGameDetails(app, [force], [region]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Get details for app id.
 <warn>Requests for this endpoint are limited to 200 every 5 minutes</warn>
 
@@ -174,6 +174,7 @@ Get details for app id.
 | --- | --- | --- | --- |
 | app | <code>string</code> |  | App ID |
 | [force] | <code>boolean</code> | <code>false</code> | Overwrite cache |
+| [region] | <code>string</code> | <code>"us"</code> | To get currency |
 
 <a name="SteamAPI+getGameNews"></a>
 
