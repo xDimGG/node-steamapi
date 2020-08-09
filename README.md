@@ -70,7 +70,7 @@ steam.getUserSummary('76561198146931523').then(summary => {
 		- [steamAPI.getFeaturedCategories() ⇒ <code>Promise.&lt;Array.&lt;Object&gt;&gt;</code>](#steamapigetfeaturedcategories-%E2%87%92-codepromiseltarrayltobjectgtgtcode)
 		- [steamAPI.getFeaturedGames() ⇒ <code>Promise.&lt;Object&gt;</code>](#steamapigetfeaturedgames-%E2%87%92-codepromiseltobjectgtcode)
 		- [steamAPI.getGameAchievements(app) ⇒ <code>Promise.&lt;Object&gt;</code>](#steamapigetgameachievementsapp-%E2%87%92-codepromiseltobjectgtcode)
-		- [steamAPI.getGameDetails(app, [force]) ⇒ <code>Promise.&lt;Object&gt;</code>](#steamapigetgamedetailsapp-force-%E2%87%92-codepromiseltobjectgtcode)
+		- [steamAPI.getGameDetails(app, [force], [region]) ⇒ <code>Promise.&lt;Object&gt;</code>](#steamapigetgamedetailsapp-force-%E2%87%92-codepromiseltobjectgtcode)
 		- [steamAPI.getGameNews(app) ⇒ <code>Promise.&lt;Array.&lt;Object&gt;&gt;</code>](#steamapigetgamenewsapp-%E2%87%92-codepromiseltarrayltobjectgtgtcode)
 		- [steamAPI.getGamePlayers(app) ⇒ <code>Promise.&lt;number&gt;</code>](#steamapigetgameplayersapp-%E2%87%92-codepromiseltnumbergtcode)
 		- [steamAPI.getGameSchema(app) ⇒ <code>Promise.&lt;Object&gt;</code>](#steamapigetgameschemaapp-%E2%87%92-codepromiseltobjectgtcode)
