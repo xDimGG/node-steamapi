@@ -18,7 +18,7 @@ const reID = /^\d{17}$/;
 
 const reProfileBase = String.raw`(?:(?:(?:(?:https?)?:\/\/)?(?:www\.)?steamcommunity\.com)?)?\/?`;
 const reProfileURL = RegExp(String.raw`${reProfileBase}(?:profiles\/)?(\d{17})`, 'i');
-const reProfileID = RegExp(String.raw`${reProfileBase}(?:id\/)?([a-zA-Z0-9_-]{2,32})`, 'i');
+const reProfileID = RegExp(String.raw`${reProfileBase}(?:id\/)?([a-z0-9_-]{2,32})`, 'i');
 
 const STATUS_SUCCESS = 1;
 
