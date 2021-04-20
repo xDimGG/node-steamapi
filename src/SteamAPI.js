@@ -327,7 +327,7 @@ class SteamAPI {
 
 		return this
 			.get(`/IPlayerService/GetOwnedGames/v1?steamid=${id}&include_appinfo=1`)
-			.then(json => json.response.games.map(game => new Game(game)));
+			.then(json => json.response.games ? json.response.games.map(game => new Game(game)) : Promise.reject(new Error('No games found')));
 	}
 
 	/**
