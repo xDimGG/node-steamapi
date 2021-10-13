@@ -8,7 +8,7 @@ module.exports = (url, { headers } = {}) => {
 	const fetch = url.startsWith('https') ? https.get : http.get;
 	const options = Object.assign(
 		parse(url),
-		{ headers: Object.assign({ 'Accept-Encoding': 'gzip, deflate' }, headers) },
+		{ headers: Object.assign({ 'Accept-Encoding': 'gzip, deflate' }, headers) }
 	);
 
 	return new Promise((resolve, reject) => {
