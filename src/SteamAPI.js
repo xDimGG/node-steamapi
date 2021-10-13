@@ -79,32 +79,34 @@ class SteamAPI {
 		if (!info) return Promise.reject(new TypeError('Invalid/no app provided'));
 
 		// community id match, ex. 76561198378422474
-		let communityIDMatch;
-		if ((communityIDMatch = info.match(reCommunityID)) !== null)
+		const communityIDMatch = info.match(reCommunityID);
+		if (communityIDMatch !== null)
 			return Promise.resolve(communityIDMatch[1]);
 
 		// url, https://steamcommunity.com/profiles/76561198378422474
-		let urlMatch;
-		if ((urlMatch = info.match(reProfileURL)) !== null)
+		const urlMatch = info.match(reProfileURL);
+		if (urlMatch !== null)
 			return Promise.resolve(urlMatch[1]);
-		
+
 		// Steam 2: STEAM_0:0:209078373
-		let steamID2Match;
-		if ((steamID2Match = info.match(reSteamID2)) !== null) {
-			let sid = new SteamID(steamID2Match[1]);
+		const steamID2Match = info.match(reSteamID2);
+		if (steamID2Match !== null) {
+			const sid = new SteamID(steamID2Match[1]);
+
 			return Promise.resolve(sid.getSteamID64());
 		}
 
 		// Steam 3: [U:1:418156746]
-		let steamID3Match;
-		if ((steamID3Match = info.match(reSteamID3)) !== null) {
-			let sid = new SteamID(steamID3Match[1]);
+		const steamID3Match = info.match(reSteamID3);
+		if (steamID3Match !== null) {
+			const sid = new SteamID(steamID3Match[1]);
+
 			return Promise.resolve(sid.getSteamID64());
 		}
 
 		// vanity id, https://steamcommunity.com/id/xDim
-		let idMatch;
-		if ((idMatch = info.match(reProfileID)) !== null) {
+		const idMatch = info.match(reProfileID);
+		if (idMatch !== null) {
 			const id = idMatch[1];
 			if (this.resolveCache.has(id)) return Promise.resolve(this.resolveCache.get(id));
 
