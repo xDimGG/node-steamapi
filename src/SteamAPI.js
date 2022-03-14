@@ -348,13 +348,18 @@ class SteamAPI {
 	/**
 	 * Get users owned games.
 	 * @param {string} id User ID
+	 * @param {boolean} [include_appinfo=true] Include App Info
+	 * @param {boolean} [include_played_free_games=false] Include Played Free Games
 	 * @returns {Promise<Game[]>} Owned games
 	 */
-	getUserOwnedGames(id) {
+	getUserOwnedGames(id, include_appinfo = true, include_played_free_games = false) {
 		if (!reID.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
+		if (!(typeof(include_appinfo)==='boolean')) return Promise.reject(new TypeError('Invalid include_appinfo provided'));
+		if (!(typeof(include_played_free_games)==='boolean')) return Promise.reject(new TypeError('Invalid include_played_free_games provided'));
+
 
 		return this
-			.get(`/IPlayerService/GetOwnedGames/v1?steamid=${id}&include_appinfo=1`)
+			.get(`/IPlayerService/GetOwnedGames/v1?steamid=${id}&include_appinfo=${include_appinfo?1:0}&include_played_free_games=${include_played_free_games?1:0}`)
 			.then(json => json.response.games ? json.response.games.map(game => new Game(game)) : Promise.reject(new Error('No games found')));
 	}
 
