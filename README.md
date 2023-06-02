@@ -227,6 +227,8 @@ Get every server associated with host.
 
 ### steamAPI.getUserAchievements(id, app) ⇒ <code>Promise.&lt;PlayerAchievements&gt;</code>
 Get users achievements for app id.
+Note that 'Game details' should be set to 'Public' in your Steam Profile (https://steamcommunity.com/id/<username>/edit/settings) in order for this to work.
+Otherwise you'll get '403 Forbidden' response.
 
 **Kind**: instance method of [<code>SteamAPI</code>](#SteamAPI)  
 **Returns**: <code>Promise.&lt;PlayerAchievements&gt;</code> - Achievements  
