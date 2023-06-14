@@ -14,8 +14,8 @@ const Game = require('./structures/Game');
 const objectify = require('./utils/objectify');
 const fetch = require('./utils/fetch');
 const { version, name } = require('../package.json');
+const regions = ['us', 'ca', 'cc', 'es', 'de', 'fr', 'ru', 'nz', 'au', 'uk'];
 const reApp = /^\d{1,7}$/;
-const reRegion = /^us|es|de|fr|ru|nz|au|uk$/i;
 const reID = /^\d{17}$/;
 
 const reProfileBase = String.raw`(?:(?:(?:(?:https?)?:\/\/)?(?:www\.)?steamcommunity\.com)?)?\/?`;
@@ -178,7 +178,7 @@ class SteamAPI {
 	 */
 	getGameDetails(app, force = false, region = 'us') {
 		if (!reApp.test(app)) return Promise.reject(TypeError('Invalid/no app provided'));
-		if (!reRegion.test(region)) return Promise.reject(TypeError('Invalid region provided'));
+		if (!regions.includes(region)) return Promise.reject(TypeError('Invalid region provided'));
 
 		const request = () => this
 			.get(`/appdetails?appids=${app}&cc=${region}`, this.baseStore)
