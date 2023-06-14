@@ -362,13 +362,14 @@ class SteamAPI {
 	/**
 	 * Get users recent games.
 	 * @param {string} id User ID
+	 * @param {number} [count] Optionally limit the number of games to fetch to some number
 	 * @returns {Promise<RecentGame[]>} Recent games
 	 */
-	getUserRecentGames(id) {
+	getUserRecentGames(id, count) {
 		if (!reID.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
 
 		return this
-			.get(`/IPlayerService/GetRecentlyPlayedGames/v1?steamid=${id}`)
+			.get(`/IPlayerService/GetRecentlyPlayedGames/v1?steamid=${id}&count=${count}`)
 			.then(json => json.response.total_count ? json.response.games.map(game => new RecentGame(game)) : []);
 	}
 
