@@ -369,7 +369,7 @@ class SteamAPI {
 		if (!reID.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
 
 		return this
-			.get(`/IPlayerService/GetRecentlyPlayedGames/v1?steamid=${id}&count=${count}`)
+			.get(`/IPlayerService/GetRecentlyPlayedGames/v1?steamid=${id}${count ? `&count=${count}` : ''}`)
 			.then(json => json.response.total_count ? json.response.games.map(game => new RecentGame(game)) : []);
 	}
 
