@@ -61,31 +61,30 @@ steam.getUserSummary('76561198146931523').then(summary => {
 ## SteamAPI
 **Kind**: global class  
 
-- [Documentation](#documentation)
-	- [SteamAPI](#steamapi-1)
-		- [new SteamAPI(key, [options])](#new-steamapikey-options)
-		- [steamAPI.get(path, [base], [key]) ⇒ <code>Promise.&lt;Object&gt;</code>](#steamapigetpath-base-key-%E2%87%92-codepromiseltobjectgtcode)
-		- [steamAPI.resolve(info) ⇒ <code>Promise.&lt;string&gt;</code>](#steamapiresolveinfo-%E2%87%92-codepromiseltstringgtcode)
-		- [steamAPI.getAppList() ⇒ <code>Promise.&lt;Array.&lt;App&gt;&gt;</code>](#steamapigetapplist-%E2%87%92-codepromiseltarrayltappgtgtcode)
-		- [steamAPI.getFeaturedCategories() ⇒ <code>Promise.&lt;Array.&lt;Object&gt;&gt;</code>](#steamapigetfeaturedcategories-%E2%87%92-codepromiseltarrayltobjectgtgtcode)
-		- [steamAPI.getFeaturedGames() ⇒ <code>Promise.&lt;Object&gt;</code>](#steamapigetfeaturedgames-%E2%87%92-codepromiseltobjectgtcode)
-		- [steamAPI.getGameAchievements(app) ⇒ <code>Promise.&lt;Object&gt;</code>](#steamapigetgameachievementsapp-%E2%87%92-codepromiseltobjectgtcode)
-		- [steamAPI.getGameDetails(app, [force]) ⇒ <code>Promise.&lt;Object&gt;</code>](#steamapigetgamedetailsapp-force-%E2%87%92-codepromiseltobjectgtcode)
-		- [steamAPI.getGameNews(app) ⇒ <code>Promise.&lt;Array.&lt;Object&gt;&gt;</code>](#steamapigetgamenewsapp-%E2%87%92-codepromiseltarrayltobjectgtgtcode)
-		- [steamAPI.getGamePlayers(app) ⇒ <code>Promise.&lt;number&gt;</code>](#steamapigetgameplayersapp-%E2%87%92-codepromiseltnumbergtcode)
-		- [steamAPI.getGameSchema(app) ⇒ <code>Promise.&lt;Object&gt;</code>](#steamapigetgameschemaapp-%E2%87%92-codepromiseltobjectgtcode)
-		- [steamAPI.getServers(host) ⇒ <code>Promise.&lt;Array.&lt;Server&gt;&gt;</code>](#steamapigetservershost-%E2%87%92-codepromiseltarrayltservergtgtcode)
-		- [steamAPI.getUserAchievements(id, app) ⇒ <code>Promise.&lt;PlayerAchievements&gt;</code>](#steamapigetuserachievementsid-app-%E2%87%92-codepromiseltplayerachievementsgtcode)
-		- [steamAPI.getUserBadges(id) ⇒ <code>Promise.&lt;PlayerBadges&gt;</code>](#steamapigetuserbadgesid-%E2%87%92-codepromiseltplayerbadgesgtcode)
-		- [steamAPI.getUserBans(id) ⇒ <code>Promise.&lt;(PlayerBans\|Array.&lt;PlayerBans&gt;)&gt;</code>](#steamapigetuserbansid-%E2%87%92-codepromiseltplayerbansarrayltplayerbansgtgtcode)
-		- [steamAPI.getUserFriends(id) ⇒ <code>Promise.&lt;Array.&lt;Friend&gt;&gt;</code>](#steamapigetuserfriendsid-%E2%87%92-codepromiseltarrayltfriendgtgtcode)
-		- [steamAPI.getUserGroups(id) ⇒ <code>Promise.&lt;Array.&lt;string&gt;&gt;</code>](#steamapigetusergroupsid-%E2%87%92-codepromiseltarrayltstringgtgtcode)
-		- [steamAPI.getUserLevel(id) ⇒ <code>Promise.&lt;number&gt;</code>](#steamapigetuserlevelid-%E2%87%92-codepromiseltnumbergtcode)
-		- [steamAPI.getUserOwnedGames(id) ⇒ <code>Promise.&lt;Array.&lt;Game&gt;&gt;</code>](#steamapigetuserownedgamesid-%E2%87%92-codepromiseltarrayltgamegtgtcode)
-		- [steamAPI.getUserRecentGames(id) ⇒ <code>Promise.&lt;Array.&lt;RecentGame&gt;&gt;</code>](#steamapigetuserrecentgamesid-%E2%87%92-codepromiseltarrayltrecentgamegtgtcode)
-		- [steamAPI.getUserServers([hide], [key]) ⇒ <code>Promise.&lt;PlayerServers&gt;</code>](#steamapigetuserservershide-key-%E2%87%92-codepromiseltplayerserversgtcode)
-		- [steamAPI.getUserStats(id, app) ⇒ <code>Promise.&lt;PlayerStats&gt;</code>](#steamapigetuserstatsid-app-%E2%87%92-codepromiseltplayerstatsgtcode)
-		- [steamAPI.getUserSummary(id) ⇒ <code>Promise.&lt;PlayerSummary&gt;</code>](#steamapigetusersummaryid-%E2%87%92-codepromiseltplayersummarygtcode)
+* [SteamAPI](#SteamAPI)
+    * [new SteamAPI(key, [options])](#new_SteamAPI_new)
+    * [.get(path, [base], [key])](#SteamAPI+get) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.resolve(info)](#SteamAPI+resolve) ⇒ <code>Promise.&lt;string&gt;</code>
+    * [.getAppList()](#SteamAPI+getAppList) ⇒ <code>Promise.&lt;Array.&lt;App&gt;&gt;</code>
+    * [.getFeaturedCategories()](#SteamAPI+getFeaturedCategories) ⇒ <code>Promise.&lt;Array.&lt;Object&gt;&gt;</code>
+    * [.getFeaturedGames()](#SteamAPI+getFeaturedGames) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.getGameAchievements(app)](#SteamAPI+getGameAchievements) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.getGameDetails(app, [force], [region])](#SteamAPI+getGameDetails) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.getGameNews(app)](#SteamAPI+getGameNews) ⇒ <code>Promise.&lt;Array.&lt;Object&gt;&gt;</code>
+    * [.getGamePlayers(app)](#SteamAPI+getGamePlayers) ⇒ <code>Promise.&lt;number&gt;</code>
+    * [.getGameSchema(app)](#SteamAPI+getGameSchema) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.getServers(host)](#SteamAPI+getServers) ⇒ <code>Promise.&lt;Array.&lt;Server&gt;&gt;</code>
+    * [.getUserAchievements(id, app)](#SteamAPI+getUserAchievements) ⇒ <code>Promise.&lt;PlayerAchievements&gt;</code>
+    * [.getUserBadges(id)](#SteamAPI+getUserBadges) ⇒ <code>Promise.&lt;PlayerBadges&gt;</code>
+    * [.getUserBans(id)](#SteamAPI+getUserBans) ⇒ <code>Promise.&lt;(PlayerBans\|Array.&lt;PlayerBans&gt;)&gt;</code>
+    * [.getUserFriends(id)](#SteamAPI+getUserFriends) ⇒ <code>Promise.&lt;Array.&lt;Friend&gt;&gt;</code>
+    * [.getUserGroups(id)](#SteamAPI+getUserGroups) ⇒ <code>Promise.&lt;Array.&lt;string&gt;&gt;</code>
+    * [.getUserLevel(id)](#SteamAPI+getUserLevel) ⇒ <code>Promise.&lt;number&gt;</code>
+    * [.getUserOwnedGames(id, [includeF2P])](#SteamAPI+getUserOwnedGames) ⇒ <code>Promise.&lt;Array.&lt;Game&gt;&gt;</code>
+    * [.getUserRecentGames(id, [count])](#SteamAPI+getUserRecentGames) ⇒ <code>Promise.&lt;Array.&lt;RecentGame&gt;&gt;</code>
+    * [.getUserServers([hide], [key])](#SteamAPI+getUserServers) ⇒ <code>Promise.&lt;PlayerServers&gt;</code>
+    * [.getUserStats(id, app)](#SteamAPI+getUserStats) ⇒ <code>Promise.&lt;PlayerStats&gt;</code>
+    * [.getUserSummary(id)](#SteamAPI+getUserSummary) ⇒ <code>Promise.&lt;PlayerSummary&gt;</code>
 
 <a name="new_SteamAPI_new"></a>
 
@@ -163,7 +162,7 @@ Get achievements for app id.
 
 <a name="SteamAPI+getGameDetails"></a>
 
-### steamAPI.getGameDetails(app, [force]) ⇒ <code>Promise.&lt;Object&gt;</code>
+### steamAPI.getGameDetails(app, [force], [region]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Get details for app id.
 <warn>Requests for this endpoint are limited to 200 every 5 minutes</warn>
 
@@ -174,6 +173,7 @@ Get details for app id.
 | --- | --- | --- | --- |
 | app | <code>string</code> |  | App ID |
 | [force] | <code>boolean</code> | <code>false</code> | Overwrite cache |
+| [region] | <code>string</code> | <code>&quot;us&quot;</code> | Store region |
 
 <a name="SteamAPI+getGameNews"></a>
 
@@ -227,8 +227,6 @@ Get every server associated with host.
 
 ### steamAPI.getUserAchievements(id, app) ⇒ <code>Promise.&lt;PlayerAchievements&gt;</code>
 Get users achievements for app id.
-Note that 'Game details' should be set to 'Public' in your Steam Profile (https://steamcommunity.com/id/<username>/edit/settings) in order for this to work.
-Otherwise you'll get '403 Forbidden' response.
 
 **Kind**: instance method of [<code>SteamAPI</code>](#SteamAPI)  
 **Returns**: <code>Promise.&lt;PlayerAchievements&gt;</code> - Achievements  
@@ -300,19 +298,20 @@ Get users level.
 
 <a name="SteamAPI+getUserOwnedGames"></a>
 
-### steamAPI.getUserOwnedGames(id) ⇒ <code>Promise.&lt;Array.&lt;Game&gt;&gt;</code>
+### steamAPI.getUserOwnedGames(id, [includeF2P]) ⇒ <code>Promise.&lt;Array.&lt;Game&gt;&gt;</code>
 Get users owned games.
 
 **Kind**: instance method of [<code>SteamAPI</code>](#SteamAPI)  
 **Returns**: <code>Promise.&lt;Array.&lt;Game&gt;&gt;</code> - Owned games  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| id | <code>string</code> | User ID |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | <code>string</code> |  | User ID |
+| [includeF2P] | <code>boolean</code> | <code>true</code> | Whether to include user's free-to-play games or not |
 
 <a name="SteamAPI+getUserRecentGames"></a>
 
-### steamAPI.getUserRecentGames(id) ⇒ <code>Promise.&lt;Array.&lt;RecentGame&gt;&gt;</code>
+### steamAPI.getUserRecentGames(id, [count]) ⇒ <code>Promise.&lt;Array.&lt;RecentGame&gt;&gt;</code>
 Get users recent games.
 
 **Kind**: instance method of [<code>SteamAPI</code>](#SteamAPI)  
@@ -321,6 +320,7 @@ Get users recent games.
 | Param | Type | Description |
 | --- | --- | --- |
 | id | <code>string</code> | User ID |
+| [count] | <code>number</code> | Optionally limit the number of games to fetch to some number |
 
 <a name="SteamAPI+getUserServers"></a>
 
