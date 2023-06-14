@@ -27,6 +27,7 @@
 		"eslint-config-dim": "github:xDimGG/eslint-config-dim"
 	},
 	"dependencies": {
+		"node-fetch": "^2.6.11",
 		"steamid": "^2.0.0"
 	}
 }
