@@ -348,13 +348,14 @@ class SteamAPI {
 	/**
 	 * Get users owned games.
 	 * @param {string} id User ID
+	 * @param {boolean} [includeF2P=true] Whether to include user's free-to-play games or not
 	 * @returns {Promise<Game[]>} Owned games
 	 */
-	getUserOwnedGames(id) {
+	getUserOwnedGames(id, includeF2P = true) {
 		if (!reID.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
 
 		return this
-			.get(`/IPlayerService/GetOwnedGames/v1?steamid=${id}&include_appinfo=1`)
+			.get(`/IPlayerService/GetOwnedGames/v1?steamid=${id}${includeF2P ? '&include_played_free_games=1' : ''}&include_appinfo=1`)
 			.then(json => json.response.games ? json.response.games.map(game => new Game(game)) : Promise.reject(new Error('No games found')));
 	}
 
