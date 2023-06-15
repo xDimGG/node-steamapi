@@ -367,6 +367,8 @@ class SteamAPI {
 	 */
 	getUserRecentGames(id, count) {
 		if (!reID.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
+		if (count !== undefined && count !== null && (!Number.isInteger(count) || count < 1))
+			return Promise.reject(new TypeError('Count must be a positive integer'));
 
 		return this
 			.get(`/IPlayerService/GetRecentlyPlayedGames/v1?steamid=${id}${count ? `&count=${count}` : ''}`)
