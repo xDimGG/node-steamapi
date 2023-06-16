@@ -5,7 +5,7 @@
 	</p>
 	<p>
 		<a href="https://www.npmjs.com/package/steamapi"><img src="https://img.shields.io/npm/v/steamapi.svg?maxAge=3600" alt="NPM" /></a>
-		<a href="https://discord.gg/6d698nhnKx"><img src="https://img.shields.io/discord/204352669731520512.svg?maxAge=3600" alt="Discord" /></a>
+		<a href="https://discord.gg/6d698nhnKx"><img src="https://img.shields.io/discord/1119337655780520057?maxAge=3600" alt="Discord" /></a>
 	</p>
 </div>
 
