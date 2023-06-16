@@ -6,7 +6,18 @@
 	"version": "2.4.0",
 	"license": "MIT",
 	"eslintConfig": {
-		"extends": "eslint-config-dim"
+		"extends": "eslint-config-dim",
+		"env": {
+			"node": true,
+      "browser": true
+		},
+		"parserOptions": {
+			"ecmaVersion": "latest"
+		},
+		"rules": {
+			"eol-last": ["error", "always"],
+			"no-shadow": "off"
+		}
 	},
 	"keywords": [
 		"steam",

@@ -114,7 +114,7 @@ class SteamAPI {
 				.get(`/ISteamUser/ResolveVanityURL/v1?vanityurl=${id}`)
 				.then(json => json.response.success === STATUS_SUCCESS
 					? this.resolveCache.set(id, json.response.steamid).get(id)
-					: Promise.reject(new TypeError(json.response.message))
+					: Promise.reject(new TypeError(json.response.message)),
 				);
 		}
 
@@ -184,7 +184,7 @@ class SteamAPI {
 			.get(`/appdetails?appids=${app}&cc=${region}`, this.baseStore)
 			.then(json => json[app].success
 				? json[app].data
-				: Promise.reject(new Error('No app found'))
+				: Promise.reject(new Error('No app found')),
 			);
 		const key = `${app}-${region.toLowerCase()}`;
 
@@ -249,7 +249,7 @@ class SteamAPI {
 			.get(`/ISteamApps/GetServersAtAddress/v1?addr=${host}`)
 			.then(json => json.response.success
 				? json.response.servers.map(server => new Server(server))
-				: Promise.reject(new Error(json.response.message))
+				: Promise.reject(new Error(json.response.message)),
 			);
 	}
 
@@ -267,7 +267,7 @@ class SteamAPI {
 			.get(`/ISteamUserStats/GetPlayerAchievements/v1?steamid=${id}&appid=${app}&l=english`)
 			.then(json => json.playerstats.success
 				? new PlayerAchievements(json.playerstats)
-				: Promise.reject(new Error(json.playerstats.message))
+				: Promise.reject(new Error(json.playerstats.message)),
 			);
 	}
 
@@ -299,7 +299,7 @@ class SteamAPI {
 				? arr
 					? json.players.map(player => new PlayerBans(player))
 					: new PlayerBans(json.players[0])
-				: Promise.reject(new Error('No players found'))
+				: Promise.reject(new Error('No players found')),
 			);
 	}
 
@@ -328,7 +328,7 @@ class SteamAPI {
 			.get(`/ISteamUser/GetUserGroupList/v1?steamid=${id}`)
 			.then(json => json.response.success
 				? json.response.groups.map(group => group.gid)
-				: Promise.reject(new Error(json.response.message))
+				: Promise.reject(new Error(json.response.message)),
 			);
 	}
 
@@ -417,7 +417,7 @@ class SteamAPI {
 				? arr
 					? json.response.players.map(player => new PlayerSummary(player))
 					: new PlayerSummary(json.response.players[0])
-				: Promise.reject(new Error('No players found'))
+				: Promise.reject(new Error('No players found')),
 			);
 	}
 }
