@@ -6,7 +6,7 @@ const PlayerServers = require('./structures/PlayerServers');
 const PlayerBadges = require('./structures/PlayerBadges');
 const PlayerStats = require('./structures/PlayerStats');
 const PlayerBans = require('./structures/PlayerBans');
-const RecentGame = require('./structures/RecentGame');
+const OwnedGame = require('./structures/OwnedGame');
 const Friend = require('./structures/Friend');
 const Server = require('./structures/Server');
 const Game = require('./structures/Game');
@@ -285,7 +285,7 @@ class SteamAPI {
 	}
 
 	/**
-	 * Get users bans.
+	 * Get users bans. If an array of IDs is passed in, this returns an array of PlayerBans
 	 * @param {string|string[]} id User ID(s)
 	 * @returns {Promise<PlayerBans|PlayerBans[]>} Ban info
 	 */
@@ -349,21 +349,21 @@ class SteamAPI {
 	 * Get users owned games.
 	 * @param {string} id User ID
 	 * @param {boolean} [includeF2P=true] Whether to include user's free-to-play games or not
-	 * @returns {Promise<Game[]>} Owned games
+	 * @returns {Promise<OwnedGame[]>} Owned games
 	 */
 	getUserOwnedGames(id, includeF2P = true) {
 		if (!reID.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
 
 		return this
 			.get(`/IPlayerService/GetOwnedGames/v1?steamid=${id}${includeF2P ? '&include_played_free_games=1' : ''}&include_appinfo=1`)
-			.then(json => json.response.games ? json.response.games.map(game => new Game(game)) : Promise.reject(new Error('No games found')));
+			.then(json => json.response.games ? json.response.games.map(game => new OwnedGame(game)) : Promise.reject(new Error('No games found')));
 	}
 
 	/**
 	 * Get users recent games.
 	 * @param {string} id User ID
 	 * @param {number} [count] Optionally limit the number of games to fetch to some number
-	 * @returns {Promise<RecentGame[]>} Recent games
+	 * @returns {Promise<Game[]>} Recent games
 	 */
 	getUserRecentGames(id, count) {
 		if (!reID.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
@@ -372,7 +372,7 @@ class SteamAPI {
 
 		return this
 			.get(`/IPlayerService/GetRecentlyPlayedGames/v1?steamid=${id}${count ? `&count=${count}` : ''}`)
-			.then(json => json.response.total_count ? json.response.games.map(game => new RecentGame(game)) : []);
+			.then(json => json.response.total_count ? json.response.games.map(game => new Game(game)) : []);
 	}
 
 	/**
@@ -403,9 +403,9 @@ class SteamAPI {
 	}
 
 	/**
-	 * Get users summary.
-	 * @param {string} id User ID
-	 * @returns {Promise<PlayerSummary>} Summary
+	 * Get users summary. If an array of IDs is passed in, this returns an array of PlayerSummary
+	 * @param {string|string[]} id User ID(s)
+	 * @returns {Promise<PlayerSummary|PlayerSummary[]>} Summary
 	 */
 	getUserSummary(id) {
 		const arr = Array.isArray(id);

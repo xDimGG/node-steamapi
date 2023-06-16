@@ -80,11 +80,11 @@ steam.getUserSummary('76561198146931523').then(summary => {
     * [.getUserFriends(id)](#SteamAPI+getUserFriends) ⇒ <code>Promise.&lt;Array.&lt;Friend&gt;&gt;</code>
     * [.getUserGroups(id)](#SteamAPI+getUserGroups) ⇒ <code>Promise.&lt;Array.&lt;string&gt;&gt;</code>
     * [.getUserLevel(id)](#SteamAPI+getUserLevel) ⇒ <code>Promise.&lt;number&gt;</code>
-    * [.getUserOwnedGames(id, [includeF2P])](#SteamAPI+getUserOwnedGames) ⇒ <code>Promise.&lt;Array.&lt;Game&gt;&gt;</code>
-    * [.getUserRecentGames(id, [count])](#SteamAPI+getUserRecentGames) ⇒ <code>Promise.&lt;Array.&lt;RecentGame&gt;&gt;</code>
+    * [.getUserOwnedGames(id, [includeF2P])](#SteamAPI+getUserOwnedGames) ⇒ <code>Promise.&lt;Array.&lt;OwnedGame&gt;&gt;</code>
+    * [.getUserRecentGames(id, [count])](#SteamAPI+getUserRecentGames) ⇒ <code>Promise.&lt;Array.&lt;Game&gt;&gt;</code>
     * [.getUserServers([hide], [key])](#SteamAPI+getUserServers) ⇒ <code>Promise.&lt;PlayerServers&gt;</code>
     * [.getUserStats(id, app)](#SteamAPI+getUserStats) ⇒ <code>Promise.&lt;PlayerStats&gt;</code>
-    * [.getUserSummary(id)](#SteamAPI+getUserSummary) ⇒ <code>Promise.&lt;PlayerSummary&gt;</code>
+    * [.getUserSummary(id)](#SteamAPI+getUserSummary) ⇒ <code>Promise.&lt;(PlayerSummary\|Array.&lt;PlayerSummary&gt;)&gt;</code>
 
 <a name="new_SteamAPI_new"></a>
 
@@ -251,7 +251,7 @@ Get users badges.
 <a name="SteamAPI+getUserBans"></a>
 
 ### steamAPI.getUserBans(id) ⇒ <code>Promise.&lt;(PlayerBans\|Array.&lt;PlayerBans&gt;)&gt;</code>
-Get users bans.
+Get users bans. If an array of IDs is passed in, this returns an array of PlayerBans
 
 **Kind**: instance method of [<code>SteamAPI</code>](#SteamAPI)  
 **Returns**: <code>Promise.&lt;(PlayerBans\|Array.&lt;PlayerBans&gt;)&gt;</code> - Ban info  
@@ -298,11 +298,11 @@ Get users level.
 
 <a name="SteamAPI+getUserOwnedGames"></a>
 
-### steamAPI.getUserOwnedGames(id, [includeF2P]) ⇒ <code>Promise.&lt;Array.&lt;Game&gt;&gt;</code>
+### steamAPI.getUserOwnedGames(id, [includeF2P]) ⇒ <code>Promise.&lt;Array.&lt;OwnedGame&gt;&gt;</code>
 Get users owned games.
 
 **Kind**: instance method of [<code>SteamAPI</code>](#SteamAPI)  
-**Returns**: <code>Promise.&lt;Array.&lt;Game&gt;&gt;</code> - Owned games  
+**Returns**: <code>Promise.&lt;Array.&lt;OwnedGame&gt;&gt;</code> - Owned games  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -311,11 +311,11 @@ Get users owned games.
 
 <a name="SteamAPI+getUserRecentGames"></a>
 
-### steamAPI.getUserRecentGames(id, [count]) ⇒ <code>Promise.&lt;Array.&lt;RecentGame&gt;&gt;</code>
+### steamAPI.getUserRecentGames(id, [count]) ⇒ <code>Promise.&lt;Array.&lt;Game&gt;&gt;</code>
 Get users recent games.
 
 **Kind**: instance method of [<code>SteamAPI</code>](#SteamAPI)  
-**Returns**: <code>Promise.&lt;Array.&lt;RecentGame&gt;&gt;</code> - Recent games  
+**Returns**: <code>Promise.&lt;Array.&lt;Game&gt;&gt;</code> - Recent games  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -350,12 +350,12 @@ Get users stats for app id.
 
 <a name="SteamAPI+getUserSummary"></a>
 
-### steamAPI.getUserSummary(id) ⇒ <code>Promise.&lt;PlayerSummary&gt;</code>
-Get users summary.
+### steamAPI.getUserSummary(id) ⇒ <code>Promise.&lt;(PlayerSummary\|Array.&lt;PlayerSummary&gt;)&gt;</code>
+Get users summary. If an array of IDs is passed in, this returns an array of PlayerSummary
 
 **Kind**: instance method of [<code>SteamAPI</code>](#SteamAPI)  
-**Returns**: <code>Promise.&lt;PlayerSummary&gt;</code> - Summary  
+**Returns**: <code>Promise.&lt;(PlayerSummary\|Array.&lt;PlayerSummary&gt;)&gt;</code> - Summary  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| id | <code>string</code> | User ID |
+| id | <code>string</code> \| <code>Array.&lt;string&gt;</code> | User ID(s) |
