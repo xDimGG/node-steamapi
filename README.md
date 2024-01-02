@@ -69,7 +69,7 @@ steam.getUserSummary('76561198146931523').then(summary => {
     * [.getFeaturedCategories()](#SteamAPI+getFeaturedCategories) ⇒ <code>Promise.&lt;Array.&lt;Object&gt;&gt;</code>
     * [.getFeaturedGames()](#SteamAPI+getFeaturedGames) ⇒ <code>Promise.&lt;Object&gt;</code>
     * [.getGameAchievements(app)](#SteamAPI+getGameAchievements) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.getGameDetails(app, [force], [region])](#SteamAPI+getGameDetails) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.getGameDetails(app, [force], [region], [language])](#SteamAPI+getGameDetails) ⇒ <code>Promise.&lt;Object&gt;</code>
     * [.getGameNews(app)](#SteamAPI+getGameNews) ⇒ <code>Promise.&lt;Array.&lt;Object&gt;&gt;</code>
     * [.getGamePlayers(app)](#SteamAPI+getGamePlayers) ⇒ <code>Promise.&lt;number&gt;</code>
     * [.getGameSchema(app)](#SteamAPI+getGameSchema) ⇒ <code>Promise.&lt;Object&gt;</code>
@@ -162,7 +162,7 @@ Get achievements for app id.
 
 <a name="SteamAPI+getGameDetails"></a>
 
-### steamAPI.getGameDetails(app, [force], [region]) ⇒ <code>Promise.&lt;Object&gt;</code>
+### steamAPI.getGameDetails(app, [force], [region], [language]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Get details for app id.
 <warn>Requests for this endpoint are limited to 200 every 5 minutes</warn>
 
@@ -173,7 +173,11 @@ Get details for app id.
 | --- | --- | --- | --- |
 | app | <code>string</code> |  | App ID |
 | [force] | <code>boolean</code> | <code>false</code> | Overwrite cache |
-| [region] | <code>string</code> | <code>&quot;us&quot;</code> | Store region |
+| [region] | <code>string</code> | <code>&quot;us&quot;</code> | Currency region |
+| [language] | <code>string</code> | <code>&quot;english&quot;</code> | Description language |
+
+**Warning** not every `language` is supported. A list of available languages can be found [here](https://www.ibabbleon.com/Steam-Supported-Languages-API-Codes.html).
+Those are also used to filter your passed argument.
 
 <a name="SteamAPI+getGameNews"></a>
 

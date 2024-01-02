@@ -14,7 +14,8 @@ const Game = require('./structures/Game');
 const objectify = require('./utils/objectify');
 const fetch = require('./utils/fetch');
 const { version, name } = require('../package.json');
-const regions = ['us', 'ca', 'cc', 'es', 'de', 'fr', 'ru', 'nz', 'au', 'uk'];
+const allowedRegions = ['us', 'ca', 'cc', 'es', 'de', 'fr', 'ru', 'nz', 'au', 'uk'];
+const allowedLanguages = ['arabic', 'bulgarian', 'schinese', 'tchinese', 'czech', 'danish', 'dutch', 'english', 'finnish', 'french', 'german', 'greek', 'hungarian', 'italian', 'japanese', 'koreana', 'norwegian', 'polish', 'brazilian', 'portuguese', 'romanian', 'russian', 'latam', 'spanish', 'swedish', 'thai', 'turkish', 'ukrainian', 'vietnamese'];
 const reApp = /^\d{1,7}$/;
 const reID = /^\d{17}$/;
 
@@ -173,19 +174,22 @@ class SteamAPI {
 	 * <warn>Requests for this endpoint are limited to 200 every 5 minutes</warn>
 	 * @param {string} app App ID
 	 * @param {boolean} [force=false] Overwrite cache
-	 * @param {string} [region=us] Store region
+	 * @param {string} [region=us] Currency region
+	 * @param {string} [language=english] Description language
 	 * @returns {Promise<Object>} App details for ID
 	 */
-	getGameDetails(app, force = false, region = 'us') {
+	getGameDetails(app, force = false, region = 'us', language = 'english') {
 		if (!reApp.test(app)) return Promise.reject(TypeError('Invalid/no app provided'));
-		if (!regions.includes(region)) return Promise.reject(TypeError('Invalid region provided'));
+		if (!allowedRegions.includes(region)) return Promise.reject(TypeError('Invalid region provided'));
+		if (!allowedLanguages.includes(language)) return Promise.reject(TypeError('Invalid language provided'));
 
 		const request = () => this
-			.get(`/appdetails?appids=${app}&cc=${region}`, this.baseStore)
+			.get(`/appdetails?appids=${app}&cc=${region}&l=${language}`, this.baseStore)
 			.then(json => json[app].success
 				? json[app].data
 				: Promise.reject(new Error('No app found')),
 			);
+
 		const key = `${app}-${region.toLowerCase()}`;
 
 		if (!force && this.options.enabled && this.cache.has(key) && this.cache.get(key)[0] > Date.now())
