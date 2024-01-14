@@ -172,6 +172,8 @@ class SteamAPI {
 	/**
 	 * Get details for app id.
 	 * <warn>Requests for this endpoint are limited to 200 every 5 minutes</warn>
+	 * <warn>Not every `region` is supported. Only the following are valid: `us, ca, cc, es, de, fr, ru, nz, au, uk`.</warn>
+	 * <warn>Not every `language` is supported. A list of available languages can be found [here](https://www.ibabbleon.com/Steam-Supported-Languages-API-Codes.html).</warn>
 	 * @param {string} app App ID
 	 * @param {boolean} [force=false] Overwrite cache
 	 * @param {string} [region=us] Currency region
@@ -190,7 +192,7 @@ class SteamAPI {
 				: Promise.reject(new Error('No app found')),
 			);
 
-		const key = `${app}-${region.toLowerCase()}`;
+		const key = `${app}-${region}-${language}`;
 
 		if (!force && this.options.enabled && this.cache.has(key) && this.cache.get(key)[0] > Date.now())
 			return Promise.resolve(this.cache.get(key)[1]);

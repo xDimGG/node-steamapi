@@ -165,6 +165,8 @@ Get achievements for app id.
 ### steamAPI.getGameDetails(app, [force], [region], [language]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Get details for app id.
 <warn>Requests for this endpoint are limited to 200 every 5 minutes</warn>
+<warn>Not every `region` is supported. Only the following are valid: `us, ca, cc, es, de, fr, ru, nz, au, uk`.</warn>
+<warn>Not every `language` is supported. A list of available languages can be found [here](https://www.ibabbleon.com/Steam-Supported-Languages-API-Codes.html).</warn>
 
 **Kind**: instance method of [<code>SteamAPI</code>](#SteamAPI)  
 **Returns**: <code>Promise.&lt;Object&gt;</code> - App details for ID  
@@ -175,9 +177,6 @@ Get details for app id.
 | [force] | <code>boolean</code> | <code>false</code> | Overwrite cache |
 | [region] | <code>string</code> | <code>&quot;us&quot;</code> | Currency region |
 | [language] | <code>string</code> | <code>&quot;english&quot;</code> | Description language |
-
-**Warning** not every `language` is supported. A list of available languages can be found [here](https://www.ibabbleon.com/Steam-Supported-Languages-API-Codes.html).
-Those are also used to filter your passed argument.
 
 <a name="SteamAPI+getGameNews"></a>
 
