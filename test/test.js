@@ -22,6 +22,8 @@ steam.resolve('id/DimGG/').then(async id => {
 	await steam.getGameDetails(730).then(inspect);
 	console.log('getGameDetails of another region');
 	await steam.getGameDetails(730, false, 'es').then(inspect);
+	console.log('getGameDetails of another region in another language');
+	await steam.getGameDetails(730, false, 'es', 'russian').then(inspect);
 	console.log('getGameNews');
 	await steam.getGameNews(730).then(inspect);
 	console.log('getGamePlayers');
