@@ -123,22 +123,6 @@ class SteamAPI {
 	}
 
 	/**
-	 * @typedef {App}
-	 * @property {number} appid The app's ID
-	 * @property {string} name The app's name
-	 */
-
-	/**
-	 * Get every single app on steam.
-	 * @returns {Promise<App[]>} Array of apps
-	 */
-	getAppList() {
-		return this
-			.get('/ISteamApps/GetAppList/v2')
-			.then(json => json.applist.apps);
-	}
-
-	/**
 	 * Get featured categories on the steam store.
 	 * @returns {Promise<Object[]>} Featured categories
 	 */
@@ -154,19 +138,6 @@ class SteamAPI {
 	 */
 	getFeaturedGames() {
 		return this.get('/featured', this.baseStore);
-	}
-
-	/**
-	 * Get achievements for app id.
-	 * @param {string} app App ID
-	 * @returns {Promise<Object>} App achievements for ID
-	 */
-	getGameAchievements(app) {
-		if (!reApp.test(app)) return Promise.reject(new TypeError('Invalid/no app provided'));
-
-		return this
-			.get(`/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v2?gameid=${app}`)
-			.then(json => objectify(json.achievementpercentages.achievements, 'percent'));
 	}
 
 	/**
@@ -204,17 +175,44 @@ class SteamAPI {
 	}
 
 	/**
-	 * Get news for app id.
-	 * @param {string} app App ID
-	 * @returns {Promise<Object[]>} App news for ID
+	 * ISteamApps interface
 	 */
-	getGameNews(app) {
-		if (!reApp.test(app)) return Promise.reject(new TypeError('Invalid/no app provided'));
+
+	/**
+	 * @typedef {App}
+	 * @property {number} appid The app's ID
+	 * @property {string} name The app's name
+	 */
+
+	/**
+	 * Get every single app on steam.
+	 * @returns {Promise<App[]>} Array of apps
+	 */
+	getAppList() {
+		return this
+			.get('/ISteamApps/GetAppList/v2')
+			.then(json => json.applist.apps);
+	}
+
+	/**
+	 * Get every server associated with host.
+	 * @param {string} host Host to request
+	 * @returns {Promise<Server[]>} Server info
+	 */
+	getServers(host) {
+		if (!host) return Promise.reject(new TypeError('No host provided'));
 
 		return this
-			.get(`/ISteamNews/GetNewsForApp/v2?appid=${app}`)
-			.then(json => json.appnews.count ? json.appnews.newsitems : Promise.reject(new Error('No news found')));
+			.get(`/ISteamApps/GetServersAtAddress/v1?addr=${host}`)
+			.then(json => json.response.success
+				? json.response.servers.map(server => new Server(server))
+				: Promise.reject(new Error(json.response.message)),
+			);
 	}
+
+	/**
+	 * ISteamUserStats interface
+	 */
 
 	/**
 	 * Get number of current players for app id.
@@ -244,22 +242,6 @@ class SteamAPI {
 	}
 
 	/**
-	 * Get every server associated with host.
-	 * @param {string} host Host to request
-	 * @returns {Promise<Server[]>} Server info
-	 */
-	getServers(host) {
-		if (!host) return Promise.reject(new TypeError('No host provided'));
-
-		return this
-			.get(`/ISteamApps/GetServersAtAddress/v1?addr=${host}`)
-			.then(json => json.response.success
-				? json.response.servers.map(server => new Server(server))
-				: Promise.reject(new Error(json.response.message)),
-			);
-	}
-
-	/**
 	 * Get users achievements for app id.
 	 * @param {string} id User ID
 	 * @param {string} app App ID
@@ -278,6 +260,55 @@ class SteamAPI {
 	}
 
 	/**
+	 * Get achievements for app id.
+	 * @param {string} app App ID
+	 * @returns {Promise<Object>} App achievements for ID
+	 */
+	getGameAchievements(app) {
+		if (!reApp.test(app)) return Promise.reject(new TypeError('Invalid/no app provided'));
+
+		return this
+			.get(`/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v2?gameid=${app}`)
+			.then(json => objectify(json.achievementpercentages.achievements, 'percent'));
+	}
+
+	/**
+	 * Get users stats for app id.
+	 * @param {string} id User ID
+	 * @param {string} app App ID
+	 * @returns {Promise<PlayerStats>} Stats for app id
+	 */
+	getUserStats(id, app) {
+		if (!reID.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
+		if (!reApp.test(app)) return Promise.reject(new TypeError('Invalid/no app provided'));
+
+		return this
+			.get(`/ISteamUserStats/GetUserStatsForGame/v2?steamid=${id}&appid=${app}`)
+			.then(json => json.playerstats ? new PlayerStats(json.playerstats) : Promise.reject(new Error('No player found')));
+	}
+
+	/**
+	 * ISteamNews interface
+	 */
+
+	/**
+	 * Get news for app id.
+	 * @param {string} app App ID
+	 * @returns {Promise<Object[]>} App news for ID
+	 */
+	getGameNews(app) {
+		if (!reApp.test(app)) return Promise.reject(new TypeError('Invalid/no app provided'));
+
+		return this
+			.get(`/ISteamNews/GetNewsForApp/v2?appid=${app}`)
+			.then(json => json.appnews.count ? json.appnews.newsitems : Promise.reject(new Error('No news found')));
+	}
+
+	/**
+	 * IPlayerService inteface
+	 */
+
+	/**
 	 * Get users badges.
 	 * @param {string} id User ID
 	 * @returns {Promise<PlayerBadges>} Badges
@@ -288,54 +319,6 @@ class SteamAPI {
 		return this
 			.get(`/IPlayerService/GetBadges/v1?steamid=${id}`)
 			.then(json => new PlayerBadges(json.response));
-	}
-
-	/**
-	 * Get users bans. If an array of IDs is passed in, this returns an array of PlayerBans
-	 * @param {string|string[]} id User ID(s)
-	 * @returns {Promise<PlayerBans|PlayerBans[]>} Ban info
-	 */
-	getUserBans(id) {
-		const arr = Array.isArray(id);
-		if ((arr && id.some(i => !reID.test(i))) || (!arr && !reID.test(id))) return Promise.reject(new TypeError('Invalid/no id provided'));
-
-		return this
-			.get(`/ISteamUser/GetPlayerBans/v1?steamids=${id}`)
-			.then(json => json.players.length
-				? arr
-					? json.players.map(player => new PlayerBans(player))
-					: new PlayerBans(json.players[0])
-				: Promise.reject(new Error('No players found')),
-			);
-	}
-
-	/**
-	 * Get users friends.
-	 * @param {string} id User ID
-	 * @returns {Promise<Friend[]>} Friends
-	 */
-	getUserFriends(id) {
-		if (!reID.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
-
-		return this
-			.get(`/ISteamUser/GetFriendList/v1?steamid=${id}`)
-			.then(json => json.friendslist.friends.map(friend => new Friend(friend)));
-	}
-
-	/**
-	 * Get users groups.
-	 * @param {string} id User ID
-	 * @returns {Promise<string[]>} Groups
-	 */
-	getUserGroups(id) {
-		if (!reID.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
-
-		return this
-			.get(`/ISteamUser/GetUserGroupList/v1?steamid=${id}`)
-			.then(json => json.response.success
-				? json.response.groups.map(group => group.gid)
-				: Promise.reject(new Error(json.response.message)),
-			);
 	}
 
 	/**
@@ -382,30 +365,55 @@ class SteamAPI {
 	}
 
 	/**
-	 * Gets servers on steamcommunity.com/dev/managegameservers using your key or provided key.
-	 * @param {boolean} [hide=false] Hide deleted/expired servers
-	 * @param {string} [key=this.key] Key
-	 * @returns {Promise<PlayerServers>} Servers
+	 * Get users bans. If an array of IDs is passed in, this returns an array of PlayerBans
+	 * @param {string|string[]} id User ID(s)
+	 * @returns {Promise<PlayerBans|PlayerBans[]>} Ban info
 	 */
-	getUserServers(hide = false, key) {
+	getUserBans(id) {
+		const arr = Array.isArray(id);
+		if ((arr && id.some(i => !reID.test(i))) || (!arr && !reID.test(id))) return Promise.reject(new TypeError('Invalid/no id provided'));
+
 		return this
-			.get('/IGameServersService/GetAccountList/v1', this.baseAPI, key)
-			.then(json => new PlayerServers(json.response, hide));
+			.get(`/ISteamUser/GetPlayerBans/v1?steamids=${id}`)
+			.then(json => json.players.length
+				? arr
+					? json.players.map(player => new PlayerBans(player))
+					: new PlayerBans(json.players[0])
+				: Promise.reject(new Error('No players found')),
+			);
 	}
 
 	/**
-	 * Get users stats for app id.
-	 * @param {string} id User ID
-	 * @param {string} app App ID
-	 * @returns {Promise<PlayerStats>} Stats for app id
+	 * ISteamUser interface
 	 */
-	getUserStats(id, app) {
+
+	/**
+	 * Get users friends.
+	 * @param {string} id User ID
+	 * @returns {Promise<Friend[]>} Friends
+	 */
+	getUserFriends(id) {
 		if (!reID.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
-		if (!reApp.test(app)) return Promise.reject(new TypeError('Invalid/no app provided'));
 
 		return this
-			.get(`/ISteamUserStats/GetUserStatsForGame/v2?steamid=${id}&appid=${app}`)
-			.then(json => json.playerstats ? new PlayerStats(json.playerstats) : Promise.reject(new Error('No player found')));
+			.get(`/ISteamUser/GetFriendList/v1?steamid=${id}`)
+			.then(json => json.friendslist.friends.map(friend => new Friend(friend)));
+	}
+
+	/**
+	 * Get users groups.
+	 * @param {string} id User ID
+	 * @returns {Promise<string[]>} Groups
+	 */
+	getUserGroups(id) {
+		if (!reID.test(id)) return Promise.reject(new TypeError('Invalid/no id provided'));
+
+		return this
+			.get(`/ISteamUser/GetUserGroupList/v1?steamid=${id}`)
+			.then(json => json.response.success
+				? json.response.groups.map(group => group.gid)
+				: Promise.reject(new Error(json.response.message)),
+			);
 	}
 
 	/**
@@ -415,7 +423,8 @@ class SteamAPI {
 	 */
 	getUserSummary(id) {
 		const arr = Array.isArray(id);
-		if ((arr && id.some(i => !reID.test(i))) || (!arr && !reID.test(id))) return Promise.reject(new TypeError('Invalid/no id provided'));
+		if ((arr && id.some(i => !reID.test(i))) || (!arr && !reID.test(id)))
+			return Promise.reject(new TypeError('Invalid/no id provided'));
 
 		return this
 			.get(`/ISteamUser/GetPlayerSummaries/v2?steamids=${id}`)
@@ -425,6 +434,22 @@ class SteamAPI {
 					: new PlayerSummary(json.response.players[0])
 				: Promise.reject(new Error('No players found')),
 			);
+	}
+
+	/**
+	 * IGameServersService interface
+	 */
+
+	/**
+	 * Gets servers on steamcommunity.com/dev/managegameservers using your key or provided key.
+	 * @param {boolean} [hide=false] Hide deleted/expired servers
+	 * @param {string} [key=this.key] Key
+	 * @returns {Promise<PlayerServers>} Servers
+	 */
+	getUserServers(hide = false, key = this.key) {
+		return this
+			.get('/IGameServersService/GetAccountList/v1', this.baseAPI, key)
+			.then(json => new PlayerServers(json.response, hide));
 	}
 }
 

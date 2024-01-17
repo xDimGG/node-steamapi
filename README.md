@@ -9,6 +9,16 @@
 	</p>
 </div>
 
+## Major changes from 3.x to 4.x
+- JavaScript -> TypeScript
+- CommonJS Modules -> ES Modules
+- Import using `import` statement instead of `require()`
+- SteamAPI constructor now takes false as the first parameter if you don't want to supply a key
+- Options for constructor have changes from `{ enabled, expires, disableWarnings }` to `{ language, inMemoryCacheEnabled, gameDetailCacheEnabled, gameDetailCacheTTL, userResolveCacheEnabled, userResolveCacheTTL }`
+- Custom caching may be enabled by setting `inMemoryCacheEnabled: false` and setting `<SteamAPI>.gameDetailCache`/`<SteamAPI>.userResolveCache`. Must implement `CacheMap<K, V>` interface in src/Cache.ts
+- getFeaturedGames() returns object instead of array
+
+
 ## Setup
 ### Installation
 ```
@@ -19,7 +29,8 @@ Once signed into Steam, head over to http://steamcommunity.com/dev/apikey to gen
 ### Usage
 First, we start by making a SteamAPI "user".
 ```js
-const SteamAPI = require('steamapi');
+import SteamAPI from 'steamapi';
+
 const steam = new SteamAPI('steam token');
 ```
 Now, we can call methods on the `steam` object.

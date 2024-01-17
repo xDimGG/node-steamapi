@@ -1,14 +1,20 @@
 const Player = require('./Player');
 
+/**
+ * PlayerSummary represents a player's profile summary as returned by /ISteamUser/GetPlayerSummaries/
+ * @class
+ * @constructor
+ * @public
+ */
 class PlayerSummary extends Player {
 	constructor(player) {
-		super();
+		super(player);
 		this.avatar = {
 			small: player.avatar,
 			medium: player.avatarmedium,
 			large: player.avatarfull,
+			hash: player.avatarhash,
 		};
-		this.steamID = player.steamid;
 		this.url = player.profileurl;
 		this.created = player.timecreated;
 		this.lastLogOff = player.lastlogoff;

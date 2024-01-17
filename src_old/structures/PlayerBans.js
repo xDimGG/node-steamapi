@@ -2,8 +2,7 @@ const Player = require('./Player');
 
 class PlayerBans extends Player {
 	constructor(player) {
-		super();
-		this.steamID = player.SteamId;
+		super(player);
 		this.communityBanned = player.CommunityBanned;
 		this.vacBanned = player.VACBanned;
 		this.daysSinceLastBan = player.DaysSinceLastBan;

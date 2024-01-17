@@ -3,8 +3,7 @@ const Player = require('./Player');
 
 class PlayerServers extends Player {
 	constructor(player, hide) {
-		super();
-		this.steamID = player.actor;
+		super(player);
 		this.banned = player.is_banned;
 		this.expires = player.expires;
 		this.lastActionTime = player.last_action_time;

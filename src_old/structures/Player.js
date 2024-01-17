@@ -1,4 +1,8 @@
 class Player {
+	constructor(data) {
+		this.steamID = data.steamID;
+	}
+
 	/**
 	 * @type {string} The permalink to this players profile.
 	 * @readonly

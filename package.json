@@ -3,19 +3,25 @@
 	"name": "steamapi",
 	"description": "A nice Steam API wrapper.",
 	"main": "index.js",
+	"types": "index.d.ts",
 	"version": "2.5.0",
 	"license": "MIT",
+	"type": "module",
 	"eslintConfig": {
 		"extends": "eslint-config-dim",
 		"env": {
 			"node": true,
-      "browser": true
+			"browser": true
 		},
 		"parserOptions": {
-			"ecmaVersion": "latest"
+			"ecmaVersion": "latest",
+			"sourceType": "module"
 		},
 		"rules": {
-			"eol-last": ["error", "always"],
+			"eol-last": [
+				"error",
+				"always"
+			],
 			"no-shadow": "off"
 		}
 	},
@@ -35,10 +41,13 @@
 	},
 	"homepage": "https://github.com/xDimGG/node-steamapi#readme",
 	"devDependencies": {
-		"eslint-config-dim": "github:xDimGG/eslint-config-dim"
+		"@types/node": "^20.11.5",
+		"@types/steamid": "^2.0.3",
+		"eslint-config-dim": "github:xDimGG/eslint-config-dim",
+		"typescript": "^5.3.3"
 	},
 	"dependencies": {
-		"node-fetch": "^2.6.11",
+		"node-fetch": "^3.3.2",
 		"steamid": "^2.0.0"
 	}
 }
