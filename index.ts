@@ -2,6 +2,7 @@ import { CacheMap } from './src/Cache.js';
 import AppBase from './src/structures/AppBase.js';
 import AchievementPercentage from './src/structures/AchievementPercentage.js';
 import UserStats from './src/structures/UserStats.js';
+import { Country, State, City } from './src/structures/Locations.js';
 import NewsPost from './src/structures/NewsPost.js';
 import Server from './src/structures/Server.js';
 import Game from './src/structures/Game.js';
@@ -45,6 +46,9 @@ export {
 	UserStats,
 	NewsPost,
 	Server,
+	Country,
+	State,
+	City,
 	Game,
 	GameInfo,
 	GameInfoExtended,

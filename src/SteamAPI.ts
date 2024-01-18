@@ -21,6 +21,7 @@ import UserBans from './structures/UserBans.js';
 import UserFriend from './structures/UserFriend.js';
 import UserServers from './structures/UserServers.js';
 import UserSummary from './structures/UserSummary.js';
+import { City, Country, State } from './structures/Locations.js';
 
 const reProfileBase = String.raw`(?:(?:(?:(?:https?)?:\/\/)?(?:www\.)?steamcommunity\.com)?)?\/?`;
 const reCommunityID = RegExp(String.raw`^(\d{17})$`, 'i');
@@ -68,6 +69,13 @@ export interface SteamAPIOptions {
 	baseStore?: string,
 
 	/**
+	 * URL to use for Steam action requests (only used for getLocations)
+	 *
+	 * 'https://steamcommunity.com/actions' by default
+	 */
+	baseActions?: string,
+
+	/**
 	 * Whether to use built-in in-memory caching for gameDetailCache and userResolveCache
 	 */
 	inMemoryCacheEnabled?: boolean;
@@ -99,6 +107,7 @@ const defaultOptions: SteamAPIOptions = {
 	headers: { 'User-Agent': `SteamAPI/${Package.version} (https://www.npmjs.com/package/${Package.name})` },
 	baseAPI: 'https://api.steampowered.com',
 	baseStore: 'https://store.steampowered.com/api',
+	baseActions: 'https://steamcommunity.com/actions',
 	inMemoryCacheEnabled: true,
 	gameDetailCacheEnabled: true,
 	gameDetailCacheTTL: 86400000,
@@ -165,6 +174,7 @@ export default class SteamAPI {
 	headers;
 	baseAPI;
 	baseStore;
+	baseActions;
 
 	gameDetailCache?: CacheMap<string, Object>;
 	userResolveCache?: CacheMap<string, string>;
@@ -204,6 +214,7 @@ export default class SteamAPI {
 		this.headers = options.headers as { [key: string]: string };
 		this.baseAPI = options.baseAPI as string;
 		this.baseStore = options.baseStore as string;
+		this.baseActions = options.baseActions as string;
 	}
 
 	/**
@@ -381,7 +392,7 @@ export default class SteamAPI {
 	 * @returns Info of servers
 	 */
 	async getServers(host: string): Promise<Server[]> {
-		const { response } = await this.get(`/ISteamApps/GetServersAtAddress/v1?addr=${host}`);
+		const { response } = await this.get('/ISteamApps/GetServersAtAddress/v1', { addr: host });
 
 		return response.success
 			? response.servers.map((server: any) => new Server(server))
@@ -565,7 +576,7 @@ export default class SteamAPI {
 	 * @param count Number of results to limit the request to (0 means no limit)
 	 * @returns Recently played games and their play times
 	 */
-	async getUserRecentGames(id: string, count: number = 0): Promise<UserPlaytime<GameInfoBasic>[]> {
+	async getUserRecentGames(id: string, count = 0): Promise<UserPlaytime<GameInfoBasic>[]> {
 		assertID(id);
 
 		const json = await this.get('/IPlayerService/GetRecentlyPlayedGames/v1', { steamid: id, count });
@@ -642,14 +653,51 @@ export default class SteamAPI {
 	}
 
 	/**
+	 * Gets the Steam server's time
+	 * @returns Date object from the server
+	 */
+	async getServerTime(): Promise<Date> {
+		const json = await this.get('/ISteamWebAPIUtil/GetServerInfo/v1');
+		return new Date(json.servertime * 1000);
+	}
+
+	/**
+	 * Gets all the countries
+	 * @returns Array of country objects with fields countrycode, hasstates, and countryname
+	 */
+	async getCountries(): Promise<Country[]> {
+		return (await this.get('/QueryLocations', {}, this.baseActions)) as Country[];
+	}
+
+	/**
+	 * Gets all the states for a particular country
+	 * @returns Array of state objects with fields countrycode, statecode, and statename
+	 */
+	async getStates(countryCode: string): Promise<State[]> {
+		return (await this.get(`/QueryLocations/${countryCode}`, {}, this.baseActions)) as State[];
+	}
+
+	/**
+	 * Gets all the cities for a particular state
+	 * @returns Array of city objects with fields countrycode, statecode, cityname and cityid
+	 */
+	async getCities(countryCode: string, stateCode: string): Promise<City[]> {
+		return (await this.get(`/QueryLocations/${countryCode}/${stateCode}`, {}, this.baseActions)) as City[];
+	}
+
+	/**
 	 * API endpoints to consider adding
+   *
+	 * Kinda useless/very similar to something already implemented:
+	 * ResolveVanityURL for url_type=2 (group) and url_type=3 (official game group)
+	 * GetFriendList relationship parameter? not sure if it does anything
 	 * https://partner.steamgames.com/doc/webapi/ISteamApps#UpToDateCheck
-	 * https://partner.steamgames.com/doc/webapi/ISteamWebAPIUtil#GetServerInfo
 	 * https://partner.steamgames.com/doc/webapi/ISteamWebAPIUtil#GetSupportedAPIList (wow)
 	 * (undocumented) ISteamApps/GetSDRConfig?key={}&appid={}
 	 * (undocumented) IStoreService/GetAppList
 	 * https://partner.steamgames.com/doc/webapi/ISteamUserStats#GetGlobalStatsForGame
-	 * https://steamcommunity.com/actions/QueryLocations
+	 *
+	 * Useful:
 	 * https://api.steampowered.com/IGameServersService/GetServerList/v1/?key={}&limit=100&filter=\appid\730
 	 */
 }

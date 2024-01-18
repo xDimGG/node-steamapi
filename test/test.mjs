@@ -56,4 +56,19 @@ steam.resolve('id/DimGG/').then(async id => {
 	// await steam.getUserStats(id, 730).then(inspect);
 	// console.log('getUserSummary');
 	// await steam.getUserSummary(['76561198248669594', id]).then(inspect);
+
+	// console.log('getServerTime');
+	// await steam.getServerTime().then(inspect);
+
+	console.log('getCountries');
+	const countries = await steam.getCountries();
+	console.log(countries[0].countrycode, countries[0].countryname, countries[0].hasstates);
+
+	console.log('getStates');
+	const states = await steam.getStates(countries[0].countrycode);
+	console.log(states[0].countrycode, states[0].statecode, states[0].statename);
+
+	console.log('getCities');
+	const cities = await steam.getCities(countries[0].countrycode, states[0].statecode);
+	console.log(cities[0].countrycode, cities[0].statecode, cities[0].cityname, cities[0].cityid);
 }).catch(inspect);
