@@ -8,6 +8,7 @@ steam.resolve('id/DimGG/').then(async id => {
 	console.log('resolve');
 	console.log(id);
 
+	// 
 	// console.log('getAppList');
 	// await steam.getAppList().then(inspect);
 	// console.log('getFeaturedCategories');
