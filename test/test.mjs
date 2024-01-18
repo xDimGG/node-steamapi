@@ -10,16 +10,15 @@ steam.resolve('id/DimGG/').then(async id => {
 
 	// console.log('getAppList');
 	// await steam.getAppList().then(inspect);
-
-	console.log('getFeaturedCategories');
-	await steam.getFeaturedCategories('polish').then(inspect);
+	// console.log('getFeaturedCategories');
+	// await steam.getFeaturedCategories('polish').then(inspect);
 	// console.log('getFeaturedGames');
 	// await steam.getFeaturedGames().then(inspect);
 
 	// console.log('getGameAchievements');
 	// await steam.getGameAchievements(730).then(inspect);
 	// console.log('getGameDetails');
-	// await steam.getGameDetails(730).then(inspect);
+	// await steam.getGameDetails([730, 1111, 1801110]).then(inspect);
 	// console.log('getGameDetails of another region');
 	// await steam.getGameDetails(730, false, 'es').then(inspect);
 	// console.log('getGameDetails of another region in another language');
@@ -55,5 +54,5 @@ steam.resolve('id/DimGG/').then(async id => {
 	// console.log('getUserStats');
 	// await steam.getUserStats(id, 730).then(inspect);
 	// console.log('getUserSummary');
-	// await steam.getUserSummary(id).then(inspect);
+	// await steam.getUserSummary('90179676884219928').then(inspect);
 }).catch(inspect);

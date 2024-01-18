@@ -9,7 +9,7 @@
 	</p>
 </div>
 
-## Major changes from 3.x to 4.x
+## Breaking changes from 3.x to 4.x
 - JavaScript -> TypeScript
 - CommonJS Modules -> ES Modules
 - Import using `import` statement instead of `require()`
@@ -17,6 +17,7 @@
 - Options for constructor have changes from `{ enabled, expires, disableWarnings }` to `{ language, inMemoryCacheEnabled, gameDetailCacheEnabled, gameDetailCacheTTL, userResolveCacheEnabled, userResolveCacheTTL }`
 - Custom caching may be enabled by setting `inMemoryCacheEnabled: false` and setting `<SteamAPI>.gameDetailCache`/`<SteamAPI>.userResolveCache`. Must implement `CacheMap<K, V>` interface in src/Cache.ts
 - getFeaturedGames() returns object instead of array
+- Server#game -> Server#gameDir
 
 
 ## Setup
