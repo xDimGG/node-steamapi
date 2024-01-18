@@ -1,4 +1,4 @@
-import SteamAPI from '../dist/src/SteamAPI.js';
+import SteamAPI, { UserPersonaState } from '../dist/index.js';
 import { key } from './cfg.mjs';
 
 const steam = new SteamAPI(key);
@@ -45,8 +45,8 @@ steam.resolve('id/DimGG/').then(async id => {
 	// await steam.getUserGroups(id).then(inspect);
 	// console.log('getUserLevel');
 	// await steam.getUserLevel(id).then(inspect);
-	console.log('getUserOwnedGames');
-	await steam.getUserOwnedGames(id, { includeAppInfo: true }).then(inspect);
+	// console.log('getUserOwnedGames');
+	// await steam.getUserOwnedGames(id, { includeAppInfo: true }).then(inspect);
 	// console.log('getUserRecentGames');
 	// await steam.getUserRecentGames(id).then(inspect);
 	// console.log('getUserServers');
@@ -54,5 +54,5 @@ steam.resolve('id/DimGG/').then(async id => {
 	// console.log('getUserStats');
 	// await steam.getUserStats(id, 730).then(inspect);
 	// console.log('getUserSummary');
-	// await steam.getUserSummary('90179676884219928').then(inspect);
+	// await steam.getUserSummary(['76561198248669594', id]).then(inspect);
 }).catch(inspect);

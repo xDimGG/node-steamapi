@@ -6,17 +6,21 @@ import Package from '../package.json' assert { type: 'json' };
 import { CacheMap, MemoryCacheMap } from './Cache.js';
 import { fetch, assertApp, assertID } from './Utils.js';
 import AppBase from './structures/AppBase.js';
-import Server from './structures/Server.js';
-import UserAchievements from './structures/UserAchievements.js';
 import AchievementPercentage from './structures/AchievementPercentage.js';
 import UserStats from './structures/UserStats.js';
 import NewsPost from './structures/NewsPost.js';
-import UserBadges from './structures/UserBadges.js';
-import UserPlaytime from './structures/UserPlaytime.js';
+import Server from './structures/Server.js';
 import Game from './structures/Game.js';
 import GameInfo from './structures/GameInfo.js';
 import GameInfoExtended from './structures/GameInfoExtended.js';
 import GameInfoBasic from './structures/GameInfoBasic.js';
+import UserAchievements from './structures/UserAchievements.js';
+import UserBadges from './structures/UserBadges.js';
+import UserPlaytime from './structures/UserPlaytime.js';
+import UserBans from './structures/UserBans.js';
+import UserFriend from './structures/UserFriend.js';
+import UserServers from './structures/UserServers.js';
+import UserSummary from './structures/UserSummary.js';
 
 const reProfileBase = String.raw`(?:(?:(?:(?:https?)?:\/\/)?(?:www\.)?steamcommunity\.com)?)?\/?`;
 const reCommunityID = RegExp(String.raw`^(\d{17})$`, 'i');
@@ -102,7 +106,7 @@ const defaultOptions: SteamAPIOptions = {
 	userResolveCacheTTL: 86400000,
 };
 
-interface GetGameNewsOptions {
+export interface GetGameNewsOptions {
 	/** Maximum length for the content to return, if this is 0 the full content is returned, if it's less then a blurb is generated to fit */
 	maxContentLength?: number;
 
@@ -119,7 +123,7 @@ interface GetGameNewsOptions {
 	tags?: string[];
 }
 
-interface GetUserOwnedGamesOptions {
+export interface GetUserOwnedGamesOptions {
 	/** Include additional details (name, icon) about each game */
 	includeAppInfo?: boolean;
 
@@ -142,10 +146,13 @@ interface GetUserOwnedGamesOptions {
 	language?: Language;
 }
 
-// Currencies are used for requests with a currency parameter
-export type Currency = 'us' | 'ca' | 'cc' | 'es' | 'de' | 'fr' | 'ru' | 'nz' | 'au' | 'uk';
+// Currencies are used for requests with a currency parameter (found on https://steamdb.info/)
+export type Currency = 'us' | 'uk' | 'eu' | 'ru' | 'br' | 'jp' | 'id' | 'my'
+	| 'ph' | 'sg' | 'th' | 'vn' | 'kr' | 'ua' | 'mx' | 'ca' | 'au' | 'nz'
+	| 'no' | 'pl' | 'ch' | 'cn' | 'in' | 'cl' | 'pe' | 'co' | 'za' | 'hk' | 'tw'
+	| 'sa' | 'ae' | 'il' | 'kz' | 'kw' | 'qa' | 'cr' | 'uy' | 'az' | 'ar' | 'tr' | 'pk';
 
-// Languages supported by Steam
+// Languages supported by Steam (found on https://steamcommunity.com/)
 export type Language = 'arabic' | 'bulgarian' | 'schinese' | 'tchinese'
 	| 'czech' | 'danish' | 'dutch' | 'english' | 'finnish' | 'french'
 	| 'german' | 'greek' | 'hungarian' | 'italian' | 'japanese' | 'koreana'
@@ -567,6 +574,74 @@ export default class SteamAPI {
 	}
 
 	/**
+	 * Get a user's or multipler users' bans. If an array of IDs is passed in, this returns an array of UserBans
+	 * @param id User ID(s)
+	 * @returns Ban info
+	 */
+	async getUserBans(id: string | string[]): Promise<UserBans | UserBans[]> {
+		assertID(id);
+
+		const arr = Array.isArray(id);
+		const json = await this.get('/ISteamUser/GetPlayerBans/v1', {
+			steamids: arr ? id.join(',') : id,
+		});
+		const bans = json.players.map((player: any) => new UserBans(player));
+
+		return arr ? bans : bans[0];
+	}
+
+	/**
+	 * Get a user's friends
+	 * @param id User ID
+	 * @returns The provided user's friends
+	 */
+	async getUserFriends(id: string): Promise<UserFriend[]> {
+		assertID(id);
+
+		const json = await this.get('/ISteamUser/GetFriendList/v1', { steamid: id });
+		return json.friendslist.friends.map((friend: any) => new UserFriend(friend));
+	}
+
+	/**
+	 * Get the groups the user is a member of
+	 * @param id User ID
+	 * @returns Group IDs
+	 */
+	async getUserGroups(id: string): Promise<string[]> {
+		assertID(id);
+
+		const json = await this.get('/ISteamUser/GetUserGroupList/v1', { steamid: id });
+		if (!json.response.success) throw new Error(json.response.message);
+
+		return json.response.groups.map((group: any) => group.gid);
+	}
+
+	/**
+	 * Gets servers on steamcommunity.com/dev/managegameservers using your key
+	 * @returns Your server
+	 */
+	async getUserServers(): Promise<UserServers> {
+		return new UserServers((await this.get('/IGameServersService/GetAccountList/v1')).response);
+	}
+
+	/**
+	 * Get users summary. If an array of IDs is passed in, this returns an array of UserSummary
+	 * @param id User ID(s)
+	 * @returns Summary
+	 */
+	async getUserSummary(id: string | string[]): Promise<UserSummary | UserSummary[]> {
+		assertID(id);
+
+		const arr = Array.isArray(id);
+		const json = await this.get('/ISteamUser/GetPlayerSummaries/v2', { steamids: arr ? id.join(',') : id });
+		if (!json.response.players.length) throw new Error('No players found');
+
+		const summaries = json.response.players.map((player: any) => new UserSummary(player));
+
+		return arr ? summaries : summaries[0];
+	}
+
+	/**
 	 * API endpoints to consider adding
 	 * https://partner.steamgames.com/doc/webapi/ISteamApps#UpToDateCheck
 	 * https://partner.steamgames.com/doc/webapi/ISteamWebAPIUtil#GetServerInfo
@@ -574,24 +649,7 @@ export default class SteamAPI {
 	 * (undocumented) ISteamApps/GetSDRConfig?key={}&appid={}
 	 * (undocumented) IStoreService/GetAppList
 	 * https://partner.steamgames.com/doc/webapi/ISteamUserStats#GetGlobalStatsForGame
-	 * 
-	 *
+	 * https://steamcommunity.com/actions/QueryLocations
+	 * https://api.steampowered.com/IGameServersService/GetServerList/v1/?key={}&limit=100&filter=\appid\730
 	 */
-
-	 /**
-	  * /IPlayerService/GetOwnedGames takes
-	  * steamid
-	  * include_appinfo bool
-	  * include_played_free_games bool
-	  * appids_filter uint32
-	  * include_free_sub bool
-		* skip_unvetted_apps bool
-		* language string
-		* include_extended_appinfo bool (include_appinfo must also be true)
-	  */
-
-	 /**
-		* The following accept language parameter `language`:
-		* * IPlayerService/GetOwnedGames
-	  */
 }

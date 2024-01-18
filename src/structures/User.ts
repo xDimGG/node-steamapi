@@ -3,7 +3,7 @@ export default class User {
 	steamID: string;
 
 	constructor(data: any) {
-		this.steamID = data.steamID;
+		this.steamID = data.steamID || data.steamid || data.SteamId; // c'mon Valve
 	}
 
 	/** The permalink to this user's profile */

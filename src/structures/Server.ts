@@ -1,4 +1,7 @@
 export default class Server {
+	/** The SteamID of this game server */
+	id: string;
+
 	/** Server address of the form IPv4:PORT */
 	address: string;
 
@@ -29,10 +32,8 @@ export default class Server {
 	/** Requirements for clients to join. Not sure */
 	reject: string;
 
-	/** The Steam ID of this game server */
-	steamID: string;
-
 	constructor(data: any) {
+		this.id = data.steamid;
 		this.address = data.addr;
 		this.appID = data.appid;
 		this.gameDir = data.gamedir;
@@ -43,6 +44,5 @@ export default class Server {
 		this.secure = data.secure;
 		this.specPort = data.specport;
 		this.reject = data.reject;
-		this.steamID = data.steamid;
 	}
 }
