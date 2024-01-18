@@ -45,8 +45,8 @@ steam.resolve('id/DimGG/').then(async id => {
 	// await steam.getUserGroups(id).then(inspect);
 	// console.log('getUserLevel');
 	// await steam.getUserLevel(id).then(inspect);
-	// console.log('getUserOwnedGames');
-	// await steam.getUserOwnedGames(id).then(inspect);
+	console.log('getUserOwnedGames');
+	await steam.getUserOwnedGames(id, { includeAppInfo: true }).then(inspect);
 	// console.log('getUserRecentGames');
 	// await steam.getUserRecentGames(id).then(inspect);
 	// console.log('getUserServers');

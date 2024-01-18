@@ -29,7 +29,7 @@ export default class Server {
 	/** Requirements for clients to join. Not sure */
 	reject: string;
 
-	/** Game server's Steam ID */
+	/** The Steam ID of this game server */
 	steamID: string;
 
 	constructor(data: any) {

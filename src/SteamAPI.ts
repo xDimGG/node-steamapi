@@ -4,12 +4,19 @@ import querystring from 'node:querystring';
 import Package from '../package.json' assert { type: 'json' };
 
 import { CacheMap, MemoryCacheMap } from './Cache.js';
-import { fetch, toObject } from './Utils.js';
-import AppMinimal from './structures/AppMinimal.js';
+import { fetch, assertApp, assertID } from './Utils.js';
+import AppBase from './structures/AppBase.js';
 import Server from './structures/Server.js';
-
-const reApp = /^\d{1,7}$/;
-const reID = /^\d{17}$/;
+import UserAchievements from './structures/UserAchievements.js';
+import AchievementPercentage from './structures/AchievementPercentage.js';
+import UserStats from './structures/UserStats.js';
+import NewsPost from './structures/NewsPost.js';
+import UserBadges from './structures/UserBadges.js';
+import UserPlaytime from './structures/UserPlaytime.js';
+import Game from './structures/Game.js';
+import GameInfo from './structures/GameInfo.js';
+import GameInfoExtended from './structures/GameInfoExtended.js';
+import GameInfoBasic from './structures/GameInfoBasic.js';
 
 const reProfileBase = String.raw`(?:(?:(?:(?:https?)?:\/\/)?(?:www\.)?steamcommunity\.com)?)?\/?`;
 const reCommunityID = RegExp(String.raw`^(\d{17})$`, 'i');
@@ -18,9 +25,9 @@ const reSteamID3 = RegExp(String.raw`^(\[U:\d+:\d+\])$`, 'i');
 const reProfileURL = RegExp(String.raw`${reProfileBase}profiles\/(\d{17})`, 'i');
 const reProfileID = RegExp(String.raw`${reProfileBase}id\/([a-z0-9_-]{2,32})`, 'i');
 
-const STATUS_SUCCESS = 1;
+const SUCCESS_CODE = 1;
 
-export interface Options {
+export interface SteamAPIOptions {
 	/**
 	 * Default language to use for the API when a language is not explicitly provided
 	 *
@@ -82,7 +89,7 @@ export interface Options {
 	userResolveCacheTTL?: number;
 }
 
-const defaultOptions: Options = {
+const defaultOptions: SteamAPIOptions = {
 	language: 'english',
 	currency: 'us',
 	headers: { 'User-Agent': `SteamAPI/${Package.version} (https://www.npmjs.com/package/${Package.name})` },
@@ -94,6 +101,46 @@ const defaultOptions: Options = {
 	userResolveCacheEnabled: true,
 	userResolveCacheTTL: 86400000,
 };
+
+interface GetGameNewsOptions {
+	/** Maximum length for the content to return, if this is 0 the full content is returned, if it's less then a blurb is generated to fit */
+	maxContentLength?: number;
+
+	/** Retrieve posts earlier than this date */
+	endDate?: Date;
+
+	/** Number of posts to retrieve (default 20) */
+	count?: number;
+
+	/** List of feed names to return news for */
+	feeds?: string[];
+
+	/** List of tags to filter by (e.g. 'patchnotes') */
+	tags?: string[];
+}
+
+interface GetUserOwnedGamesOptions {
+	/** Include additional details (name, icon) about each game */
+	includeAppInfo?: boolean;
+
+	/** Include free games the user has played */
+	includeFreeGames?: boolean;
+
+	/** Includes games in the free sub (defaults to false) */
+	includeFreeSubGames?: boolean;
+
+	/** Include unvetted store apps (defaults to false) */
+	includeUnvettedApps?: boolean;
+
+	/** Include even more app details. If true, `includeAppInfo` will also be set to true */
+	includeExtendedAppInfo?: boolean;
+
+	/** If set, restricts results to the passed in apps. (note: does not seem to actually work) */
+	filterApps?: number[];
+
+	/** Language to return app info in. (note: does not seem to actualy work) */
+	language?: Language;
+}
 
 // Currencies are used for requests with a currency parameter
 export type Currency = 'us' | 'ca' | 'cc' | 'es' | 'de' | 'fr' | 'ru' | 'nz' | 'au' | 'uk';
@@ -122,7 +169,7 @@ export default class SteamAPI {
 	 * @param key Key to use for API calls. Key can be generated at https://steamcommunity.com/dev/apikey. If you want to make requests without a key, pass in false
 	 * @param options Custom options for default language, HTTP parameters, and caching
 	 */
-	constructor(key: string | false, options: Options = {}) {
+	constructor(key: string | false, options: SteamAPIOptions = {}) {
 		if (key !== false) {
 			if (key) {
 				this.key = key;
@@ -152,19 +199,13 @@ export default class SteamAPI {
 		this.baseStore = options.baseStore as string;
 	}
 
-	private testApps(apps: number | number[]): void {
-		if (!Array.isArray(apps)) apps = [apps];
-		if (apps.some(app => !reApp.test(app.toString())))
-			throw new TypeError('Invalid app id provided');
-	}
-
 	/**
 	 * Used to make any GET request to the Steam API
 	 * @param path Path to request e.g '/IPlayerService/GetOwnedGames/v1?steamid=76561198378422474'
 	 * @param base Base API URL
 	 * @returns Parse JSON
 	 */
-	get(path: string, params: { [key: string]: string } = {}, base = this.baseAPI) {
+	get(path: string, params: querystring.ParsedUrlQueryInput = {}, base = this.baseAPI): Promise<any> {
 		if (this.key) params.key = this.key;
 		return fetch(`${base}${path}?${querystring.stringify(params)}`, this.headers);
 	}
@@ -213,7 +254,7 @@ export default class SteamAPI {
 			const steamID = await this
 				.get(`/ISteamUser/ResolveVanityURL/v1`, { vanityurl: id }) // TODO: consider using url_type paramater
 				.then(json =>
-					json.response.success === STATUS_SUCCESS
+					json.response.success === SUCCESS_CODE
 						? json.response.steamid
 						: Promise.reject(new TypeError(json.response.message)),
 				);
@@ -235,7 +276,7 @@ export default class SteamAPI {
 	 */
 	getFeaturedCategories({ language = this.language, currency = this.currency } = {}): Promise<{ [key: string]: any }> {
 		// TODO: make class for this
-		return this.get('/featuredcategories', { l: language }, this.baseStore);
+		return this.get('/featuredcategories', { l: language, cc: currency }, this.baseStore);
 	}
 
 	/**
@@ -251,7 +292,7 @@ export default class SteamAPI {
 	}
 
 	/**
-	 * Get details for app id. If an array of more than one app ID is passed in, the parameter &filters=price_overview
+	 * Get details for app ID. If an array of more than one app ID is passed in, the parameter &filters=price_overview
 	 * will be added to the request since otherwise the server would respond with null
 	 *
 	 * Note: a game will not have a price_overview field if it is F2P
@@ -266,16 +307,16 @@ export default class SteamAPI {
 	 * @param app App ID or array of App IDs
 	 * @param options.language Description language
 	 * @param options.currency Currency currency
-	 * @param options.filters Fields to filter out. Field can be found [here](https://wiki.teamfortress.com/wiki/User:RJackson/StorefrontAPI#appdetails)
-	 * @returns If app is number, returns single object. If app is array, returns a mapping of app ids to objects
+	 * @param options.filters Fields to filter out. Available fields can be found [here](https://wiki.teamfortress.com/wiki/User:RJackson/StorefrontAPI#appdetails)
+	 * @returns If app is number, returns single object. If app is array, returns a mapping of app IDs to objects
 	 */
 	async getGameDetails(
 		app: number | number[],
 		{ language = this.language, currency = this.currency, filters = [] } = {}
 	): Promise<{ [key: string]: any }> {
-		const isArr = Array.isArray(app);
-		this.testApps(app);
+		assertApp(app);
 
+		const isArr = Array.isArray(app);
 		const key = `${app}-${currency}-${language}`;
 
 		// For now we're not touching the cache if an array of apps is passed
@@ -287,7 +328,7 @@ export default class SteamAPI {
 
 		const details = await this
 			.get('/appdetails', {
-				appids: isArr ? app.join(',') : app.toString(),
+				appids: isArr ? app.join(',') : app,
 				cc: currency,
 				l: language,
 				filters: isArr && app.length > 1 ? 'price_overview' : filters.join(','),
@@ -322,7 +363,7 @@ export default class SteamAPI {
 	 * that would have to be made into a class.
 	 * @returns Array of very basic app info (ID + name)
 	 */
-	async getAppList(): Promise<AppMinimal[]> {
+	async getAppList(): Promise<AppBase[]> {
 		// TODO: allow a parameter to be passed in to convert these to a class?
 		return (await this.get('/ISteamApps/GetAppList/v2')).applist.apps;
 	}
@@ -338,6 +379,191 @@ export default class SteamAPI {
 		return response.success
 			? response.servers.map((server: any) => new Server(server))
 			: Promise.reject(new Error(response.message));
+	}
+
+	/**
+	 * Get number of current players for app ID
+	 * @param app App ID to get number of current players for
+	 * @returns Number of current players
+	 */
+	async getGamePlayers(app: number): Promise<number> {
+		assertApp(app);
+
+		const json = await this.get('/ISteamUserStats/GetNumberOfCurrentPlayers/v1', { appid: app });
+		if (json.response.result !== SUCCESS_CODE)
+			throw new Error('No app found');
+
+		return json.response.player_count;
+	}
+
+	/**
+	 * Get schema for app ID
+	 * @param app App ID to get schema for
+	 * @param language Language to return strings for (note: does not seem to affect stats; only achievements)
+	 * @returns Schema
+	 */
+	async getGameSchema(app: number, language = this.language): Promise<any> {
+		assertApp(app);
+
+		// TODO: make class for this
+		return (await this.get('/ISteamUserStats/GetSchemaForGame/v2', { appid: app, l: language })).game;
+	}
+
+	/**
+	 * Get a user's achievements for app ID
+	 * @param id Steam ID of user
+	 * @param app App ID to get achievements for
+	 * @param language Language to return strings for
+	 * @returns Achievements
+	 */
+	async getUserAchievements(id: string, app: number, language = this.language): Promise<UserAchievements> {
+		assertID(id);
+		assertApp(app);
+
+		const json = await this.get('/ISteamUserStats/GetPlayerAchievements/v1', { steamid: id, appid: app, l: language });
+		if (!json.playerstats.success)
+			throw new Error(json.playerstats.message)
+
+		return new UserAchievements(json.playerstats);
+	}
+
+	/**
+	 * Get achievement percentages for app ID
+	 *
+	 * If a game does not hvae any achievements, this will error
+	 * @param app App ID to get achievement progress for
+	 * @returns Array of object with achievement name and percentage for app ID
+	 */
+	async getGameAchievementPercentages(app: number): Promise<AchievementPercentage[]> {
+		assertApp(app);
+
+		const json = await this.get('/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v2', { gameid: app });
+		return json.achievementpercentages.achievements as AchievementPercentage[];
+	}
+
+	/**
+	 * Get a user's stats for app ID
+	 * @param id Steam ID of user
+	 * @param app App ID to get user stats for
+	 * @returns Stats for app ID
+	 */
+	async getUserStats(id: string, app: number): Promise<UserStats> {
+		assertID(id);
+		assertApp(app);
+
+		return new UserStats((await this.get('/ISteamUserStats/GetUserStatsForGame/v2', { steamid: id, appid: app })).playerstats);
+	}
+
+	/**
+	 * Get news for app ID
+	 * @param app App ID
+	 * @param options Additional options for filtering posts
+	 * @returns App news for ID
+	 */
+	async getGameNews(app: number, options: GetGameNewsOptions = {}): Promise<NewsPost[]> {
+		assertApp(app);
+
+		const params: querystring.ParsedUrlQueryInput = {
+			appid: app,
+			maxlength: options.maxContentLength,
+			enddate: options.endDate?.getTime(),
+			count: options.count,
+			feeds: options.feeds?.join(','),
+			tags: options.tags?.join(','),
+		};
+
+		// Filter out options that weren't supplied
+		for (const [k, v] of Object.entries(params))
+			if (v === undefined)
+				delete params[k];
+		
+		return (await this.get('/ISteamNews/GetNewsForApp/v2', params)).appnews.newsitems.map((item: any) => new NewsPost(item));
+	}
+
+	/**
+	 * Get a user's badges
+	 * @param id User ID
+	 * @returns User level info and badges
+	 */
+	async getUserBadges(id: string): Promise<UserBadges> {
+		assertID(id);
+
+		return new UserBadges((await this.get('/IPlayerService/GetBadges/v1', { steamid: id })).response);
+	}
+
+	/**
+	 * Get a user's level
+	 * @param id User ID
+	 * @returns The user's Steam level
+	 */
+	async getUserLevel(id: string): Promise<number> {
+		assertID(id);
+
+		return (await this.get('/IPlayerService/GetSteamLevel/v1', { steamid: id })).response.player_level;
+	}
+
+	/**
+	 * Get users owned games.
+	 * @param id User ID
+	 * @param options Additional options for filtering
+	 * @returns Owned games
+	 */
+	async getUserOwnedGames(id: string, opts: GetUserOwnedGamesOptions = {}): Promise<UserPlaytime<Game | GameInfo | GameInfoExtended>[]> {
+		assertID(id);
+
+		// Same behavior as v3
+		if (opts.includeFreeGames === undefined)
+			opts.includeFreeGames = true;
+
+		if (opts.language === undefined)
+			opts.language = this.language;
+
+		if (opts.includeExtendedAppInfo)
+			opts.includeAppInfo = true;
+
+		const params: querystring.ParsedUrlQueryInput = {
+			steamid: id,
+			include_appinfo: opts.includeAppInfo,
+			include_played_free_games: opts.includeFreeGames,
+			include_free_sub: opts.includeFreeSubGames,
+			skip_unvetted_apps: opts.includeUnvettedApps === undefined ? undefined : !opts.includeUnvettedApps,
+			include_extended_appinfo: opts.includeExtendedAppInfo,
+
+			appids_filter: opts.filterApps,
+			language: opts.language,
+		};
+
+		// Filter out options that weren't supplied
+		for (const [k, v] of Object.entries(params))
+			if (v === undefined)
+				delete params[k];
+
+
+		const json = await this.get('/IPlayerService/GetOwnedGames/v1', params);
+		return json.response.games.map((data: any) => {
+			let game;
+			if (opts.includeExtendedAppInfo) game = new GameInfoExtended(data);
+			else if (opts.includeAppInfo) game = new GameInfo(data);
+			else game = new Game(data);
+
+			return new UserPlaytime(data, game);
+		});
+	}
+
+	/**
+	 * Get a user's recently played games. Note: <UserPlaytime>.game is GameInfo not just Game
+	 *
+	 * Like getUserOwnedGames() but only returns games played in the last 2 weeks
+	 * @param id User ID
+	 * @param count Number of results to limit the request to (0 means no limit)
+	 * @returns Recently played games and their play times
+	 */
+	async getUserRecentGames(id: string, count: number = 0): Promise<UserPlaytime<GameInfoBasic>[]> {
+		assertID(id);
+
+		const json = await this.get('/IPlayerService/GetRecentlyPlayedGames/v1', { steamid: id, count });
+
+		return json.response.games.map((data: any) => new UserPlaytime(data, new GameInfoBasic(data)));
 	}
 
 	/**
@@ -365,9 +591,7 @@ export default class SteamAPI {
 	  */
 
 	 /**
-		* The following accept language parameter `l`:
-		* * ISteamUserStats/GetPlayerAchievements
-		* * ISteamUserStats/GetSchemaForGame
-		* * IPlayerService/GetOwnedGames (actually `language`)
+		* The following accept language parameter `language`:
+		* * IPlayerService/GetOwnedGames
 	  */
 }
