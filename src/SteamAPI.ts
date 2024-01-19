@@ -4,7 +4,7 @@ import querystring from 'node:querystring';
 // https://stackoverflow.com/a/66726426/7504056
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
-const Package = require('../package.json');
+const Package = require('../../package.json');
 
 import { CacheMap, MemoryCacheMap } from './Cache.js';
 import { fetch, assertApp, assertID } from './utils.js';

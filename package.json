@@ -2,13 +2,13 @@
 	"author": "xDimGG <dimggyt@gmail.com> (https://dim.codes)",
 	"name": "steamapi",
 	"description": "A nice Steam API wrapper.",
-	"main": "index.js",
-	"types": "index.d.ts",
-	"version": "3.0.3",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"version": "3.0.5",
 	"license": "MIT",
 	"type": "module",
 	"scripts": {
-		"prebuild": "tsc && cp README.md dist/",
+		"prepublish": "tsc",
 		"tsdoc": "typedoc --plugin typedoc-plugin-markdown --readme none --out docs index.ts"
 	},
 	"keywords": [
