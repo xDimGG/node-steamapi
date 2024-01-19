@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[src/structures/UserAchievement.ts:15](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserAchievement.ts#L15)
+[src/structures/UserAchievement.ts:15](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserAchievement.ts#L15)
 
 ## Properties
 
@@ -48,7 +48,7 @@ API name for this achievement (e.g. ACH03, TF_GET_TURRETKILLS, Champion)
 
 #### Defined in
 
-[src/structures/UserAchievement.ts:3](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserAchievement.ts#L3)
+[src/structures/UserAchievement.ts:3](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserAchievement.ts#L3)
 
 ___
 
@@ -60,7 +60,7 @@ Whether the user has unlocked this achievement
 
 #### Defined in
 
-[src/structures/UserAchievement.ts:6](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserAchievement.ts#L6)
+[src/structures/UserAchievement.ts:6](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserAchievement.ts#L6)
 
 ___
 
@@ -74,7 +74,7 @@ when calling getUserAchievements()
 
 #### Defined in
 
-[src/structures/UserAchievement.ts:13](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserAchievement.ts#L13)
+[src/structures/UserAchievement.ts:13](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserAchievement.ts#L13)
 
 ## Accessors
 
@@ -90,4 +90,4 @@ Date when this achievement was unlocked
 
 #### Defined in
 
-[src/structures/UserAchievement.ts:23](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserAchievement.ts#L23)
+[src/structures/UserAchievement.ts:23](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserAchievement.ts#L23)

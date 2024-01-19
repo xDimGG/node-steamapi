@@ -64,7 +64,7 @@ User.constructor
 
 #### Defined in
 
-[src/structures/UserSummary.ts:69](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L69)
+[src/structures/UserSummary.ts:69](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L69)
 
 ## Properties
 
@@ -76,7 +76,7 @@ If this user allows comments on their profile
 
 #### Defined in
 
-[src/structures/UserSummary.ts:31](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L31)
+[src/structures/UserSummary.ts:31](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L31)
 
 ___
 
@@ -97,7 +97,7 @@ The user's avatar in varous sizes
 
 #### Defined in
 
-[src/structures/UserSummary.ts:16](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L16)
+[src/structures/UserSummary.ts:16](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L16)
 
 ___
 
@@ -109,7 +109,7 @@ The user's city ID if set and visible
 
 #### Defined in
 
-[src/structures/UserSummary.ts:67](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L67)
+[src/structures/UserSummary.ts:67](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L67)
 
 ___
 
@@ -121,7 +121,7 @@ The user's country code if set and visible
 
 #### Defined in
 
-[src/structures/UserSummary.ts:61](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L61)
+[src/structures/UserSummary.ts:61](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L61)
 
 ___
 
@@ -133,7 +133,7 @@ Unix Timestamp when the profile was created if visible
 
 #### Defined in
 
-[src/structures/UserSummary.ts:40](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L40)
+[src/structures/UserSummary.ts:40](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L40)
 
 ___
 
@@ -145,7 +145,7 @@ The game the user is currently playing if any
 
 #### Defined in
 
-[src/structures/UserSummary.ts:49](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L49)
+[src/structures/UserSummary.ts:49](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L49)
 
 ___
 
@@ -157,7 +157,7 @@ The name of the game the user is currently playing if any
 
 #### Defined in
 
-[src/structures/UserSummary.ts:52](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L52)
+[src/structures/UserSummary.ts:52](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L52)
 
 ___
 
@@ -169,7 +169,7 @@ The SteamID of the game server the user is currently playing on if any
 
 #### Defined in
 
-[src/structures/UserSummary.ts:58](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L58)
+[src/structures/UserSummary.ts:58](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L58)
 
 ___
 
@@ -181,7 +181,7 @@ The IP:PORT of the game server the user is currently playing on if any
 
 #### Defined in
 
-[src/structures/UserSummary.ts:55](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L55)
+[src/structures/UserSummary.ts:55](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L55)
 
 ___
 
@@ -193,7 +193,7 @@ Unix Timestamp when the user last logged off
 
 #### Defined in
 
-[src/structures/UserSummary.ts:37](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L37)
+[src/structures/UserSummary.ts:37](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L37)
 
 ___
 
@@ -205,7 +205,7 @@ The nickname this user has set
 
 #### Defined in
 
-[src/structures/UserSummary.ts:34](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L34)
+[src/structures/UserSummary.ts:34](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L34)
 
 ___
 
@@ -217,7 +217,7 @@ The user's persona state. Always 0 if profile is private
 
 #### Defined in
 
-[src/structures/UserSummary.ts:25](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L25)
+[src/structures/UserSummary.ts:25](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L25)
 
 ___
 
@@ -229,7 +229,7 @@ Flags for personState. Seems to always be 0
 
 #### Defined in
 
-[src/structures/UserSummary.ts:28](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L28)
+[src/structures/UserSummary.ts:28](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L28)
 
 ___
 
@@ -241,7 +241,7 @@ The user's primary group ID if set and visible
 
 #### Defined in
 
-[src/structures/UserSummary.ts:46](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L46)
+[src/structures/UserSummary.ts:46](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L46)
 
 ___
 
@@ -253,7 +253,7 @@ The user's real name if set and visible
 
 #### Defined in
 
-[src/structures/UserSummary.ts:43](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L43)
+[src/structures/UserSummary.ts:43](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L43)
 
 ___
 
@@ -265,7 +265,7 @@ The user's state code if set and visible
 
 #### Defined in
 
-[src/structures/UserSummary.ts:64](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L64)
+[src/structures/UserSummary.ts:64](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L64)
 
 ___
 
@@ -281,7 +281,7 @@ User.steamID
 
 #### Defined in
 
-[src/structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/User.ts#L3)
+[src/structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/User.ts#L3)
 
 ___
 
@@ -293,7 +293,7 @@ Link to the user's profile
 
 #### Defined in
 
-[src/structures/UserSummary.ts:19](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L19)
+[src/structures/UserSummary.ts:19](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L19)
 
 ___
 
@@ -305,7 +305,7 @@ Is this user's profile visible to you
 
 #### Defined in
 
-[src/structures/UserSummary.ts:22](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L22)
+[src/structures/UserSummary.ts:22](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L22)
 
 ## Accessors
 
@@ -321,7 +321,7 @@ Date when this user's account was created
 
 #### Defined in
 
-[src/structures/UserSummary.ts:102](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L102)
+[src/structures/UserSummary.ts:102](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L102)
 
 ___
 
@@ -337,7 +337,7 @@ Date when this user last logged off
 
 #### Defined in
 
-[src/structures/UserSummary.ts:107](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserSummary.ts#L107)
+[src/structures/UserSummary.ts:107](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L107)
 
 ___
 
@@ -357,4 +357,4 @@ User.profileURL
 
 #### Defined in
 
-[src/structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/User.ts#L10)
+[src/structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/User.ts#L10)

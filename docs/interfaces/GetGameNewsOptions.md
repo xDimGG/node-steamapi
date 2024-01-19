@@ -22,7 +22,7 @@ Number of posts to retrieve (default 20)
 
 #### Defined in
 
-[src/SteamAPI.ts:118](https://github.com/xDimGG/node-steamapi/blob/f869965/src/SteamAPI.ts#L118)
+[src/SteamAPI.ts:118](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L118)
 
 ___
 
@@ -34,7 +34,7 @@ Retrieve posts earlier than this date
 
 #### Defined in
 
-[src/SteamAPI.ts:115](https://github.com/xDimGG/node-steamapi/blob/f869965/src/SteamAPI.ts#L115)
+[src/SteamAPI.ts:115](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L115)
 
 ___
 
@@ -46,7 +46,7 @@ List of feed names to return news for
 
 #### Defined in
 
-[src/SteamAPI.ts:121](https://github.com/xDimGG/node-steamapi/blob/f869965/src/SteamAPI.ts#L121)
+[src/SteamAPI.ts:121](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L121)
 
 ___
 
@@ -58,7 +58,7 @@ Maximum length for the content to return, if this is 0 the full content is retur
 
 #### Defined in
 
-[src/SteamAPI.ts:112](https://github.com/xDimGG/node-steamapi/blob/f869965/src/SteamAPI.ts#L112)
+[src/SteamAPI.ts:112](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L112)
 
 ___
 
@@ -70,4 +70,4 @@ List of tags to filter by (e.g. 'patchnotes')
 
 #### Defined in
 
-[src/SteamAPI.ts:124](https://github.com/xDimGG/node-steamapi/blob/f869965/src/SteamAPI.ts#L124)
+[src/SteamAPI.ts:124](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L124)

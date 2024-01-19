@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[src/structures/UserServer.ts:23](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServer.ts#L23)
+[src/structures/UserServer.ts:23](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServer.ts#L23)
 
 ## Properties
 
@@ -52,7 +52,7 @@ App ID this server is for
 
 #### Defined in
 
-[src/structures/UserServer.ts:6](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServer.ts#L6)
+[src/structures/UserServer.ts:6](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServer.ts#L6)
 
 ___
 
@@ -64,7 +64,7 @@ Has this server been deleted
 
 #### Defined in
 
-[src/structures/UserServer.ts:15](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServer.ts#L15)
+[src/structures/UserServer.ts:15](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServer.ts#L15)
 
 ___
 
@@ -76,7 +76,7 @@ Has this server expired
 
 #### Defined in
 
-[src/structures/UserServer.ts:18](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServer.ts#L18)
+[src/structures/UserServer.ts:18](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServer.ts#L18)
 
 ___
 
@@ -88,7 +88,7 @@ The SteamID of this game server
 
 #### Defined in
 
-[src/structures/UserServer.ts:3](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServer.ts#L3)
+[src/structures/UserServer.ts:3](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServer.ts#L3)
 
 ___
 
@@ -100,7 +100,7 @@ Unix Timestamp for when last time this server token was logged onto
 
 #### Defined in
 
-[src/structures/UserServer.ts:21](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServer.ts#L21)
+[src/structures/UserServer.ts:21](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServer.ts#L21)
 
 ___
 
@@ -112,7 +112,7 @@ The memo/name for this server
 
 #### Defined in
 
-[src/structures/UserServer.ts:12](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServer.ts#L12)
+[src/structures/UserServer.ts:12](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServer.ts#L12)
 
 ___
 
@@ -124,7 +124,7 @@ The login token for this server
 
 #### Defined in
 
-[src/structures/UserServer.ts:9](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServer.ts#L9)
+[src/structures/UserServer.ts:9](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServer.ts#L9)
 
 ## Accessors
 
@@ -140,4 +140,4 @@ The login token for this server
 
 #### Defined in
 
-[src/structures/UserServer.ts:34](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServer.ts#L34)
+[src/structures/UserServer.ts:34](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServer.ts#L34)

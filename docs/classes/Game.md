@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[src/structures/Game.ts:8](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L8)
+[src/structures/Game.ts:8](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L8)
 
 ## Properties
 
@@ -58,7 +58,7 @@ App ID for this game
 
 #### Defined in
 
-[src/structures/Game.ts:6](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L6)
+[src/structures/Game.ts:6](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L6)
 
 ## Accessors
 
@@ -74,7 +74,7 @@ App ID for this game
 
 #### Defined in
 
-[src/structures/Game.ts:28](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L28)
+[src/structures/Game.ts:28](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L28)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[src/structures/Game.ts:31](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L31)
+[src/structures/Game.ts:31](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L31)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[src/structures/Game.ts:16](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L16)
+[src/structures/Game.ts:16](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L16)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[src/structures/Game.ts:13](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L13)
+[src/structures/Game.ts:13](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L13)
 
 ___
 
@@ -138,7 +138,7 @@ ___
 
 #### Defined in
 
-[src/structures/Game.ts:34](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L34)
+[src/structures/Game.ts:34](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L34)
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 #### Defined in
 
-[src/structures/Game.ts:19](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L19)
+[src/structures/Game.ts:19](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L19)
 
 ___
 
@@ -170,4 +170,4 @@ ___
 
 #### Defined in
 
-[src/structures/Game.ts:22](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L22)
+[src/structures/Game.ts:22](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L22)

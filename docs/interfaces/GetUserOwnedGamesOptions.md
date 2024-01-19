@@ -24,7 +24,7 @@ If set, restricts results to the passed in apps. (note: does not seem to actuall
 
 #### Defined in
 
-[src/SteamAPI.ts:144](https://github.com/xDimGG/node-steamapi/blob/f869965/src/SteamAPI.ts#L144)
+[src/SteamAPI.ts:144](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L144)
 
 ___
 
@@ -36,7 +36,7 @@ Include additional details (name, icon) about each game
 
 #### Defined in
 
-[src/SteamAPI.ts:129](https://github.com/xDimGG/node-steamapi/blob/f869965/src/SteamAPI.ts#L129)
+[src/SteamAPI.ts:129](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L129)
 
 ___
 
@@ -48,7 +48,7 @@ Include even more app details. If true, `includeAppInfo` will also be set to tru
 
 #### Defined in
 
-[src/SteamAPI.ts:141](https://github.com/xDimGG/node-steamapi/blob/f869965/src/SteamAPI.ts#L141)
+[src/SteamAPI.ts:141](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L141)
 
 ___
 
@@ -60,7 +60,7 @@ Include free games the user has played
 
 #### Defined in
 
-[src/SteamAPI.ts:132](https://github.com/xDimGG/node-steamapi/blob/f869965/src/SteamAPI.ts#L132)
+[src/SteamAPI.ts:132](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L132)
 
 ___
 
@@ -72,7 +72,7 @@ Includes games in the free sub (defaults to false)
 
 #### Defined in
 
-[src/SteamAPI.ts:135](https://github.com/xDimGG/node-steamapi/blob/f869965/src/SteamAPI.ts#L135)
+[src/SteamAPI.ts:135](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L135)
 
 ___
 
@@ -84,7 +84,7 @@ Include unvetted store apps (defaults to false)
 
 #### Defined in
 
-[src/SteamAPI.ts:138](https://github.com/xDimGG/node-steamapi/blob/f869965/src/SteamAPI.ts#L138)
+[src/SteamAPI.ts:138](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L138)
 
 ___
 
@@ -96,4 +96,4 @@ Language to return app info in. (note: does not seem to actualy work)
 
 #### Defined in
 
-[src/SteamAPI.ts:147](https://github.com/xDimGG/node-steamapi/blob/f869965/src/SteamAPI.ts#L147)
+[src/SteamAPI.ts:147](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L147)

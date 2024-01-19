@@ -41,7 +41,7 @@ Game servers as returned by getUserServers
 
 #### Defined in
 
-[src/structures/UserServers.ts:20](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServers.ts#L20)
+[src/structures/UserServers.ts:20](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServers.ts#L20)
 
 ## Properties
 
@@ -53,7 +53,7 @@ Server actor SteamID. Not sure what this is
 
 #### Defined in
 
-[src/structures/UserServers.ts:12](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServers.ts#L12)
+[src/structures/UserServers.ts:12](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServers.ts#L12)
 
 ___
 
@@ -65,7 +65,7 @@ Whether this account has a ban from hosting servers
 
 #### Defined in
 
-[src/structures/UserServers.ts:9](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServers.ts#L9)
+[src/structures/UserServers.ts:9](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServers.ts#L9)
 
 ___
 
@@ -77,7 +77,7 @@ Unix Timestamp for when the servers expires
 
 #### Defined in
 
-[src/structures/UserServers.ts:15](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServers.ts#L15)
+[src/structures/UserServers.ts:15](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServers.ts#L15)
 
 ___
 
@@ -89,7 +89,7 @@ Unix Timestamp for the last time a server token action was executed
 
 #### Defined in
 
-[src/structures/UserServers.ts:18](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServers.ts#L18)
+[src/structures/UserServers.ts:18](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServers.ts#L18)
 
 ___
 
@@ -101,7 +101,7 @@ Servers this account has created
 
 #### Defined in
 
-[src/structures/UserServers.ts:6](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServers.ts#L6)
+[src/structures/UserServers.ts:6](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServers.ts#L6)
 
 ## Accessors
 
@@ -117,7 +117,7 @@ Servers this account has created
 
 #### Defined in
 
-[src/structures/UserServers.ts:29](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServers.ts#L29)
+[src/structures/UserServers.ts:29](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServers.ts#L29)
 
 ___
 
@@ -133,4 +133,4 @@ ___
 
 #### Defined in
 
-[src/structures/UserServers.ts:34](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserServers.ts#L34)
+[src/structures/UserServers.ts:34](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserServers.ts#L34)

@@ -12,7 +12,7 @@
 ## Documentation
 A list of all the methods SteamAPI provides is available [here](https://github.com/xDimGG/node-steamapi/blob/master/docs/classes/default.md#methods).
 
-## Breaking changes from 3.x to 4.x
+## Breaking changes from 2.x to 3.x
 - CommonJS Modules -> ES Modules
 - Import using `import` statement instead of `require()`
 - SteamAPI constructor now takes false as the first parameter if you don't want to supply a key

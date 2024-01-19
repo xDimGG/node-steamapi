@@ -57,7 +57,7 @@ steamapi
 
 #### Defined in
 
-[src/SteamAPI.ts:151](https://github.com/xDimGG/node-steamapi/blob/f869965/src/SteamAPI.ts#L151)
+[src/SteamAPI.ts:151](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L151)
 
 ___
 
@@ -67,4 +67,4 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:157](https://github.com/xDimGG/node-steamapi/blob/f869965/src/SteamAPI.ts#L157)
+[src/SteamAPI.ts:157](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L157)

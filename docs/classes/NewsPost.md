@@ -45,7 +45,7 @@
 
 #### Defined in
 
-[src/structures/NewsPost.ts:38](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/NewsPost.ts#L38)
+[src/structures/NewsPost.ts:38](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/NewsPost.ts#L38)
 
 ## Properties
 
@@ -57,7 +57,7 @@ App ID this news pertains to
 
 #### Defined in
 
-[src/structures/NewsPost.ts:33](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/NewsPost.ts#L33)
+[src/structures/NewsPost.ts:33](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/NewsPost.ts#L33)
 
 ___
 
@@ -69,7 +69,7 @@ Name of the post's author
 
 #### Defined in
 
-[src/structures/NewsPost.ts:15](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/NewsPost.ts#L15)
+[src/structures/NewsPost.ts:15](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/NewsPost.ts#L15)
 
 ___
 
@@ -81,7 +81,7 @@ Content of the post
 
 #### Defined in
 
-[src/structures/NewsPost.ts:18](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/NewsPost.ts#L18)
+[src/structures/NewsPost.ts:18](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/NewsPost.ts#L18)
 
 ___
 
@@ -93,7 +93,7 @@ Human readable label to be display on feed
 
 #### Defined in
 
-[src/structures/NewsPost.ts:24](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/NewsPost.ts#L24)
+[src/structures/NewsPost.ts:24](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/NewsPost.ts#L24)
 
 ___
 
@@ -105,7 +105,7 @@ API name of feed this was posted to
 
 #### Defined in
 
-[src/structures/NewsPost.ts:27](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/NewsPost.ts#L27)
+[src/structures/NewsPost.ts:27](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/NewsPost.ts#L27)
 
 ___
 
@@ -117,7 +117,7 @@ Feed type. Not sure what this is. Seems to always be 1
 
 #### Defined in
 
-[src/structures/NewsPost.ts:30](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/NewsPost.ts#L30)
+[src/structures/NewsPost.ts:30](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/NewsPost.ts#L30)
 
 ___
 
@@ -129,7 +129,7 @@ ID for this post
 
 #### Defined in
 
-[src/structures/NewsPost.ts:3](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/NewsPost.ts#L3)
+[src/structures/NewsPost.ts:3](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/NewsPost.ts#L3)
 
 ___
 
@@ -141,7 +141,7 @@ Unix Timestamp for when the post was published
 
 #### Defined in
 
-[src/structures/NewsPost.ts:21](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/NewsPost.ts#L21)
+[src/structures/NewsPost.ts:21](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/NewsPost.ts#L21)
 
 ___
 
@@ -153,7 +153,7 @@ Tags associated with this post
 
 #### Defined in
 
-[src/structures/NewsPost.ts:36](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/NewsPost.ts#L36)
+[src/structures/NewsPost.ts:36](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/NewsPost.ts#L36)
 
 ___
 
@@ -165,7 +165,7 @@ Title for this post
 
 #### Defined in
 
-[src/structures/NewsPost.ts:6](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/NewsPost.ts#L6)
+[src/structures/NewsPost.ts:6](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/NewsPost.ts#L6)
 
 ___
 
@@ -177,7 +177,7 @@ Link to this post
 
 #### Defined in
 
-[src/structures/NewsPost.ts:9](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/NewsPost.ts#L9)
+[src/structures/NewsPost.ts:9](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/NewsPost.ts#L9)
 
 ___
 
@@ -189,7 +189,7 @@ Whether the URL is external
 
 #### Defined in
 
-[src/structures/NewsPost.ts:12](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/NewsPost.ts#L12)
+[src/structures/NewsPost.ts:12](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/NewsPost.ts#L12)
 
 ## Accessors
 
@@ -205,4 +205,4 @@ Date when this post was published
 
 #### Defined in
 
-[src/structures/NewsPost.ts:54](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/NewsPost.ts#L54)
+[src/structures/NewsPost.ts:54](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/NewsPost.ts#L54)

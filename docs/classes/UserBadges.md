@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[src/structures/UserBadges.ts:19](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserBadges.ts#L19)
+[src/structures/UserBadges.ts:19](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserBadges.ts#L19)
 
 ## Properties
 
@@ -46,7 +46,7 @@ Badges this user owns
 
 #### Defined in
 
-[src/structures/UserBadges.ts:5](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserBadges.ts#L5)
+[src/structures/UserBadges.ts:5](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserBadges.ts#L5)
 
 ___
 
@@ -58,7 +58,7 @@ This user's current level
 
 #### Defined in
 
-[src/structures/UserBadges.ts:14](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserBadges.ts#L14)
+[src/structures/UserBadges.ts:14](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserBadges.ts#L14)
 
 ___
 
@@ -70,7 +70,7 @@ The amount of XP it took to reach this user's level (e.g. reaching level 26 requ
 
 #### Defined in
 
-[src/structures/UserBadges.ts:17](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserBadges.ts#L17)
+[src/structures/UserBadges.ts:17](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserBadges.ts#L17)
 
 ___
 
@@ -82,7 +82,7 @@ The total amount of XP this user has
 
 #### Defined in
 
-[src/structures/UserBadges.ts:8](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserBadges.ts#L8)
+[src/structures/UserBadges.ts:8](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserBadges.ts#L8)
 
 ___
 
@@ -94,4 +94,4 @@ The amount of XP remaining for this user to reach the next level
 
 #### Defined in
 
-[src/structures/UserBadges.ts:11](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserBadges.ts#L11)
+[src/structures/UserBadges.ts:11](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserBadges.ts#L11)

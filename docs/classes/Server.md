@@ -42,7 +42,7 @@ Game server as returned by getServers
 
 #### Defined in
 
-[src/structures/Server.ts:49](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Server.ts#L49)
+[src/structures/Server.ts:49](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L49)
 
 ## Properties
 
@@ -54,7 +54,7 @@ Server address of the form IPv4:PORT
 
 #### Defined in
 
-[src/structures/Server.ts:20](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Server.ts#L20)
+[src/structures/Server.ts:20](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L20)
 
 ___
 
@@ -66,7 +66,7 @@ App ID this server is hosting
 
 #### Defined in
 
-[src/structures/Server.ts:23](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Server.ts#L23)
+[src/structures/Server.ts:23](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L23)
 
 ___
 
@@ -78,7 +78,7 @@ The directory the game is from
 
 #### Defined in
 
-[src/structures/Server.ts:26](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Server.ts#L26)
+[src/structures/Server.ts:26](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L26)
 
 ___
 
@@ -90,7 +90,7 @@ GMS Index. Not sure what this means
 
 #### Defined in
 
-[src/structures/Server.ts:29](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Server.ts#L29)
+[src/structures/Server.ts:29](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L29)
 
 ___
 
@@ -102,7 +102,7 @@ The SteamID of this game server
 
 #### Defined in
 
-[src/structures/Server.ts:17](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Server.ts#L17)
+[src/structures/Server.ts:17](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L17)
 
 ___
 
@@ -114,7 +114,7 @@ Is this server LAN only
 
 #### Defined in
 
-[src/structures/Server.ts:32](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Server.ts#L32)
+[src/structures/Server.ts:32](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L32)
 
 ___
 
@@ -126,7 +126,7 @@ The port this server is running on
 
 #### Defined in
 
-[src/structures/Server.ts:35](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Server.ts#L35)
+[src/structures/Server.ts:35](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L35)
 
 ___
 
@@ -138,7 +138,7 @@ Server region
 
 #### Defined in
 
-[src/structures/Server.ts:38](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Server.ts#L38)
+[src/structures/Server.ts:38](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L38)
 
 ___
 
@@ -150,7 +150,7 @@ Requirements for clients to join server
 
 #### Defined in
 
-[src/structures/Server.ts:47](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Server.ts#L47)
+[src/structures/Server.ts:47](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L47)
 
 ___
 
@@ -162,7 +162,7 @@ Is this server VAC secured
 
 #### Defined in
 
-[src/structures/Server.ts:41](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Server.ts#L41)
+[src/structures/Server.ts:41](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L41)
 
 ___
 
@@ -174,4 +174,4 @@ Server specPort. Not sure what this means
 
 #### Defined in
 
-[src/structures/Server.ts:44](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Server.ts#L44)
+[src/structures/Server.ts:44](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L44)

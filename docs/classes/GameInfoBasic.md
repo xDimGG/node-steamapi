@@ -55,7 +55,7 @@
 
 #### Defined in
 
-[src/structures/GameInfoBasic.ts:12](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/GameInfoBasic.ts#L12)
+[src/structures/GameInfoBasic.ts:12](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/GameInfoBasic.ts#L12)
 
 ## Properties
 
@@ -67,7 +67,7 @@ Hash for this game's icon
 
 #### Defined in
 
-[src/structures/GameInfoBasic.ts:10](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/GameInfoBasic.ts#L10)
+[src/structures/GameInfoBasic.ts:10](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/GameInfoBasic.ts#L10)
 
 ___
 
@@ -83,7 +83,7 @@ App ID for this game
 
 #### Defined in
 
-[src/structures/Game.ts:6](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L6)
+[src/structures/Game.ts:6](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L6)
 
 ___
 
@@ -95,7 +95,7 @@ Name for this game
 
 #### Defined in
 
-[src/structures/GameInfoBasic.ts:7](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/GameInfoBasic.ts#L7)
+[src/structures/GameInfoBasic.ts:7](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/GameInfoBasic.ts#L7)
 
 ## Accessors
 
@@ -115,7 +115,7 @@ Game.backgroundURL
 
 #### Defined in
 
-[src/structures/Game.ts:28](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L28)
+[src/structures/Game.ts:28](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L28)
 
 ___
 
@@ -135,7 +135,7 @@ Game.coverURL
 
 #### Defined in
 
-[src/structures/Game.ts:31](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L31)
+[src/structures/Game.ts:31](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L31)
 
 ___
 
@@ -155,7 +155,7 @@ Game.headerMediumURL
 
 #### Defined in
 
-[src/structures/Game.ts:16](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L16)
+[src/structures/Game.ts:16](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L16)
 
 ___
 
@@ -175,7 +175,7 @@ Game.headerURL
 
 #### Defined in
 
-[src/structures/Game.ts:13](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L13)
+[src/structures/Game.ts:13](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L13)
 
 ___
 
@@ -191,7 +191,7 @@ tiny app icon
 
 #### Defined in
 
-[src/structures/GameInfoBasic.ts:20](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/GameInfoBasic.ts#L20)
+[src/structures/GameInfoBasic.ts:20](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/GameInfoBasic.ts#L20)
 
 ___
 
@@ -211,7 +211,7 @@ Game.logoURL
 
 #### Defined in
 
-[src/structures/Game.ts:34](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L34)
+[src/structures/Game.ts:34](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L34)
 
 ___
 
@@ -231,7 +231,7 @@ Game.smallHeaderURL
 
 #### Defined in
 
-[src/structures/Game.ts:19](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L19)
+[src/structures/Game.ts:19](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L19)
 
 ___
 
@@ -251,4 +251,4 @@ Game.tinyHeaderURL
 
 #### Defined in
 
-[src/structures/Game.ts:22](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Game.ts#L22)
+[src/structures/Game.ts:22](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Game.ts#L22)
