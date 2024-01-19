@@ -1,5 +1,6 @@
 import User from './User.js';
 
+/** Persona states as indicated by https://developer.valvesoftware.com/wiki/Steam_Web_API#Public_Data */
 export enum UserPersonaState {
 	Offline,
 	Online,

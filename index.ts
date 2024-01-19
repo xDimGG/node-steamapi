@@ -4,11 +4,12 @@ import AchievementPercentage from './src/structures/AchievementPercentage.js';
 import UserStats from './src/structures/UserStats.js';
 import { Country, State, City } from './src/structures/Locations.js';
 import NewsPost from './src/structures/NewsPost.js';
-import Server from './src/structures/Server.js';
+import Server, { ServerRegion } from './src/structures/Server.js';
 import Game from './src/structures/Game.js';
 import GameInfo from './src/structures/GameInfo.js';
 import GameInfoExtended from './src/structures/GameInfoExtended.js';
 import GameInfoBasic from './src/structures/GameInfoBasic.js';
+import GameServer from './src/structures/GameServer.js';
 import UserAchievements from './src/structures/UserAchievements.js';
 import UserBadges from './src/structures/UserBadges.js';
 import UserPlaytime from './src/structures/UserPlaytime.js';
@@ -35,6 +36,7 @@ export {
 	// Steam constants
 	Currency,
 	Language,
+	ServerRegion,
 	UserPersonaState,
 
 	// Caching interface
@@ -53,6 +55,7 @@ export {
 	GameInfo,
 	GameInfoExtended,
 	GameInfoBasic,
+	GameServer,
 	UserAchievements,
 	UserBadges,
 	UserPlaytime,

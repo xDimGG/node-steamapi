@@ -5,6 +5,7 @@ import Package from '../package.json' assert { type: 'json' };
 
 import { CacheMap, MemoryCacheMap } from './Cache.js';
 import { fetch, assertApp, assertID } from './Utils.js';
+import { City, Country, State } from './structures/Locations.js';
 import AppBase from './structures/AppBase.js';
 import AchievementPercentage from './structures/AchievementPercentage.js';
 import UserStats from './structures/UserStats.js';
@@ -14,6 +15,7 @@ import Game from './structures/Game.js';
 import GameInfo from './structures/GameInfo.js';
 import GameInfoExtended from './structures/GameInfoExtended.js';
 import GameInfoBasic from './structures/GameInfoBasic.js';
+import GameServer from './structures/GameServer.js';
 import UserAchievements from './structures/UserAchievements.js';
 import UserBadges from './structures/UserBadges.js';
 import UserPlaytime from './structures/UserPlaytime.js';
@@ -21,16 +23,6 @@ import UserBans from './structures/UserBans.js';
 import UserFriend from './structures/UserFriend.js';
 import UserServers from './structures/UserServers.js';
 import UserSummary from './structures/UserSummary.js';
-import { City, Country, State } from './structures/Locations.js';
-
-const reProfileBase = String.raw`(?:(?:(?:(?:https?)?:\/\/)?(?:www\.)?steamcommunity\.com)?)?\/?`;
-const reCommunityID = RegExp(String.raw`^(\d{17})$`, 'i');
-const reSteamID2 = RegExp(String.raw`^(STEAM_\d+:\d+:\d+)$`, 'i');
-const reSteamID3 = RegExp(String.raw`^(\[U:\d+:\d+\])$`, 'i');
-const reProfileURL = RegExp(String.raw`${reProfileBase}profiles\/(\d{17})`, 'i');
-const reProfileID = RegExp(String.raw`${reProfileBase}id\/([a-z0-9_-]{2,32})`, 'i');
-
-const SUCCESS_CODE = 1;
 
 export interface SteamAPIOptions {
 	/**
@@ -169,6 +161,15 @@ export type Language = 'arabic' | 'bulgarian' | 'schinese' | 'tchinese'
 	| 'latam' | 'spanish' | 'swedish' | 'thai' | 'turkish' | 'ukrainian' | 'vietnamese';
 
 export default class SteamAPI {
+	static reProfileBase = String.raw`(?:(?:(?:(?:https?)?:\/\/)?(?:www\.)?steamcommunity\.com)?)?\/?`;
+	static reCommunityID = RegExp(String.raw`^(\d{17})$`, 'i');
+	static reSteamID2 = RegExp(String.raw`^(STEAM_\d+:\d+:\d+)$`, 'i');
+	static reSteamID3 = RegExp(String.raw`^(\[U:\d+:\d+\])$`, 'i');
+	static reProfileURL = RegExp(String.raw`${this.reProfileBase}profiles\/(\d{17})`, 'i');
+	static reProfileID = RegExp(String.raw`${this.reProfileBase}id\/([a-z0-9_-]{2,32})`, 'i');
+
+	static SUCCESS_CODE = 1;
+
 	language;
 	currency;
 	headers;
@@ -237,17 +238,17 @@ export default class SteamAPI {
 	 */
 	async resolve(query: string): Promise<string> {
 		// community id match, ex. 76561198378422474
-		const communityIDMatch = query.match(reCommunityID);
+		const communityIDMatch = query.match(SteamAPI.reCommunityID);
 		if (communityIDMatch !== null)
 			return communityIDMatch[1];
 
 		// url, https://steamcommunity.com/profiles/76561198378422474
-		const urlMatch = query.match(reProfileURL);
+		const urlMatch = query.match(SteamAPI.reProfileURL);
 		if (urlMatch !== null)
 			return urlMatch[1];
 
 		// Steam 2: STEAM_0:0:209078373
-		const steamID2Match = query.match(reSteamID2);
+		const steamID2Match = query.match(SteamAPI.reSteamID2);
 		if (steamID2Match !== null) {
 			const sid = new SteamID(steamID2Match[1]);
 
@@ -255,7 +256,7 @@ export default class SteamAPI {
 		}
 
 		// Steam 3: [U:1:418156746]
-		const steamID3Match = query.match(reSteamID3);
+		const steamID3Match = query.match(SteamAPI.reSteamID3);
 		if (steamID3Match !== null) {
 			const sid = new SteamID(steamID3Match[1]);
 
@@ -263,23 +264,20 @@ export default class SteamAPI {
 		}
 
 		// vanity id, https://steamcommunity.com/id/xDim
-		const idMatch = query.match(reProfileID);
+		const idMatch = query.match(SteamAPI.reProfileID);
 		if (idMatch !== null) {
 			const id = idMatch[1];
 			const cachedID = this.userResolveCache?.get(id);
 			if (cachedID) return cachedID;
 
-			const steamID = await this
-				.get(`/ISteamUser/ResolveVanityURL/v1`, { vanityurl: id }) // TODO: consider using url_type paramater
-				.then(json =>
-					json.response.success === SUCCESS_CODE
-						? json.response.steamid
-						: Promise.reject(new TypeError(json.response.message)),
-				);
+			const json = await this.get('/ISteamUser/ResolveVanityURL/v1', { vanityurl: id })
+			if (json.response.success !== SteamAPI.SUCCESS_CODE)
+				throw new Error(json.response.message);
 
-			if (this.userResolveCache) this.userResolveCache.set(id, steamID);
+			if (this.userResolveCache)
+				this.userResolveCache.set(id, json.response.steamid);
 
-			return steamID;
+			return json.response.steamid;
 		}
 
 		throw new TypeError('Invalid format');
@@ -393,10 +391,10 @@ export default class SteamAPI {
 	 */
 	async getServers(host: string): Promise<Server[]> {
 		const { response } = await this.get('/ISteamApps/GetServersAtAddress/v1', { addr: host });
+		if (!response.success)
+			throw new Error(response.message);
 
-		return response.success
-			? response.servers.map((server: any) => new Server(server))
-			: Promise.reject(new Error(response.message));
+		return response.servers.map((server: any) => new Server(server));
 	}
 
 	/**
@@ -408,7 +406,7 @@ export default class SteamAPI {
 		assertApp(app);
 
 		const json = await this.get('/ISteamUserStats/GetNumberOfCurrentPlayers/v1', { appid: app });
-		if (json.response.result !== SUCCESS_CODE)
+		if (json.response.result !== SteamAPI.SUCCESS_CODE)
 			throw new Error('No app found');
 
 		return json.response.player_count;
@@ -686,9 +684,20 @@ export default class SteamAPI {
 	}
 
 	/**
-	 * API endpoints to consider adding
-   *
+	 * Gets servers using Master Server Query Protocol filtering
+	 * @param filter Filter as defined by the [Master Server Query Protocol](https://developer.valvesoftware.com/wiki/Master_Server_Query_Protocol#Filter).
+	 * Although a filter is not stricly required, you probably want to at least use something like \appid\[appid] to filter by app
+	 * @param count Number of results to return. 100 by default
+	 */
+	async getServerList(filter: string = '', count: number = 100): Promise<GameServer> {
+		const json = await this.get('/IGameServersService/GetServerList/v1', { filter, count });
+		return json.response.servers.map((server: any) => new GameServer(server));
+	}
+
+	/**
+	 * * Leaving this here for future me
 	 * Kinda useless/very similar to something already implemented:
+	 *
 	 * ResolveVanityURL for url_type=2 (group) and url_type=3 (official game group)
 	 * GetFriendList relationship parameter? not sure if it does anything
 	 * https://partner.steamgames.com/doc/webapi/ISteamApps#UpToDateCheck
@@ -696,8 +705,5 @@ export default class SteamAPI {
 	 * (undocumented) ISteamApps/GetSDRConfig?key={}&appid={}
 	 * (undocumented) IStoreService/GetAppList
 	 * https://partner.steamgames.com/doc/webapi/ISteamUserStats#GetGlobalStatsForGame
-	 *
-	 * Useful:
-	 * https://api.steampowered.com/IGameServersService/GetServerList/v1/?key={}&limit=100&filter=\appid\730
 	 */
 }

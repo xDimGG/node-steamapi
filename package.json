@@ -7,23 +7,8 @@
 	"version": "2.5.0",
 	"license": "MIT",
 	"type": "module",
-	"eslintConfig": {
-		"extends": "eslint-config-dim",
-		"env": {
-			"node": true,
-			"browser": true
-		},
-		"parserOptions": {
-			"ecmaVersion": "latest",
-			"sourceType": "module"
-		},
-		"rules": {
-			"eol-last": [
-				"error",
-				"always"
-			],
-			"no-shadow": "off"
-		}
+	"scripts": {
+    "tsdoc": "tsdoc --src=src/index.ts --dest=out.md"
 	},
 	"keywords": [
 		"steam",
@@ -43,7 +28,7 @@
 	"devDependencies": {
 		"@types/node": "^20.11.5",
 		"@types/steamid": "^2.0.3",
-		"eslint-config-dim": "github:xDimGG/eslint-config-dim",
+		"tsdoc-markdown": "^0.1.0",
 		"typescript": "^5.3.3"
 	},
 	"dependencies": {

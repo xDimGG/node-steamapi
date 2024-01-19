@@ -1,3 +1,17 @@
+/** Server regions as indicated by https://developer.valvesoftware.com/wiki/Sv_region */
+export enum ServerRegion {
+	USEast,
+	USWest,
+	SouthAmerica,
+	Europe,
+	Asia,
+	Australia,
+	MiddleEast,
+	Africa,
+	World = 255,
+}
+
+/** Game server as returned by getServers */
 export default class Server {
 	/** The SteamID of this game server */
 	id: string;
@@ -20,17 +34,17 @@ export default class Server {
 	/** The port this server is running on */
 	port: number;
 
-	/** Server region. Not sure what the number means */
-	region: number;
+	/** Server region */
+	region: ServerRegion;
 
-	/** Is this server VAC secure */
+	/** Is this server VAC secured */
 	secure: boolean;
 
 	/** Server specPort. Not sure what this means */
 	specPort: number;
 
-	/** Requirements for clients to join. Not sure */
-	reject: string;
+	/** Requirements for clients to join server */
+	reject?: string;
 
 	constructor(data: any) {
 		this.id = data.steamid;

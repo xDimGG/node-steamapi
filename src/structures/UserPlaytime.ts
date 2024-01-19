@@ -24,8 +24,8 @@ export default class UserPlaytime<G> {
 	/** The number of minutes played while offline */
 	disconnectedMinutes: number;
 
-	/** UNIX Timestamp for when the user last played this game */
-	lastPlayedTimestamp: number;
+	/** UNIX Timestamp for when the user last played this game if the user has ever launched the game */
+	lastPlayedTimestamp?: number;
 
 	constructor(data: any, game: G) {
 		this.game = game;
@@ -34,12 +34,12 @@ export default class UserPlaytime<G> {
 		this.windowsMinutes = data.playtime_windows_forever;
 		this.macMinutes = data.playtime_mac_forever;
 		this.linuxMinutes = data.playtime_linux_forever;
-		this.disconnectedMinutes = data.playtime_disconnected;
+		this.disconnectedMinutes = data.playtime_disconnected || 0;
 		this.lastPlayedTimestamp = data.rtime_last_played;
 	}
 
 	/** Date when uaer last played this game */
 	get lastPlayedAt() {
-		return new Date(this.lastPlayedTimestamp * 1000);
+		return this.lastPlayedTimestamp === undefined ? undefined : new Date(this.lastPlayedTimestamp * 1000);
 	}
 }

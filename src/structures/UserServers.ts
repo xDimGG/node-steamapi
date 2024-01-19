@@ -1,5 +1,6 @@
 import UserServer from './UserServer.js';
 
+/** Game servers as returned by getUserServers */
 export default class UserServers {
 	/** Servers this account has created */
 	servers: UserServer[];

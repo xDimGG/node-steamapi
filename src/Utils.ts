@@ -36,28 +36,3 @@ export function assertID(ids: string | string[]): void {
 	if (ids.some(id => !reID.test(id)))
 		throw new TypeError('Invalid user ID provided');
 }
-
-/**
- * Converts
- * * [{ name: 'a', value: 'b' }, { name: 'b', value: 'c' }]
- *
- * To
- * * { a: 'b', b: 'c' }
- * @param arr The array to make an object
- * @param val The name of the value
- * @param key The name of the key
- * @param convertBooleans Whether to convert values to booleans
- * @returns An object consisting of the keys and values
-*/
-// export function toObject(
-// 	arr: any[],
-// 	key: string,
-// 	val: string,
-// 	convertBooleans = false,
-// ) {
-// 	const object: { [key: string]: string | boolean } = {};
-// 	for (const obj of arr)
-// 		object[obj[key]] = convertBooleans ? Boolean(obj[val]) : obj[val];
-
-// 	return object;
-// };
