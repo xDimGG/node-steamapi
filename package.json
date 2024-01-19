@@ -4,10 +4,11 @@
 	"description": "A nice Steam API wrapper.",
 	"main": "index.js",
 	"types": "index.d.ts",
-	"version": "3.0.0",
+	"version": "3.0.3",
 	"license": "MIT",
 	"type": "module",
 	"scripts": {
+		"prebuild": "tsc && cp README.md dist/",
 		"tsdoc": "typedoc --plugin typedoc-plugin-markdown --readme none --out docs index.ts"
 	},
 	"keywords": [

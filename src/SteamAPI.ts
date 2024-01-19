@@ -1,10 +1,13 @@
 import SteamID from 'steamid';
 import querystring from 'node:querystring';
 
-import Package from '../package.json' assert { type: 'json' };
+// https://stackoverflow.com/a/66726426/7504056
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+const Package = require('../package.json');
 
 import { CacheMap, MemoryCacheMap } from './Cache.js';
-import { fetch, assertApp, assertID } from './Utils.js';
+import { fetch, assertApp, assertID } from './utils.js';
 import { City, Country, State } from './structures/Locations.js';
 import AppBase from './structures/AppBase.js';
 import AchievementPercentage from './structures/AchievementPercentage.js';
