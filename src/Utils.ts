@@ -9,7 +9,7 @@ const reg = /<h1>(.*)<\/h1>/;
  * @returns 
  */
 export async function fetch(url: string, options: any): Promise<any> {
-	console.log(url);
+	// console.log(url);
 	const res = await nodeFetch(url, options);
 	if (res.status === 400) {
 		const data = await res.text();
