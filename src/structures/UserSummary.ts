@@ -15,10 +15,10 @@ export default class UserSummary extends User {
 	/** The user's avatar in varous sizes */
 	avatar;
 
-	/** Link to the player's profile */
+	/** Link to the user's profile */
 	url: string;
 
-	/** Is this player's profile visible to you */
+	/** Is this user's profile visible to you */
 	visible: boolean;
 
 	/** The user's persona state. Always 0 if profile is private */

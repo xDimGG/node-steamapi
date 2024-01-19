@@ -10,7 +10,7 @@
 </div>
 
 ## Documentation
-Documentation is available at https://github.com/xDimGG/node-steamapi/tree/ts-rewrite/docs/README.md
+A list of all the methods SteamAPI provides is available [here](https://github.com/xDimGG/node-steamapi/blob/ts-rewrite/docs/classes/default.md#methods).
 
 ## Breaking changes from 3.x to 4.x
 - JavaScript -> TypeScript
