@@ -10,18 +10,18 @@
 </div>
 
 ## Documentation
-A list of all the methods SteamAPI provides is available [here](https://github.com/xDimGG/node-steamapi/blob/ts-rewrite/docs/classes/default.md#methods).
+A list of all the methods SteamAPI provides is available [here](https://github.com/xDimGG/node-steamapi/blob/master/docs/classes/default.md#methods).
 
 ## Breaking changes from 3.x to 4.x
-- JavaScript -> TypeScript
 - CommonJS Modules -> ES Modules
 - Import using `import` statement instead of `require()`
 - SteamAPI constructor now takes false as the first parameter if you don't want to supply a key
-- Options for constructor have changes from `{ enabled, expires, disableWarnings }` to `{ language, inMemoryCacheEnabled, gameDetailCacheEnabled, gameDetailCacheTTL, userResolveCacheEnabled, userResolveCacheTTL }`
+- Options for constructor have changes from `{ enabled, expires, disableWarnings }` to `{ language, currency, headers, baseAPI, baseStore, baseActions, inMemoryCacheEnabled, gameDetailCacheEnabled, gameDetailCacheTTL, userResolveCacheEnabled, userResolveCacheTTL }`
 - Custom caching may be enabled by setting `inMemoryCacheEnabled: false` and setting `<SteamAPI>.gameDetailCache`/`<SteamAPI>.userResolveCache`. Must implement `CacheMap<K, V>` interface in src/Cache.ts
 - getFeaturedGames() returns object instead of array
 - Server#game -> Server#gameDir
 - App IDs are passed as numbers not strings (although a string will probably still work)
+- Any other changes to the API can be found in https://github.com/xDimGG/node-steamapi/blob/master/PORT.md
 
 ## Setup
 ### Installation

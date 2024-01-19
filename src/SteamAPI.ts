@@ -287,8 +287,9 @@ export default class SteamAPI {
 	 * Gets featured categories on Steam store
 	 *
 	 * <warn>undocumented endpoint -- may be unstable</warn>
-	 * @param language The language
-	 * @param currency The currency
+	 * @param options More options
+	 * @param options.language The language
+	 * @param options.currency The currency
 	 */
 	getFeaturedCategories({ language = this.language, currency = this.currency } = {}): Promise<{ [key: string]: any }> {
 		// TODO: make class for this
@@ -299,8 +300,9 @@ export default class SteamAPI {
 	 * Gets featured games on Steam store
 	 *
 	 * <warn>undocumented endpoint -- may be unstable</warn>
-	 * @param language The language
-	 * @param currency The currency
+	 * @param options More options
+	 * @param options.language The language
+	 * @param options.currency The currency
 	 */
 	getFeaturedGames({ language = this.language, currency = this.currency } = {}): Promise<{ [key: string]: any }> {
 		// TODO: make class for this
@@ -321,9 +323,10 @@ export default class SteamAPI {
 	 *
 	 * <warn>Not every `language` is supported. A list of available languages can be found [here](https://www.ibabbleon.com/Steam-Supported-Languages-API-Codes.html).</warn>
 	 * @param app App ID or array of App IDs
-	 * @param options.language Description language
-	 * @param options.currency Currency currency
-	 * @param options.filters Fields to filter out. Available fields can be found [here](https://wiki.teamfortress.com/wiki/User:RJackson/StorefrontAPI#appdetails)
+	 * @param options More options
+	 * @param options.language The language
+	 * @param options.currency The currency
+	 * @param options.filters Fields to restrict the return results to
 	 * @returns If app is number, returns single object. If app is array, returns a mapping of app IDs to objects
 	 */
 	async getGameDetails(
@@ -521,7 +524,7 @@ export default class SteamAPI {
 	/**
 	 * Get users owned games.
 	 * @param id User ID
-	 * @param options Additional options for filtering
+	 * @param opts Additional options for filtering
 	 * @returns Owned games
 	 */
 	async getUserOwnedGames(id: string, opts: GetUserOwnedGamesOptions = {}): Promise<UserPlaytime<Game | GameInfo | GameInfoExtended>[]> {
@@ -696,7 +699,7 @@ export default class SteamAPI {
 
 	/**
 	 * * Leaving this here for future me
-	 * Kinda useless/very similar to something already implemented:
+	 * Kinda useless/very similar to something already implemented, but worth considering:
 	 *
 	 * ResolveVanityURL for url_type=2 (group) and url_type=3 (official game group)
 	 * GetFriendList relationship parameter? not sure if it does anything

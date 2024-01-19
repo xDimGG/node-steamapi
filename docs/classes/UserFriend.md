@@ -47,7 +47,7 @@ User.constructor
 
 #### Defined in
 
-[src/structures/UserFriend.ts:10](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/UserFriend.ts#L10)
+[src/structures/UserFriend.ts:10](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserFriend.ts#L10)
 
 ## Properties
 
@@ -59,7 +59,7 @@ Unix Timestamp representing when the friendship started
 
 #### Defined in
 
-[src/structures/UserFriend.ts:5](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/UserFriend.ts#L5)
+[src/structures/UserFriend.ts:5](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserFriend.ts#L5)
 
 ___
 
@@ -71,7 +71,7 @@ The type of the relationship (note: seems to always be 'friend')
 
 #### Defined in
 
-[src/structures/UserFriend.ts:8](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/UserFriend.ts#L8)
+[src/structures/UserFriend.ts:8](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserFriend.ts#L8)
 
 ___
 
@@ -87,7 +87,7 @@ User.steamID
 
 #### Defined in
 
-[src/structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/User.ts#L3)
+[src/structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/User.ts#L3)
 
 ## Accessors
 
@@ -103,7 +103,7 @@ Date object when this friendship started
 
 #### Defined in
 
-[src/structures/UserFriend.ts:18](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/UserFriend.ts#L18)
+[src/structures/UserFriend.ts:18](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserFriend.ts#L18)
 
 ___
 
@@ -123,4 +123,4 @@ User.profileURL
 
 #### Defined in
 
-[src/structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/User.ts#L10)
+[src/structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/User.ts#L10)

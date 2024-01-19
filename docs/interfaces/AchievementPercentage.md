@@ -19,7 +19,7 @@ API name of this achievement
 
 #### Defined in
 
-[src/structures/AchievementPercentage.ts:3](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/AchievementPercentage.ts#L3)
+[src/structures/AchievementPercentage.ts:3](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/AchievementPercentage.ts#L3)
 
 ___
 
@@ -31,4 +31,4 @@ What percent of players have completed this achievement (floating point value be
 
 #### Defined in
 
-[src/structures/AchievementPercentage.ts:6](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/AchievementPercentage.ts#L6)
+[src/structures/AchievementPercentage.ts:6](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/AchievementPercentage.ts#L6)

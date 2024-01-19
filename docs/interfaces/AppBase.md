@@ -21,7 +21,7 @@ This app's ID
 
 #### Defined in
 
-[src/structures/AppBase.ts:4](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/AppBase.ts#L4)
+[src/structures/AppBase.ts:4](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/AppBase.ts#L4)
 
 ___
 
@@ -33,4 +33,4 @@ This app's name
 
 #### Defined in
 
-[src/structures/AppBase.ts:7](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/AppBase.ts#L7)
+[src/structures/AppBase.ts:7](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/AppBase.ts#L7)

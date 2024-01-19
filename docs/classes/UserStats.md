@@ -47,19 +47,19 @@ User.constructor
 
 #### Defined in
 
-[src/structures/UserStats.ts:15](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/UserStats.ts#L15)
+[src/structures/UserStats.ts:15](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserStats.ts#L15)
 
 ## Properties
 
 ### achievements
 
-• `Optional` **achievements**: `default`[]
+• `Optional` **achievements**: [`UserAchievement`](UserAchievement.md)[]
 
 The achievements this user has unlocked
 
 #### Defined in
 
-[src/structures/UserStats.ts:10](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/UserStats.ts#L10)
+[src/structures/UserStats.ts:10](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserStats.ts#L10)
 
 ___
 
@@ -71,19 +71,19 @@ Name of this game
 
 #### Defined in
 
-[src/structures/UserStats.ts:7](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/UserStats.ts#L7)
+[src/structures/UserStats.ts:7](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserStats.ts#L7)
 
 ___
 
 ### stats
 
-• `Optional` **stats**: `default`[]
+• `Optional` **stats**: [`UserStat`](../interfaces/UserStat.md)[]
 
 Some game stats about the user
 
 #### Defined in
 
-[src/structures/UserStats.ts:13](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/UserStats.ts#L13)
+[src/structures/UserStats.ts:13](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserStats.ts#L13)
 
 ___
 
@@ -99,7 +99,7 @@ User.steamID
 
 #### Defined in
 
-[src/structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/User.ts#L3)
+[src/structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/User.ts#L3)
 
 ## Accessors
 
@@ -119,4 +119,4 @@ User.profileURL
 
 #### Defined in
 
-[src/structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/User.ts#L10)
+[src/structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/User.ts#L10)

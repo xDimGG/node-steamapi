@@ -18,11 +18,14 @@ steamapi
 - [GameServer](classes/GameServer.md)
 - [NewsPost](classes/NewsPost.md)
 - [Server](classes/Server.md)
+- [UserAchievement](classes/UserAchievement.md)
 - [UserAchievements](classes/UserAchievements.md)
+- [UserBadge](classes/UserBadge.md)
 - [UserBadges](classes/UserBadges.md)
 - [UserBans](classes/UserBans.md)
 - [UserFriend](classes/UserFriend.md)
 - [UserPlaytime](classes/UserPlaytime.md)
+- [UserServer](classes/UserServer.md)
 - [UserServers](classes/UserServers.md)
 - [UserStats](classes/UserStats.md)
 - [UserSummary](classes/UserSummary.md)
@@ -39,6 +42,7 @@ steamapi
 - [GetUserOwnedGamesOptions](interfaces/GetUserOwnedGamesOptions.md)
 - [State](interfaces/State.md)
 - [SteamAPIOptions](interfaces/SteamAPIOptions.md)
+- [UserStat](interfaces/UserStat.md)
 
 ### Type Aliases
 
@@ -53,7 +57,7 @@ steamapi
 
 #### Defined in
 
-[src/SteamAPI.ts:151](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/SteamAPI.ts#L151)
+[src/SteamAPI.ts:151](https://github.com/xDimGG/node-steamapi/blob/f869965/src/SteamAPI.ts#L151)
 
 ___
 
@@ -63,4 +67,4 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:157](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/SteamAPI.ts#L157)
+[src/SteamAPI.ts:157](https://github.com/xDimGG/node-steamapi/blob/f869965/src/SteamAPI.ts#L157)

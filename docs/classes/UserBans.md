@@ -50,7 +50,7 @@ User.constructor
 
 #### Defined in
 
-[src/structures/UserBans.ts:26](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/UserBans.ts#L26)
+[src/structures/UserBans.ts:26](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserBans.ts#L26)
 
 ## Properties
 
@@ -62,7 +62,7 @@ Is this user community banned
 
 #### Defined in
 
-[src/structures/UserBans.ts:5](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/UserBans.ts#L5)
+[src/structures/UserBans.ts:5](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserBans.ts#L5)
 
 ___
 
@@ -74,7 +74,7 @@ The number of days it has been since the user's last ban
 
 #### Defined in
 
-[src/structures/UserBans.ts:24](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/UserBans.ts#L24)
+[src/structures/UserBans.ts:24](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserBans.ts#L24)
 
 ___
 
@@ -88,7 +88,7 @@ Not sure what other string values exist
 
 #### Defined in
 
-[src/structures/UserBans.ts:21](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/UserBans.ts#L21)
+[src/structures/UserBans.ts:21](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserBans.ts#L21)
 
 ___
 
@@ -100,7 +100,7 @@ Number of game bans the user has had
 
 #### Defined in
 
-[src/structures/UserBans.ts:14](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/UserBans.ts#L14)
+[src/structures/UserBans.ts:14](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserBans.ts#L14)
 
 ___
 
@@ -116,7 +116,7 @@ User.steamID
 
 #### Defined in
 
-[src/structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/User.ts#L3)
+[src/structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/User.ts#L3)
 
 ___
 
@@ -128,7 +128,7 @@ Is this user vac banned
 
 #### Defined in
 
-[src/structures/UserBans.ts:8](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/UserBans.ts#L8)
+[src/structures/UserBans.ts:8](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserBans.ts#L8)
 
 ___
 
@@ -140,7 +140,7 @@ Number of VAC bans the user has had
 
 #### Defined in
 
-[src/structures/UserBans.ts:11](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/UserBans.ts#L11)
+[src/structures/UserBans.ts:11](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/UserBans.ts#L11)
 
 ## Accessors
 
@@ -160,4 +160,4 @@ User.profileURL
 
 #### Defined in
 
-[src/structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/User.ts#L10)
+[src/structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/User.ts#L10)

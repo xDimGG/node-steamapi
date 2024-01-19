@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[src/Cache.ts:2](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/Cache.ts#L2)
+[src/Cache.ts:2](https://github.com/xDimGG/node-steamapi/blob/f869965/src/Cache.ts#L2)
 
 ___
 
@@ -55,4 +55,4 @@ ___
 
 #### Defined in
 
-[src/Cache.ts:3](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/Cache.ts#L3)
+[src/Cache.ts:3](https://github.com/xDimGG/node-steamapi/blob/f869965/src/Cache.ts#L3)

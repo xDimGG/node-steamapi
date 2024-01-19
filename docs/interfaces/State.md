@@ -20,7 +20,7 @@ Two letter code representing the country of this state
 
 #### Defined in
 
-[src/structures/Locations.ts:14](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/Locations.ts#L14)
+[src/structures/Locations.ts:14](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Locations.ts#L14)
 
 ___
 
@@ -32,7 +32,7 @@ Number representing the state. Can have leading 0s and must be kept as a string
 
 #### Defined in
 
-[src/structures/Locations.ts:17](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/Locations.ts#L17)
+[src/structures/Locations.ts:17](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Locations.ts#L17)
 
 ___
 
@@ -44,4 +44,4 @@ Human readable name of the state
 
 #### Defined in
 
-[src/structures/Locations.ts:20](https://github.com/xDimGG/node-steamapi/blob/e50b622/src/structures/Locations.ts#L20)
+[src/structures/Locations.ts:20](https://github.com/xDimGG/node-steamapi/blob/f869965/src/structures/Locations.ts#L20)
