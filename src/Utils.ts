@@ -26,7 +26,7 @@ const reID = /^\d{17}$/;
 
 export function assertApp(apps: number | number[]): void {
 	if (!Array.isArray(apps)) apps = [apps];
-	if (apps.some(app => !(app > 0 && app % 10 === 0)))
+	if (apps.some(app => !(app > 0 && app % 1 === 0)))
 		throw new TypeError('Invalid app ID provided');
 }
 
