@@ -7,7 +7,7 @@ const require = createRequire(import.meta.url);
 const Package = require('../../package.json');
 
 import { CacheMap, MemoryCacheMap } from './Cache.js';
-import { fetch, assertApp, assertID } from './utils.js';
+import { fetch, assertApp, assertID } from './Utils.js';
 import { City, Country, State } from './structures/Locations.js';
 import AppBase from './structures/AppBase.js';
 import AchievementPercentage from './structures/AchievementPercentage.js';
@@ -142,6 +142,9 @@ export interface GetUserOwnedGamesOptions {
 
 	/** Include even more app details. If true, `includeAppInfo` will also be set to true */
 	includeExtendedAppInfo?: boolean;
+
+	//* Filters out every game without 100% achievement completation
+	completedGamesOnly?: boolean;
 
 	/** If set, restricts results to the passed in apps. (note: does not seem to actually work) */
 	filterApps?: number[];
@@ -562,14 +565,23 @@ export default class SteamAPI {
 
 
 		const json = await this.get('/IPlayerService/GetOwnedGames/v1', params);
-		return json.response.games.map((data: any) => {
+		let userPlaytimes = Promise.all(json.response.games.map(async (data: any) => {
 			let game;
 			if (opts.includeExtendedAppInfo) game = new GameInfoExtended(data);
 			else if (opts.includeAppInfo) game = new GameInfo(data);
 			else game = new Game(data);
 
+			if (opts.completedGamesOnly) {
+				try {
+					let achievements = (await this.getUserAchievements(id, game.id)).achievements;
+					if (achievements.filter(a => a.unlocked == true).length != achievements.length) return undefined;
+				}
+				catch(gameHasNoStats) {return undefined} //Assuming that a game which stats cannot be fetched is uncomplete
+			}
 			return new UserPlaytime(data, game);
-		});
+		}));
+
+		return (await userPlaytimes).filter(entry => entry !== undefined);
 	}
 
 	/**

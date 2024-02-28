@@ -12,6 +12,7 @@
 - [includeFreeGames](GetUserOwnedGamesOptions.md#includefreegames)
 - [includeFreeSubGames](GetUserOwnedGamesOptions.md#includefreesubgames)
 - [includeUnvettedApps](GetUserOwnedGamesOptions.md#includeunvettedapps)
+- [completedGamesOnly](GetUserOwnedGamesOptions.md#completedGamesOnly)
 - [language](GetUserOwnedGamesOptions.md#language)
 
 ## Properties
@@ -24,7 +25,7 @@ If set, restricts results to the passed in apps. (note: does not seem to actuall
 
 #### Defined in
 
-[src/SteamAPI.ts:144](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L144)
+[src/SteamAPI.ts:150](TODO)
 
 ___
 
@@ -88,6 +89,18 @@ Include unvetted store apps (defaults to false)
 
 ___
 
+### completedGamesOnly
+
+• `Optional` **completedGamesOnly**: `boolean`
+
+Filters out every game without 100% achievement completation (defaults to false)
+
+#### Defined in
+
+[src/SteamAPI.ts:147](TODO)
+
+___
+
 ### language
 
 • `Optional` **language**: [`Language`](../README.md#language)
@@ -96,4 +109,4 @@ Language to return app info in. (note: does not seem to actualy work)
 
 #### Defined in
 
-[src/SteamAPI.ts:147](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L147)
+[src/SteamAPI.ts:153](TODO)
