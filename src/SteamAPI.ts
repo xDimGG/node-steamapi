@@ -695,8 +695,8 @@ export default class SteamAPI {
 	 * Although a filter is not stricly required, you probably want to at least use something like \appid\[appid] to filter by app
 	 * @param count Number of results to return. 100 by default
 	 */
-	async getServerList(filter: string = '', count: number = 100): Promise<GameServer[]> {
-		const json = await this.get('/IGameServersService/GetServerList/v1', { filter, count });
+	async getServerList(filter: string = '', limit: number = 100): Promise<GameServer[]> {
+		const json = await this.get('/IGameServersService/GetServerList/v1', { filter, limit });
 		return json.response.servers.map((server: any) => new GameServer(server));
 	}
 
