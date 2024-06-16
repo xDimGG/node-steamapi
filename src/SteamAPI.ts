@@ -693,7 +693,7 @@ export default class SteamAPI {
 	 * Gets servers using Master Server Query Protocol filtering
 	 * @param filter Filter as defined by the [Master Server Query Protocol](https://developer.valvesoftware.com/wiki/Master_Server_Query_Protocol#Filter).
 	 * Although a filter is not stricly required, you probably want to at least use something like \appid\[appid] to filter by app
-	 * @param count Number of results to return. 100 by default
+	 * @param limit Number of results to return. 100 by default
 	 */
 	async getServerList(filter: string = '', limit: number = 100): Promise<GameServer[]> {
 		const json = await this.get('/IGameServersService/GetServerList/v1', { filter, limit });
