@@ -19,7 +19,7 @@ API name for this stat (e.g. 1_3, total_time_played, total_wins_map_de_train)
 
 #### Defined in
 
-[src/structures/UserStat.ts:3](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserStat.ts#L3)
+[src/structures/UserStat.ts:3](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserStat.ts#L3)
 
 ___
 
@@ -31,4 +31,4 @@ The integer value for this stat
 
 #### Defined in
 
-[src/structures/UserStat.ts:6](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserStat.ts#L6)
+[src/structures/UserStat.ts:6](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserStat.ts#L6)

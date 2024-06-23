@@ -30,7 +30,7 @@ URL to use for Steam API requests
 
 #### Defined in
 
-[src/SteamAPI.ts:54](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L54)
+[src/SteamAPI.ts:57](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L57)
 
 ___
 
@@ -44,7 +44,7 @@ URL to use for Steam action requests (only used for getLocations)
 
 #### Defined in
 
-[src/SteamAPI.ts:68](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L68)
+[src/SteamAPI.ts:71](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L71)
 
 ___
 
@@ -58,7 +58,7 @@ URL to use for Steam Store API requests
 
 #### Defined in
 
-[src/SteamAPI.ts:61](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L61)
+[src/SteamAPI.ts:64](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L64)
 
 ___
 
@@ -72,7 +72,7 @@ Default currency to use for the API when a currency is not explicitly provided
 
 #### Defined in
 
-[src/SteamAPI.ts:40](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L40)
+[src/SteamAPI.ts:43](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L43)
 
 ___
 
@@ -84,7 +84,7 @@ If `inMemoryCacheEnabled` is true, this decides whether to cache API requests fo
 
 #### Defined in
 
-[src/SteamAPI.ts:78](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L78)
+[src/SteamAPI.ts:81](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L81)
 
 ___
 
@@ -96,7 +96,7 @@ How long to cache getGameDetails() in milliseconds
 
 #### Defined in
 
-[src/SteamAPI.ts:83](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L83)
+[src/SteamAPI.ts:86](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L86)
 
 ___
 
@@ -114,7 +114,7 @@ By default, User-Agent is "SteamAPI/<VERSION> (https://www.npmjs.com/package/ste
 
 #### Defined in
 
-[src/SteamAPI.ts:47](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L47)
+[src/SteamAPI.ts:50](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L50)
 
 ___
 
@@ -126,7 +126,7 @@ Whether to use built-in in-memory caching for gameDetailCache and userResolveCac
 
 #### Defined in
 
-[src/SteamAPI.ts:73](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L73)
+[src/SteamAPI.ts:76](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L76)
 
 ___
 
@@ -140,7 +140,7 @@ Default language to use for the API when a language is not explicitly provided
 
 #### Defined in
 
-[src/SteamAPI.ts:33](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L33)
+[src/SteamAPI.ts:36](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L36)
 
 ___
 
@@ -152,7 +152,7 @@ If `inMemoryCacheEnabled` is true, this decides whether to cache API requests fo
 
 #### Defined in
 
-[src/SteamAPI.ts:88](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L88)
+[src/SteamAPI.ts:91](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L91)
 
 ___
 
@@ -164,4 +164,4 @@ How long to cache resolve() in milliseconds
 
 #### Defined in
 
-[src/SteamAPI.ts:93](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L93)
+[src/SteamAPI.ts:96](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L96)

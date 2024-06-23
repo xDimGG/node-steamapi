@@ -24,7 +24,7 @@ Persona states as indicated by https://developer.valvesoftware.com/wiki/Steam_We
 
 #### Defined in
 
-[src/structures/UserSummary.ts:8](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L8)
+[src/structures/UserSummary.ts:8](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L8)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/structures/UserSummary.ts:7](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L7)
+[src/structures/UserSummary.ts:7](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L7)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/structures/UserSummary.ts:11](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L11)
+[src/structures/UserSummary.ts:11](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L11)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[src/structures/UserSummary.ts:10](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L10)
+[src/structures/UserSummary.ts:10](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L10)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[src/structures/UserSummary.ts:5](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L5)
+[src/structures/UserSummary.ts:5](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L5)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/structures/UserSummary.ts:6](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L6)
+[src/structures/UserSummary.ts:6](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L6)
 
 ___
 
@@ -84,4 +84,4 @@ ___
 
 #### Defined in
 
-[src/structures/UserSummary.ts:9](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserSummary.ts#L9)
+[src/structures/UserSummary.ts:9](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L9)

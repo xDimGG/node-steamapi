@@ -26,7 +26,7 @@ Server regions as indicated by https://developer.valvesoftware.com/wiki/Sv_regio
 
 #### Defined in
 
-[src/structures/Server.ts:10](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L10)
+[src/structures/Server.ts:10](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L10)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[src/structures/Server.ts:7](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L7)
+[src/structures/Server.ts:7](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L7)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[src/structures/Server.ts:8](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L8)
+[src/structures/Server.ts:8](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L8)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[src/structures/Server.ts:6](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L6)
+[src/structures/Server.ts:6](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L6)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[src/structures/Server.ts:9](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L9)
+[src/structures/Server.ts:9](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L9)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[src/structures/Server.ts:5](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L5)
+[src/structures/Server.ts:5](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L5)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[src/structures/Server.ts:3](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L3)
+[src/structures/Server.ts:3](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L3)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[src/structures/Server.ts:4](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L4)
+[src/structures/Server.ts:4](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L4)
 
 ___
 
@@ -106,4 +106,4 @@ ___
 
 #### Defined in
 
-[src/structures/Server.ts:11](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/Server.ts#L11)
+[src/structures/Server.ts:11](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L11)

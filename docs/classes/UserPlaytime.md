@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[src/structures/UserPlaytime.ts:30](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserPlaytime.ts#L30)
+[src/structures/UserPlaytime.ts:30](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L30)
 
 ## Properties
 
@@ -66,7 +66,7 @@ The number of minutes played while offline
 
 #### Defined in
 
-[src/structures/UserPlaytime.ts:25](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserPlaytime.ts#L25)
+[src/structures/UserPlaytime.ts:25](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L25)
 
 ___
 
@@ -78,7 +78,7 @@ The game with various levels of information based on parameters passed to getUse
 
 #### Defined in
 
-[src/structures/UserPlaytime.ts:7](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserPlaytime.ts#L7)
+[src/structures/UserPlaytime.ts:7](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L7)
 
 ___
 
@@ -90,7 +90,7 @@ UNIX Timestamp for when the user last played this game if the user has ever laun
 
 #### Defined in
 
-[src/structures/UserPlaytime.ts:28](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserPlaytime.ts#L28)
+[src/structures/UserPlaytime.ts:28](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L28)
 
 ___
 
@@ -102,7 +102,7 @@ The number of minutes played on Linux (not accurate)
 
 #### Defined in
 
-[src/structures/UserPlaytime.ts:22](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserPlaytime.ts#L22)
+[src/structures/UserPlaytime.ts:22](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L22)
 
 ___
 
@@ -114,7 +114,7 @@ The number of minutes played on Mac (not accurate)
 
 #### Defined in
 
-[src/structures/UserPlaytime.ts:19](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserPlaytime.ts#L19)
+[src/structures/UserPlaytime.ts:19](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L19)
 
 ___
 
@@ -126,7 +126,7 @@ The total number of minutes the user has played this game
 
 #### Defined in
 
-[src/structures/UserPlaytime.ts:10](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserPlaytime.ts#L10)
+[src/structures/UserPlaytime.ts:10](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L10)
 
 ___
 
@@ -138,7 +138,7 @@ The number of minutes played in the last 2 weeks
 
 #### Defined in
 
-[src/structures/UserPlaytime.ts:13](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserPlaytime.ts#L13)
+[src/structures/UserPlaytime.ts:13](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L13)
 
 ___
 
@@ -150,7 +150,7 @@ The number of minutes played on Windows (not accurate)
 
 #### Defined in
 
-[src/structures/UserPlaytime.ts:16](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserPlaytime.ts#L16)
+[src/structures/UserPlaytime.ts:16](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L16)
 
 ## Accessors
 
@@ -166,4 +166,4 @@ Date when uaer last played this game
 
 #### Defined in
 
-[src/structures/UserPlaytime.ts:42](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserPlaytime.ts#L42)
+[src/structures/UserPlaytime.ts:42](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L42)

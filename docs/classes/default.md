@@ -78,7 +78,7 @@ Make a new SteamAPI Client
 
 #### Defined in
 
-[src/SteamAPI.ts:190](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L190)
+[src/SteamAPI.ts:193](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L193)
 
 ## Properties
 
@@ -88,7 +88,7 @@ Make a new SteamAPI Client
 
 #### Defined in
 
-[src/SteamAPI.ts:176](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L176)
+[src/SteamAPI.ts:179](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L179)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:178](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L178)
+[src/SteamAPI.ts:181](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L181)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:177](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L177)
+[src/SteamAPI.ts:180](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L180)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:174](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L174)
+[src/SteamAPI.ts:177](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L177)
 
 ___
 
@@ -128,7 +128,7 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:180](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L180)
+[src/SteamAPI.ts:183](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L183)
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:175](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L175)
+[src/SteamAPI.ts:178](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L178)
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:183](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L183)
+[src/SteamAPI.ts:186](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L186)
 
 ___
 
@@ -162,7 +162,7 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:173](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L173)
+[src/SteamAPI.ts:176](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L176)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:181](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L181)
+[src/SteamAPI.ts:184](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L184)
 
 ___
 
@@ -182,7 +182,7 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:171](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L171)
+[src/SteamAPI.ts:174](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L174)
 
 ___
 
@@ -192,7 +192,7 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:165](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L165)
+[src/SteamAPI.ts:168](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L168)
 
 ___
 
@@ -202,7 +202,7 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:164](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L164)
+[src/SteamAPI.ts:167](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L167)
 
 ___
 
@@ -212,7 +212,7 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:169](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L169)
+[src/SteamAPI.ts:172](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L172)
 
 ___
 
@@ -222,7 +222,7 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:168](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L168)
+[src/SteamAPI.ts:171](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L171)
 
 ___
 
@@ -232,7 +232,7 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:166](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L166)
+[src/SteamAPI.ts:169](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L169)
 
 ___
 
@@ -242,7 +242,7 @@ ___
 
 #### Defined in
 
-[src/SteamAPI.ts:167](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L167)
+[src/SteamAPI.ts:170](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L170)
 
 ## Methods
 
@@ -268,7 +268,7 @@ Parse JSON
 
 #### Defined in
 
-[src/SteamAPI.ts:227](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L227)
+[src/SteamAPI.ts:230](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L230)
 
 ___
 
@@ -290,7 +290,7 @@ Array of very basic app info (ID + name)
 
 #### Defined in
 
-[src/SteamAPI.ts:385](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L385)
+[src/SteamAPI.ts:388](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L388)
 
 ___
 
@@ -315,7 +315,7 @@ Array of city objects with fields countrycode, statecode, cityname and cityid
 
 #### Defined in
 
-[src/SteamAPI.ts:685](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L685)
+[src/SteamAPI.ts:688](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L688)
 
 ___
 
@@ -333,7 +333,7 @@ Array of country objects with fields countrycode, hasstates, and countryname
 
 #### Defined in
 
-[src/SteamAPI.ts:669](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L669)
+[src/SteamAPI.ts:672](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L672)
 
 ___
 
@@ -359,7 +359,7 @@ Gets featured categories on Steam store
 
 #### Defined in
 
-[src/SteamAPI.ts:294](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L294)
+[src/SteamAPI.ts:297](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L297)
 
 ___
 
@@ -385,7 +385,7 @@ Gets featured games on Steam store
 
 #### Defined in
 
-[src/SteamAPI.ts:307](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L307)
+[src/SteamAPI.ts:310](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L310)
 
 ___
 
@@ -411,7 +411,7 @@ Array of object with achievement name and percentage for app ID
 
 #### Defined in
 
-[src/SteamAPI.ts:456](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L456)
+[src/SteamAPI.ts:459](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L459)
 
 ___
 
@@ -450,7 +450,7 @@ If app is number, returns single object. If app is array, returns a mapping of a
 
 #### Defined in
 
-[src/SteamAPI.ts:332](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L332)
+[src/SteamAPI.ts:335](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L335)
 
 ___
 
@@ -475,7 +475,7 @@ App news for ID
 
 #### Defined in
 
-[src/SteamAPI.ts:482](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L482)
+[src/SteamAPI.ts:485](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L485)
 
 ___
 
@@ -499,7 +499,7 @@ Number of current players
 
 #### Defined in
 
-[src/SteamAPI.ts:408](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L408)
+[src/SteamAPI.ts:411](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L411)
 
 ___
 
@@ -524,13 +524,13 @@ Schema
 
 #### Defined in
 
-[src/SteamAPI.ts:424](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L424)
+[src/SteamAPI.ts:427](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L427)
 
 ___
 
 ### getServerList
 
-▸ **getServerList**(`filter?`, `count?`): `Promise`\<[`GameServer`](GameServer.md)\>
+▸ **getServerList**(`filter?`, `limit?`): `Promise`\<[`GameServer`](GameServer.md)[]\>
 
 Gets servers using Master Server Query Protocol filtering
 
@@ -539,15 +539,15 @@ Gets servers using Master Server Query Protocol filtering
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
 | `filter` | `string` | `''` | Filter as defined by the [Master Server Query Protocol](https://developer.valvesoftware.com/wiki/Master_Server_Query_Protocol#Filter). Although a filter is not stricly required, you probably want to at least use something like \appid\[appid] to filter by app |
-| `count` | `number` | `100` | Number of results to return. 100 by default |
+| `limit` | `number` | `100` | Number of results to return. 100 by default |
 
 #### Returns
 
-`Promise`\<[`GameServer`](GameServer.md)\>
+`Promise`\<[`GameServer`](GameServer.md)[]\>
 
 #### Defined in
 
-[src/SteamAPI.ts:695](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L695)
+[src/SteamAPI.ts:698](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L698)
 
 ___
 
@@ -565,7 +565,7 @@ Date object from the server
 
 #### Defined in
 
-[src/SteamAPI.ts:660](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L660)
+[src/SteamAPI.ts:663](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L663)
 
 ___
 
@@ -589,7 +589,7 @@ Info of servers
 
 #### Defined in
 
-[src/SteamAPI.ts:395](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L395)
+[src/SteamAPI.ts:398](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L398)
 
 ___
 
@@ -613,7 +613,7 @@ Array of state objects with fields countrycode, statecode, and statename
 
 #### Defined in
 
-[src/SteamAPI.ts:677](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L677)
+[src/SteamAPI.ts:680](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L680)
 
 ___
 
@@ -639,7 +639,7 @@ Achievements
 
 #### Defined in
 
-[src/SteamAPI.ts:438](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L438)
+[src/SteamAPI.ts:441](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L441)
 
 ___
 
@@ -663,7 +663,7 @@ User level info and badges
 
 #### Defined in
 
-[src/SteamAPI.ts:507](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L507)
+[src/SteamAPI.ts:510](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L510)
 
 ___
 
@@ -687,7 +687,7 @@ Ban info
 
 #### Defined in
 
-[src/SteamAPI.ts:593](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L593)
+[src/SteamAPI.ts:596](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L596)
 
 ___
 
@@ -711,7 +711,7 @@ The provided user's friends
 
 #### Defined in
 
-[src/SteamAPI.ts:610](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L610)
+[src/SteamAPI.ts:613](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L613)
 
 ___
 
@@ -735,7 +735,7 @@ Group IDs
 
 #### Defined in
 
-[src/SteamAPI.ts:622](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L622)
+[src/SteamAPI.ts:625](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L625)
 
 ___
 
@@ -759,7 +759,7 @@ The user's Steam level
 
 #### Defined in
 
-[src/SteamAPI.ts:518](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L518)
+[src/SteamAPI.ts:521](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L521)
 
 ___
 
@@ -784,7 +784,7 @@ Owned games
 
 #### Defined in
 
-[src/SteamAPI.ts:530](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L530)
+[src/SteamAPI.ts:533](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L533)
 
 ___
 
@@ -811,7 +811,7 @@ Recently played games and their play times
 
 #### Defined in
 
-[src/SteamAPI.ts:580](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L580)
+[src/SteamAPI.ts:583](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L583)
 
 ___
 
@@ -829,7 +829,7 @@ Your server
 
 #### Defined in
 
-[src/SteamAPI.ts:635](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L635)
+[src/SteamAPI.ts:638](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L638)
 
 ___
 
@@ -854,7 +854,7 @@ Stats for app ID
 
 #### Defined in
 
-[src/SteamAPI.ts:469](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L469)
+[src/SteamAPI.ts:472](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L472)
 
 ___
 
@@ -878,7 +878,7 @@ Summary
 
 #### Defined in
 
-[src/SteamAPI.ts:644](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L644)
+[src/SteamAPI.ts:647](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L647)
 
 ___
 
@@ -904,4 +904,4 @@ Profile ID
 
 #### Defined in
 
-[src/SteamAPI.ts:239](https://github.com/xDimGG/node-steamapi/blob/acff462/src/SteamAPI.ts#L239)
+[src/SteamAPI.ts:242](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L242)

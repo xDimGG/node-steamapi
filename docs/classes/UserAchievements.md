@@ -46,7 +46,7 @@ User.constructor
 
 #### Defined in
 
-[src/structures/UserAchievements.ts:11](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserAchievements.ts#L11)
+[src/structures/UserAchievements.ts:11](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserAchievements.ts#L11)
 
 ## Properties
 
@@ -58,7 +58,7 @@ All the achievements for this game with respect to the user
 
 #### Defined in
 
-[src/structures/UserAchievements.ts:9](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserAchievements.ts#L9)
+[src/structures/UserAchievements.ts:9](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserAchievements.ts#L9)
 
 ___
 
@@ -70,7 +70,7 @@ Name of this game
 
 #### Defined in
 
-[src/structures/UserAchievements.ts:6](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/UserAchievements.ts#L6)
+[src/structures/UserAchievements.ts:6](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserAchievements.ts#L6)
 
 ___
 
@@ -86,7 +86,7 @@ User.steamID
 
 #### Defined in
 
-[src/structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/User.ts#L3)
+[src/structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/User.ts#L3)
 
 ## Accessors
 
@@ -106,4 +106,4 @@ User.profileURL
 
 #### Defined in
 
-[src/structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/acff462/src/structures/User.ts#L10)
+[src/structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/User.ts#L10)
