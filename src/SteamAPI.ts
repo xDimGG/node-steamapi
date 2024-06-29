@@ -7,7 +7,7 @@ const require = createRequire(import.meta.url);
 const Package = require('../../package.json');
 
 import { CacheMap, MemoryCacheMap } from './Cache.js';
-import { fetch, assertApp, assertID } from './Utils.js';
+import { fetch, assertApp, assertID } from './utils.js';
 import { City, Country, State } from './structures/Locations.js';
 import AppBase from './structures/AppBase.js';
 import AchievementPercentage from './structures/AchievementPercentage.js';
