@@ -17,7 +17,7 @@ export default class UserBadges {
 	levelXP: number;
 
 	constructor(data: any) {
-		this.badges = data.badges.map((badge: any) => new UserBadge(badge));
+        this.badges = data.badges ? data.badges.map((badge: any) => new UserBadge(badge)) : [];
 
 		this.xp = data.player_xp;
 		this.xpRemaining = data.player_xp_needed_to_level_up;
