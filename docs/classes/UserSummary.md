@@ -84,7 +84,7 @@ ___
 
 • **avatar**: `Object`
 
-The user's avatar in varous sizes
+The user's avatar in various sizes
 
 #### Type declaration
 

@@ -12,7 +12,7 @@ export enum UserPersonaState {
 }
 
 export default class UserSummary extends User {
-	/** The user's avatar in varous sizes */
+	/** The user's avatar in various sizes */
 	avatar;
 
 	/** Link to the user's profile */

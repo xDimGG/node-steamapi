@@ -146,7 +146,7 @@ export interface GetUserOwnedGamesOptions {
 	/** If set, restricts results to the passed in apps. (note: does not seem to actually work) */
 	filterApps?: number[];
 
-	/** Language to return app info in. (note: does not seem to actualy work) */
+	/** Language to return app info in. (note: does not seem to actually work) */
 	language?: Language;
 }
 
@@ -452,7 +452,7 @@ export default class SteamAPI {
 	/**
 	 * Get achievement percentages for app ID
 	 *
-	 * If a game does not hvae any achievements, this will error
+	 * If a game does not have any achievements, this will error
 	 * @param app App ID to get achievement progress for
 	 * @returns Array of object with achievement name and percentage for app ID
 	 */
@@ -589,7 +589,7 @@ export default class SteamAPI {
 	}
 
 	/**
-	 * Get a user's or multipler users' bans. If an array of IDs is passed in, this returns an array of UserBans
+	 * Get a user's or multiple users' bans. If an array of IDs is passed in, this returns an array of UserBans
 	 * @param id User ID(s)
 	 * @returns Ban info
 	 */
@@ -692,7 +692,7 @@ export default class SteamAPI {
 	/**
 	 * Gets servers using Master Server Query Protocol filtering
 	 * @param filter Filter as defined by the [Master Server Query Protocol](https://developer.valvesoftware.com/wiki/Master_Server_Query_Protocol#Filter).
-	 * Although a filter is not stricly required, you probably want to at least use something like \appid\[appid] to filter by app
+	 * Although a filter is not strictly required, you probably want to at least use something like \appid\[appid] to filter by app
 	 * @param limit Number of results to return. 100 by default
 	 */
 	async getServerList(filter: string = '', limit: number = 100): Promise<GameServer[]> {

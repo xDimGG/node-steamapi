@@ -158,7 +158,7 @@ The number of minutes played on Windows (not accurate)
 
 • `get` **lastPlayedAt**(): `undefined` \| `Date`
 
-Date when uaer last played this game
+Date when user last played this game
 
 #### Returns
 
