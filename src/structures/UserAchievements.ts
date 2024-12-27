@@ -12,6 +12,6 @@ export default class UserAchievements extends User {
 		super(data);
 
 		this.game = data.gameName;
-		this.achievements = data.achievements.map((achievement: any) => new UserAchievement(achievement));
+		this.achievements = data.achievements ? data.achievements.map((achievement: any) => new UserAchievement(achievement)) : [];
 	}
 }
