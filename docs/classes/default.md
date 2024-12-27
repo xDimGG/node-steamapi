@@ -395,7 +395,7 @@ ___
 
 Get achievement percentages for app ID
 
-If a game does not hvae any achievements, this will error
+If a game does not have any achievements, this will error
 
 #### Parameters
 
@@ -536,10 +536,10 @@ Gets servers using Master Server Query Protocol filtering
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `filter` | `string` | `''` | Filter as defined by the [Master Server Query Protocol](https://developer.valvesoftware.com/wiki/Master_Server_Query_Protocol#Filter). Although a filter is not stricly required, you probably want to at least use something like \appid\[appid] to filter by app |
-| `limit` | `number` | `100` | Number of results to return. 100 by default |
+| Name | Type | Default value | Description                                                                                                                                                                                                                                                         |
+| :------ | :------ | :------ |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `filter` | `string` | `''` | Filter as defined by the [Master Server Query Protocol](https://developer.valvesoftware.com/wiki/Master_Server_Query_Protocol#Filter). Although a filter is not strictly required, you probably want to at least use something like \appid\[appid] to filter by app |
+| `limit` | `number` | `100` | Number of results to return. 100 by default                                                                                                                                                                                                                         |
 
 #### Returns
 
@@ -671,7 +671,7 @@ ___
 
 ▸ **getUserBans**(`id`): `Promise`\<[`UserBans`](UserBans.md) \| [`UserBans`](UserBans.md)[]\>
 
-Get a user's or multipler users' bans. If an array of IDs is passed in, this returns an array of UserBans
+Get a user's or multiple users' bans. If an array of IDs is passed in, this returns an array of UserBans
 
 #### Parameters
 

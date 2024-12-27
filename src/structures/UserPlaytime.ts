@@ -38,7 +38,7 @@ export default class UserPlaytime<G> {
 		this.lastPlayedTimestamp = data.rtime_last_played;
 	}
 
-	/** Date when uaer last played this game */
+	/** Date when user last played this game */
 	get lastPlayedAt() {
 		return this.lastPlayedTimestamp === undefined ? undefined : new Date(this.lastPlayedTimestamp * 1000);
 	}
