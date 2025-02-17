@@ -342,7 +342,7 @@ export default class SteamAPI {
 		const isArr = Array.isArray(app);
 		const appIds = isArr ? app : [app];
 
-		const cached = appIds.map(a => this.gameDetailCache?.get(`${a}-${currency}-${language}`)).filter(d => d !== undefined);
+		const cached = appIds.map(a => this.gameDetailCache?.get(`${a}-${currency}-${language}`)).filter(g => g !== undefined);
 		const remainingAppIds = appIds.filter((_, i) => cached[i] === undefined);
 
 		// If some appIds were missing from the cache, fetch from Steam and update the cache
@@ -357,7 +357,7 @@ export default class SteamAPI {
 				.then(json => {
 					if (json === null) throw new Error('Failed to find app ID');
 
-					const filtered: { [key: string]: GameDetails } = {};
+					const filtered: { [key: string]: any } = {};
 					for (const [k, v] of Object.entries(json))
 						if ((v as any).success) {
 							const d = (v as any).data;
@@ -371,7 +371,8 @@ export default class SteamAPI {
 				});
 
 			for (const appId in details) {
-				this.gameDetailCache?.set(`${appId}-${currency}-${language}`, details[appId]);
+				const game = new GameDetails(details[appId]);
+				this.gameDetailCache?.set(`${appId}-${currency}-${language}`, game);
 				cached.push(details[appId]);
 			}
 		}
