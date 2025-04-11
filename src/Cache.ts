@@ -19,7 +19,7 @@ export class MemoryCacheMap<K, V> implements CacheMap<K, V> {
 
 	get(key: K): V | undefined {
 		const val = this.map.get(key);
-		if (val && val.expiresAt >= Date.now()) {
+		if (val && val.expiresAt <= Date.now()) {
 			this.map.delete(key);
 			return;
 		}
