@@ -336,23 +336,23 @@ export default class SteamAPI {
 	async getGameDetails(
 		app: number | number[],
 		{ language = this.language, currency = this.currency, filters = [] } = {}
-	): Promise<GameDetails | { [key: number]: GameDetails } | undefined> {
+	): Promise<{ [key: number]: GameDetails }> {
 		assertApp(app);
 
 		const isArr = Array.isArray(app);
-		const appIds = isArr ? app : [app];
+		const appIDs = isArr ? app : [app];
 
-		const cached = appIds.map(a => this.gameDetailCache?.get(`${a}-${currency}-${language}`)).filter(g => g !== undefined);
-		const remainingAppIds = appIds.filter((_, i) => cached[i] === undefined);
+		const cached = appIDs.map(a => this.gameDetailCache?.get(`${a}-${currency}-${language}`)).filter(g => g !== undefined);
+		const remainingAppIDs = appIDs.filter((_, i) => cached[i] === undefined);
 
-		// If some appIds were missing from the cache, fetch from Steam and update the cache
-		if (remainingAppIds.length !== 0) {
+		// If some appIDs were missing from the cache, fetch from Steam and update the cache
+		if (remainingAppIDs.length !== 0) {
 			const details = await this
 				.get('/appdetails', {
-					appids: remainingAppIds.join(','),
+					appids: remainingAppIDs.join(','),
 					cc: currency,
 					l: language,
-					filters: isArr && appIds.length > 1 ? 'price_overview' : filters.join(','),
+					filters: isArr && appIDs.length > 1 ? 'price_overview' : filters.join(','),
 				}, this.baseStore)
 				.then(json => {
 					if (json === null) throw new Error('Failed to find app ID');
@@ -370,14 +370,12 @@ export default class SteamAPI {
 					return filtered;
 				});
 
-			for (const appId in details) {
-				const game = new GameDetails(details[appId]);
-				this.gameDetailCache?.set(`${appId}-${currency}-${language}`, game);
-				cached.push(details[appId]);
+			for (const [appID, data] of Object.entries(details)) {
+				const game = new GameDetails(data);
+				this.gameDetailCache?.set(`${appID}-${currency}-${language}`, game);
+				cached.push(game);
 			}
 		}
-
-		if (!isArr) return cached[0];
 
 		const cachedObject: { [key: number]: GameDetails } = {};
 		for (const details of cached) cachedObject[details.id] = details;
