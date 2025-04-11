@@ -18,10 +18,7 @@ export default class UserServers {
 	lastActionTimestamp: number;
 
 	constructor(data: any) {
-
-		data.servers = data.server || [];
-
-		this.servers = data.servers.map((server: any) => new UserServer(server));
+		this.servers = (data.server || []).map((server: any) => new UserServer(server));
 		this.banned = data.is_banned;
 		this.expiresTimestamp = data.expires;
 		this.actorID = data.actor;
