@@ -1,254 +1,229 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / GameInfoBasic
 
 # Class: GameInfoBasic
 
-## Hierarchy
+Defined in: [structures/GameInfoBasic.ts:5](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfoBasic.ts#L5)
+
+## Extends
 
 - [`Game`](Game.md)
 
-  ↳ **`GameInfoBasic`**
+## Extended by
 
-  ↳↳ [`GameInfo`](GameInfo.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](GameInfoBasic.md#constructor)
-
-### Properties
-
-- [icon](GameInfoBasic.md#icon)
-- [id](GameInfoBasic.md#id)
-- [name](GameInfoBasic.md#name)
-
-### Accessors
-
-- [backgroundURL](GameInfoBasic.md#backgroundurl)
-- [coverURL](GameInfoBasic.md#coverurl)
-- [headerMediumURL](GameInfoBasic.md#headermediumurl)
-- [headerURL](GameInfoBasic.md#headerurl)
-- [iconURL](GameInfoBasic.md#iconurl)
-- [logoURL](GameInfoBasic.md#logourl)
-- [smallHeaderURL](GameInfoBasic.md#smallheaderurl)
-- [tinyHeaderURL](GameInfoBasic.md#tinyheaderurl)
+- [`GameInfo`](GameInfo.md)
 
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new GameInfoBasic**(`data`): [`GameInfoBasic`](GameInfoBasic.md)
+> **new GameInfoBasic**(`data`): `GameInfoBasic`
+
+Defined in: [structures/GameInfoBasic.ts:12](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfoBasic.ts#L12)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `any` |
+##### data
+
+`any`
 
 #### Returns
 
-[`GameInfoBasic`](GameInfoBasic.md)
+`GameInfoBasic`
 
 #### Overrides
 
-[Game](Game.md).[constructor](Game.md#constructor)
-
-#### Defined in
-
-[src/structures/GameInfoBasic.ts:12](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/GameInfoBasic.ts#L12)
+[`Game`](Game.md).[`constructor`](Game.md#constructor)
 
 ## Properties
 
 ### icon
 
-• **icon**: `string`
+> **icon**: `string`
+
+Defined in: [structures/GameInfoBasic.ts:10](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfoBasic.ts#L10)
 
 Hash for this game's icon
 
-#### Defined in
-
-[src/structures/GameInfoBasic.ts:10](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/GameInfoBasic.ts#L10)
-
-___
+***
 
 ### id
 
-• **id**: `number`
+> **id**: `number`
+
+Defined in: [structures/Game.ts:6](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L6)
 
 App ID for this game
 
 #### Inherited from
 
-[Game](Game.md).[id](Game.md#id)
+[`Game`](Game.md).[`id`](Game.md#id)
 
-#### Defined in
-
-[src/structures/Game.ts:6](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L6)
-
-___
+***
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
+
+Defined in: [structures/GameInfoBasic.ts:7](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfoBasic.ts#L7)
 
 Name for this game
-
-#### Defined in
-
-[src/structures/GameInfoBasic.ts:7](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/GameInfoBasic.ts#L7)
 
 ## Accessors
 
 ### backgroundURL
 
-• `get` **backgroundURL**(): `string`
+#### Get Signature
+
+> **get** **backgroundURL**(): `string`
+
+Defined in: [structures/Game.ts:28](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L28)
 
 (might not exist) game page background
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-Game.backgroundURL
+[`Game`](Game.md).[`backgroundURL`](Game.md#backgroundurl)
 
-#### Defined in
-
-[src/structures/Game.ts:28](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L28)
-
-___
+***
 
 ### coverURL
 
-• `get` **coverURL**(): `string`
+#### Get Signature
+
+> **get** **coverURL**(): `string`
+
+Defined in: [structures/Game.ts:31](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L31)
 
 (might not exist) game cover
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-Game.coverURL
+[`Game`](Game.md).[`coverURL`](Game.md#coverurl)
 
-#### Defined in
-
-[src/structures/Game.ts:31](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L31)
-
-___
+***
 
 ### headerMediumURL
 
-• `get` **headerMediumURL**(): `string`
+#### Get Signature
+
+> **get** **headerMediumURL**(): `string`
+
+Defined in: [structures/Game.ts:16](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L16)
 
 (might not exist) medium sized header image
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-Game.headerMediumURL
+[`Game`](Game.md).[`headerMediumURL`](Game.md#headermediumurl)
 
-#### Defined in
-
-[src/structures/Game.ts:16](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L16)
-
-___
+***
 
 ### headerURL
 
-• `get` **headerURL**(): `string`
+#### Get Signature
+
+> **get** **headerURL**(): `string`
+
+Defined in: [structures/Game.ts:13](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L13)
 
 (might not exist) large sized header used on the store page
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-Game.headerURL
+[`Game`](Game.md).[`headerURL`](Game.md#headerurl)
 
-#### Defined in
-
-[src/structures/Game.ts:13](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L13)
-
-___
+***
 
 ### iconURL
 
-• `get` **iconURL**(): `string`
+#### Get Signature
+
+> **get** **iconURL**(): `string`
+
+Defined in: [structures/GameInfoBasic.ts:20](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfoBasic.ts#L20)
 
 tiny app icon
 
-#### Returns
+##### Returns
 
 `string`
 
-#### Defined in
-
-[src/structures/GameInfoBasic.ts:20](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/GameInfoBasic.ts#L20)
-
-___
+***
 
 ### logoURL
 
-• `get` **logoURL**(): `string`
+#### Get Signature
+
+> **get** **logoURL**(): `string`
+
+Defined in: [structures/Game.ts:34](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L34)
 
 (might not exist) transparent game logo
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-Game.logoURL
+[`Game`](Game.md).[`logoURL`](Game.md#logourl)
 
-#### Defined in
-
-[src/structures/Game.ts:34](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L34)
-
-___
+***
 
 ### smallHeaderURL
 
-• `get` **smallHeaderURL**(): `string`
+#### Get Signature
+
+> **get** **smallHeaderURL**(): `string`
+
+Defined in: [structures/Game.ts:19](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L19)
 
 (might not exist) small header image used on user pages
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-Game.smallHeaderURL
+[`Game`](Game.md).[`smallHeaderURL`](Game.md#smallheaderurl)
 
-#### Defined in
-
-[src/structures/Game.ts:19](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L19)
-
-___
+***
 
 ### tinyHeaderURL
 
-• `get` **tinyHeaderURL**(): `string`
+#### Get Signature
+
+> **get** **tinyHeaderURL**(): `string`
+
+Defined in: [structures/Game.ts:22](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L22)
 
 (might not exist) tiny header image used on app bundles
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-Game.tinyHeaderURL
-
-#### Defined in
-
-[src/structures/Game.ts:22](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L22)
+[`Game`](Game.md).[`tinyHeaderURL`](Game.md#tinyheaderurl)

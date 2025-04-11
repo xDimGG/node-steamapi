@@ -1,58 +1,59 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / CacheMap
 
 # Interface: CacheMap\<K, V\>
 
-## Type parameters
+Defined in: [Cache.ts:1](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/Cache.ts#L1)
 
-| Name |
-| :------ |
-| `K` |
-| `V` |
+## Type Parameters
 
-## Table of contents
+### K
 
-### Methods
+`K`
 
-- [get](CacheMap.md#get)
-- [set](CacheMap.md#set)
+### V
+
+`V`
 
 ## Methods
 
-### get
+### get()
 
-▸ **get**(`key`): `undefined` \| `V`
+> **get**(`key`): `undefined` \| `V`
+
+Defined in: [Cache.ts:2](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/Cache.ts#L2)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `key` | `K` |
+##### key
+
+`K`
 
 #### Returns
 
 `undefined` \| `V`
 
-#### Defined in
+***
 
-[src/Cache.ts:2](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/Cache.ts#L2)
+### set()
 
-___
+> **set**(`key`, `value`): `V`
 
-### set
-
-▸ **set**(`key`, `value`): `V`
+Defined in: [Cache.ts:3](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/Cache.ts#L3)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `key` | `K` |
-| `value` | `V` |
+##### key
+
+`K`
+
+##### value
+
+`V`
 
 #### Returns
 
 `V`
-
-#### Defined in
-
-[src/Cache.ts:3](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/Cache.ts#L3)

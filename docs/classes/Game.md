@@ -1,173 +1,153 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / Game
 
 # Class: Game
 
-## Hierarchy
+Defined in: [structures/Game.ts:4](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L4)
 
-- **`Game`**
+## Extended by
 
-  ↳ [`GameInfoBasic`](GameInfoBasic.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](Game.md#constructor)
-
-### Properties
-
-- [id](Game.md#id)
-
-### Accessors
-
-- [backgroundURL](Game.md#backgroundurl)
-- [coverURL](Game.md#coverurl)
-- [headerMediumURL](Game.md#headermediumurl)
-- [headerURL](Game.md#headerurl)
-- [logoURL](Game.md#logourl)
-- [smallHeaderURL](Game.md#smallheaderurl)
-- [tinyHeaderURL](Game.md#tinyheaderurl)
+- [`GameInfoBasic`](GameInfoBasic.md)
 
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new Game**(`data`): [`Game`](Game.md)
+> **new Game**(`data`): `Game`
+
+Defined in: [structures/Game.ts:8](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L8)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `any` |
+##### data
+
+`any`
 
 #### Returns
 
-[`Game`](Game.md)
-
-#### Defined in
-
-[src/structures/Game.ts:8](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L8)
+`Game`
 
 ## Properties
 
 ### id
 
-• **id**: `number`
+> **id**: `number`
+
+Defined in: [structures/Game.ts:6](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L6)
 
 App ID for this game
-
-#### Defined in
-
-[src/structures/Game.ts:6](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L6)
 
 ## Accessors
 
 ### backgroundURL
 
-• `get` **backgroundURL**(): `string`
+#### Get Signature
+
+> **get** **backgroundURL**(): `string`
+
+Defined in: [structures/Game.ts:28](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L28)
 
 (might not exist) game page background
 
-#### Returns
+##### Returns
 
 `string`
 
-#### Defined in
-
-[src/structures/Game.ts:28](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L28)
-
-___
+***
 
 ### coverURL
 
-• `get` **coverURL**(): `string`
+#### Get Signature
+
+> **get** **coverURL**(): `string`
+
+Defined in: [structures/Game.ts:31](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L31)
 
 (might not exist) game cover
 
-#### Returns
+##### Returns
 
 `string`
 
-#### Defined in
-
-[src/structures/Game.ts:31](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L31)
-
-___
+***
 
 ### headerMediumURL
 
-• `get` **headerMediumURL**(): `string`
+#### Get Signature
+
+> **get** **headerMediumURL**(): `string`
+
+Defined in: [structures/Game.ts:16](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L16)
 
 (might not exist) medium sized header image
 
-#### Returns
+##### Returns
 
 `string`
 
-#### Defined in
-
-[src/structures/Game.ts:16](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L16)
-
-___
+***
 
 ### headerURL
 
-• `get` **headerURL**(): `string`
+#### Get Signature
+
+> **get** **headerURL**(): `string`
+
+Defined in: [structures/Game.ts:13](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L13)
 
 (might not exist) large sized header used on the store page
 
-#### Returns
+##### Returns
 
 `string`
 
-#### Defined in
-
-[src/structures/Game.ts:13](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L13)
-
-___
+***
 
 ### logoURL
 
-• `get` **logoURL**(): `string`
+#### Get Signature
+
+> **get** **logoURL**(): `string`
+
+Defined in: [structures/Game.ts:34](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L34)
 
 (might not exist) transparent game logo
 
-#### Returns
+##### Returns
 
 `string`
 
-#### Defined in
-
-[src/structures/Game.ts:34](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L34)
-
-___
+***
 
 ### smallHeaderURL
 
-• `get` **smallHeaderURL**(): `string`
+#### Get Signature
+
+> **get** **smallHeaderURL**(): `string`
+
+Defined in: [structures/Game.ts:19](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L19)
 
 (might not exist) small header image used on user pages
 
-#### Returns
+##### Returns
 
 `string`
 
-#### Defined in
-
-[src/structures/Game.ts:19](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L19)
-
-___
+***
 
 ### tinyHeaderURL
 
-• `get` **tinyHeaderURL**(): `string`
+#### Get Signature
+
+> **get** **tinyHeaderURL**(): `string`
+
+Defined in: [structures/Game.ts:22](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L22)
 
 (might not exist) tiny header image used on app bundles
 
-#### Returns
+##### Returns
 
 `string`
-
-#### Defined in
-
-[src/structures/Game.ts:22](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L22)

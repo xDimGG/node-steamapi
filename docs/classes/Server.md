@@ -1,177 +1,139 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / Server
 
 # Class: Server
 
+Defined in: [structures/Server.ts:15](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Server.ts#L15)
+
 Game server as returned by getServers
-
-## Table of contents
-
-### Constructors
-
-- [constructor](Server.md#constructor)
-
-### Properties
-
-- [address](Server.md#address)
-- [appID](Server.md#appid)
-- [gameDir](Server.md#gamedir)
-- [gmsIndex](Server.md#gmsindex)
-- [id](Server.md#id)
-- [lan](Server.md#lan)
-- [port](Server.md#port)
-- [region](Server.md#region)
-- [reject](Server.md#reject)
-- [secure](Server.md#secure)
-- [specPort](Server.md#specport)
 
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new Server**(`data`): [`Server`](Server.md)
+> **new Server**(`data`): `Server`
+
+Defined in: [structures/Server.ts:49](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Server.ts#L49)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `any` |
+##### data
+
+`any`
 
 #### Returns
 
-[`Server`](Server.md)
-
-#### Defined in
-
-[src/structures/Server.ts:49](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L49)
+`Server`
 
 ## Properties
 
 ### address
 
-• **address**: `string`
+> **address**: `string`
+
+Defined in: [structures/Server.ts:20](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Server.ts#L20)
 
 Server address of the form IPv4:PORT
 
-#### Defined in
-
-[src/structures/Server.ts:20](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L20)
-
-___
+***
 
 ### appID
 
-• **appID**: `number`
+> **appID**: `number`
+
+Defined in: [structures/Server.ts:23](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Server.ts#L23)
 
 App ID this server is hosting
 
-#### Defined in
-
-[src/structures/Server.ts:23](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L23)
-
-___
+***
 
 ### gameDir
 
-• **gameDir**: `string`
+> **gameDir**: `string`
+
+Defined in: [structures/Server.ts:26](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Server.ts#L26)
 
 The directory the game is from
 
-#### Defined in
-
-[src/structures/Server.ts:26](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L26)
-
-___
+***
 
 ### gmsIndex
 
-• **gmsIndex**: `number`
+> **gmsIndex**: `number`
+
+Defined in: [structures/Server.ts:29](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Server.ts#L29)
 
 GMS Index. Not sure what this means
 
-#### Defined in
-
-[src/structures/Server.ts:29](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L29)
-
-___
+***
 
 ### id
 
-• **id**: `string`
+> **id**: `string`
+
+Defined in: [structures/Server.ts:17](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Server.ts#L17)
 
 The SteamID of this game server
 
-#### Defined in
-
-[src/structures/Server.ts:17](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L17)
-
-___
+***
 
 ### lan
 
-• **lan**: `boolean`
+> **lan**: `boolean`
+
+Defined in: [structures/Server.ts:32](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Server.ts#L32)
 
 Is this server LAN only
 
-#### Defined in
-
-[src/structures/Server.ts:32](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L32)
-
-___
+***
 
 ### port
 
-• **port**: `number`
+> **port**: `number`
+
+Defined in: [structures/Server.ts:35](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Server.ts#L35)
 
 The port this server is running on
 
-#### Defined in
-
-[src/structures/Server.ts:35](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L35)
-
-___
+***
 
 ### region
 
-• **region**: [`ServerRegion`](../enums/ServerRegion.md)
+> **region**: [`ServerRegion`](../enumerations/ServerRegion.md)
+
+Defined in: [structures/Server.ts:38](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Server.ts#L38)
 
 Server region
 
-#### Defined in
+***
 
-[src/structures/Server.ts:38](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L38)
+### reject?
 
-___
+> `optional` **reject**: `string`
 
-### reject
-
-• `Optional` **reject**: `string`
+Defined in: [structures/Server.ts:47](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Server.ts#L47)
 
 Requirements for clients to join server
 
-#### Defined in
-
-[src/structures/Server.ts:47](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L47)
-
-___
+***
 
 ### secure
 
-• **secure**: `boolean`
+> **secure**: `boolean`
+
+Defined in: [structures/Server.ts:41](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Server.ts#L41)
 
 Is this server VAC secured
 
-#### Defined in
-
-[src/structures/Server.ts:41](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L41)
-
-___
+***
 
 ### specPort
 
-• **specPort**: `number`
+> **specPort**: `number`
+
+Defined in: [structures/Server.ts:44](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Server.ts#L44)
 
 Server specPort. Not sure what this means
-
-#### Defined in
-
-[src/structures/Server.ts:44](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Server.ts#L44)

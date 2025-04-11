@@ -1,97 +1,77 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / UserBadges
 
 # Class: UserBadges
 
-## Table of contents
-
-### Constructors
-
-- [constructor](UserBadges.md#constructor)
-
-### Properties
-
-- [badges](UserBadges.md#badges)
-- [level](UserBadges.md#level)
-- [levelXP](UserBadges.md#levelxp)
-- [xp](UserBadges.md#xp)
-- [xpRemaining](UserBadges.md#xpremaining)
+Defined in: [structures/UserBadges.ts:3](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserBadges.ts#L3)
 
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new UserBadges**(`data`): [`UserBadges`](UserBadges.md)
+> **new UserBadges**(`data`): `UserBadges`
+
+Defined in: [structures/UserBadges.ts:19](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserBadges.ts#L19)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `any` |
+##### data
+
+`any`
 
 #### Returns
 
-[`UserBadges`](UserBadges.md)
-
-#### Defined in
-
-[src/structures/UserBadges.ts:19](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserBadges.ts#L19)
+`UserBadges`
 
 ## Properties
 
 ### badges
 
-• **badges**: [`UserBadge`](UserBadge.md)[]
+> **badges**: [`UserBadge`](UserBadge.md)[]
+
+Defined in: [structures/UserBadges.ts:5](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserBadges.ts#L5)
 
 Badges this user owns
 
-#### Defined in
-
-[src/structures/UserBadges.ts:5](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserBadges.ts#L5)
-
-___
+***
 
 ### level
 
-• **level**: `number`
+> **level**: `number`
+
+Defined in: [structures/UserBadges.ts:14](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserBadges.ts#L14)
 
 This user's current level
 
-#### Defined in
-
-[src/structures/UserBadges.ts:14](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserBadges.ts#L14)
-
-___
+***
 
 ### levelXP
 
-• **levelXP**: `number`
+> **levelXP**: `number`
+
+Defined in: [structures/UserBadges.ts:17](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserBadges.ts#L17)
 
 The amount of XP it took to reach this user's level (e.g. reaching level 26 requires 4800 XP)
 
-#### Defined in
-
-[src/structures/UserBadges.ts:17](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserBadges.ts#L17)
-
-___
+***
 
 ### xp
 
-• **xp**: `number`
+> **xp**: `number`
+
+Defined in: [structures/UserBadges.ts:8](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserBadges.ts#L8)
 
 The total amount of XP this user has
 
-#### Defined in
-
-[src/structures/UserBadges.ts:8](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserBadges.ts#L8)
-
-___
+***
 
 ### xpRemaining
 
-• **xpRemaining**: `number`
+> **xpRemaining**: `number`
+
+Defined in: [structures/UserBadges.ts:11](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserBadges.ts#L11)
 
 The amount of XP remaining for this user to reach the next level
-
-#### Defined in
-
-[src/structures/UserBadges.ts:11](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserBadges.ts#L11)

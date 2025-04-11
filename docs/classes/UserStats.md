@@ -1,122 +1,99 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / UserStats
 
 # Class: UserStats
 
-## Hierarchy
+Defined in: [structures/UserStats.ts:5](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserStats.ts#L5)
+
+## Extends
 
 - `default`
 
-  ↳ **`UserStats`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](UserStats.md#constructor)
-
-### Properties
-
-- [achievements](UserStats.md#achievements)
-- [game](UserStats.md#game)
-- [stats](UserStats.md#stats)
-- [steamID](UserStats.md#steamid)
-
-### Accessors
-
-- [profileURL](UserStats.md#profileurl)
-
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new UserStats**(`data`): [`UserStats`](UserStats.md)
+> **new UserStats**(`data`): `UserStats`
+
+Defined in: [structures/UserStats.ts:15](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserStats.ts#L15)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `any` |
+##### data
+
+`any`
 
 #### Returns
 
-[`UserStats`](UserStats.md)
+`UserStats`
 
 #### Overrides
 
-User.constructor
-
-#### Defined in
-
-[src/structures/UserStats.ts:15](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserStats.ts#L15)
+`User.constructor`
 
 ## Properties
 
-### achievements
+### achievements?
 
-• `Optional` **achievements**: [`UserAchievement`](UserAchievement.md)[]
+> `optional` **achievements**: [`UserAchievement`](UserAchievement.md)[]
+
+Defined in: [structures/UserStats.ts:10](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserStats.ts#L10)
 
 The achievements this user has unlocked
 
-#### Defined in
-
-[src/structures/UserStats.ts:10](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserStats.ts#L10)
-
-___
+***
 
 ### game
 
-• **game**: `string`
+> **game**: `string`
+
+Defined in: [structures/UserStats.ts:7](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserStats.ts#L7)
 
 Name of this game
 
-#### Defined in
+***
 
-[src/structures/UserStats.ts:7](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserStats.ts#L7)
+### stats?
 
-___
+> `optional` **stats**: [`UserStat`](../interfaces/UserStat.md)[]
 
-### stats
-
-• `Optional` **stats**: [`UserStat`](../interfaces/UserStat.md)[]
+Defined in: [structures/UserStats.ts:13](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserStats.ts#L13)
 
 Some game stats about the user
 
-#### Defined in
-
-[src/structures/UserStats.ts:13](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserStats.ts#L13)
-
-___
+***
 
 ### steamID
 
-• **steamID**: `string`
+> **steamID**: `string`
+
+Defined in: [structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/User.ts#L3)
 
 This user's Steam ID
 
 #### Inherited from
 
-User.steamID
-
-#### Defined in
-
-[src/structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/User.ts#L3)
+`User.steamID`
 
 ## Accessors
 
 ### profileURL
 
-• `get` **profileURL**(): `string`
+#### Get Signature
+
+> **get** **profileURL**(): `string`
+
+Defined in: [structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/User.ts#L10)
 
 The permalink to this user's profile
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-User.profileURL
-
-#### Defined in
-
-[src/structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/User.ts#L10)
+`User.profileURL`

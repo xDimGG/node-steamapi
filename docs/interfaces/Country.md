@@ -1,47 +1,39 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / Country
 
 # Interface: Country
 
-## Table of contents
-
-### Properties
-
-- [countrycode](Country.md#countrycode)
-- [countryname](Country.md#countryname)
-- [hasstates](Country.md#hasstates)
+Defined in: [structures/Locations.ts:1](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Locations.ts#L1)
 
 ## Properties
 
 ### countrycode
 
-• **countrycode**: `string`
+> **countrycode**: `string`
+
+Defined in: [structures/Locations.ts:3](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Locations.ts#L3)
 
 Two letter code representing the country
 
-#### Defined in
-
-[src/structures/Locations.ts:3](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Locations.ts#L3)
-
-___
+***
 
 ### countryname
 
-• **countryname**: `string`
+> **countryname**: `string`
+
+Defined in: [structures/Locations.ts:6](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Locations.ts#L6)
 
 Human readable name of country (english only)
 
-#### Defined in
-
-[src/structures/Locations.ts:6](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Locations.ts#L6)
-
-___
+***
 
 ### hasstates
 
-• **hasstates**: `number`
+> **hasstates**: `number`
+
+Defined in: [structures/Locations.ts:9](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Locations.ts#L9)
 
 Does this country have states. 1 is true 0 is false
-
-#### Defined in
-
-[src/structures/Locations.ts:9](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Locations.ts#L9)

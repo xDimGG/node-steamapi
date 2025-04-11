@@ -1,264 +1,200 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / default
 
 # Class: default
 
-## Table of contents
-
-### Constructors
-
-- [constructor](default.md#constructor)
-
-### Properties
-
-- [baseAPI](default.md#baseapi)
-- [baseActions](default.md#baseactions)
-- [baseStore](default.md#basestore)
-- [currency](default.md#currency)
-- [gameDetailCache](default.md#gamedetailcache)
-- [headers](default.md#headers)
-- [key](default.md#key)
-- [language](default.md#language)
-- [userResolveCache](default.md#userresolvecache)
-- [SUCCESS\_CODE](default.md#success_code)
-- [reCommunityID](default.md#recommunityid)
-- [reProfileBase](default.md#reprofilebase)
-- [reProfileID](default.md#reprofileid)
-- [reProfileURL](default.md#reprofileurl)
-- [reSteamID2](default.md#resteamid2)
-- [reSteamID3](default.md#resteamid3)
-
-### Methods
-
-- [get](default.md#get)
-- [getAppList](default.md#getapplist)
-- [getCities](default.md#getcities)
-- [getCountries](default.md#getcountries)
-- [getFeaturedCategories](default.md#getfeaturedcategories)
-- [getFeaturedGames](default.md#getfeaturedgames)
-- [getGameAchievementPercentages](default.md#getgameachievementpercentages)
-- [getGameDetails](default.md#getgamedetails)
-- [getGameNews](default.md#getgamenews)
-- [getGamePlayers](default.md#getgameplayers)
-- [getGameSchema](default.md#getgameschema)
-- [getServerList](default.md#getserverlist)
-- [getServerTime](default.md#getservertime)
-- [getServers](default.md#getservers)
-- [getStates](default.md#getstates)
-- [getUserAchievements](default.md#getuserachievements)
-- [getUserBadges](default.md#getuserbadges)
-- [getUserBans](default.md#getuserbans)
-- [getUserFriends](default.md#getuserfriends)
-- [getUserGroups](default.md#getusergroups)
-- [getUserLevel](default.md#getuserlevel)
-- [getUserOwnedGames](default.md#getuserownedgames)
-- [getUserRecentGames](default.md#getuserrecentgames)
-- [getUserServers](default.md#getuserservers)
-- [getUserStats](default.md#getuserstats)
-- [getUserSummary](default.md#getusersummary)
-- [resolve](default.md#resolve)
+Defined in: [SteamAPI.ts:167](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L167)
 
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new default**(`key`, `options?`): [`default`](default.md)
+> **new default**(`key`, `options`): `SteamAPI`
+
+Defined in: [SteamAPI.ts:195](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L195)
 
 Make a new SteamAPI Client
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `key` | `string` \| ``false`` | Key to use for API calls. Key can be generated at https://steamcommunity.com/dev/apikey. If you want to make requests without a key, pass in false |
-| `options` | [`SteamAPIOptions`](../interfaces/SteamAPIOptions.md) | Custom options for default language, HTTP parameters, and caching |
+##### key
+
+Key to use for API calls. Key can be generated at https://steamcommunity.com/dev/apikey. If you want to make requests without a key, pass in false
+
+`string` | `false`
+
+##### options
+
+[`SteamAPIOptions`](../interfaces/SteamAPIOptions.md) = `{}`
+
+Custom options for default language, HTTP parameters, and caching
 
 #### Returns
 
-[`default`](default.md)
-
-#### Defined in
-
-[src/SteamAPI.ts:193](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L193)
+`SteamAPI`
 
 ## Properties
 
-### baseAPI
-
-• **baseAPI**: `string`
-
-#### Defined in
-
-[src/SteamAPI.ts:179](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L179)
-
-___
-
 ### baseActions
 
-• **baseActions**: `string`
+> **baseActions**: `string`
 
-#### Defined in
+Defined in: [SteamAPI.ts:183](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L183)
 
-[src/SteamAPI.ts:181](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L181)
+***
 
-___
+### baseAPI
+
+> **baseAPI**: `string`
+
+Defined in: [SteamAPI.ts:181](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L181)
+
+***
 
 ### baseStore
 
-• **baseStore**: `string`
+> **baseStore**: `string`
 
-#### Defined in
+Defined in: [SteamAPI.ts:182](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L182)
 
-[src/SteamAPI.ts:180](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L180)
-
-___
+***
 
 ### currency
 
-• **currency**: [`Currency`](../README.md#currency)
+> **currency**: [`Currency`](../type-aliases/Currency.md)
 
-#### Defined in
+Defined in: [SteamAPI.ts:179](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L179)
 
-[src/SteamAPI.ts:177](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L177)
+***
 
-___
+### gameDetailCache?
 
-### gameDetailCache
+> `optional` **gameDetailCache**: [`CacheMap`](../interfaces/CacheMap.md)\<`string`, [`GameDetails`](GameDetails.md)\>
 
-• `Optional` **gameDetailCache**: [`CacheMap`](../interfaces/CacheMap.md)\<`string`, `Object`\>
+Defined in: [SteamAPI.ts:185](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L185)
 
-#### Defined in
-
-[src/SteamAPI.ts:183](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L183)
-
-___
+***
 
 ### headers
 
-• **headers**: `Object`
+> **headers**: `object`
 
-#### Index signature
+Defined in: [SteamAPI.ts:180](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L180)
 
-▪ [key: `string`]: `string`
+#### Index Signature
 
-#### Defined in
+\[`key`: `string`\]: `string`
 
-[src/SteamAPI.ts:178](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L178)
-
-___
-
-### key
-
-• `Private` **key**: `string` = `''`
-
-#### Defined in
-
-[src/SteamAPI.ts:186](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L186)
-
-___
+***
 
 ### language
 
-• **language**: [`Language`](../README.md#language)
+> **language**: [`Language`](../type-aliases/Language.md)
 
-#### Defined in
+Defined in: [SteamAPI.ts:178](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L178)
 
-[src/SteamAPI.ts:176](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L176)
+***
 
-___
+### userResolveCache?
 
-### userResolveCache
+> `optional` **userResolveCache**: [`CacheMap`](../interfaces/CacheMap.md)\<`string`, `string`\>
 
-• `Optional` **userResolveCache**: [`CacheMap`](../interfaces/CacheMap.md)\<`string`, `string`\>
+Defined in: [SteamAPI.ts:186](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L186)
 
-#### Defined in
-
-[src/SteamAPI.ts:184](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L184)
-
-___
-
-### SUCCESS\_CODE
-
-▪ `Static` **SUCCESS\_CODE**: `number` = `1`
-
-#### Defined in
-
-[src/SteamAPI.ts:174](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L174)
-
-___
+***
 
 ### reCommunityID
 
-▪ `Static` **reCommunityID**: `RegExp`
+> `static` **reCommunityID**: `RegExp`
 
-#### Defined in
+Defined in: [SteamAPI.ts:169](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L169)
 
-[src/SteamAPI.ts:168](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L168)
-
-___
+***
 
 ### reProfileBase
 
-▪ `Static` **reProfileBase**: `string`
+> `static` **reProfileBase**: `string`
 
-#### Defined in
+Defined in: [SteamAPI.ts:168](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L168)
 
-[src/SteamAPI.ts:167](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L167)
-
-___
-
-### reProfileID
-
-▪ `Static` **reProfileID**: `RegExp`
-
-#### Defined in
-
-[src/SteamAPI.ts:172](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L172)
-
-___
+***
 
 ### reProfileURL
 
-▪ `Static` **reProfileURL**: `RegExp`
+> `static` **reProfileURL**: `RegExp`
 
-#### Defined in
+Defined in: [SteamAPI.ts:172](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L172)
 
-[src/SteamAPI.ts:171](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L171)
-
-___
+***
 
 ### reSteamID2
 
-▪ `Static` **reSteamID2**: `RegExp`
+> `static` **reSteamID2**: `RegExp`
 
-#### Defined in
+Defined in: [SteamAPI.ts:170](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L170)
 
-[src/SteamAPI.ts:169](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L169)
-
-___
+***
 
 ### reSteamID3
 
-▪ `Static` **reSteamID3**: `RegExp`
+> `static` **reSteamID3**: `RegExp`
 
-#### Defined in
+Defined in: [SteamAPI.ts:171](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L171)
 
-[src/SteamAPI.ts:170](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L170)
+***
+
+### reVanityID
+
+> `static` **reVanityID**: `RegExp`
+
+Defined in: [SteamAPI.ts:174](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L174)
+
+***
+
+### reVanityURL
+
+> `static` **reVanityURL**: `RegExp`
+
+Defined in: [SteamAPI.ts:173](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L173)
+
+***
+
+### SUCCESS\_CODE
+
+> `static` **SUCCESS\_CODE**: `number` = `1`
+
+Defined in: [SteamAPI.ts:176](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L176)
 
 ## Methods
 
-### get
+### get()
 
-▸ **get**(`path`, `params?`, `base?`): `Promise`\<`any`\>
+> **get**(`path`, `params`, `base`): `Promise`\<`any`\>
+
+Defined in: [SteamAPI.ts:232](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L232)
 
 Used to make any GET request to the Steam API
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `path` | `string` | Path to request e.g '/IPlayerService/GetOwnedGames/v1?steamid=76561198378422474' |
-| `params` | `ParsedUrlQueryInput` | - |
-| `base` | `string` | Base API URL |
+##### path
+
+`string`
+
+Path to request e.g '/IPlayerService/GetOwnedGames/v1?steamid=76561198378422474'
+
+##### params
+
+`ParsedUrlQueryInput` = `{}`
+
+##### base
+
+`string` = `...`
+
+Base API URL
 
 #### Returns
 
@@ -266,15 +202,13 @@ Used to make any GET request to the Steam API
 
 Parse JSON
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:230](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L230)
+### getAppList()
 
-___
+> **getAppList**(): `Promise`\<[`AppBase`](../interfaces/AppBase.md)[]\>
 
-### getAppList
-
-▸ **getAppList**(): `Promise`\<[`AppBase`](../interfaces/AppBase.md)[]\>
+Defined in: [SteamAPI.ts:412](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L412)
 
 Get every single app on steam
 
@@ -288,24 +222,25 @@ that would have to be made into a class.
 
 Array of very basic app info (ID + name)
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:388](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L388)
+### getCities()
 
-___
+> **getCities**(`countryCode`, `stateCode`): `Promise`\<[`City`](../interfaces/City.md)[]\>
 
-### getCities
-
-▸ **getCities**(`countryCode`, `stateCode`): `Promise`\<[`City`](../interfaces/City.md)[]\>
+Defined in: [SteamAPI.ts:716](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L716)
 
 Gets all the cities for a particular state
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `countryCode` | `string` |
-| `stateCode` | `string` |
+##### countryCode
+
+`string`
+
+##### stateCode
+
+`string`
 
 #### Returns
 
@@ -313,15 +248,13 @@ Gets all the cities for a particular state
 
 Array of city objects with fields countrycode, statecode, cityname and cityid
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:688](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L688)
+### getCountries()
 
-___
+> **getCountries**(): `Promise`\<[`Country`](../interfaces/Country.md)[]\>
 
-### getCountries
-
-▸ **getCountries**(): `Promise`\<[`Country`](../interfaces/Country.md)[]\>
+Defined in: [SteamAPI.ts:700](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L700)
 
 Gets all the countries
 
@@ -331,15 +264,13 @@ Gets all the countries
 
 Array of country objects with fields countrycode, hasstates, and countryname
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:672](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L672)
+### getFeaturedCategories()
 
-___
+> **getFeaturedCategories**(`options`): `Promise`\<\{[`key`: `string`]: `any`; \}\>
 
-### getFeaturedCategories
-
-▸ **getFeaturedCategories**(`options?`): `Promise`\<\{ `[key: string]`: `any`;  }\>
+Defined in: [SteamAPI.ts:315](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L315)
 
 Gets featured categories on Steam store
 
@@ -347,25 +278,33 @@ Gets featured categories on Steam store
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options` | `Object` | More options |
-| `options.currency` | `undefined` \| [`Currency`](../README.md#currency) | The currency |
-| `options.language` | `undefined` \| [`Language`](../README.md#language) | The language |
+##### options
+
+More options
+
+###### currency?
+
+[`Currency`](../type-aliases/Currency.md) = `...`
+
+The currency
+
+###### language?
+
+[`Language`](../type-aliases/Language.md) = `...`
+
+The language
 
 #### Returns
 
-`Promise`\<\{ `[key: string]`: `any`;  }\>
+`Promise`\<\{[`key`: `string`]: `any`; \}\>
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:297](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L297)
+### getFeaturedGames()
 
-___
+> **getFeaturedGames**(`options`): `Promise`\<\{[`key`: `string`]: `any`; \}\>
 
-### getFeaturedGames
-
-▸ **getFeaturedGames**(`options?`): `Promise`\<\{ `[key: string]`: `any`;  }\>
+Defined in: [SteamAPI.ts:328](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L328)
 
 Gets featured games on Steam store
 
@@ -373,25 +312,33 @@ Gets featured games on Steam store
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options` | `Object` | More options |
-| `options.currency` | `undefined` \| [`Currency`](../README.md#currency) | The currency |
-| `options.language` | `undefined` \| [`Language`](../README.md#language) | The language |
+##### options
+
+More options
+
+###### currency?
+
+[`Currency`](../type-aliases/Currency.md) = `...`
+
+The currency
+
+###### language?
+
+[`Language`](../type-aliases/Language.md) = `...`
+
+The language
 
 #### Returns
 
-`Promise`\<\{ `[key: string]`: `any`;  }\>
+`Promise`\<\{[`key`: `string`]: `any`; \}\>
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:310](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L310)
+### getGameAchievementPercentages()
 
-___
+> **getGameAchievementPercentages**(`app`): `Promise`\<[`AchievementPercentage`](../interfaces/AchievementPercentage.md)[]\>
 
-### getGameAchievementPercentages
-
-▸ **getGameAchievementPercentages**(`app`): `Promise`\<[`AchievementPercentage`](../interfaces/AchievementPercentage.md)[]\>
+Defined in: [SteamAPI.ts:483](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L483)
 
 Get achievement percentages for app ID
 
@@ -399,9 +346,11 @@ If a game does not have any achievements, this will error
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `app` | `number` | App ID to get achievement progress for |
+##### app
+
+`number`
+
+App ID to get achievement progress for
 
 #### Returns
 
@@ -409,15 +358,15 @@ If a game does not have any achievements, this will error
 
 Array of object with achievement name and percentage for app ID
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:459](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L459)
+### getGameDetails()
 
-___
+#### Call Signature
 
-### getGameDetails
+> **getGameDetails**(`app`, `options?`): `Promise`\<\{[`key`: `string`]: `any`; \}\>
 
-▸ **getGameDetails**(`app`, `options?`): `Promise`\<\{ `[key: string]`: `any`;  }\>
+Defined in: [SteamAPI.ts:353](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L353)
 
 Get details for app ID. If an array of more than one app ID is passed in, the parameter &filters=price_overview
 will be added to the request since otherwise the server would respond with null
@@ -432,40 +381,126 @@ Note: a game will not have a price_overview field if it is F2P
 
 <warn>Not every `language` is supported. A list of available languages can be found [here](https://www.ibabbleon.com/Steam-Supported-Languages-API-Codes.html).</warn>
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `app` | `number` \| `number`[] | `undefined` | App ID or array of App IDs |
-| `options` | `Object` | `{}` | More options |
-| `options.currency` | `undefined` \| [`Currency`](../README.md#currency) | `undefined` | The currency |
-| `options.filters` | `undefined` \| `never`[] | `[]` | Fields to restrict the return results to |
-| `options.language` | `undefined` \| [`Language`](../README.md#language) | `undefined` | The language |
+###### app
 
-#### Returns
+`Number`
 
-`Promise`\<\{ `[key: string]`: `any`;  }\>
+App ID or array of App IDs
+
+###### options?
+
+More options
+
+###### currency
+
+[`Currency`](../type-aliases/Currency.md)
+
+The currency
+
+###### filters
+
+`string`[]
+
+Fields to restrict the return results to
+
+###### language
+
+[`Language`](../type-aliases/Language.md)
+
+The language
+
+##### Returns
+
+`Promise`\<\{[`key`: `string`]: `any`; \}\>
 
 If app is number, returns single object. If app is array, returns a mapping of app IDs to objects
 
-#### Defined in
+#### Call Signature
 
-[src/SteamAPI.ts:335](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L335)
+> **getGameDetails**\<`T`\>(`app`, `options?`): `Promise`\<`{ [K in number]: { [key: string]: any } }`\>
 
-___
+Defined in: [SteamAPI.ts:354](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L354)
 
-### getGameNews
+Get details for app ID. If an array of more than one app ID is passed in, the parameter &filters=price_overview
+will be added to the request since otherwise the server would respond with null
 
-▸ **getGameNews**(`app`, `options?`): `Promise`\<[`NewsPost`](NewsPost.md)[]\>
+Note: a game will not have a price_overview field if it is F2P
+
+<warn>If the array contains invalid app IDs, they will be filtered out</warn>
+
+<warn>Requests for this endpoint are limited to 200 every 5 minutes</warn>
+
+<warn>Not every `currency` is supported. Only the following are valid: `us, ca, cc, es, de, fr, ru, nz, au, uk`.</warn>
+
+<warn>Not every `language` is supported. A list of available languages can be found [here](https://www.ibabbleon.com/Steam-Supported-Languages-API-Codes.html).</warn>
+
+##### Type Parameters
+
+###### T
+
+`T` *extends* `number`
+
+##### Parameters
+
+###### app
+
+`T`[]
+
+App ID or array of App IDs
+
+###### options?
+
+More options
+
+###### currency
+
+[`Currency`](../type-aliases/Currency.md)
+
+The currency
+
+###### filters
+
+`string`[]
+
+Fields to restrict the return results to
+
+###### language
+
+[`Language`](../type-aliases/Language.md)
+
+The language
+
+##### Returns
+
+`Promise`\<`{ [K in number]: { [key: string]: any } }`\>
+
+If app is number, returns single object. If app is array, returns a mapping of app IDs to objects
+
+***
+
+### getGameNews()
+
+> **getGameNews**(`app`, `options`): `Promise`\<[`NewsPost`](NewsPost.md)[]\>
+
+Defined in: [SteamAPI.ts:509](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L509)
 
 Get news for app ID
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `app` | `number` | App ID |
-| `options` | [`GetGameNewsOptions`](../interfaces/GetGameNewsOptions.md) | Additional options for filtering posts |
+##### app
+
+`number`
+
+App ID
+
+##### options
+
+[`GetGameNewsOptions`](../interfaces/GetGameNewsOptions.md) = `{}`
+
+Additional options for filtering posts
 
 #### Returns
 
@@ -473,23 +508,23 @@ Get news for app ID
 
 App news for ID
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:485](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L485)
+### getGamePlayers()
 
-___
+> **getGamePlayers**(`app`): `Promise`\<`number`\>
 
-### getGamePlayers
-
-▸ **getGamePlayers**(`app`): `Promise`\<`number`\>
+Defined in: [SteamAPI.ts:435](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L435)
 
 Get number of current players for app ID
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `app` | `number` | App ID to get number of current players for |
+##### app
+
+`number`
+
+App ID to get number of current players for
 
 #### Returns
 
@@ -497,24 +532,29 @@ Get number of current players for app ID
 
 Number of current players
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:411](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L411)
+### getGameSchema()
 
-___
+> **getGameSchema**(`app`, `language`): `Promise`\<`any`\>
 
-### getGameSchema
-
-▸ **getGameSchema**(`app`, `language?`): `Promise`\<`any`\>
+Defined in: [SteamAPI.ts:451](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L451)
 
 Get schema for app ID
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `app` | `number` | App ID to get schema for |
-| `language` | [`Language`](../README.md#language) | Language to return strings for (note: does not seem to affect stats; only achievements) |
+##### app
+
+`number`
+
+App ID to get schema for
+
+##### language
+
+[`Language`](../type-aliases/Language.md) = `...`
+
+Language to return strings for (note: does not seem to affect stats; only achievements)
 
 #### Returns
 
@@ -522,38 +562,66 @@ Get schema for app ID
 
 Schema
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:427](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L427)
+### getServerList()
 
-___
+> **getServerList**(`filter`, `limit`): `Promise`\<[`GameServer`](GameServer.md)[]\>
 
-### getServerList
-
-▸ **getServerList**(`filter?`, `limit?`): `Promise`\<[`GameServer`](GameServer.md)[]\>
+Defined in: [SteamAPI.ts:726](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L726)
 
 Gets servers using Master Server Query Protocol filtering
 
 #### Parameters
 
-| Name | Type | Default value | Description                                                                                                                                                                                                                                                         |
-| :------ | :------ | :------ |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `filter` | `string` | `''` | Filter as defined by the [Master Server Query Protocol](https://developer.valvesoftware.com/wiki/Master_Server_Query_Protocol#Filter). Although a filter is not strictly required, you probably want to at least use something like \appid\[appid] to filter by app |
-| `limit` | `number` | `100` | Number of results to return. 100 by default                                                                                                                                                                                                                         |
+##### filter
+
+`string` = `''`
+
+Filter as defined by the [Master Server Query Protocol](https://developer.valvesoftware.com/wiki/Master_Server_Query_Protocol#Filter).
+Although a filter is not strictly required, you probably want to at least use something like \appid\[appid] to filter by app
+
+##### limit
+
+`number` = `100`
+
+Number of results to return. 100 by default
 
 #### Returns
 
 `Promise`\<[`GameServer`](GameServer.md)[]\>
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:698](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L698)
+### getServers()
 
-___
+> **getServers**(`host`): `Promise`\<[`Server`](Server.md)[]\>
 
-### getServerTime
+Defined in: [SteamAPI.ts:422](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L422)
 
-▸ **getServerTime**(): `Promise`\<`Date`\>
+Get every server associated with a particular host
+
+#### Parameters
+
+##### host
+
+`string`
+
+Host to query (IPv4 or IPv4:queryport)
+
+#### Returns
+
+`Promise`\<[`Server`](Server.md)[]\>
+
+Info of servers
+
+***
+
+### getServerTime()
+
+> **getServerTime**(): `Promise`\<`Date`\>
+
+Defined in: [SteamAPI.ts:691](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L691)
 
 Gets the Steam server's time
 
@@ -563,47 +631,21 @@ Gets the Steam server's time
 
 Date object from the server
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:663](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L663)
+### getStates()
 
-___
+> **getStates**(`countryCode`): `Promise`\<[`State`](../interfaces/State.md)[]\>
 
-### getServers
-
-▸ **getServers**(`host`): `Promise`\<[`Server`](Server.md)[]\>
-
-Get every server associated with a particular host
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `host` | `string` | Host to query (IPv4 or IPv4:queryport) |
-
-#### Returns
-
-`Promise`\<[`Server`](Server.md)[]\>
-
-Info of servers
-
-#### Defined in
-
-[src/SteamAPI.ts:398](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L398)
-
-___
-
-### getStates
-
-▸ **getStates**(`countryCode`): `Promise`\<[`State`](../interfaces/State.md)[]\>
+Defined in: [SteamAPI.ts:708](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L708)
 
 Gets all the states for a particular country
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `countryCode` | `string` |
+##### countryCode
+
+`string`
 
 #### Returns
 
@@ -611,25 +653,35 @@ Gets all the states for a particular country
 
 Array of state objects with fields countrycode, statecode, and statename
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:680](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L680)
+### getUserAchievements()
 
-___
+> **getUserAchievements**(`id`, `app`, `language`): `Promise`\<[`UserAchievements`](UserAchievements.md)\>
 
-### getUserAchievements
-
-▸ **getUserAchievements**(`id`, `app`, `language?`): `Promise`\<[`UserAchievements`](UserAchievements.md)\>
+Defined in: [SteamAPI.ts:465](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L465)
 
 Get a user's achievements for app ID
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `string` | Steam ID of user |
-| `app` | `number` | App ID to get achievements for |
-| `language` | [`Language`](../README.md#language) | Language to return strings for |
+##### id
+
+`string`
+
+Steam ID of user
+
+##### app
+
+`number`
+
+App ID to get achievements for
+
+##### language
+
+[`Language`](../type-aliases/Language.md) = `...`
+
+Language to return strings for
 
 #### Returns
 
@@ -637,23 +689,23 @@ Get a user's achievements for app ID
 
 Achievements
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:441](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L441)
+### getUserBadges()
 
-___
+> **getUserBadges**(`id`): `Promise`\<[`UserBadges`](UserBadges.md)\>
 
-### getUserBadges
-
-▸ **getUserBadges**(`id`): `Promise`\<[`UserBadges`](UserBadges.md)\>
+Defined in: [SteamAPI.ts:534](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L534)
 
 Get a user's badges
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `string` | User ID |
+##### id
+
+`string`
+
+User ID
 
 #### Returns
 
@@ -661,47 +713,71 @@ Get a user's badges
 
 User level info and badges
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:510](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L510)
+### getUserBans()
 
-___
+#### Call Signature
 
-### getUserBans
+> **getUserBans**(`id`): `Promise`\<[`UserBans`](UserBans.md)\>
 
-▸ **getUserBans**(`id`): `Promise`\<[`UserBans`](UserBans.md) \| [`UserBans`](UserBans.md)[]\>
+Defined in: [SteamAPI.ts:620](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L620)
 
 Get a user's or multiple users' bans. If an array of IDs is passed in, this returns an array of UserBans
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `string` \| `string`[] | User ID(s) |
+###### id
 
-#### Returns
+`string`
 
-`Promise`\<[`UserBans`](UserBans.md) \| [`UserBans`](UserBans.md)[]\>
+User ID(s)
+
+##### Returns
+
+`Promise`\<[`UserBans`](UserBans.md)\>
 
 Ban info
 
-#### Defined in
+#### Call Signature
 
-[src/SteamAPI.ts:596](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L596)
+> **getUserBans**(`id`): `Promise`\<[`UserBans`](UserBans.md)[]\>
 
-___
+Defined in: [SteamAPI.ts:621](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L621)
 
-### getUserFriends
+Get a user's or multiple users' bans. If an array of IDs is passed in, this returns an array of UserBans
 
-▸ **getUserFriends**(`id`): `Promise`\<[`UserFriend`](UserFriend.md)[]\>
+##### Parameters
+
+###### id
+
+`string`[]
+
+User ID(s)
+
+##### Returns
+
+`Promise`\<[`UserBans`](UserBans.md)[]\>
+
+Ban info
+
+***
+
+### getUserFriends()
+
+> **getUserFriends**(`id`): `Promise`\<[`UserFriend`](UserFriend.md)[]\>
+
+Defined in: [SteamAPI.ts:639](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L639)
 
 Get a user's friends
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `string` | User ID |
+##### id
+
+`string`
+
+User ID
 
 #### Returns
 
@@ -709,23 +785,23 @@ Get a user's friends
 
 The provided user's friends
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:613](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L613)
+### getUserGroups()
 
-___
+> **getUserGroups**(`id`): `Promise`\<`string`[]\>
 
-### getUserGroups
-
-▸ **getUserGroups**(`id`): `Promise`\<`string`[]\>
+Defined in: [SteamAPI.ts:651](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L651)
 
 Get the groups the user is a member of
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `string` | User ID |
+##### id
+
+`string`
+
+User ID
 
 #### Returns
 
@@ -733,23 +809,23 @@ Get the groups the user is a member of
 
 Group IDs
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:625](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L625)
+### getUserLevel()
 
-___
+> **getUserLevel**(`id`): `Promise`\<`number`\>
 
-### getUserLevel
-
-▸ **getUserLevel**(`id`): `Promise`\<`number`\>
+Defined in: [SteamAPI.ts:545](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L545)
 
 Get a user's level
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `string` | User ID |
+##### id
+
+`string`
+
+User ID
 
 #### Returns
 
@@ -757,24 +833,29 @@ Get a user's level
 
 The user's Steam level
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:521](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L521)
+### getUserOwnedGames()
 
-___
+> **getUserOwnedGames**(`id`, `opts`): `Promise`\<[`UserPlaytime`](UserPlaytime.md)\<[`Game`](Game.md) \| [`GameInfo`](GameInfo.md) \| [`GameInfoExtended`](GameInfoExtended.md)\>[]\>
 
-### getUserOwnedGames
-
-▸ **getUserOwnedGames**(`id`, `opts?`): `Promise`\<[`UserPlaytime`](UserPlaytime.md)\<[`Game`](Game.md) \| [`GameInfo`](GameInfo.md) \| [`GameInfoExtended`](GameInfoExtended.md)\>[]\>
+Defined in: [SteamAPI.ts:557](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L557)
 
 Get users owned games.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `string` | User ID |
-| `opts` | [`GetUserOwnedGamesOptions`](../interfaces/GetUserOwnedGamesOptions.md) | Additional options for filtering |
+##### id
+
+`string`
+
+User ID
+
+##### opts
+
+[`GetUserOwnedGamesOptions`](../interfaces/GetUserOwnedGamesOptions.md) = `{}`
+
+Additional options for filtering
 
 #### Returns
 
@@ -782,15 +863,13 @@ Get users owned games.
 
 Owned games
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:533](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L533)
+### getUserRecentGames()
 
-___
+> **getUserRecentGames**(`id`, `count`): `Promise`\<[`UserPlaytime`](UserPlaytime.md)\<[`GameInfoBasic`](GameInfoBasic.md)\>[]\>
 
-### getUserRecentGames
-
-▸ **getUserRecentGames**(`id`, `count?`): `Promise`\<[`UserPlaytime`](UserPlaytime.md)\<[`GameInfoBasic`](GameInfoBasic.md)\>[]\>
+Defined in: [SteamAPI.ts:607](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L607)
 
 Get a user's recently played games. Note: <UserPlaytime>.game is GameInfo not just Game
 
@@ -798,10 +877,17 @@ Like getUserOwnedGames() but only returns games played in the last 2 weeks
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `id` | `string` | `undefined` | User ID |
-| `count` | `number` | `0` | Number of results to limit the request to (0 means no limit) |
+##### id
+
+`string`
+
+User ID
+
+##### count
+
+`number` = `0`
+
+Number of results to limit the request to (0 means no limit)
 
 #### Returns
 
@@ -809,15 +895,13 @@ Like getUserOwnedGames() but only returns games played in the last 2 weeks
 
 Recently played games and their play times
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:583](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L583)
+### getUserServers()
 
-___
+> **getUserServers**(): `Promise`\<[`UserServers`](UserServers.md)\>
 
-### getUserServers
-
-▸ **getUserServers**(): `Promise`\<[`UserServers`](UserServers.md)\>
+Defined in: [SteamAPI.ts:664](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L664)
 
 Gets servers on steamcommunity.com/dev/managegameservers using your key
 
@@ -827,24 +911,29 @@ Gets servers on steamcommunity.com/dev/managegameservers using your key
 
 Your server
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:638](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L638)
+### getUserStats()
 
-___
+> **getUserStats**(`id`, `app`): `Promise`\<[`UserStats`](UserStats.md)\>
 
-### getUserStats
-
-▸ **getUserStats**(`id`, `app`): `Promise`\<[`UserStats`](UserStats.md)\>
+Defined in: [SteamAPI.ts:496](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L496)
 
 Get a user's stats for app ID
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `string` | Steam ID of user |
-| `app` | `number` | App ID to get user stats for |
+##### id
+
+`string`
+
+Steam ID of user
+
+##### app
+
+`number`
+
+App ID to get user stats for
 
 #### Returns
 
@@ -852,39 +941,61 @@ Get a user's stats for app ID
 
 Stats for app ID
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:472](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L472)
+### getUserSummary()
 
-___
+#### Call Signature
 
-### getUserSummary
+> **getUserSummary**(`id`): `Promise`\<[`UserSummary`](UserSummary.md)\>
 
-▸ **getUserSummary**(`id`): `Promise`\<[`UserSummary`](UserSummary.md) \| [`UserSummary`](UserSummary.md)[]\>
+Defined in: [SteamAPI.ts:673](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L673)
 
 Get users summary. If an array of IDs is passed in, this returns an array of UserSummary
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `string` \| `string`[] | User ID(s) |
+###### id
 
-#### Returns
+`string`
 
-`Promise`\<[`UserSummary`](UserSummary.md) \| [`UserSummary`](UserSummary.md)[]\>
+User ID(s)
+
+##### Returns
+
+`Promise`\<[`UserSummary`](UserSummary.md)\>
 
 Summary
 
-#### Defined in
+#### Call Signature
 
-[src/SteamAPI.ts:647](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L647)
+> **getUserSummary**(`id`): `Promise`\<[`UserSummary`](UserSummary.md)[]\>
 
-___
+Defined in: [SteamAPI.ts:674](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L674)
 
-### resolve
+Get users summary. If an array of IDs is passed in, this returns an array of UserSummary
 
-▸ **resolve**(`query`): `Promise`\<`string`\>
+##### Parameters
+
+###### id
+
+`string`[]
+
+User ID(s)
+
+##### Returns
+
+`Promise`\<[`UserSummary`](UserSummary.md)[]\>
+
+Summary
+
+***
+
+### resolve()
+
+> **resolve**(`query`): `Promise`\<`string`\>
+
+Defined in: [SteamAPI.ts:244](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L244)
 
 Resolve runs through a couple different methods for finding a user's profile ID based on
 either their id, username, profile url, vanity url, steamID2, or steamID3.
@@ -892,16 +1003,14 @@ Rejects promise if a profile couldn't be resolved
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `query` | `string` | Something to resolve like https://steamcommunity.com/id/xDim |
+##### query
+
+`string`
+
+Something to resolve like https://steamcommunity.com/id/xDim
 
 #### Returns
 
 `Promise`\<`string`\>
 
 Profile ID
-
-#### Defined in
-
-[src/SteamAPI.ts:242](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L242)

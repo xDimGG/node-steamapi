@@ -1,167 +1,135 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / SteamAPIOptions
 
 # Interface: SteamAPIOptions
 
-## Table of contents
-
-### Properties
-
-- [baseAPI](SteamAPIOptions.md#baseapi)
-- [baseActions](SteamAPIOptions.md#baseactions)
-- [baseStore](SteamAPIOptions.md#basestore)
-- [currency](SteamAPIOptions.md#currency)
-- [gameDetailCacheEnabled](SteamAPIOptions.md#gamedetailcacheenabled)
-- [gameDetailCacheTTL](SteamAPIOptions.md#gamedetailcachettl)
-- [headers](SteamAPIOptions.md#headers)
-- [inMemoryCacheEnabled](SteamAPIOptions.md#inmemorycacheenabled)
-- [language](SteamAPIOptions.md#language)
-- [userResolveCacheEnabled](SteamAPIOptions.md#userresolvecacheenabled)
-- [userResolveCacheTTL](SteamAPIOptions.md#userresolvecachettl)
+Defined in: [SteamAPI.ts:31](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L31)
 
 ## Properties
 
-### baseAPI
+### baseActions?
 
-• `Optional` **baseAPI**: `string`
+> `optional` **baseActions**: `string`
 
-URL to use for Steam API requests
-
-'https://api.steampowered.com' by default
-
-#### Defined in
-
-[src/SteamAPI.ts:57](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L57)
-
-___
-
-### baseActions
-
-• `Optional` **baseActions**: `string`
+Defined in: [SteamAPI.ts:72](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L72)
 
 URL to use for Steam action requests (only used for getLocations)
 
 'https://steamcommunity.com/actions' by default
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:71](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L71)
+### baseAPI?
 
-___
+> `optional` **baseAPI**: `string`
 
-### baseStore
+Defined in: [SteamAPI.ts:58](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L58)
 
-• `Optional` **baseStore**: `string`
+URL to use for Steam API requests
+
+'https://api.steampowered.com' by default
+
+***
+
+### baseStore?
+
+> `optional` **baseStore**: `string`
+
+Defined in: [SteamAPI.ts:65](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L65)
 
 URL to use for Steam Store API requests
 
 'https://store.steampowered.com/api' by default
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:64](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L64)
+### currency?
 
-___
+> `optional` **currency**: [`Currency`](../type-aliases/Currency.md)
 
-### currency
-
-• `Optional` **currency**: [`Currency`](../README.md#currency)
+Defined in: [SteamAPI.ts:44](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L44)
 
 Default currency to use for the API when a currency is not explicitly provided
 
 'us' by default
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:43](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L43)
+### gameDetailCacheEnabled?
 
-___
+> `optional` **gameDetailCacheEnabled**: `boolean`
 
-### gameDetailCacheEnabled
-
-• `Optional` **gameDetailCacheEnabled**: `boolean`
+Defined in: [SteamAPI.ts:82](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L82)
 
 If `inMemoryCacheEnabled` is true, this decides whether to cache API requests for getGameDetails()
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:81](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L81)
+### gameDetailCacheTTL?
 
-___
+> `optional` **gameDetailCacheTTL**: `number`
 
-### gameDetailCacheTTL
-
-• `Optional` **gameDetailCacheTTL**: `number`
+Defined in: [SteamAPI.ts:87](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L87)
 
 How long to cache getGameDetails() in milliseconds
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:86](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L86)
+### headers?
 
-___
+> `optional` **headers**: `object`
 
-### headers
-
-• `Optional` **headers**: `Object`
+Defined in: [SteamAPI.ts:51](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L51)
 
 Custom headers to send for all API requests
 
 By default, User-Agent is "SteamAPI/<VERSION> (https://www.npmjs.com/package/steamapi)"
 
-#### Index signature
+#### Index Signature
 
-▪ [key: `string`]: `string`
+\[`key`: `string`\]: `string`
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:50](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L50)
+### inMemoryCacheEnabled?
 
-___
+> `optional` **inMemoryCacheEnabled**: `boolean`
 
-### inMemoryCacheEnabled
-
-• `Optional` **inMemoryCacheEnabled**: `boolean`
+Defined in: [SteamAPI.ts:77](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L77)
 
 Whether to use built-in in-memory caching for gameDetailCache and userResolveCache
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:76](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L76)
+### language?
 
-___
+> `optional` **language**: [`Language`](../type-aliases/Language.md)
 
-### language
-
-• `Optional` **language**: [`Language`](../README.md#language)
+Defined in: [SteamAPI.ts:37](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L37)
 
 Default language to use for the API when a language is not explicitly provided
 
 'english' by default
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:36](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L36)
+### userResolveCacheEnabled?
 
-___
+> `optional` **userResolveCacheEnabled**: `boolean`
 
-### userResolveCacheEnabled
-
-• `Optional` **userResolveCacheEnabled**: `boolean`
+Defined in: [SteamAPI.ts:92](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L92)
 
 If `inMemoryCacheEnabled` is true, this decides whether to cache API requests for resolve()
 
-#### Defined in
+***
 
-[src/SteamAPI.ts:91](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L91)
+### userResolveCacheTTL?
 
-___
+> `optional` **userResolveCacheTTL**: `number`
 
-### userResolveCacheTTL
-
-• `Optional` **userResolveCacheTTL**: `number`
+Defined in: [SteamAPI.ts:97](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L97)
 
 How long to cache resolve() in milliseconds
-
-#### Defined in
-
-[src/SteamAPI.ts:96](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/SteamAPI.ts#L96)

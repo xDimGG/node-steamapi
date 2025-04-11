@@ -1,60 +1,49 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / City
 
 # Interface: City
 
-## Table of contents
-
-### Properties
-
-- [cityid](City.md#cityid)
-- [cityname](City.md#cityname)
-- [countrycode](City.md#countrycode)
-- [statecode](City.md#statecode)
+Defined in: [structures/Locations.ts:23](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Locations.ts#L23)
 
 ## Properties
 
 ### cityid
 
-• **cityid**: `number`
+> **cityid**: `number`
+
+Defined in: [structures/Locations.ts:31](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Locations.ts#L31)
 
 ID representing the city
 
-#### Defined in
-
-[src/structures/Locations.ts:31](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Locations.ts#L31)
-
-___
+***
 
 ### cityname
 
-• **cityname**: `string`
+> **cityname**: `string`
+
+Defined in: [structures/Locations.ts:34](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Locations.ts#L34)
 
 Human readable name of the city
 
-#### Defined in
-
-[src/structures/Locations.ts:34](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Locations.ts#L34)
-
-___
+***
 
 ### countrycode
 
-• **countrycode**: `string`
+> **countrycode**: `string`
+
+Defined in: [structures/Locations.ts:25](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Locations.ts#L25)
 
 Two letter code representing the country of this state
 
-#### Defined in
-
-[src/structures/Locations.ts:25](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Locations.ts#L25)
-
-___
+***
 
 ### statecode
 
-• **statecode**: `string`
+> **statecode**: `string`
+
+Defined in: [structures/Locations.ts:28](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Locations.ts#L28)
 
 Number representing the state. Can have leading 0s and must be kept as a string
-
-#### Defined in
-
-[src/structures/Locations.ts:28](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Locations.ts#L28)

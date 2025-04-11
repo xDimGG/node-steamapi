@@ -1,360 +1,297 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / UserSummary
 
 # Class: UserSummary
 
-## Hierarchy
+Defined in: [structures/UserSummary.ts:14](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L14)
+
+## Extends
 
 - `default`
 
-  ↳ **`UserSummary`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](UserSummary.md#constructor)
-
-### Properties
-
-- [allowsComments](UserSummary.md#allowscomments)
-- [avatar](UserSummary.md#avatar)
-- [cityID](UserSummary.md#cityid)
-- [countryCode](UserSummary.md#countrycode)
-- [createdTimestamp](UserSummary.md#createdtimestamp)
-- [gameID](UserSummary.md#gameid)
-- [gameName](UserSummary.md#gamename)
-- [gameServerID](UserSummary.md#gameserverid)
-- [gameServerIP](UserSummary.md#gameserverip)
-- [lastLogOffTimestamp](UserSummary.md#lastlogofftimestamp)
-- [nickname](UserSummary.md#nickname)
-- [personaState](UserSummary.md#personastate)
-- [personaStateFlags](UserSummary.md#personastateflags)
-- [primaryGroupID](UserSummary.md#primarygroupid)
-- [realName](UserSummary.md#realname)
-- [stateCode](UserSummary.md#statecode)
-- [steamID](UserSummary.md#steamid)
-- [url](UserSummary.md#url)
-- [visible](UserSummary.md#visible)
-
-### Accessors
-
-- [createdAt](UserSummary.md#createdat)
-- [lastLogOffAt](UserSummary.md#lastlogoffat)
-- [profileURL](UserSummary.md#profileurl)
-
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new UserSummary**(`data`): [`UserSummary`](UserSummary.md)
+> **new UserSummary**(`data`): `UserSummary`
+
+Defined in: [structures/UserSummary.ts:69](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L69)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `any` |
+##### data
+
+`any`
 
 #### Returns
 
-[`UserSummary`](UserSummary.md)
+`UserSummary`
 
 #### Overrides
 
-User.constructor
-
-#### Defined in
-
-[src/structures/UserSummary.ts:69](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L69)
+`User.constructor`
 
 ## Properties
 
 ### allowsComments
 
-• **allowsComments**: `boolean`
+> **allowsComments**: `boolean`
+
+Defined in: [structures/UserSummary.ts:31](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L31)
 
 If this user allows comments on their profile
 
-#### Defined in
-
-[src/structures/UserSummary.ts:31](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L31)
-
-___
+***
 
 ### avatar
 
-• **avatar**: `Object`
+> **avatar**: `object`
+
+Defined in: [structures/UserSummary.ts:16](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L16)
 
 The user's avatar in various sizes
 
-#### Type declaration
+#### hash
 
-| Name | Type |
-| :------ | :------ |
-| `hash` | `string` |
-| `large` | `string` |
-| `medium` | `string` |
-| `small` | `string` |
+> **hash**: `string`
 
-#### Defined in
+#### large
 
-[src/structures/UserSummary.ts:16](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L16)
+> **large**: `string`
 
-___
+#### medium
 
-### cityID
+> **medium**: `string`
 
-• `Optional` **cityID**: `string`
+#### small
+
+> **small**: `string`
+
+***
+
+### cityID?
+
+> `optional` **cityID**: `string`
+
+Defined in: [structures/UserSummary.ts:67](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L67)
 
 The user's city ID if set and visible
 
-#### Defined in
+***
 
-[src/structures/UserSummary.ts:67](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L67)
+### countryCode?
 
-___
+> `optional` **countryCode**: `string`
 
-### countryCode
-
-• `Optional` **countryCode**: `string`
+Defined in: [structures/UserSummary.ts:61](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L61)
 
 The user's country code if set and visible
 
-#### Defined in
+***
 
-[src/structures/UserSummary.ts:61](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L61)
+### createdTimestamp?
 
-___
+> `optional` **createdTimestamp**: `number`
 
-### createdTimestamp
-
-• `Optional` **createdTimestamp**: `number`
+Defined in: [structures/UserSummary.ts:40](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L40)
 
 Unix Timestamp when the profile was created if visible
 
-#### Defined in
+***
 
-[src/structures/UserSummary.ts:40](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L40)
+### gameID?
 
-___
+> `optional` **gameID**: `number`
 
-### gameID
-
-• `Optional` **gameID**: `number`
+Defined in: [structures/UserSummary.ts:49](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L49)
 
 The game the user is currently playing if any
 
-#### Defined in
+***
 
-[src/structures/UserSummary.ts:49](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L49)
+### gameName?
 
-___
+> `optional` **gameName**: `string`
 
-### gameName
-
-• `Optional` **gameName**: `string`
+Defined in: [structures/UserSummary.ts:52](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L52)
 
 The name of the game the user is currently playing if any
 
-#### Defined in
+***
 
-[src/structures/UserSummary.ts:52](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L52)
+### gameServerID?
 
-___
+> `optional` **gameServerID**: `string`
 
-### gameServerID
-
-• `Optional` **gameServerID**: `string`
+Defined in: [structures/UserSummary.ts:58](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L58)
 
 The SteamID of the game server the user is currently playing on if any
 
-#### Defined in
+***
 
-[src/structures/UserSummary.ts:58](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L58)
+### gameServerIP?
 
-___
+> `optional` **gameServerIP**: `string`
 
-### gameServerIP
-
-• `Optional` **gameServerIP**: `string`
+Defined in: [structures/UserSummary.ts:55](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L55)
 
 The IP:PORT of the game server the user is currently playing on if any
 
-#### Defined in
+***
 
-[src/structures/UserSummary.ts:55](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L55)
+### lastLogOffTimestamp?
 
-___
+> `optional` **lastLogOffTimestamp**: `number`
 
-### lastLogOffTimestamp
-
-• `Optional` **lastLogOffTimestamp**: `number`
+Defined in: [structures/UserSummary.ts:37](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L37)
 
 Unix Timestamp when the user last logged off
 
-#### Defined in
-
-[src/structures/UserSummary.ts:37](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L37)
-
-___
+***
 
 ### nickname
 
-• **nickname**: `string`
+> **nickname**: `string`
+
+Defined in: [structures/UserSummary.ts:34](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L34)
 
 The nickname this user has set
 
-#### Defined in
-
-[src/structures/UserSummary.ts:34](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L34)
-
-___
+***
 
 ### personaState
 
-• **personaState**: [`UserPersonaState`](../enums/UserPersonaState.md)
+> **personaState**: [`UserPersonaState`](../enumerations/UserPersonaState.md)
+
+Defined in: [structures/UserSummary.ts:25](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L25)
 
 The user's persona state. Always 0 if profile is private
 
-#### Defined in
-
-[src/structures/UserSummary.ts:25](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L25)
-
-___
+***
 
 ### personaStateFlags
 
-• **personaStateFlags**: `number`
+> **personaStateFlags**: `number`
+
+Defined in: [structures/UserSummary.ts:28](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L28)
 
 Flags for personState. Seems to always be 0
 
-#### Defined in
+***
 
-[src/structures/UserSummary.ts:28](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L28)
+### primaryGroupID?
 
-___
+> `optional` **primaryGroupID**: `string`
 
-### primaryGroupID
-
-• `Optional` **primaryGroupID**: `string`
+Defined in: [structures/UserSummary.ts:46](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L46)
 
 The user's primary group ID if set and visible
 
-#### Defined in
+***
 
-[src/structures/UserSummary.ts:46](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L46)
+### realName?
 
-___
+> `optional` **realName**: `string`
 
-### realName
-
-• `Optional` **realName**: `string`
+Defined in: [structures/UserSummary.ts:43](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L43)
 
 The user's real name if set and visible
 
-#### Defined in
+***
 
-[src/structures/UserSummary.ts:43](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L43)
+### stateCode?
 
-___
+> `optional` **stateCode**: `string`
 
-### stateCode
-
-• `Optional` **stateCode**: `string`
+Defined in: [structures/UserSummary.ts:64](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L64)
 
 The user's state code if set and visible
 
-#### Defined in
-
-[src/structures/UserSummary.ts:64](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L64)
-
-___
+***
 
 ### steamID
 
-• **steamID**: `string`
+> **steamID**: `string`
+
+Defined in: [structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/User.ts#L3)
 
 This user's Steam ID
 
 #### Inherited from
 
-User.steamID
+`User.steamID`
 
-#### Defined in
-
-[src/structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/User.ts#L3)
-
-___
+***
 
 ### url
 
-• **url**: `string`
+> **url**: `string`
+
+Defined in: [structures/UserSummary.ts:19](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L19)
 
 Link to the user's profile
 
-#### Defined in
-
-[src/structures/UserSummary.ts:19](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L19)
-
-___
+***
 
 ### visible
 
-• **visible**: `boolean`
+> **visible**: `boolean`
+
+Defined in: [structures/UserSummary.ts:22](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L22)
 
 Is this user's profile visible to you
-
-#### Defined in
-
-[src/structures/UserSummary.ts:22](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L22)
 
 ## Accessors
 
 ### createdAt
 
-• `get` **createdAt**(): `undefined` \| `Date`
+#### Get Signature
+
+> **get** **createdAt**(): `undefined` \| `Date`
+
+Defined in: [structures/UserSummary.ts:102](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L102)
 
 Date when this user's account was created
 
-#### Returns
+##### Returns
 
 `undefined` \| `Date`
 
-#### Defined in
-
-[src/structures/UserSummary.ts:102](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L102)
-
-___
+***
 
 ### lastLogOffAt
 
-• `get` **lastLogOffAt**(): `undefined` \| `Date`
+#### Get Signature
+
+> **get** **lastLogOffAt**(): `undefined` \| `Date`
+
+Defined in: [structures/UserSummary.ts:107](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserSummary.ts#L107)
 
 Date when this user last logged off
 
-#### Returns
+##### Returns
 
 `undefined` \| `Date`
 
-#### Defined in
-
-[src/structures/UserSummary.ts:107](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserSummary.ts#L107)
-
-___
+***
 
 ### profileURL
 
-• `get` **profileURL**(): `string`
+#### Get Signature
+
+> **get** **profileURL**(): `string`
+
+Defined in: [structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/User.ts#L10)
 
 The permalink to this user's profile
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-User.profileURL
-
-#### Defined in
-
-[src/structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/User.ts#L10)
+`User.profileURL`

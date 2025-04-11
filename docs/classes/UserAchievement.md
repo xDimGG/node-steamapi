@@ -1,93 +1,75 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / UserAchievement
 
 # Class: UserAchievement
 
-## Table of contents
-
-### Constructors
-
-- [constructor](UserAchievement.md#constructor)
-
-### Properties
-
-- [name](UserAchievement.md#name)
-- [unlocked](UserAchievement.md#unlocked)
-- [unlockedTimestamp](UserAchievement.md#unlockedtimestamp)
-
-### Accessors
-
-- [unlockedAt](UserAchievement.md#unlockedat)
+Defined in: [structures/UserAchievement.ts:1](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserAchievement.ts#L1)
 
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new UserAchievement**(`data`): [`UserAchievement`](UserAchievement.md)
+> **new UserAchievement**(`data`): `UserAchievement`
+
+Defined in: [structures/UserAchievement.ts:15](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserAchievement.ts#L15)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `any` |
+##### data
+
+`any`
 
 #### Returns
 
-[`UserAchievement`](UserAchievement.md)
-
-#### Defined in
-
-[src/structures/UserAchievement.ts:15](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserAchievement.ts#L15)
+`UserAchievement`
 
 ## Properties
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
+
+Defined in: [structures/UserAchievement.ts:3](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserAchievement.ts#L3)
 
 API name for this achievement (e.g. ACH03, TF_GET_TURRETKILLS, Champion)
 
-#### Defined in
-
-[src/structures/UserAchievement.ts:3](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserAchievement.ts#L3)
-
-___
+***
 
 ### unlocked
 
-• **unlocked**: `boolean`
+> **unlocked**: `boolean`
+
+Defined in: [structures/UserAchievement.ts:6](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserAchievement.ts#L6)
 
 Whether the user has unlocked this achievement
 
-#### Defined in
+***
 
-[src/structures/UserAchievement.ts:6](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserAchievement.ts#L6)
+### unlockedTimestamp?
 
-___
+> `optional` **unlockedTimestamp**: `number`
 
-### unlockedTimestamp
-
-• `Optional` **unlockedTimestamp**: `number`
+Defined in: [structures/UserAchievement.ts:13](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserAchievement.ts#L13)
 
 Unix Timestamp for when the user unlocked this achievement.
 Is 0 if the user has not unlocked this achievement. Only defined
 when calling getUserAchievements()
 
-#### Defined in
-
-[src/structures/UserAchievement.ts:13](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserAchievement.ts#L13)
-
 ## Accessors
 
 ### unlockedAt
 
-• `get` **unlockedAt**(): `undefined` \| `Date`
+#### Get Signature
+
+> **get** **unlockedAt**(): `undefined` \| `Date`
+
+Defined in: [structures/UserAchievement.ts:23](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserAchievement.ts#L23)
 
 Date when this achievement was unlocked
 
-#### Returns
+##### Returns
 
 `undefined` \| `Date`
-
-#### Defined in
-
-[src/structures/UserAchievement.ts:23](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserAchievement.ts#L23)

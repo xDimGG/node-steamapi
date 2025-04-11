@@ -1,169 +1,133 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / UserPlaytime
 
 # Class: UserPlaytime\<G\>
 
-## Type parameters
+Defined in: [structures/UserPlaytime.ts:5](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserPlaytime.ts#L5)
 
-| Name |
-| :------ |
-| `G` |
+## Type Parameters
 
-## Table of contents
+### G
 
-### Constructors
-
-- [constructor](UserPlaytime.md#constructor)
-
-### Properties
-
-- [disconnectedMinutes](UserPlaytime.md#disconnectedminutes)
-- [game](UserPlaytime.md#game)
-- [lastPlayedTimestamp](UserPlaytime.md#lastplayedtimestamp)
-- [linuxMinutes](UserPlaytime.md#linuxminutes)
-- [macMinutes](UserPlaytime.md#macminutes)
-- [minutes](UserPlaytime.md#minutes)
-- [recentMinutes](UserPlaytime.md#recentminutes)
-- [windowsMinutes](UserPlaytime.md#windowsminutes)
-
-### Accessors
-
-- [lastPlayedAt](UserPlaytime.md#lastplayedat)
+`G`
 
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new UserPlaytime**\<`G`\>(`data`, `game`): [`UserPlaytime`](UserPlaytime.md)\<`G`\>
+> **new UserPlaytime**\<`G`\>(`data`, `game`): `UserPlaytime`\<`G`\>
 
-#### Type parameters
-
-| Name |
-| :------ |
-| `G` |
+Defined in: [structures/UserPlaytime.ts:30](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserPlaytime.ts#L30)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `any` |
-| `game` | `G` |
+##### data
+
+`any`
+
+##### game
+
+`G`
 
 #### Returns
 
-[`UserPlaytime`](UserPlaytime.md)\<`G`\>
-
-#### Defined in
-
-[src/structures/UserPlaytime.ts:30](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L30)
+`UserPlaytime`\<`G`\>
 
 ## Properties
 
 ### disconnectedMinutes
 
-• **disconnectedMinutes**: `number`
+> **disconnectedMinutes**: `number`
+
+Defined in: [structures/UserPlaytime.ts:25](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserPlaytime.ts#L25)
 
 The number of minutes played while offline
 
-#### Defined in
-
-[src/structures/UserPlaytime.ts:25](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L25)
-
-___
+***
 
 ### game
 
-• **game**: `G`
+> **game**: `G`
+
+Defined in: [structures/UserPlaytime.ts:7](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserPlaytime.ts#L7)
 
 The game with various levels of information based on parameters passed to getUserOwnedGames()
 
-#### Defined in
+***
 
-[src/structures/UserPlaytime.ts:7](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L7)
+### lastPlayedTimestamp?
 
-___
+> `optional` **lastPlayedTimestamp**: `number`
 
-### lastPlayedTimestamp
-
-• `Optional` **lastPlayedTimestamp**: `number`
+Defined in: [structures/UserPlaytime.ts:28](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserPlaytime.ts#L28)
 
 UNIX Timestamp for when the user last played this game if the user has ever launched the game
 
-#### Defined in
-
-[src/structures/UserPlaytime.ts:28](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L28)
-
-___
+***
 
 ### linuxMinutes
 
-• **linuxMinutes**: `number`
+> **linuxMinutes**: `number`
+
+Defined in: [structures/UserPlaytime.ts:22](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserPlaytime.ts#L22)
 
 The number of minutes played on Linux (not accurate)
 
-#### Defined in
-
-[src/structures/UserPlaytime.ts:22](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L22)
-
-___
+***
 
 ### macMinutes
 
-• **macMinutes**: `number`
+> **macMinutes**: `number`
+
+Defined in: [structures/UserPlaytime.ts:19](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserPlaytime.ts#L19)
 
 The number of minutes played on Mac (not accurate)
 
-#### Defined in
-
-[src/structures/UserPlaytime.ts:19](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L19)
-
-___
+***
 
 ### minutes
 
-• **minutes**: `number`
+> **minutes**: `number`
+
+Defined in: [structures/UserPlaytime.ts:10](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserPlaytime.ts#L10)
 
 The total number of minutes the user has played this game
 
-#### Defined in
-
-[src/structures/UserPlaytime.ts:10](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L10)
-
-___
+***
 
 ### recentMinutes
 
-• **recentMinutes**: `number`
+> **recentMinutes**: `number`
+
+Defined in: [structures/UserPlaytime.ts:13](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserPlaytime.ts#L13)
 
 The number of minutes played in the last 2 weeks
 
-#### Defined in
-
-[src/structures/UserPlaytime.ts:13](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L13)
-
-___
+***
 
 ### windowsMinutes
 
-• **windowsMinutes**: `number`
+> **windowsMinutes**: `number`
+
+Defined in: [structures/UserPlaytime.ts:16](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserPlaytime.ts#L16)
 
 The number of minutes played on Windows (not accurate)
-
-#### Defined in
-
-[src/structures/UserPlaytime.ts:16](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L16)
 
 ## Accessors
 
 ### lastPlayedAt
 
-• `get` **lastPlayedAt**(): `undefined` \| `Date`
+#### Get Signature
+
+> **get** **lastPlayedAt**(): `undefined` \| `Date`
+
+Defined in: [structures/UserPlaytime.ts:42](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserPlaytime.ts#L42)
 
 Date when user last played this game
 
-#### Returns
+##### Returns
 
 `undefined` \| `Date`
-
-#### Defined in
-
-[src/structures/UserPlaytime.ts:42](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserPlaytime.ts#L42)

@@ -1,34 +1,29 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / AchievementPercentage
 
 # Interface: AchievementPercentage
 
-## Table of contents
-
-### Properties
-
-- [name](AchievementPercentage.md#name)
-- [percent](AchievementPercentage.md#percent)
+Defined in: [structures/AchievementPercentage.ts:1](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/AchievementPercentage.ts#L1)
 
 ## Properties
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
+
+Defined in: [structures/AchievementPercentage.ts:3](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/AchievementPercentage.ts#L3)
 
 API name of this achievement
 
-#### Defined in
-
-[src/structures/AchievementPercentage.ts:3](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/AchievementPercentage.ts#L3)
-
-___
+***
 
 ### percent
 
-• **percent**: `number`
+> **percent**: `number`
+
+Defined in: [structures/AchievementPercentage.ts:6](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/AchievementPercentage.ts#L6)
 
 What percent of players have completed this achievement (floating point value between 0 and 100)
-
-#### Defined in
-
-[src/structures/AchievementPercentage.ts:6](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/AchievementPercentage.ts#L6)

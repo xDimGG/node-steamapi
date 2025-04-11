@@ -1,47 +1,39 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / State
 
 # Interface: State
 
-## Table of contents
-
-### Properties
-
-- [countrycode](State.md#countrycode)
-- [statecode](State.md#statecode)
-- [statename](State.md#statename)
+Defined in: [structures/Locations.ts:12](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Locations.ts#L12)
 
 ## Properties
 
 ### countrycode
 
-• **countrycode**: `string`
+> **countrycode**: `string`
+
+Defined in: [structures/Locations.ts:14](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Locations.ts#L14)
 
 Two letter code representing the country of this state
 
-#### Defined in
-
-[src/structures/Locations.ts:14](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Locations.ts#L14)
-
-___
+***
 
 ### statecode
 
-• **statecode**: `string`
+> **statecode**: `string`
+
+Defined in: [structures/Locations.ts:17](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Locations.ts#L17)
 
 Number representing the state. Can have leading 0s and must be kept as a string
 
-#### Defined in
-
-[src/structures/Locations.ts:17](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Locations.ts#L17)
-
-___
+***
 
 ### statename
 
-• **statename**: `string`
+> **statename**: `string`
+
+Defined in: [structures/Locations.ts:20](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Locations.ts#L20)
 
 Human readable name of the state
-
-#### Defined in
-
-[src/structures/Locations.ts:20](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Locations.ts#L20)

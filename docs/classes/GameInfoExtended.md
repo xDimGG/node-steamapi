@@ -1,380 +1,329 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / GameInfoExtended
 
 # Class: GameInfoExtended
 
-## Hierarchy
+Defined in: [structures/GameInfoExtended.ts:3](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfoExtended.ts#L3)
+
+## Extends
 
 - [`GameInfo`](GameInfo.md)
 
-  ↳ **`GameInfoExtended`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](GameInfoExtended.md#constructor)
-
-### Properties
-
-- [capsuleFilename](GameInfoExtended.md#capsulefilename)
-- [descriptorIDs](GameInfoExtended.md#descriptorids)
-- [hasCommunityVisibleStats](GameInfoExtended.md#hascommunityvisiblestats)
-- [hasDLC](GameInfoExtended.md#hasdlc)
-- [hasLeaderboards](GameInfoExtended.md#hasleaderboards)
-- [hasMarket](GameInfoExtended.md#hasmarket)
-- [hasWorkshop](GameInfoExtended.md#hasworkshop)
-- [icon](GameInfoExtended.md#icon)
-- [id](GameInfoExtended.md#id)
-- [name](GameInfoExtended.md#name)
-- [sortName](GameInfoExtended.md#sortname)
-
-### Accessors
-
-- [backgroundURL](GameInfoExtended.md#backgroundurl)
-- [coverURL](GameInfoExtended.md#coverurl)
-- [headerMediumURL](GameInfoExtended.md#headermediumurl)
-- [headerURL](GameInfoExtended.md#headerurl)
-- [iconURL](GameInfoExtended.md#iconurl)
-- [logoURL](GameInfoExtended.md#logourl)
-- [smallHeaderURL](GameInfoExtended.md#smallheaderurl)
-- [tinyHeaderURL](GameInfoExtended.md#tinyheaderurl)
-
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new GameInfoExtended**(`data`): [`GameInfoExtended`](GameInfoExtended.md)
+> **new GameInfoExtended**(`data`): `GameInfoExtended`
+
+Defined in: [structures/GameInfoExtended.ts:19](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfoExtended.ts#L19)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `any` |
+##### data
+
+`any`
 
 #### Returns
 
-[`GameInfoExtended`](GameInfoExtended.md)
+`GameInfoExtended`
 
 #### Overrides
 
-[GameInfo](GameInfo.md).[constructor](GameInfo.md#constructor)
-
-#### Defined in
-
-[src/structures/GameInfoExtended.ts:19](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/GameInfoExtended.ts#L19)
+[`GameInfo`](GameInfo.md).[`constructor`](GameInfo.md#constructor)
 
 ## Properties
 
-### capsuleFilename
+### capsuleFilename?
 
-• `Optional` **capsuleFilename**: `string`
+> `optional` **capsuleFilename**: `string`
+
+Defined in: [structures/GameInfoExtended.ts:14](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfoExtended.ts#L14)
 
 Game's capsule filename. Not sure what this means
 
-#### Defined in
+***
 
-[src/structures/GameInfoExtended.ts:14](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/GameInfoExtended.ts#L14)
+### descriptorIDs?
 
-___
+> `optional` **descriptorIDs**: `number`[]
 
-### descriptorIDs
-
-• `Optional` **descriptorIDs**: `number`[]
+Defined in: [structures/GameInfo.ts:11](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfo.ts#L11)
 
 Descriptor IDs. Not sure what this means. Usually undefined
 
 #### Inherited from
 
-[GameInfo](GameInfo.md).[descriptorIDs](GameInfo.md#descriptorids)
+[`GameInfo`](GameInfo.md).[`descriptorIDs`](GameInfo.md#descriptorids)
 
-#### Defined in
-
-[src/structures/GameInfo.ts:11](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/GameInfo.ts#L11)
-
-___
+***
 
 ### hasCommunityVisibleStats
 
-• **hasCommunityVisibleStats**: `boolean`
+> **hasCommunityVisibleStats**: `boolean`
+
+Defined in: [structures/GameInfo.ts:5](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfo.ts#L5)
 
 If this game has community visible stats
 
 #### Inherited from
 
-[GameInfo](GameInfo.md).[hasCommunityVisibleStats](GameInfo.md#hascommunityvisiblestats)
+[`GameInfo`](GameInfo.md).[`hasCommunityVisibleStats`](GameInfo.md#hascommunityvisiblestats)
 
-#### Defined in
-
-[src/structures/GameInfo.ts:5](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/GameInfo.ts#L5)
-
-___
+***
 
 ### hasDLC
 
-• **hasDLC**: `boolean`
+> **hasDLC**: `boolean`
+
+Defined in: [structures/GameInfoExtended.ts:11](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfoExtended.ts#L11)
 
 If this game has DLC
 
-#### Defined in
-
-[src/structures/GameInfoExtended.ts:11](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/GameInfoExtended.ts#L11)
-
-___
+***
 
 ### hasLeaderboards
 
-• **hasLeaderboards**: `boolean`
+> **hasLeaderboards**: `boolean`
+
+Defined in: [structures/GameInfo.ts:8](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfo.ts#L8)
 
 If this game has leaderboards
 
 #### Inherited from
 
-[GameInfo](GameInfo.md).[hasLeaderboards](GameInfo.md#hasleaderboards)
+[`GameInfo`](GameInfo.md).[`hasLeaderboards`](GameInfo.md#hasleaderboards)
 
-#### Defined in
-
-[src/structures/GameInfo.ts:8](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/GameInfo.ts#L8)
-
-___
+***
 
 ### hasMarket
 
-• **hasMarket**: `boolean`
+> **hasMarket**: `boolean`
+
+Defined in: [structures/GameInfoExtended.ts:8](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfoExtended.ts#L8)
 
 If this game has a market
 
-#### Defined in
-
-[src/structures/GameInfoExtended.ts:8](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/GameInfoExtended.ts#L8)
-
-___
+***
 
 ### hasWorkshop
 
-• **hasWorkshop**: `boolean`
+> **hasWorkshop**: `boolean`
+
+Defined in: [structures/GameInfoExtended.ts:5](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfoExtended.ts#L5)
 
 If this game has a workshop
 
-#### Defined in
-
-[src/structures/GameInfoExtended.ts:5](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/GameInfoExtended.ts#L5)
-
-___
+***
 
 ### icon
 
-• **icon**: `string`
+> **icon**: `string`
+
+Defined in: [structures/GameInfoBasic.ts:10](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfoBasic.ts#L10)
 
 Hash for this game's icon
 
 #### Inherited from
 
-[GameInfo](GameInfo.md).[icon](GameInfo.md#icon)
+[`GameInfo`](GameInfo.md).[`icon`](GameInfo.md#icon)
 
-#### Defined in
-
-[src/structures/GameInfoBasic.ts:10](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/GameInfoBasic.ts#L10)
-
-___
+***
 
 ### id
 
-• **id**: `number`
+> **id**: `number`
+
+Defined in: [structures/Game.ts:6](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L6)
 
 App ID for this game
 
 #### Inherited from
 
-[GameInfo](GameInfo.md).[id](GameInfo.md#id)
+[`GameInfo`](GameInfo.md).[`id`](GameInfo.md#id)
 
-#### Defined in
-
-[src/structures/Game.ts:6](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L6)
-
-___
+***
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
+
+Defined in: [structures/GameInfoBasic.ts:7](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfoBasic.ts#L7)
 
 Name for this game
 
 #### Inherited from
 
-[GameInfo](GameInfo.md).[name](GameInfo.md#name)
+[`GameInfo`](GameInfo.md).[`name`](GameInfo.md#name)
 
-#### Defined in
+***
 
-[src/structures/GameInfoBasic.ts:7](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/GameInfoBasic.ts#L7)
+### sortName?
 
-___
+> `optional` **sortName**: `string`
 
-### sortName
-
-• `Optional` **sortName**: `string`
+Defined in: [structures/GameInfoExtended.ts:17](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfoExtended.ts#L17)
 
 Name that this game is sorted by
-
-#### Defined in
-
-[src/structures/GameInfoExtended.ts:17](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/GameInfoExtended.ts#L17)
 
 ## Accessors
 
 ### backgroundURL
 
-• `get` **backgroundURL**(): `string`
+#### Get Signature
+
+> **get** **backgroundURL**(): `string`
+
+Defined in: [structures/Game.ts:28](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L28)
 
 (might not exist) game page background
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-GameInfo.backgroundURL
+[`GameInfo`](GameInfo.md).[`backgroundURL`](GameInfo.md#backgroundurl)
 
-#### Defined in
-
-[src/structures/Game.ts:28](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L28)
-
-___
+***
 
 ### coverURL
 
-• `get` **coverURL**(): `string`
+#### Get Signature
+
+> **get** **coverURL**(): `string`
+
+Defined in: [structures/Game.ts:31](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L31)
 
 (might not exist) game cover
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-GameInfo.coverURL
+[`GameInfo`](GameInfo.md).[`coverURL`](GameInfo.md#coverurl)
 
-#### Defined in
-
-[src/structures/Game.ts:31](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L31)
-
-___
+***
 
 ### headerMediumURL
 
-• `get` **headerMediumURL**(): `string`
+#### Get Signature
+
+> **get** **headerMediumURL**(): `string`
+
+Defined in: [structures/Game.ts:16](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L16)
 
 (might not exist) medium sized header image
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-GameInfo.headerMediumURL
+[`GameInfo`](GameInfo.md).[`headerMediumURL`](GameInfo.md#headermediumurl)
 
-#### Defined in
-
-[src/structures/Game.ts:16](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L16)
-
-___
+***
 
 ### headerURL
 
-• `get` **headerURL**(): `string`
+#### Get Signature
+
+> **get** **headerURL**(): `string`
+
+Defined in: [structures/Game.ts:13](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L13)
 
 (might not exist) large sized header used on the store page
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-GameInfo.headerURL
+[`GameInfo`](GameInfo.md).[`headerURL`](GameInfo.md#headerurl)
 
-#### Defined in
-
-[src/structures/Game.ts:13](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L13)
-
-___
+***
 
 ### iconURL
 
-• `get` **iconURL**(): `string`
+#### Get Signature
+
+> **get** **iconURL**(): `string`
+
+Defined in: [structures/GameInfoBasic.ts:20](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/GameInfoBasic.ts#L20)
 
 tiny app icon
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-GameInfo.iconURL
+[`GameInfo`](GameInfo.md).[`iconURL`](GameInfo.md#iconurl)
 
-#### Defined in
-
-[src/structures/GameInfoBasic.ts:20](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/GameInfoBasic.ts#L20)
-
-___
+***
 
 ### logoURL
 
-• `get` **logoURL**(): `string`
+#### Get Signature
+
+> **get** **logoURL**(): `string`
+
+Defined in: [structures/Game.ts:34](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L34)
 
 (might not exist) transparent game logo
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-GameInfo.logoURL
+[`GameInfo`](GameInfo.md).[`logoURL`](GameInfo.md#logourl)
 
-#### Defined in
-
-[src/structures/Game.ts:34](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L34)
-
-___
+***
 
 ### smallHeaderURL
 
-• `get` **smallHeaderURL**(): `string`
+#### Get Signature
+
+> **get** **smallHeaderURL**(): `string`
+
+Defined in: [structures/Game.ts:19](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L19)
 
 (might not exist) small header image used on user pages
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-GameInfo.smallHeaderURL
+[`GameInfo`](GameInfo.md).[`smallHeaderURL`](GameInfo.md#smallheaderurl)
 
-#### Defined in
-
-[src/structures/Game.ts:19](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L19)
-
-___
+***
 
 ### tinyHeaderURL
 
-• `get` **tinyHeaderURL**(): `string`
+#### Get Signature
+
+> **get** **tinyHeaderURL**(): `string`
+
+Defined in: [structures/Game.ts:22](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/Game.ts#L22)
 
 (might not exist) tiny header image used on app bundles
 
-#### Returns
+##### Returns
 
 `string`
 
 #### Inherited from
 
-GameInfo.tinyHeaderURL
-
-#### Defined in
-
-[src/structures/Game.ts:22](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/Game.ts#L22)
+[`GameInfo`](GameInfo.md).[`tinyHeaderURL`](GameInfo.md#tinyheaderurl)

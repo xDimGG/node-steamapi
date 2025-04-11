@@ -1,143 +1,113 @@
+[**steamapi**](../README.md)
+
+***
+
 [steamapi](../README.md) / UserServer
 
 # Class: UserServer
 
-## Table of contents
-
-### Constructors
-
-- [constructor](UserServer.md#constructor)
-
-### Properties
-
-- [appID](UserServer.md#appid)
-- [deleted](UserServer.md#deleted)
-- [expired](UserServer.md#expired)
-- [id](UserServer.md#id)
-- [lastLogonTimestamp](UserServer.md#lastlogontimestamp)
-- [memo](UserServer.md#memo)
-- [token](UserServer.md#token)
-
-### Accessors
-
-- [lastLogonAt](UserServer.md#lastlogonat)
+Defined in: [structures/UserServer.ts:1](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserServer.ts#L1)
 
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new UserServer**(`data`): [`UserServer`](UserServer.md)
+> **new UserServer**(`data`): `UserServer`
+
+Defined in: [structures/UserServer.ts:23](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserServer.ts#L23)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `any` |
+##### data
+
+`any`
 
 #### Returns
 
-[`UserServer`](UserServer.md)
-
-#### Defined in
-
-[src/structures/UserServer.ts:23](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserServer.ts#L23)
+`UserServer`
 
 ## Properties
 
 ### appID
 
-• **appID**: `number`
+> **appID**: `number`
+
+Defined in: [structures/UserServer.ts:6](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserServer.ts#L6)
 
 App ID this server is for
 
-#### Defined in
-
-[src/structures/UserServer.ts:6](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserServer.ts#L6)
-
-___
+***
 
 ### deleted
 
-• **deleted**: `boolean`
+> **deleted**: `boolean`
+
+Defined in: [structures/UserServer.ts:15](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserServer.ts#L15)
 
 Has this server been deleted
 
-#### Defined in
-
-[src/structures/UserServer.ts:15](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserServer.ts#L15)
-
-___
+***
 
 ### expired
 
-• **expired**: `boolean`
+> **expired**: `boolean`
+
+Defined in: [structures/UserServer.ts:18](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserServer.ts#L18)
 
 Has this server expired
 
-#### Defined in
-
-[src/structures/UserServer.ts:18](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserServer.ts#L18)
-
-___
+***
 
 ### id
 
-• **id**: `string`
+> **id**: `string`
+
+Defined in: [structures/UserServer.ts:3](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserServer.ts#L3)
 
 The SteamID of this game server
 
-#### Defined in
-
-[src/structures/UserServer.ts:3](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserServer.ts#L3)
-
-___
+***
 
 ### lastLogonTimestamp
 
-• **lastLogonTimestamp**: `number`
+> **lastLogonTimestamp**: `number`
+
+Defined in: [structures/UserServer.ts:21](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserServer.ts#L21)
 
 Unix Timestamp for when last time this server token was logged onto
 
-#### Defined in
-
-[src/structures/UserServer.ts:21](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserServer.ts#L21)
-
-___
+***
 
 ### memo
 
-• **memo**: `string`
+> **memo**: `string`
+
+Defined in: [structures/UserServer.ts:12](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserServer.ts#L12)
 
 The memo/name for this server
 
-#### Defined in
-
-[src/structures/UserServer.ts:12](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserServer.ts#L12)
-
-___
+***
 
 ### token
 
-• **token**: `string`
+> **token**: `string`
+
+Defined in: [structures/UserServer.ts:9](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserServer.ts#L9)
 
 The login token for this server
-
-#### Defined in
-
-[src/structures/UserServer.ts:9](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserServer.ts#L9)
 
 ## Accessors
 
 ### lastLogonAt
 
-• `get` **lastLogonAt**(): `Date`
+#### Get Signature
+
+> **get** **lastLogonAt**(): `Date`
+
+Defined in: [structures/UserServer.ts:34](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/structures/UserServer.ts#L34)
 
 `lastLogonTimestamp` as a Date object
 
-#### Returns
+##### Returns
 
 `Date`
-
-#### Defined in
-
-[src/structures/UserServer.ts:34](https://github.com/xDimGG/node-steamapi/blob/b7dfdb7/src/structures/UserServer.ts#L34)
