@@ -5,6 +5,7 @@ import { Country, State, City } from './src/structures/Locations.js';
 import NewsPost from './src/structures/NewsPost.js';
 import Server, { ServerRegion } from './src/structures/Server.js';
 import Game from './src/structures/Game.js';
+import GameDetails from './src/structures/GameDetails.js';
 import GameInfo from './src/structures/GameInfo.js';
 import GameInfoExtended from './src/structures/GameInfoExtended.js';
 import GameInfoBasic from './src/structures/GameInfoBasic.js';
@@ -55,6 +56,7 @@ export {
 	State,
 	City,
 	Game,
+	GameDetails,
 	GameInfo,
 	GameInfoExtended,
 	GameInfoBasic,

@@ -15,6 +15,7 @@ import UserStats from './structures/UserStats.js';
 import NewsPost from './structures/NewsPost.js';
 import Server from './structures/Server.js';
 import Game from './structures/Game.js';
+import GameDetails from './structures/GameDetails.js';
 import GameInfo from './structures/GameInfo.js';
 import GameInfoExtended from './structures/GameInfoExtended.js';
 import GameInfoBasic from './structures/GameInfoBasic.js';
@@ -181,7 +182,7 @@ export default class SteamAPI {
 	baseStore;
 	baseActions;
 
-	gameDetailCache?: CacheMap<string, Object>;
+	gameDetailCache?: CacheMap<string, GameDetails>;
 	userResolveCache?: CacheMap<string, string>;
 
 	private key = '';
@@ -358,42 +359,46 @@ export default class SteamAPI {
 		assertApp(app);
 
 		const isArr = Array.isArray(app);
-		const key = `${app}-${currency}-${language}`;
+		const appIDs = isArr ? app : [app];
 
-		// For now we're not touching the cache if an array of apps is passed
-		// TODO: maybe cache apps individually if an array is passed?
-		if (!isArr) {
-			const cached = this.gameDetailCache?.get(key);
-			if (cached) return cached;
+		const cached = appIDs.map(a => this.gameDetailCache?.get(`${a}-${currency}-${language}`)).filter(g => g !== undefined);
+		const remainingAppIDs = appIDs.filter((_, i) => cached[i] === undefined);
+
+		// If some appIDs were missing from the cache, fetch from Steam and update the cache
+		if (remainingAppIDs.length !== 0) {
+			const details = await this
+				.get('/appdetails', {
+					appids: remainingAppIDs.join(','),
+					cc: currency,
+					l: language,
+					filters: isArr && appIDs.length > 1 ? 'price_overview' : filters.join(','),
+				}, this.baseStore)
+				.then(json => {
+					if (json === null) throw new Error('Failed to find app ID');
+
+					const filtered: { [key: string]: any } = {};
+					for (const [k, v] of Object.entries(json))
+						if ((v as any).success) {
+							const d = (v as any).data;
+							// Convert empty arrays to empty objects for consistency
+							filtered[k] = Array.isArray(d) && d.length === 0 ? {} : d;
+						}
+
+					if (Object.keys(filtered).length === 0) throw new Error('Failed to find app ID');
+
+					return filtered;
+				});
+
+			for (const [appID, data] of Object.entries(details)) {
+				const game = new GameDetails(data);
+				this.gameDetailCache?.set(`${appID}-${currency}-${language}`, game);
+				cached.push(game);
+			}
 		}
 
-		const details = await this
-			.get('/appdetails', {
-				appids: isArr ? app.join(',') : app,
-				cc: currency,
-				l: language,
-				filters: isArr && app.length > 1 ? 'price_overview' : filters.join(','),
-			}, this.baseStore)
-			.then(json => {
-				if (json === null) throw new Error('Failed to find app ID');
-
-				// TODO: make a class
-				const filtered: { [key: string]: any } = {};
-				for (const [k, v] of Object.entries(json))
-					if ((v as any).success) {
-						const d = (v as any).data;
-						// Convert empty arrays to empty objects for consistency
-						filtered[k] = Array.isArray(d) && d.length === 0 ? {} : d;
-					}
-
-				if (Object.keys(filtered).length === 0) throw new Error('Failed to find app ID');
-
-				return isArr ? filtered : filtered[app];
-			});
-
-		if (!isArr) this.gameDetailCache?.set(key, details);
-
-		return details;
+		const cachedObject: { [key: number]: GameDetails } = {};
+		for (const details of cached) cachedObject[details.id] = details;
+		return cachedObject;
 	}
 
 	/**
@@ -604,7 +609,7 @@ export default class SteamAPI {
 
 		const json = await this.get('/IPlayerService/GetRecentlyPlayedGames/v1', { steamid: id, count });
 
-		return json.response.games.map((data: any) => new UserPlaytime(data, new GameInfoBasic(data)));
+		return (json.response.games || []).map((data: any) => new UserPlaytime(data, new GameInfoBasic(data)));
 	}
 
 	/**
