@@ -585,7 +585,7 @@ export default class SteamAPI {
 
 		const json = await this.get('/IPlayerService/GetRecentlyPlayedGames/v1', { steamid: id, count });
 
-		return json.response.games.map((data: any) => new UserPlaytime(data, new GameInfoBasic(data)));
+		return (json.response.games || []).map((data: any) => new UserPlaytime(data, new GameInfoBasic(data)));
 	}
 
 	/**
