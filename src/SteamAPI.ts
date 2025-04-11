@@ -170,7 +170,8 @@ export default class SteamAPI {
 	static reSteamID2 = RegExp(String.raw`^(STEAM_\d+:\d+:\d+)$`, 'i');
 	static reSteamID3 = RegExp(String.raw`^(\[U:\d+:\d+\])$`, 'i');
 	static reProfileURL = RegExp(String.raw`${this.reProfileBase}profiles\/(\d{17})`, 'i');
-	static reProfileID = RegExp(String.raw`${this.reProfileBase}id\/([a-z0-9_-]{2,32})`, 'i');
+	static reVanityURL = RegExp(String.raw`${this.reProfileBase}id\/([a-z0-9_-]{2,32})`, 'i');
+	static reVanityID = RegExp(String.raw`([a-z0-9_-]{2,32})`, 'i');
 
 	static SUCCESS_CODE = 1;
 
@@ -268,9 +269,25 @@ export default class SteamAPI {
 		}
 
 		// vanity id, https://steamcommunity.com/id/xDim
-		const idMatch = query.match(SteamAPI.reProfileID);
-		if (idMatch !== null) {
-			const id = idMatch[1];
+		const vanityUrlMatch = query.match(SteamAPI.reVanityURL);
+		if (vanityUrlMatch !== null) {
+			const id = vanityUrlMatch[1];
+			const cachedID = this.userResolveCache?.get(id);
+			if (cachedID) return cachedID;
+
+			const json = await this.get('/ISteamUser/ResolveVanityURL/v1', { vanityurl: id })
+			if (json.response.success !== SteamAPI.SUCCESS_CODE)
+				throw new Error(json.response.message);
+
+			if (this.userResolveCache)
+				this.userResolveCache.set(id, json.response.steamid);
+
+			return json.response.steamid;
+		}
+
+		const vanityIdMatch = query.match(SteamAPI.reVanityID)
+		if (vanityIdMatch !== null) {
+			const id = vanityIdMatch[0];
 			const cachedID = this.userResolveCache?.get(id);
 			if (cachedID) return cachedID;
 
@@ -333,10 +350,12 @@ export default class SteamAPI {
 	 * @param options.filters Fields to restrict the return results to
 	 * @returns If app is number, returns single object. If app is array, returns a mapping of app IDs to objects
 	 */
-	async getGameDetails(
-		app: number | number[],
-		{ language = this.language, currency = this.currency, filters = [] } = {}
-	): Promise<{ [key: number]: GameDetails }> {
+	async getGameDetails(app: Number, options?: { language: Language, currency: Currency, filters: string[] }): Promise<{ [key: string]: any }>
+	async getGameDetails<T extends number>(app: T[], options?: { language: Language, currency: Currency, filters: string[] }): Promise<{ [K in T]: { [key: string]: any } }>
+	async getGameDetails<T extends number>(
+		app: T | T[],
+		{ language = this.language, currency = this.currency, filters = [] as string[] } = {}
+	) {
 		assertApp(app);
 
 		const isArr = Array.isArray(app);
@@ -598,6 +617,8 @@ export default class SteamAPI {
 	 * @param id User ID(s)
 	 * @returns Ban info
 	 */
+	async getUserBans(id: string): Promise<UserBans>
+	async getUserBans(id: string[]): Promise<UserBans[]>
 	async getUserBans(id: string | string[]): Promise<UserBans | UserBans[]> {
 		assertID(id);
 
@@ -649,6 +670,8 @@ export default class SteamAPI {
 	 * @param id User ID(s)
 	 * @returns Summary
 	 */
+	async getUserSummary(id: string): Promise<UserSummary>
+	async getUserSummary(id: string[]): Promise<UserSummary[]>
 	async getUserSummary(id: string | string[]): Promise<UserSummary | UserSummary[]> {
 		assertID(id);
 
