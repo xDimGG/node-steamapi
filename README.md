@@ -23,6 +23,11 @@ A list of all the methods SteamAPI provides is available [here](https://github.c
 - App IDs are passed as numbers not strings (although a string will probably still work)
 - Any other changes to the API can be found in https://github.com/xDimGG/node-steamapi/blob/master/PORT.md
 
+## Future plans for 4.x
+- Allow `getGameDetails` to return either a GameDetails object or a map of string to GameDetails depending on if the user supplied a single id or an array of ids.
+- Maybe separate groups of endpoints into different classes so there isn't just a monolithic SteamAPI class? Not quite sure how they would be grouped.
+- Add some convenience methods to the Cache class to reduce double logic in SteamAPI.ts
+
 ## Setup
 ### Installation
 ```
