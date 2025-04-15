@@ -8,4 +8,4 @@
 
 > **Language** = `"arabic"` \| `"bulgarian"` \| `"schinese"` \| `"tchinese"` \| `"czech"` \| `"danish"` \| `"dutch"` \| `"english"` \| `"finnish"` \| `"french"` \| `"german"` \| `"greek"` \| `"hungarian"` \| `"italian"` \| `"japanese"` \| `"koreana"` \| `"norwegian"` \| `"polish"` \| `"brazilian"` \| `"portuguese"` \| `"romanian"` \| `"russian"` \| `"latam"` \| `"spanish"` \| `"swedish"` \| `"thai"` \| `"turkish"` \| `"ukrainian"` \| `"vietnamese"`
 
-Defined in: [SteamAPI.ts:161](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/SteamAPI.ts#L161)
+Defined in: [SteamAPI.ts:161](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/SteamAPI.ts#L161)

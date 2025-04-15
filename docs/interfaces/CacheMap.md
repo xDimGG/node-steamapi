@@ -6,7 +6,7 @@
 
 # Interface: CacheMap\<K, V\>
 
-Defined in: [Cache.ts:1](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/Cache.ts#L1)
+Defined in: [Cache.ts:1](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/Cache.ts#L1)
 
 ## Type Parameters
 
@@ -24,7 +24,7 @@ Defined in: [Cache.ts:1](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a
 
 > **get**(`key`): `undefined` \| `V`
 
-Defined in: [Cache.ts:2](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/Cache.ts#L2)
+Defined in: [Cache.ts:2](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/Cache.ts#L2)
 
 #### Parameters
 
@@ -42,7 +42,7 @@ Defined in: [Cache.ts:2](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a
 
 > **set**(`key`, `value`): `V`
 
-Defined in: [Cache.ts:3](https://github.com/xDimGG/node-steamapi/blob/1fe06d2c5a85fee5e9f5e4f0962481cbd53a974e/src/Cache.ts#L3)
+Defined in: [Cache.ts:3](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/Cache.ts#L3)
 
 #### Parameters
 
