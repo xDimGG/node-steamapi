@@ -350,8 +350,8 @@ export default class SteamAPI {
 	 * @param options.filters Fields to restrict the return results to
 	 * @returns If app is number, returns single object. If app is array, returns a mapping of app IDs to objects
 	 */
-	async getGameDetails(app: Number, options?: { language: Language, currency: Currency, filters: string[] }): Promise<{ [key: string]: any }>
-	async getGameDetails<T extends number>(app: T[], options?: { language: Language, currency: Currency, filters: string[] }): Promise<{ [K in T]: { [key: string]: any } }>
+	async getGameDetails(app: Number, options?: { language: Language, currency: Currency, filters: string[] }): Promise<GameDetails>
+	async getGameDetails<T extends number>(app: T[], options?: { language: Language, currency: Currency, filters: string[] }): Promise<{ [key: string]: GameDetails }>
 	async getGameDetails<T extends number>(
 		app: T | T[],
 		{ language = this.language, currency = this.currency, filters = [] as string[] } = {}
@@ -396,8 +396,10 @@ export default class SteamAPI {
 			}
 		}
 
-		const cachedObject: { [key: number]: GameDetails } = {};
-		for (const details of cached) cachedObject[details.id] = details;
+		if (!isArr) return cached[0];
+
+		const cachedObject: { [key: string]: GameDetails } = {};
+		for (const details of cached) cachedObject[details.id.toString()] = details;
 		return cachedObject;
 	}
 
