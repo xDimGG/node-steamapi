@@ -20,6 +20,7 @@ import GameInfo from './structures/GameInfo.js';
 import GameInfoExtended from './structures/GameInfoExtended.js';
 import GameInfoBasic from './structures/GameInfoBasic.js';
 import GameServer from './structures/GameServer.js';
+import GameSchema from './structures/GameSchema.js';
 import UserAchievements from './structures/UserAchievements.js';
 import UserBadges from './structures/UserBadges.js';
 import UserPlaytime from './structures/UserPlaytime.js';
@@ -450,11 +451,10 @@ export default class SteamAPI {
 	 * @param language Language to return strings for (note: does not seem to affect stats; only achievements)
 	 * @returns Schema
 	 */
-	async getGameSchema(app: number, language = this.language): Promise<any> {
+	async getGameSchema(app: number, language = this.language): Promise<GameSchema> {
 		assertApp(app);
 
-		// TODO: make class for this
-		return (await this.get('/ISteamUserStats/GetSchemaForGame/v2', { appid: app, l: language })).game;
+		return new GameSchema((await this.get('/ISteamUserStats/GetSchemaForGame/v2', { appid: app, l: language })).game);
 	}
 
 	/**
