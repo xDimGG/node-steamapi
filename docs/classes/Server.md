@@ -6,7 +6,7 @@
 
 # Class: Server
 
-Defined in: [structures/Server.ts:15](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/Server.ts#L15)
+Defined in: [structures/Server.ts:15](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Server.ts#L15)
 
 Game server as returned by getServers
 
@@ -16,7 +16,7 @@ Game server as returned by getServers
 
 > **new Server**(`data`): `Server`
 
-Defined in: [structures/Server.ts:49](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/Server.ts#L49)
+Defined in: [structures/Server.ts:49](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Server.ts#L49)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [structures/Server.ts:49](https://github.com/xDimGG/node-steamapi/bl
 
 > **address**: `string`
 
-Defined in: [structures/Server.ts:20](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/Server.ts#L20)
+Defined in: [structures/Server.ts:20](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Server.ts#L20)
 
 Server address of the form IPv4:PORT
 
@@ -44,7 +44,7 @@ Server address of the form IPv4:PORT
 
 > **appID**: `number`
 
-Defined in: [structures/Server.ts:23](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/Server.ts#L23)
+Defined in: [structures/Server.ts:23](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Server.ts#L23)
 
 App ID this server is hosting
 
@@ -54,7 +54,7 @@ App ID this server is hosting
 
 > **gameDir**: `string`
 
-Defined in: [structures/Server.ts:26](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/Server.ts#L26)
+Defined in: [structures/Server.ts:26](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Server.ts#L26)
 
 The directory the game is from
 
@@ -64,7 +64,7 @@ The directory the game is from
 
 > **gmsIndex**: `number`
 
-Defined in: [structures/Server.ts:29](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/Server.ts#L29)
+Defined in: [structures/Server.ts:29](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Server.ts#L29)
 
 GMS Index. Not sure what this means
 
@@ -74,7 +74,7 @@ GMS Index. Not sure what this means
 
 > **id**: `string`
 
-Defined in: [structures/Server.ts:17](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/Server.ts#L17)
+Defined in: [structures/Server.ts:17](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Server.ts#L17)
 
 The SteamID of this game server
 
@@ -84,7 +84,7 @@ The SteamID of this game server
 
 > **lan**: `boolean`
 
-Defined in: [structures/Server.ts:32](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/Server.ts#L32)
+Defined in: [structures/Server.ts:32](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Server.ts#L32)
 
 Is this server LAN only
 
@@ -94,7 +94,7 @@ Is this server LAN only
 
 > **port**: `number`
 
-Defined in: [structures/Server.ts:35](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/Server.ts#L35)
+Defined in: [structures/Server.ts:35](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Server.ts#L35)
 
 The port this server is running on
 
@@ -104,7 +104,7 @@ The port this server is running on
 
 > **region**: [`ServerRegion`](../enumerations/ServerRegion.md)
 
-Defined in: [structures/Server.ts:38](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/Server.ts#L38)
+Defined in: [structures/Server.ts:38](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Server.ts#L38)
 
 Server region
 
@@ -114,7 +114,7 @@ Server region
 
 > `optional` **reject**: `string`
 
-Defined in: [structures/Server.ts:47](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/Server.ts#L47)
+Defined in: [structures/Server.ts:47](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Server.ts#L47)
 
 Requirements for clients to join server
 
@@ -124,7 +124,7 @@ Requirements for clients to join server
 
 > **secure**: `boolean`
 
-Defined in: [structures/Server.ts:41](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/Server.ts#L41)
+Defined in: [structures/Server.ts:41](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Server.ts#L41)
 
 Is this server VAC secured
 
@@ -134,6 +134,6 @@ Is this server VAC secured
 
 > **specPort**: `number`
 
-Defined in: [structures/Server.ts:44](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/Server.ts#L44)
+Defined in: [structures/Server.ts:44](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Server.ts#L44)
 
 Server specPort. Not sure what this means

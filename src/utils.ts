@@ -1,5 +1,5 @@
 // Use custom fetch implementation
-import { fetchImpl } from "./fetch-impl.js";
+import { fetchImpl } from './fetch-impl.js';
 
 const reg = /<h1>(.*)<\/h1>/;
 

@@ -6,7 +6,7 @@
 
 # Class: GameDetails
 
-Defined in: [structures/GameDetails.ts:1](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L1)
+Defined in: [structures/GameDetails.ts:1](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L1)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [structures/GameDetails.ts:1](https://github.com/xDimGG/node-steamap
 
 > **new GameDetails**(`data`): `GameDetails`
 
-Defined in: [structures/GameDetails.ts:163](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L163)
+Defined in: [structures/GameDetails.ts:163](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L163)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: [structures/GameDetails.ts:163](https://github.com/xDimGG/node-steam
 
 > **aboutTheGame**: `string`
 
-Defined in: [structures/GameDetails.ts:36](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L36)
+Defined in: [structures/GameDetails.ts:36](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L36)
 
 Detailed HTML from main body of the store page
 NOTE: This appears to be the same as detailedDescription
@@ -43,7 +43,7 @@ NOTE: This appears to be the same as detailedDescription
 
 > **achievements**: `object`
 
-Defined in: [structures/GameDetails.ts:140](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L140)
+Defined in: [structures/GameDetails.ts:140](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L140)
 
 Number of achievements and array of achievements from the right column of the store page
 
@@ -61,7 +61,7 @@ Number of achievements and array of achievements from the right column of the st
 
 > **background**: `string`
 
-Defined in: [structures/GameDetails.ts:149](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L149)
+Defined in: [structures/GameDetails.ts:149](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L149)
 
 Background image URL scaled for store page
 
@@ -71,7 +71,7 @@ Background image URL scaled for store page
 
 > **backgroundRaw**: `string`
 
-Defined in: [structures/GameDetails.ts:152](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L152)
+Defined in: [structures/GameDetails.ts:152](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L152)
 
 Raw background image URL
 
@@ -81,7 +81,7 @@ Raw background image URL
 
 > **capsuleImage**: `string`
 
-Defined in: [structures/GameDetails.ts:48](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L48)
+Defined in: [structures/GameDetails.ts:48](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L48)
 
 URL to the capsule image 231x87px
 
@@ -91,7 +91,7 @@ URL to the capsule image 231x87px
 
 > **capsuleImagev5**: `string`
 
-Defined in: [structures/GameDetails.ts:51](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L51)
+Defined in: [structures/GameDetails.ts:51](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L51)
 
 URL to the capsule image 184x69px
 
@@ -101,7 +101,7 @@ URL to the capsule image 184x69px
 
 > **categories**: `object`[]
 
-Defined in: [structures/GameDetails.ts:115](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L115)
+Defined in: [structures/GameDetails.ts:115](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L115)
 
 Array of Steam categories with IDs and short descriptions
 
@@ -119,7 +119,7 @@ Array of Steam categories with IDs and short descriptions
 
 > **contentDescriptors**: `object`
 
-Defined in: [structures/GameDetails.ts:155](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L155)
+Defined in: [structures/GameDetails.ts:155](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L155)
 
 Unsure what this is. It has always been an empty array of ids and null notes for games tested
 
@@ -137,7 +137,7 @@ Unsure what this is. It has always been an empty array of ids and null notes for
 
 > **controllerSupport**: `string`
 
-Defined in: [structures/GameDetails.ts:21](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L21)
+Defined in: [structures/GameDetails.ts:21](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L21)
 
 Enum indicating level of support. E.G. "full"
 NOTE: I'm not sure what the possible values are
@@ -148,7 +148,7 @@ NOTE: I'm not sure what the possible values are
 
 > **detailedDescription**: `string`
 
-Defined in: [structures/GameDetails.ts:30](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L30)
+Defined in: [structures/GameDetails.ts:30](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L30)
 
 Detailed HTML from main body of the store page
 NOTE: This appears to be the same as aboutTheGame
@@ -159,7 +159,7 @@ NOTE: This appears to be the same as aboutTheGame
 
 > **developers**: `string`[]
 
-Defined in: [structures/GameDetails.ts:69](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L69)
+Defined in: [structures/GameDetails.ts:69](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L69)
 
 Array of developer names
 
@@ -169,7 +169,7 @@ Array of developer names
 
 > **dlc**: `number`[]
 
-Defined in: [structures/GameDetails.ts:24](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L24)
+Defined in: [structures/GameDetails.ts:24](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L24)
 
 List of DLC app IDs for this game
 
@@ -179,7 +179,7 @@ List of DLC app IDs for this game
 
 > **genres**: `object`[]
 
-Defined in: [structures/GameDetails.ts:121](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L121)
+Defined in: [structures/GameDetails.ts:121](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L121)
 
 Array of Steam genres with IDs and short descriptions
 NOTE: ID is a string for genres rather than a number like most other ID in Steam
@@ -198,7 +198,7 @@ NOTE: ID is a string for genres rather than a number like most other ID in Steam
 
 > **headerImage**: `string`
 
-Defined in: [structures/GameDetails.ts:45](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L45)
+Defined in: [structures/GameDetails.ts:45](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L45)
 
 URL to the header image
 
@@ -208,7 +208,7 @@ URL to the header image
 
 > **id**: `number`
 
-Defined in: [structures/GameDetails.ts:9](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L9)
+Defined in: [structures/GameDetails.ts:9](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L9)
 
 App ID for this game
 
@@ -218,7 +218,7 @@ App ID for this game
 
 > **isFree**: `boolean`
 
-Defined in: [structures/GameDetails.ts:15](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L15)
+Defined in: [structures/GameDetails.ts:15](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L15)
 
 If this game is free
 
@@ -228,7 +228,7 @@ If this game is free
 
 > **legalNotice**: `string`
 
-Defined in: [structures/GameDetails.ts:66](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L66)
+Defined in: [structures/GameDetails.ts:66](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L66)
 
 Legal notice for the game
 
@@ -238,7 +238,7 @@ Legal notice for the game
 
 > **linuxRequirements**: `object`
 
-Defined in: [structures/GameDetails.ts:63](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L63)
+Defined in: [structures/GameDetails.ts:63](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L63)
 
 HTML specs for minimum and recommended Linux hardware
 
@@ -256,7 +256,7 @@ HTML specs for minimum and recommended Linux hardware
 
 > **macRequirements**: `object`
 
-Defined in: [structures/GameDetails.ts:60](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L60)
+Defined in: [structures/GameDetails.ts:60](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L60)
 
 HTML specs for minimum and recommended Mac hardware
 
@@ -274,7 +274,7 @@ HTML specs for minimum and recommended Mac hardware
 
 > **metacritic**: `object`
 
-Defined in: [structures/GameDetails.ts:112](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L112)
+Defined in: [structures/GameDetails.ts:112](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L112)
 
 Metacritic score and website URL
 
@@ -292,7 +292,7 @@ Metacritic score and website URL
 
 > **movies**: `object`[]
 
-Defined in: [structures/GameDetails.ts:127](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L127)
+Defined in: [structures/GameDetails.ts:127](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L127)
 
 Array of movie information including thumbnail and video URLs
 
@@ -342,7 +342,7 @@ Array of movie information including thumbnail and video URLs
 
 > **name**: `string`
 
-Defined in: [structures/GameDetails.ts:6](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L6)
+Defined in: [structures/GameDetails.ts:6](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L6)
 
 Display name of the app
 
@@ -352,7 +352,7 @@ Display name of the app
 
 > **packageGroups**: `object`[]
 
-Defined in: [structures/GameDetails.ts:88](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L88)
+Defined in: [structures/GameDetails.ts:88](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L88)
 
 Array of package groups containing purchase details for each package
 
@@ -394,7 +394,7 @@ Array of package groups containing purchase details for each package
 
 > **packages**: `number`[]
 
-Defined in: [structures/GameDetails.ts:85](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L85)
+Defined in: [structures/GameDetails.ts:85](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L85)
 
 Array of IDs for the purchasing options of the game
 
@@ -404,7 +404,7 @@ Array of IDs for the purchasing options of the game
 
 > **pcRequirements**: `object`
 
-Defined in: [structures/GameDetails.ts:57](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L57)
+Defined in: [structures/GameDetails.ts:57](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L57)
 
 HTML specs for minimum and recommended PC hardware
 
@@ -422,7 +422,7 @@ HTML specs for minimum and recommended PC hardware
 
 > **platforms**: `object`
 
-Defined in: [structures/GameDetails.ts:109](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L109)
+Defined in: [structures/GameDetails.ts:109](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L109)
 
 Supported platforms
 
@@ -444,7 +444,7 @@ Supported platforms
 
 > **priceOverview**: `object`
 
-Defined in: [structures/GameDetails.ts:75](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L75)
+Defined in: [structures/GameDetails.ts:75](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L75)
 
 Price overview including discounts. Calculated in the given currency when requesting app details
 
@@ -478,7 +478,7 @@ Price overview including discounts. Calculated in the given currency when reques
 
 > **publishers**: `string`[]
 
-Defined in: [structures/GameDetails.ts:72](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L72)
+Defined in: [structures/GameDetails.ts:72](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L72)
 
 Array of publisher names
 
@@ -488,7 +488,7 @@ Array of publisher names
 
 > **ratings**: `any`
 
-Defined in: [structures/GameDetails.ts:161](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L161)
+Defined in: [structures/GameDetails.ts:161](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L161)
 
 Ratings for different rating systems
 NOTE: These appear to have a different object structure based on the game
@@ -499,7 +499,7 @@ NOTE: These appear to have a different object structure based on the game
 
 > **recommendations**: `object`
 
-Defined in: [structures/GameDetails.ts:137](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L137)
+Defined in: [structures/GameDetails.ts:137](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L137)
 
 Number of positive reviews
 
@@ -513,7 +513,7 @@ Number of positive reviews
 
 > **releaseDate**: `object`
 
-Defined in: [structures/GameDetails.ts:143](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L143)
+Defined in: [structures/GameDetails.ts:143](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L143)
 
 Release date information
 
@@ -531,7 +531,7 @@ Release date information
 
 > **requiredAge**: `number`
 
-Defined in: [structures/GameDetails.ts:12](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L12)
+Defined in: [structures/GameDetails.ts:12](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L12)
 
 Age restriction for purchasing
 
@@ -541,7 +541,7 @@ Age restriction for purchasing
 
 > **screenshots**: `object`[]
 
-Defined in: [structures/GameDetails.ts:124](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L124)
+Defined in: [structures/GameDetails.ts:124](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L124)
 
 Array of screenshot thumbnail and full path URLs
 
@@ -563,7 +563,7 @@ Array of screenshot thumbnail and full path URLs
 
 > **shortDescription**: `string`
 
-Defined in: [structures/GameDetails.ts:39](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L39)
+Defined in: [structures/GameDetails.ts:39](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L39)
 
 Short description of the game under the game banner on the store page
 
@@ -573,7 +573,7 @@ Short description of the game under the game banner on the store page
 
 > **supportedLanguages**: `string`
 
-Defined in: [structures/GameDetails.ts:42](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L42)
+Defined in: [structures/GameDetails.ts:42](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L42)
 
 Supported languages in game
 
@@ -583,7 +583,7 @@ Supported languages in game
 
 > **supportInfo**: `object`
 
-Defined in: [structures/GameDetails.ts:146](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L146)
+Defined in: [structures/GameDetails.ts:146](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L146)
 
 Support information including URL and email
 
@@ -601,7 +601,7 @@ Support information including URL and email
 
 > **type**: `string`
 
-Defined in: [structures/GameDetails.ts:3](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L3)
+Defined in: [structures/GameDetails.ts:3](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L3)
 
 Type of app. Usually "game"
 
@@ -611,6 +611,6 @@ Type of app. Usually "game"
 
 > **website**: `string`
 
-Defined in: [structures/GameDetails.ts:54](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/GameDetails.ts#L54)
+Defined in: [structures/GameDetails.ts:54](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameDetails.ts#L54)
 
 URL to the game's website

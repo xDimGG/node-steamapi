@@ -6,7 +6,7 @@
 
 # Class: UserBans
 
-Defined in: [structures/UserBans.ts:3](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/UserBans.ts#L3)
+Defined in: [structures/UserBans.ts:3](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBans.ts#L3)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [structures/UserBans.ts:3](https://github.com/xDimGG/node-steamapi/b
 
 > **new UserBans**(`data`): `UserBans`
 
-Defined in: [structures/UserBans.ts:26](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/UserBans.ts#L26)
+Defined in: [structures/UserBans.ts:26](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBans.ts#L26)
 
 #### Parameters
 
@@ -40,7 +40,7 @@ Defined in: [structures/UserBans.ts:26](https://github.com/xDimGG/node-steamapi/
 
 > **communityBanned**: `boolean`
 
-Defined in: [structures/UserBans.ts:5](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/UserBans.ts#L5)
+Defined in: [structures/UserBans.ts:5](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBans.ts#L5)
 
 Is this user community banned
 
@@ -50,7 +50,7 @@ Is this user community banned
 
 > **daysSinceLastBan**: `number`
 
-Defined in: [structures/UserBans.ts:24](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/UserBans.ts#L24)
+Defined in: [structures/UserBans.ts:24](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBans.ts#L24)
 
 The number of days it has been since the user's last ban
 
@@ -60,7 +60,7 @@ The number of days it has been since the user's last ban
 
 > **economyBan**: `string`
 
-Defined in: [structures/UserBans.ts:21](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/UserBans.ts#L21)
+Defined in: [structures/UserBans.ts:21](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBans.ts#L21)
 
 Economy ban status of the user. 'none' means no economy ban.
 'probation' means user is on probation.
@@ -72,7 +72,7 @@ Not sure what other string values exist
 
 > **gameBans**: `number`
 
-Defined in: [structures/UserBans.ts:14](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/UserBans.ts#L14)
+Defined in: [structures/UserBans.ts:14](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBans.ts#L14)
 
 Number of game bans the user has had
 
@@ -82,7 +82,7 @@ Number of game bans the user has had
 
 > **steamID**: `string`
 
-Defined in: [structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/User.ts#L3)
+Defined in: [structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/User.ts#L3)
 
 This user's Steam ID
 
@@ -96,7 +96,7 @@ This user's Steam ID
 
 > **vacBanned**: `boolean`
 
-Defined in: [structures/UserBans.ts:8](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/UserBans.ts#L8)
+Defined in: [structures/UserBans.ts:8](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBans.ts#L8)
 
 Is this user vac banned
 
@@ -106,7 +106,7 @@ Is this user vac banned
 
 > **vacBans**: `number`
 
-Defined in: [structures/UserBans.ts:11](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/UserBans.ts#L11)
+Defined in: [structures/UserBans.ts:11](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBans.ts#L11)
 
 Number of VAC bans the user has had
 
@@ -118,7 +118,7 @@ Number of VAC bans the user has had
 
 > **get** **profileURL**(): `string`
 
-Defined in: [structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/structures/User.ts#L10)
+Defined in: [structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/User.ts#L10)
 
 The permalink to this user's profile
 

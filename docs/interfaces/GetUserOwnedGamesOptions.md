@@ -6,7 +6,7 @@
 
 # Interface: GetUserOwnedGamesOptions
 
-Defined in: [SteamAPI.ts:131](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/SteamAPI.ts#L131)
+Defined in: [SteamAPI.ts:132](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/SteamAPI.ts#L132)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [SteamAPI.ts:131](https://github.com/xDimGG/node-steamapi/blob/581c0
 
 > `optional` **filterApps**: `number`[]
 
-Defined in: [SteamAPI.ts:148](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/SteamAPI.ts#L148)
+Defined in: [SteamAPI.ts:149](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/SteamAPI.ts#L149)
 
 If set, restricts results to the passed in apps. (note: does not seem to actually work)
 
@@ -24,7 +24,7 @@ If set, restricts results to the passed in apps. (note: does not seem to actuall
 
 > `optional` **includeAppInfo**: `boolean`
 
-Defined in: [SteamAPI.ts:133](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/SteamAPI.ts#L133)
+Defined in: [SteamAPI.ts:134](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/SteamAPI.ts#L134)
 
 Include additional details (name, icon) about each game
 
@@ -34,7 +34,7 @@ Include additional details (name, icon) about each game
 
 > `optional` **includeExtendedAppInfo**: `boolean`
 
-Defined in: [SteamAPI.ts:145](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/SteamAPI.ts#L145)
+Defined in: [SteamAPI.ts:146](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/SteamAPI.ts#L146)
 
 Include even more app details. If true, `includeAppInfo` will also be set to true
 
@@ -44,7 +44,7 @@ Include even more app details. If true, `includeAppInfo` will also be set to tru
 
 > `optional` **includeFreeGames**: `boolean`
 
-Defined in: [SteamAPI.ts:136](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/SteamAPI.ts#L136)
+Defined in: [SteamAPI.ts:137](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/SteamAPI.ts#L137)
 
 Include free games the user has played
 
@@ -54,7 +54,7 @@ Include free games the user has played
 
 > `optional` **includeFreeSubGames**: `boolean`
 
-Defined in: [SteamAPI.ts:139](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/SteamAPI.ts#L139)
+Defined in: [SteamAPI.ts:140](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/SteamAPI.ts#L140)
 
 Includes games in the free sub (defaults to false)
 
@@ -64,7 +64,7 @@ Includes games in the free sub (defaults to false)
 
 > `optional` **includeUnvettedApps**: `boolean`
 
-Defined in: [SteamAPI.ts:142](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/SteamAPI.ts#L142)
+Defined in: [SteamAPI.ts:143](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/SteamAPI.ts#L143)
 
 Include unvetted store apps (defaults to false)
 
@@ -74,6 +74,6 @@ Include unvetted store apps (defaults to false)
 
 > `optional` **language**: [`Language`](../type-aliases/Language.md)
 
-Defined in: [SteamAPI.ts:151](https://github.com/xDimGG/node-steamapi/blob/581c07afeb4ac3b12f9edf652025117d15d662af/src/SteamAPI.ts#L151)
+Defined in: [SteamAPI.ts:152](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/SteamAPI.ts#L152)
 
 Language to return app info in. (note: does not seem to actually work)
