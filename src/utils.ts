@@ -1,5 +1,5 @@
 // Use custom fetch implementation
-import { fetchImpl } from './fetch-impl.js';
+import { lazyFetch } from './fetch-impl.js';
 
 const reg = /<h1>(.*)<\/h1>/;
 
@@ -11,7 +11,7 @@ const reg = /<h1>(.*)<\/h1>/;
  */
 export async function fetch(url: string, options: any): Promise<any> {
 	// console.log(url);
-	const res = await fetchImpl(url, options);
+	const res = await lazyFetch(url, options);
 	if (res.status === 400) {
 		const data = await res.text();
 		throw new Error(data.match(reg)?.[1] || data);
