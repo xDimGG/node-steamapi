@@ -6,7 +6,7 @@
 
 # Class: UserStats
 
-Defined in: [structures/UserStats.ts:5](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserStats.ts#L5)
+Defined in: [structures/UserStats.ts:5](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserStats.ts#L5)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [structures/UserStats.ts:5](https://github.com/xDimGG/node-steamapi/
 
 > **new UserStats**(`data`): `UserStats`
 
-Defined in: [structures/UserStats.ts:15](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserStats.ts#L15)
+Defined in: [structures/UserStats.ts:15](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserStats.ts#L15)
 
 #### Parameters
 
@@ -40,7 +40,7 @@ Defined in: [structures/UserStats.ts:15](https://github.com/xDimGG/node-steamapi
 
 > `optional` **achievements**: [`UserAchievement`](UserAchievement.md)[]
 
-Defined in: [structures/UserStats.ts:10](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserStats.ts#L10)
+Defined in: [structures/UserStats.ts:10](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserStats.ts#L10)
 
 The achievements this user has unlocked
 
@@ -50,7 +50,7 @@ The achievements this user has unlocked
 
 > **game**: `string`
 
-Defined in: [structures/UserStats.ts:7](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserStats.ts#L7)
+Defined in: [structures/UserStats.ts:7](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserStats.ts#L7)
 
 Name of this game
 
@@ -60,7 +60,7 @@ Name of this game
 
 > `optional` **stats**: [`UserStat`](../interfaces/UserStat.md)[]
 
-Defined in: [structures/UserStats.ts:13](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserStats.ts#L13)
+Defined in: [structures/UserStats.ts:13](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserStats.ts#L13)
 
 Some game stats about the user
 
@@ -70,7 +70,7 @@ Some game stats about the user
 
 > **steamID**: `string`
 
-Defined in: [structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/User.ts#L3)
+Defined in: [structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/User.ts#L3)
 
 This user's Steam ID
 
@@ -86,7 +86,7 @@ This user's Steam ID
 
 > **get** **profileURL**(): `string`
 
-Defined in: [structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/User.ts#L10)
+Defined in: [structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/User.ts#L10)
 
 The permalink to this user's profile
 

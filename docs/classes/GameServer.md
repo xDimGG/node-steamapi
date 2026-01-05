@@ -6,7 +6,7 @@
 
 # Class: GameServer
 
-Defined in: [structures/GameServer.ts:4](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L4)
+Defined in: [structures/GameServer.ts:4](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L4)
 
 Game server as returned by getServerList
 
@@ -16,7 +16,7 @@ Game server as returned by getServerList
 
 > **new GameServer**(`data`): `GameServer`
 
-Defined in: [structures/GameServer.ts:56](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L56)
+Defined in: [structures/GameServer.ts:56](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L56)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [structures/GameServer.ts:56](https://github.com/xDimGG/node-steamap
 
 > **address**: `string`
 
-Defined in: [structures/GameServer.ts:6](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L6)
+Defined in: [structures/GameServer.ts:6](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L6)
 
 Server address of the form IPv4:PORT
 
@@ -44,7 +44,7 @@ Server address of the form IPv4:PORT
 
 > **appID**: `number`
 
-Defined in: [structures/GameServer.ts:18](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L18)
+Defined in: [structures/GameServer.ts:18](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L18)
 
 App ID this server is hosting
 
@@ -54,7 +54,7 @@ App ID this server is hosting
 
 > **bots**: `number`
 
-Defined in: [structures/GameServer.ts:39](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L39)
+Defined in: [structures/GameServer.ts:39](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L39)
 
 Number of bots in the server
 
@@ -64,7 +64,7 @@ Number of bots in the server
 
 > **dedicated**: `boolean`
 
-Defined in: [structures/GameServer.ts:48](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L48)
+Defined in: [structures/GameServer.ts:48](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L48)
 
 Is the server running dedicated
 
@@ -74,7 +74,7 @@ Is the server running dedicated
 
 > **gameDir**: `string`
 
-Defined in: [structures/GameServer.ts:21](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L21)
+Defined in: [structures/GameServer.ts:21](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L21)
 
 The directory the game is from
 
@@ -84,7 +84,7 @@ The directory the game is from
 
 > **id**: `string`
 
-Defined in: [structures/GameServer.ts:12](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L12)
+Defined in: [structures/GameServer.ts:12](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L12)
 
 The SteamID of this game server
 
@@ -94,7 +94,7 @@ The SteamID of this game server
 
 > **map**: `string`
 
-Defined in: [structures/GameServer.ts:42](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L42)
+Defined in: [structures/GameServer.ts:42](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L42)
 
 What map the game server is on
 
@@ -104,7 +104,7 @@ What map the game server is on
 
 > **maxPlayers**: `number`
 
-Defined in: [structures/GameServer.ts:36](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L36)
+Defined in: [structures/GameServer.ts:36](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L36)
 
 Max number of players that can join the server
 
@@ -114,7 +114,7 @@ Max number of players that can join the server
 
 > **name**: `string`
 
-Defined in: [structures/GameServer.ts:15](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L15)
+Defined in: [structures/GameServer.ts:15](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L15)
 
 Public name of the server
 
@@ -124,7 +124,7 @@ Public name of the server
 
 > **os**: `string`
 
-Defined in: [structures/GameServer.ts:51](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L51)
+Defined in: [structures/GameServer.ts:51](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L51)
 
 What OS the server is running. Typically 'l' or 'w'
 
@@ -134,7 +134,7 @@ What OS the server is running. Typically 'l' or 'w'
 
 > **players**: `number`
 
-Defined in: [structures/GameServer.ts:33](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L33)
+Defined in: [structures/GameServer.ts:33](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L33)
 
 Number of players in the server
 
@@ -144,7 +144,7 @@ Number of players in the server
 
 > **port**: `number`
 
-Defined in: [structures/GameServer.ts:9](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L9)
+Defined in: [structures/GameServer.ts:9](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L9)
 
 The port this server is running on
 
@@ -154,7 +154,7 @@ The port this server is running on
 
 > **product**: `string`
 
-Defined in: [structures/GameServer.ts:27](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L27)
+Defined in: [structures/GameServer.ts:27](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L27)
 
 Product string. Not sure what this means. Is often the same as gameDir
 
@@ -164,7 +164,7 @@ Product string. Not sure what this means. Is often the same as gameDir
 
 > **region**: [`ServerRegion`](../enumerations/ServerRegion.md)
 
-Defined in: [structures/GameServer.ts:30](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L30)
+Defined in: [structures/GameServer.ts:30](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L30)
 
 Server region
 
@@ -174,7 +174,7 @@ Server region
 
 > **secure**: `boolean`
 
-Defined in: [structures/GameServer.ts:45](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L45)
+Defined in: [structures/GameServer.ts:45](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L45)
 
 Is this server VAC secured
 
@@ -184,7 +184,7 @@ Is this server VAC secured
 
 > **tags**: `string`[]
 
-Defined in: [structures/GameServer.ts:54](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L54)
+Defined in: [structures/GameServer.ts:54](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L54)
 
 Game specific sv_tags e.g. hidden,reserved,empty,secure
 
@@ -194,6 +194,6 @@ Game specific sv_tags e.g. hidden,reserved,empty,secure
 
 > **version**: `string`
 
-Defined in: [structures/GameServer.ts:24](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/GameServer.ts#L24)
+Defined in: [structures/GameServer.ts:24](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameServer.ts#L24)
 
 What version the server is running

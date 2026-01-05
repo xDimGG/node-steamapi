@@ -6,7 +6,7 @@
 
 # Interface: AppBase
 
-Defined in: [structures/AppBase.ts:2](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/AppBase.ts#L2)
+Defined in: [structures/AppBase.ts:2](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/AppBase.ts#L2)
 
 An object representing a steam app with only its name and ID
 
@@ -16,7 +16,7 @@ An object representing a steam app with only its name and ID
 
 > **appid**: `number`
 
-Defined in: [structures/AppBase.ts:4](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/AppBase.ts#L4)
+Defined in: [structures/AppBase.ts:4](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/AppBase.ts#L4)
 
 This app's ID
 
@@ -26,6 +26,6 @@ This app's ID
 
 > **name**: `string`
 
-Defined in: [structures/AppBase.ts:7](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/AppBase.ts#L7)
+Defined in: [structures/AppBase.ts:7](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/AppBase.ts#L7)
 
 This app's name

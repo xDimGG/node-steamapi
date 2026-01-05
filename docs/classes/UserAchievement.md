@@ -6,7 +6,7 @@
 
 # Class: UserAchievement
 
-Defined in: [structures/UserAchievement.ts:1](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserAchievement.ts#L1)
+Defined in: [structures/UserAchievement.ts:1](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserAchievement.ts#L1)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [structures/UserAchievement.ts:1](https://github.com/xDimGG/node-ste
 
 > **new UserAchievement**(`data`): `UserAchievement`
 
-Defined in: [structures/UserAchievement.ts:15](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserAchievement.ts#L15)
+Defined in: [structures/UserAchievement.ts:15](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserAchievement.ts#L15)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: [structures/UserAchievement.ts:15](https://github.com/xDimGG/node-st
 
 > **name**: `string`
 
-Defined in: [structures/UserAchievement.ts:3](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserAchievement.ts#L3)
+Defined in: [structures/UserAchievement.ts:3](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserAchievement.ts#L3)
 
 API name for this achievement (e.g. ACH03, TF_GET_TURRETKILLS, Champion)
 
@@ -42,7 +42,7 @@ API name for this achievement (e.g. ACH03, TF_GET_TURRETKILLS, Champion)
 
 > **unlocked**: `boolean`
 
-Defined in: [structures/UserAchievement.ts:6](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserAchievement.ts#L6)
+Defined in: [structures/UserAchievement.ts:6](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserAchievement.ts#L6)
 
 Whether the user has unlocked this achievement
 
@@ -52,7 +52,7 @@ Whether the user has unlocked this achievement
 
 > `optional` **unlockedTimestamp**: `number`
 
-Defined in: [structures/UserAchievement.ts:13](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserAchievement.ts#L13)
+Defined in: [structures/UserAchievement.ts:13](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserAchievement.ts#L13)
 
 Unix Timestamp for when the user unlocked this achievement.
 Is 0 if the user has not unlocked this achievement. Only defined
@@ -66,7 +66,7 @@ when calling getUserAchievements()
 
 > **get** **unlockedAt**(): `undefined` \| `Date`
 
-Defined in: [structures/UserAchievement.ts:23](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserAchievement.ts#L23)
+Defined in: [structures/UserAchievement.ts:23](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserAchievement.ts#L23)
 
 Date when this achievement was unlocked
 

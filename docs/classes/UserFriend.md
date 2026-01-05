@@ -6,7 +6,7 @@
 
 # Class: UserFriend
 
-Defined in: [structures/UserFriend.ts:3](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserFriend.ts#L3)
+Defined in: [structures/UserFriend.ts:3](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserFriend.ts#L3)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [structures/UserFriend.ts:3](https://github.com/xDimGG/node-steamapi
 
 > **new UserFriend**(`data`): `UserFriend`
 
-Defined in: [structures/UserFriend.ts:10](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserFriend.ts#L10)
+Defined in: [structures/UserFriend.ts:10](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserFriend.ts#L10)
 
 #### Parameters
 
@@ -40,7 +40,7 @@ Defined in: [structures/UserFriend.ts:10](https://github.com/xDimGG/node-steamap
 
 > **friendedTimestamp**: `number`
 
-Defined in: [structures/UserFriend.ts:5](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserFriend.ts#L5)
+Defined in: [structures/UserFriend.ts:5](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserFriend.ts#L5)
 
 Unix Timestamp representing when the friendship started
 
@@ -50,7 +50,7 @@ Unix Timestamp representing when the friendship started
 
 > **relationship**: `string`
 
-Defined in: [structures/UserFriend.ts:8](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserFriend.ts#L8)
+Defined in: [structures/UserFriend.ts:8](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserFriend.ts#L8)
 
 The type of the relationship (note: seems to always be 'friend')
 
@@ -60,7 +60,7 @@ The type of the relationship (note: seems to always be 'friend')
 
 > **steamID**: `string`
 
-Defined in: [structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/User.ts#L3)
+Defined in: [structures/User.ts:3](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/User.ts#L3)
 
 This user's Steam ID
 
@@ -76,7 +76,7 @@ This user's Steam ID
 
 > **get** **friendedAt**(): `Date`
 
-Defined in: [structures/UserFriend.ts:18](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserFriend.ts#L18)
+Defined in: [structures/UserFriend.ts:18](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserFriend.ts#L18)
 
 Date object when this friendship started
 
@@ -92,7 +92,7 @@ Date object when this friendship started
 
 > **get** **profileURL**(): `string`
 
-Defined in: [structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/User.ts#L10)
+Defined in: [structures/User.ts:10](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/User.ts#L10)
 
 The permalink to this user's profile
 

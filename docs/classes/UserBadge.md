@@ -6,7 +6,7 @@
 
 # Class: UserBadge
 
-Defined in: [structures/UserBadge.ts:1](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBadge.ts#L1)
+Defined in: [structures/UserBadge.ts:1](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserBadge.ts#L1)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [structures/UserBadge.ts:1](https://github.com/xDimGG/node-steamapi/
 
 > **new UserBadge**(`data`): `Badge`
 
-Defined in: [structures/UserBadge.ts:26](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBadge.ts#L26)
+Defined in: [structures/UserBadge.ts:26](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserBadge.ts#L26)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: [structures/UserBadge.ts:26](https://github.com/xDimGG/node-steamapi
 
 > `optional` **appID**: `number`
 
-Defined in: [structures/UserBadge.ts:18](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBadge.ts#L18)
+Defined in: [structures/UserBadge.ts:18](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserBadge.ts#L18)
 
 If this badge belongs to a game, this is the app ID of that game
 
@@ -42,7 +42,7 @@ If this badge belongs to a game, this is the app ID of that game
 
 > `optional` **borderColor**: `number`
 
-Defined in: [structures/UserBadge.ts:24](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBadge.ts#L24)
+Defined in: [structures/UserBadge.ts:24](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserBadge.ts#L24)
 
 If this badge belongs to a game, this is the border color for the badge. (note: seems to always be 0)
 
@@ -52,7 +52,7 @@ If this badge belongs to a game, this is the border color for the badge. (note: 
 
 > `optional` **communityItemID**: `number`
 
-Defined in: [structures/UserBadge.ts:21](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBadge.ts#L21)
+Defined in: [structures/UserBadge.ts:21](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserBadge.ts#L21)
 
 If this badge belongs to a game, this is the community item ID for the badge
 
@@ -62,7 +62,7 @@ If this badge belongs to a game, this is the community item ID for the badge
 
 > **completedTimestamp**: `number`
 
-Defined in: [structures/UserBadge.ts:9](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBadge.ts#L9)
+Defined in: [structures/UserBadge.ts:9](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserBadge.ts#L9)
 
 UNIX Timestamp for when this badge was completed
 
@@ -72,7 +72,7 @@ UNIX Timestamp for when this badge was completed
 
 > **id**: `number`
 
-Defined in: [structures/UserBadge.ts:3](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBadge.ts#L3)
+Defined in: [structures/UserBadge.ts:3](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserBadge.ts#L3)
 
 This badge's ID
 
@@ -82,7 +82,7 @@ This badge's ID
 
 > **level**: `number`
 
-Defined in: [structures/UserBadge.ts:6](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBadge.ts#L6)
+Defined in: [structures/UserBadge.ts:6](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserBadge.ts#L6)
 
 The user's level for this badge
 
@@ -92,7 +92,7 @@ The user's level for this badge
 
 > **scarcity**: `number`
 
-Defined in: [structures/UserBadge.ts:15](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBadge.ts#L15)
+Defined in: [structures/UserBadge.ts:15](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserBadge.ts#L15)
 
 How many have received this badge
 
@@ -102,7 +102,7 @@ How many have received this badge
 
 > **xp**: `number`
 
-Defined in: [structures/UserBadge.ts:12](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBadge.ts#L12)
+Defined in: [structures/UserBadge.ts:12](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserBadge.ts#L12)
 
 The amount of XP gained towards this badge
 
@@ -114,7 +114,7 @@ The amount of XP gained towards this badge
 
 > **get** **completedAt**(): `Date`
 
-Defined in: [structures/UserBadge.ts:40](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/UserBadge.ts#L40)
+Defined in: [structures/UserBadge.ts:40](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserBadge.ts#L40)
 
 Date when this badge was completed
 

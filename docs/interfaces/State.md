@@ -6,7 +6,7 @@
 
 # Interface: State
 
-Defined in: [structures/Locations.ts:12](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Locations.ts#L12)
+Defined in: [structures/Locations.ts:12](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Locations.ts#L12)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [structures/Locations.ts:12](https://github.com/xDimGG/node-steamapi
 
 > **countrycode**: `string`
 
-Defined in: [structures/Locations.ts:14](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Locations.ts#L14)
+Defined in: [structures/Locations.ts:14](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Locations.ts#L14)
 
 Two letter code representing the country of this state
 
@@ -24,7 +24,7 @@ Two letter code representing the country of this state
 
 > **statecode**: `string`
 
-Defined in: [structures/Locations.ts:17](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Locations.ts#L17)
+Defined in: [structures/Locations.ts:17](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Locations.ts#L17)
 
 Number representing the state. Can have leading 0s and must be kept as a string
 
@@ -34,6 +34,6 @@ Number representing the state. Can have leading 0s and must be kept as a string
 
 > **statename**: `string`
 
-Defined in: [structures/Locations.ts:20](https://github.com/xDimGG/node-steamapi/blob/3e56810b4e484abde1e0f43153e48f61f57ece33/src/structures/Locations.ts#L20)
+Defined in: [structures/Locations.ts:20](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Locations.ts#L20)
 
 Human readable name of the state
