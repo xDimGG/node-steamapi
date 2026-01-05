@@ -588,7 +588,7 @@ export default class SteamAPI {
 
 
 		const json = await this.get('/IPlayerService/GetOwnedGames/v1', params);
-		return json.response.games.map((data: any) => {
+		return (json.response.games || []).map((data: any) => {
 			let game;
 			if (opts.includeExtendedAppInfo) game = new GameInfoExtended(data);
 			else if (opts.includeAppInfo) game = new GameInfo(data);
