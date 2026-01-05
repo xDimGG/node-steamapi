@@ -542,9 +542,9 @@ export default class SteamAPI {
 	/**
 	 * Get a user's level
 	 * @param id User ID
-	 * @returns The user's Steam level
+	 * @returns The user's Steam level, or undefined if the profile is private
 	 */
-	async getUserLevel(id: string): Promise<number> {
+	async getUserLevel(id: string): Promise<number | undefined> {
 		assertID(id);
 
 		return (await this.get('/IPlayerService/GetSteamLevel/v1', { steamid: id })).response.player_level;

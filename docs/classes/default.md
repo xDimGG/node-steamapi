@@ -813,7 +813,7 @@ Group IDs
 
 ### getUserLevel()
 
-> **getUserLevel**(`id`): `Promise`\<`number`\>
+> **getUserLevel**(`id`): `Promise`\<`number` \| `undefined`\>
 
 Defined in: [SteamAPI.ts:547](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/SteamAPI.ts#L547)
 
@@ -829,9 +829,9 @@ User ID
 
 #### Returns
 
-`Promise`\<`number`\>
+`Promise`\<`number` \| `undefined`\>
 
-The user's Steam level
+The user's Steam level, or undefined if the profile is private
 
 ***
 
