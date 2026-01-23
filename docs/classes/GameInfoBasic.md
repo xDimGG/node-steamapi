@@ -6,7 +6,7 @@
 
 # Class: GameInfoBasic
 
-Defined in: [structures/GameInfoBasic.ts:5](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameInfoBasic.ts#L5)
+Defined in: [structures/GameInfoBasic.ts:5](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/GameInfoBasic.ts#L5)
 
 ## Extends
 
@@ -22,7 +22,7 @@ Defined in: [structures/GameInfoBasic.ts:5](https://github.com/xDimGG/node-steam
 
 > **new GameInfoBasic**(`data`): `GameInfoBasic`
 
-Defined in: [structures/GameInfoBasic.ts:12](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameInfoBasic.ts#L12)
+Defined in: [structures/GameInfoBasic.ts:12](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/GameInfoBasic.ts#L12)
 
 #### Parameters
 
@@ -44,7 +44,7 @@ Defined in: [structures/GameInfoBasic.ts:12](https://github.com/xDimGG/node-stea
 
 > **icon**: `string`
 
-Defined in: [structures/GameInfoBasic.ts:10](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameInfoBasic.ts#L10)
+Defined in: [structures/GameInfoBasic.ts:10](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/GameInfoBasic.ts#L10)
 
 Hash for this game's icon
 
@@ -54,7 +54,7 @@ Hash for this game's icon
 
 > **id**: `number`
 
-Defined in: [structures/Game.ts:6](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Game.ts#L6)
+Defined in: [structures/Game.ts:6](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Game.ts#L6)
 
 App ID for this game
 
@@ -68,7 +68,7 @@ App ID for this game
 
 > **name**: `string`
 
-Defined in: [structures/GameInfoBasic.ts:7](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameInfoBasic.ts#L7)
+Defined in: [structures/GameInfoBasic.ts:7](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/GameInfoBasic.ts#L7)
 
 Name for this game
 
@@ -80,7 +80,7 @@ Name for this game
 
 > **get** **backgroundURL**(): `string`
 
-Defined in: [structures/Game.ts:28](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Game.ts#L28)
+Defined in: [structures/Game.ts:28](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Game.ts#L28)
 
 (might not exist) game page background
 
@@ -100,7 +100,7 @@ Defined in: [structures/Game.ts:28](https://github.com/xDimGG/node-steamapi/blob
 
 > **get** **coverURL**(): `string`
 
-Defined in: [structures/Game.ts:31](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Game.ts#L31)
+Defined in: [structures/Game.ts:31](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Game.ts#L31)
 
 (might not exist) game cover
 
@@ -120,7 +120,7 @@ Defined in: [structures/Game.ts:31](https://github.com/xDimGG/node-steamapi/blob
 
 > **get** **headerMediumURL**(): `string`
 
-Defined in: [structures/Game.ts:16](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Game.ts#L16)
+Defined in: [structures/Game.ts:16](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Game.ts#L16)
 
 (might not exist) medium sized header image
 
@@ -140,7 +140,7 @@ Defined in: [structures/Game.ts:16](https://github.com/xDimGG/node-steamapi/blob
 
 > **get** **headerURL**(): `string`
 
-Defined in: [structures/Game.ts:13](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Game.ts#L13)
+Defined in: [structures/Game.ts:13](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Game.ts#L13)
 
 (might not exist) large sized header used on the store page
 
@@ -160,7 +160,7 @@ Defined in: [structures/Game.ts:13](https://github.com/xDimGG/node-steamapi/blob
 
 > **get** **iconURL**(): `string`
 
-Defined in: [structures/GameInfoBasic.ts:20](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/GameInfoBasic.ts#L20)
+Defined in: [structures/GameInfoBasic.ts:20](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/GameInfoBasic.ts#L20)
 
 tiny app icon
 
@@ -176,7 +176,7 @@ tiny app icon
 
 > **get** **logoURL**(): `string`
 
-Defined in: [structures/Game.ts:34](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Game.ts#L34)
+Defined in: [structures/Game.ts:34](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Game.ts#L34)
 
 (might not exist) transparent game logo
 
@@ -196,7 +196,7 @@ Defined in: [structures/Game.ts:34](https://github.com/xDimGG/node-steamapi/blob
 
 > **get** **smallHeaderURL**(): `string`
 
-Defined in: [structures/Game.ts:19](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Game.ts#L19)
+Defined in: [structures/Game.ts:19](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Game.ts#L19)
 
 (might not exist) small header image used on user pages
 
@@ -216,7 +216,7 @@ Defined in: [structures/Game.ts:19](https://github.com/xDimGG/node-steamapi/blob
 
 > **get** **tinyHeaderURL**(): `string`
 
-Defined in: [structures/Game.ts:22](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Game.ts#L22)
+Defined in: [structures/Game.ts:22](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Game.ts#L22)
 
 (might not exist) tiny header image used on app bundles
 

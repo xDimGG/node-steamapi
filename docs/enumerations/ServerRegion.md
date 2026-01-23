@@ -6,7 +6,7 @@
 
 # Enumeration: ServerRegion
 
-Defined in: [structures/Server.ts:2](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Server.ts#L2)
+Defined in: [structures/Server.ts:2](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Server.ts#L2)
 
 Server regions as indicated by https://developer.valvesoftware.com/wiki/Sv_region
 
@@ -16,7 +16,7 @@ Server regions as indicated by https://developer.valvesoftware.com/wiki/Sv_regio
 
 > **Africa**: `7`
 
-Defined in: [structures/Server.ts:10](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Server.ts#L10)
+Defined in: [structures/Server.ts:10](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Server.ts#L10)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [structures/Server.ts:10](https://github.com/xDimGG/node-steamapi/bl
 
 > **Asia**: `4`
 
-Defined in: [structures/Server.ts:7](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Server.ts#L7)
+Defined in: [structures/Server.ts:7](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Server.ts#L7)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [structures/Server.ts:7](https://github.com/xDimGG/node-steamapi/blo
 
 > **Australia**: `5`
 
-Defined in: [structures/Server.ts:8](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Server.ts#L8)
+Defined in: [structures/Server.ts:8](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Server.ts#L8)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [structures/Server.ts:8](https://github.com/xDimGG/node-steamapi/blo
 
 > **Europe**: `3`
 
-Defined in: [structures/Server.ts:6](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Server.ts#L6)
+Defined in: [structures/Server.ts:6](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Server.ts#L6)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [structures/Server.ts:6](https://github.com/xDimGG/node-steamapi/blo
 
 > **MiddleEast**: `6`
 
-Defined in: [structures/Server.ts:9](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Server.ts#L9)
+Defined in: [structures/Server.ts:9](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Server.ts#L9)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [structures/Server.ts:9](https://github.com/xDimGG/node-steamapi/blo
 
 > **SouthAmerica**: `2`
 
-Defined in: [structures/Server.ts:5](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Server.ts#L5)
+Defined in: [structures/Server.ts:5](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Server.ts#L5)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [structures/Server.ts:5](https://github.com/xDimGG/node-steamapi/blo
 
 > **USEast**: `0`
 
-Defined in: [structures/Server.ts:3](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Server.ts#L3)
+Defined in: [structures/Server.ts:3](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Server.ts#L3)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: [structures/Server.ts:3](https://github.com/xDimGG/node-steamapi/blo
 
 > **USWest**: `1`
 
-Defined in: [structures/Server.ts:4](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Server.ts#L4)
+Defined in: [structures/Server.ts:4](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Server.ts#L4)
 
 ***
 
@@ -80,4 +80,4 @@ Defined in: [structures/Server.ts:4](https://github.com/xDimGG/node-steamapi/blo
 
 > **World**: `255`
 
-Defined in: [structures/Server.ts:11](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Server.ts#L11)
+Defined in: [structures/Server.ts:11](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Server.ts#L11)

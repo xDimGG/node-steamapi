@@ -6,7 +6,7 @@
 
 # Class: UserPlaytime\<G\>
 
-Defined in: [structures/UserPlaytime.ts:5](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserPlaytime.ts#L5)
+Defined in: [structures/UserPlaytime.ts:5](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserPlaytime.ts#L5)
 
 ## Type Parameters
 
@@ -20,7 +20,7 @@ Defined in: [structures/UserPlaytime.ts:5](https://github.com/xDimGG/node-steama
 
 > **new UserPlaytime**\<`G`\>(`data`, `game`): `UserPlaytime`\<`G`\>
 
-Defined in: [structures/UserPlaytime.ts:30](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserPlaytime.ts#L30)
+Defined in: [structures/UserPlaytime.ts:30](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserPlaytime.ts#L30)
 
 #### Parameters
 
@@ -42,7 +42,7 @@ Defined in: [structures/UserPlaytime.ts:30](https://github.com/xDimGG/node-steam
 
 > **disconnectedMinutes**: `number`
 
-Defined in: [structures/UserPlaytime.ts:25](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserPlaytime.ts#L25)
+Defined in: [structures/UserPlaytime.ts:25](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserPlaytime.ts#L25)
 
 The number of minutes played while offline
 
@@ -52,7 +52,7 @@ The number of minutes played while offline
 
 > **game**: `G`
 
-Defined in: [structures/UserPlaytime.ts:7](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserPlaytime.ts#L7)
+Defined in: [structures/UserPlaytime.ts:7](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserPlaytime.ts#L7)
 
 The game with various levels of information based on parameters passed to getUserOwnedGames()
 
@@ -62,7 +62,7 @@ The game with various levels of information based on parameters passed to getUse
 
 > `optional` **lastPlayedTimestamp**: `number`
 
-Defined in: [structures/UserPlaytime.ts:28](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserPlaytime.ts#L28)
+Defined in: [structures/UserPlaytime.ts:28](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserPlaytime.ts#L28)
 
 UNIX Timestamp for when the user last played this game if the user has ever launched the game
 
@@ -72,7 +72,7 @@ UNIX Timestamp for when the user last played this game if the user has ever laun
 
 > **linuxMinutes**: `number`
 
-Defined in: [structures/UserPlaytime.ts:22](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserPlaytime.ts#L22)
+Defined in: [structures/UserPlaytime.ts:22](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserPlaytime.ts#L22)
 
 The number of minutes played on Linux (not accurate)
 
@@ -82,7 +82,7 @@ The number of minutes played on Linux (not accurate)
 
 > **macMinutes**: `number`
 
-Defined in: [structures/UserPlaytime.ts:19](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserPlaytime.ts#L19)
+Defined in: [structures/UserPlaytime.ts:19](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserPlaytime.ts#L19)
 
 The number of minutes played on Mac (not accurate)
 
@@ -92,7 +92,7 @@ The number of minutes played on Mac (not accurate)
 
 > **minutes**: `number`
 
-Defined in: [structures/UserPlaytime.ts:10](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserPlaytime.ts#L10)
+Defined in: [structures/UserPlaytime.ts:10](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserPlaytime.ts#L10)
 
 The total number of minutes the user has played this game
 
@@ -102,7 +102,7 @@ The total number of minutes the user has played this game
 
 > **recentMinutes**: `number`
 
-Defined in: [structures/UserPlaytime.ts:13](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserPlaytime.ts#L13)
+Defined in: [structures/UserPlaytime.ts:13](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserPlaytime.ts#L13)
 
 The number of minutes played in the last 2 weeks
 
@@ -112,7 +112,7 @@ The number of minutes played in the last 2 weeks
 
 > **windowsMinutes**: `number`
 
-Defined in: [structures/UserPlaytime.ts:16](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserPlaytime.ts#L16)
+Defined in: [structures/UserPlaytime.ts:16](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserPlaytime.ts#L16)
 
 The number of minutes played on Windows (not accurate)
 
@@ -124,7 +124,7 @@ The number of minutes played on Windows (not accurate)
 
 > **get** **lastPlayedAt**(): `undefined` \| `Date`
 
-Defined in: [structures/UserPlaytime.ts:42](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserPlaytime.ts#L42)
+Defined in: [structures/UserPlaytime.ts:42](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserPlaytime.ts#L42)
 
 Date when user last played this game
 

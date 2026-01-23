@@ -6,7 +6,7 @@
 
 # Interface: GetGameNewsOptions
 
-Defined in: [SteamAPI.ts:115](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/SteamAPI.ts#L115)
+Defined in: [SteamAPI.ts:115](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/SteamAPI.ts#L115)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [SteamAPI.ts:115](https://github.com/xDimGG/node-steamapi/blob/f4d6b
 
 > `optional` **count**: `number`
 
-Defined in: [SteamAPI.ts:123](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/SteamAPI.ts#L123)
+Defined in: [SteamAPI.ts:123](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/SteamAPI.ts#L123)
 
 Number of posts to retrieve (default 20)
 
@@ -24,7 +24,7 @@ Number of posts to retrieve (default 20)
 
 > `optional` **endDate**: `Date`
 
-Defined in: [SteamAPI.ts:120](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/SteamAPI.ts#L120)
+Defined in: [SteamAPI.ts:120](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/SteamAPI.ts#L120)
 
 Retrieve posts earlier than this date
 
@@ -34,7 +34,7 @@ Retrieve posts earlier than this date
 
 > `optional` **feeds**: `string`[]
 
-Defined in: [SteamAPI.ts:126](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/SteamAPI.ts#L126)
+Defined in: [SteamAPI.ts:126](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/SteamAPI.ts#L126)
 
 List of feed names to return news for
 
@@ -44,7 +44,7 @@ List of feed names to return news for
 
 > `optional` **maxContentLength**: `number`
 
-Defined in: [SteamAPI.ts:117](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/SteamAPI.ts#L117)
+Defined in: [SteamAPI.ts:117](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/SteamAPI.ts#L117)
 
 Maximum length for the content to return, if this is 0 the full content is returned, if it's less then a blurb is generated to fit
 
@@ -54,6 +54,6 @@ Maximum length for the content to return, if this is 0 the full content is retur
 
 > `optional` **tags**: `string`[]
 
-Defined in: [SteamAPI.ts:129](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/SteamAPI.ts#L129)
+Defined in: [SteamAPI.ts:129](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/SteamAPI.ts#L129)
 
 List of tags to filter by (e.g. 'patchnotes')

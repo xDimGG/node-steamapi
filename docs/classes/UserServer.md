@@ -6,7 +6,7 @@
 
 # Class: UserServer
 
-Defined in: [structures/UserServer.ts:1](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserServer.ts#L1)
+Defined in: [structures/UserServer.ts:1](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserServer.ts#L1)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [structures/UserServer.ts:1](https://github.com/xDimGG/node-steamapi
 
 > **new UserServer**(`data`): `UserServer`
 
-Defined in: [structures/UserServer.ts:23](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserServer.ts#L23)
+Defined in: [structures/UserServer.ts:23](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserServer.ts#L23)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: [structures/UserServer.ts:23](https://github.com/xDimGG/node-steamap
 
 > **appID**: `number`
 
-Defined in: [structures/UserServer.ts:6](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserServer.ts#L6)
+Defined in: [structures/UserServer.ts:6](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserServer.ts#L6)
 
 App ID this server is for
 
@@ -42,7 +42,7 @@ App ID this server is for
 
 > **deleted**: `boolean`
 
-Defined in: [structures/UserServer.ts:15](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserServer.ts#L15)
+Defined in: [structures/UserServer.ts:15](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserServer.ts#L15)
 
 Has this server been deleted
 
@@ -52,7 +52,7 @@ Has this server been deleted
 
 > **expired**: `boolean`
 
-Defined in: [structures/UserServer.ts:18](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserServer.ts#L18)
+Defined in: [structures/UserServer.ts:18](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserServer.ts#L18)
 
 Has this server expired
 
@@ -62,7 +62,7 @@ Has this server expired
 
 > **id**: `string`
 
-Defined in: [structures/UserServer.ts:3](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserServer.ts#L3)
+Defined in: [structures/UserServer.ts:3](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserServer.ts#L3)
 
 The SteamID of this game server
 
@@ -72,7 +72,7 @@ The SteamID of this game server
 
 > **lastLogonTimestamp**: `number`
 
-Defined in: [structures/UserServer.ts:21](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserServer.ts#L21)
+Defined in: [structures/UserServer.ts:21](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserServer.ts#L21)
 
 Unix Timestamp for when last time this server token was logged onto
 
@@ -82,7 +82,7 @@ Unix Timestamp for when last time this server token was logged onto
 
 > **memo**: `string`
 
-Defined in: [structures/UserServer.ts:12](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserServer.ts#L12)
+Defined in: [structures/UserServer.ts:12](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserServer.ts#L12)
 
 The memo/name for this server
 
@@ -92,7 +92,7 @@ The memo/name for this server
 
 > **token**: `string`
 
-Defined in: [structures/UserServer.ts:9](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserServer.ts#L9)
+Defined in: [structures/UserServer.ts:9](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserServer.ts#L9)
 
 The login token for this server
 
@@ -104,7 +104,7 @@ The login token for this server
 
 > **get** **lastLogonAt**(): `Date`
 
-Defined in: [structures/UserServer.ts:34](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserServer.ts#L34)
+Defined in: [structures/UserServer.ts:34](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserServer.ts#L34)
 
 `lastLogonTimestamp` as a Date object
 

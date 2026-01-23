@@ -6,7 +6,7 @@
 
 # Interface: UserStat
 
-Defined in: [structures/UserStat.ts:1](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserStat.ts#L1)
+Defined in: [structures/UserStat.ts:1](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserStat.ts#L1)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [structures/UserStat.ts:1](https://github.com/xDimGG/node-steamapi/b
 
 > **name**: `string`
 
-Defined in: [structures/UserStat.ts:3](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserStat.ts#L3)
+Defined in: [structures/UserStat.ts:3](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserStat.ts#L3)
 
 API name for this stat (e.g. 1_3, total_time_played, total_wins_map_de_train)
 
@@ -24,6 +24,6 @@ API name for this stat (e.g. 1_3, total_time_played, total_wins_map_de_train)
 
 > **value**: `number`
 
-Defined in: [structures/UserStat.ts:6](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/UserStat.ts#L6)
+Defined in: [structures/UserStat.ts:6](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/UserStat.ts#L6)
 
 The integer value for this stat

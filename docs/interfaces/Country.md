@@ -6,7 +6,7 @@
 
 # Interface: Country
 
-Defined in: [structures/Locations.ts:1](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Locations.ts#L1)
+Defined in: [structures/Locations.ts:1](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Locations.ts#L1)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [structures/Locations.ts:1](https://github.com/xDimGG/node-steamapi/
 
 > **countrycode**: `string`
 
-Defined in: [structures/Locations.ts:3](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Locations.ts#L3)
+Defined in: [structures/Locations.ts:3](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Locations.ts#L3)
 
 Two letter code representing the country
 
@@ -24,7 +24,7 @@ Two letter code representing the country
 
 > **countryname**: `string`
 
-Defined in: [structures/Locations.ts:6](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Locations.ts#L6)
+Defined in: [structures/Locations.ts:6](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Locations.ts#L6)
 
 Human readable name of country (english only)
 
@@ -34,6 +34,6 @@ Human readable name of country (english only)
 
 > **hasstates**: `number`
 
-Defined in: [structures/Locations.ts:9](https://github.com/xDimGG/node-steamapi/blob/f4d6bcd21f6389481b7da485ce2cb9bddf197216/src/structures/Locations.ts#L9)
+Defined in: [structures/Locations.ts:9](https://github.com/xDimGG/node-steamapi/blob/551a4ce7df69dd6effd7f1281dbbe310e0a20a54/src/structures/Locations.ts#L9)
 
 Does this country have states. 1 is true 0 is false
